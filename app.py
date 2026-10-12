@@ -44,9 +44,18 @@ def main() -> int:
             "In two sentences, explain how you would help us evaluate expansion into "
             "Dubai and Abu Dhabi. Describe your approach without making market claims."
         )
-    except ModelProviderError:
+    except ModelProviderError as exc:
+        guidance = {
+            401: "Authentication failed. Replace OPENROUTER_API_KEY in .env with a valid "
+            "key from https://openrouter.ai/settings/keys. Existing environment "
+            "variables take precedence over .env.",
+            402: "The request exceeds your available credits or spending limit. "
+            "Check your OpenRouter balance and key limit, or reduce max_tokens.",
+            429: "OpenRouter or the model provider rate-limited the request. "
+            "Wait before retrying and check your usage limits.",
+        }.get(exc.status_code, "Check your model access and connection.")
         print(
-            "OpenRouter request failed. Check your key, credits, model access, and connection.",
+            f"OpenRouter request failed (HTTP {exc.status_code}). {guidance}",
             file=sys.stderr,
         )
         return 1

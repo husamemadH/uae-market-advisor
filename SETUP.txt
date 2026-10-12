@@ -18,7 +18,8 @@ Current behavior
   and prints the answer in the terminal. A missing key exits before making
   a model request. Existing environment variables take precedence over .env.
   Model requests have a 45-second timeout, a 4,096-token completion limit,
-  and no automatic client retries. Provider errors exit with a short message.
+  and no automatic client retries. Provider errors exit with an HTTP status
+  and guidance for authentication (401), credits (402), or rate limits (429).
 
 How the code works
   load_dotenv loads the local API key.
