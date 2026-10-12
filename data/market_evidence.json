@@ -1,1 +1,1178 @@
-[]
+[
+  {
+    "id": "DXB-LOC-001",
+    "cities": [
+      "dubai"
+    ],
+    "topics": [
+      "locations"
+    ],
+    "entity": "Deira",
+    "observation": "The official Dubai neighbourhood guide describes Deira as a heritage district with traditional souks.",
+    "source_title": "Deira neighbourhood guide",
+    "source_url": "https://www.visitdubai.com/en/explore-dubai/dubai-neighbourhoods/deira",
+    "publisher": "Dubai Department of Economy and Tourism",
+    "source_kind": "official",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Deira heading and introductory description",
+    "qualifiers": [
+      "Tourism guide describes an area or landmark, not a proposed restaurant unit.",
+      "No verified shop rent, footfall, customer mix, or demand estimate."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "DXB-COMP-001",
+    "cities": [
+      "dubai"
+    ],
+    "topics": [
+      "locations",
+      "competitors"
+    ],
+    "entity": "Papa Johns - Deira",
+    "observation": "Papa Johns lists pizza branches at Al Ghurair Centre in Al Muraqqabat and Deira City Centre in Port Saeed.",
+    "source_title": "Papa Johns Stores in UAE",
+    "source_url": "https://www.papajohns.ae/stores",
+    "publisher": "Papa Johns UAE",
+    "source_kind": "business",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Dubai / Al Ghurair Centre; Deira City Centre",
+    "qualifiers": [
+      "Public branch listing; opening status and service catchment need confirmation.",
+      "Presence does not establish sales, market share, footfall, or shop availability."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "DXB-COMP-002",
+    "cities": [
+      "dubai"
+    ],
+    "topics": [
+      "locations",
+      "competitors"
+    ],
+    "entity": "Papa Johns - Al Barsha",
+    "observation": "Papa Johns lists a pizza branch at Al Barsha Mall on Al Barsha 2 Street.",
+    "source_title": "Papa Johns Stores in UAE",
+    "source_url": "https://www.papajohns.ae/stores",
+    "publisher": "Papa Johns UAE",
+    "source_kind": "business",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Dubai / Al Barsha Mall",
+    "qualifiers": [
+      "Public branch listing; opening status and service catchment need confirmation.",
+      "Presence does not establish sales, market share, footfall, or shop availability."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "DXB-COMP-003",
+    "cities": [
+      "dubai"
+    ],
+    "topics": [
+      "locations",
+      "competitors"
+    ],
+    "entity": "Papa Johns - Dubai Marina",
+    "observation": "Papa Johns lists a pizza branch at Marina Diamond near Dubai Marina Metro Station.",
+    "source_title": "Papa Johns Stores in UAE",
+    "source_url": "https://www.papajohns.ae/stores",
+    "publisher": "Papa Johns UAE",
+    "source_kind": "business",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Dubai / Marina Diamond",
+    "qualifiers": [
+      "Public branch listing; opening status and service catchment need confirmation.",
+      "Presence does not establish sales, market share, footfall, or shop availability."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "DXB-COMP-004",
+    "cities": [
+      "dubai"
+    ],
+    "topics": [
+      "locations",
+      "competitors",
+      "delivery"
+    ],
+    "entity": "Allo Beirut - Al Barsha / Hessa Street",
+    "observation": "Allo Beirut lists its Hessa Street branch in Al Barsha, Dubai, and advertises delivery until 4 AM.",
+    "source_title": "Allo Beirut locations",
+    "source_url": "https://www.allobeirutstreetfood.com/locations",
+    "publisher": "Allo Beirut",
+    "source_kind": "business",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Dubai / Hessa St.",
+    "qualifiers": [
+      "Public branch listing; opening status and service catchment need confirmation.",
+      "Presence does not establish sales, market share, footfall, or shop availability.",
+      "Advertised delivery hours do not establish overnight demand or the proposed site catchment."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "DXB-COMP-005",
+    "cities": [
+      "dubai"
+    ],
+    "topics": [
+      "locations",
+      "competitors"
+    ],
+    "entity": "Allo Beirut - JBR",
+    "observation": "Allo Beirut lists a Dubai branch on Al Mamsha Street in Jumeirah Beach Residence; its site includes shawarma, grills, and sandwiches.",
+    "source_title": "Allo Beirut locations",
+    "source_url": "https://www.allobeirutstreetfood.com/locations",
+    "publisher": "Allo Beirut",
+    "source_kind": "business",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Dubai / JBR; footer / menu categories",
+    "qualifiers": [
+      "Public branch listing; opening status and service catchment need confirmation.",
+      "Presence does not establish sales, market share, footfall, or shop availability."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "DXB-COMP-006",
+    "cities": [
+      "dubai"
+    ],
+    "topics": [
+      "locations",
+      "competitors",
+      "operations"
+    ],
+    "entity": "Zaroob - Dubai Marina",
+    "observation": "Zaroob lists its Dubai Marina restaurant at Radisson Blu Residence with advertised hours of 7 AM to 5 AM.",
+    "source_title": "Zaroob hours and locations",
+    "source_url": "https://www.zaroob.com/",
+    "publisher": "Zaroob",
+    "source_kind": "business",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Hours & Locations / Zaroob Marina",
+    "qualifiers": [
+      "Public branch listing; opening status and service catchment need confirmation.",
+      "Presence does not establish sales, market share, footfall, or shop availability.",
+      "Hours are branch-specific observations, not evidence that late-night staffing would be profitable."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "DXB-OPS-001",
+    "cities": [
+      "dubai"
+    ],
+    "topics": [
+      "competitors",
+      "operations"
+    ],
+    "entity": "Zaroob - Sheikh Zayed Road and Motor City",
+    "observation": "Zaroob advertises 24-hour restaurants at Jumeirah Tower on Sheikh Zayed Road and First Avenue Mall in Motor City.",
+    "source_title": "Zaroob hours and locations",
+    "source_url": "https://www.zaroob.com/",
+    "publisher": "Zaroob",
+    "source_kind": "business",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Hours & Locations / Zaroob SZR; Zaroob Motor City",
+    "qualifiers": [
+      "Public branch listing; opening status and service catchment need confirmation.",
+      "Presence does not establish sales, market share, footfall, or shop availability.",
+      "Extended hours do not establish order volume, labor cost, or a required operating schedule."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "DXB-COMP-007",
+    "cities": [
+      "dubai"
+    ],
+    "topics": [
+      "locations",
+      "competitors"
+    ],
+    "entity": "Operation Falafel - The Beach JBR",
+    "observation": "The Beach JBR lists Operation Falafel as a restaurant serving Middle Eastern street food at the venue.",
+    "source_title": "Operation Falafel at The Beach JBR",
+    "source_url": "https://www.thebeach.ae/en/outlets/operation-falafel",
+    "publisher": "The Beach JBR / Merex Investment Group",
+    "source_kind": "business",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Operation Falafel description; venue address",
+    "qualifiers": [
+      "Public branch listing; opening status and service catchment need confirmation.",
+      "Presence does not establish sales, market share, footfall, or shop availability."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "AUH-LOC-001",
+    "cities": [
+      "abu_dhabi"
+    ],
+    "topics": [
+      "locations"
+    ],
+    "entity": "Al Zahiyah",
+    "observation": "Abu Dhabi tourism describes Al Zahiyah as an established district with long-running restaurants and parks, near the Corniche, Al Maryah Island, and Abu Dhabi Mall.",
+    "source_title": "Al Zahiyah neighbourhood guide",
+    "source_url": "https://visitabudhabi.ae/en/where-to-go/marinas-waterfronts/al-zahiyah",
+    "publisher": "Department of Culture and Tourism - Abu Dhabi",
+    "source_kind": "official",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Introduction; FAQs / What is Al Zahiyah famous for?",
+    "qualifiers": [
+      "Tourism guide describes an area or landmark, not a proposed restaurant unit.",
+      "No verified shop rent, footfall, customer mix, or demand estimate."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "AUH-COMP-001",
+    "cities": [
+      "abu_dhabi"
+    ],
+    "topics": [
+      "locations",
+      "competitors"
+    ],
+    "entity": "Papa Johns - Al Zahiyah",
+    "observation": "Papa Johns lists a pizza branch by the Abu Dhabi Mall parking entrance in Al Zahiyah.",
+    "source_title": "Papa Johns Stores in UAE",
+    "source_url": "https://www.papajohns.ae/stores",
+    "publisher": "Papa Johns UAE",
+    "source_kind": "business",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Abu Dhabi / Abu Dhabi Mall",
+    "qualifiers": [
+      "Public branch listing; opening status and service catchment need confirmation.",
+      "Presence does not establish sales, market share, footfall, or shop availability."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "AUH-LOC-002",
+    "cities": [
+      "abu_dhabi"
+    ],
+    "topics": [
+      "locations"
+    ],
+    "entity": "Khalidiya / Khalidiyah Mall",
+    "observation": "Abu Dhabi tourism describes Khalidiyah Mall as near Corniche Beach, with cafes, restaurants, a food court, cinema, and bowling.",
+    "source_title": "Khalidiyah Mall",
+    "source_url": "https://visitabudhabi.ae/en/things-to-do/shopping/Khalidiyah-Mall",
+    "publisher": "Department of Culture and Tourism - Abu Dhabi",
+    "source_kind": "official",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Mall description",
+    "qualifiers": [
+      "Tourism guide describes an area or landmark, not a proposed restaurant unit.",
+      "No verified shop rent, footfall, customer mix, or demand estimate.",
+      "Undated guide; individual tenants and current facilities require confirmation."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "AUH-COMP-002",
+    "cities": [
+      "abu_dhabi"
+    ],
+    "topics": [
+      "locations",
+      "competitors"
+    ],
+    "entity": "Papa Johns - Khalidiya",
+    "observation": "Papa Johns lists its ADNOC 913 Khalidiya pizza branch on Ash Shoulah Street in Al Khubeirah, Al Khalidiyah.",
+    "source_title": "Papa Johns Stores in UAE",
+    "source_url": "https://www.papajohns.ae/stores",
+    "publisher": "Papa Johns UAE",
+    "source_kind": "business",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Abu Dhabi / ADNOC 913 Khalidiya",
+    "qualifiers": [
+      "Public branch listing; opening status and service catchment need confirmation.",
+      "Presence does not establish sales, market share, footfall, or shop availability."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "AUH-LOC-003",
+    "cities": [
+      "abu_dhabi"
+    ],
+    "topics": [
+      "locations"
+    ],
+    "entity": "Al Wahda Mall / Al Manhal",
+    "observation": "Abu Dhabi tourism describes Al Wahda Mall as a retail centre with a Lulu Hypermarket and multiple dining options.",
+    "source_title": "Al Wahda Mall",
+    "source_url": "https://visitabudhabi.ae/en/things-to-do/shopping/al-wahda-mall",
+    "publisher": "Department of Culture and Tourism - Abu Dhabi",
+    "source_kind": "official",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Mall description",
+    "qualifiers": [
+      "Tourism guide describes an area or landmark, not a proposed restaurant unit.",
+      "No verified shop rent, footfall, customer mix, or demand estimate.",
+      "The tourism page establishes the mall features; the separate Papa Johns directory identifies Al Manhal as the branch district."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "AUH-COMP-003",
+    "cities": [
+      "abu_dhabi"
+    ],
+    "topics": [
+      "locations",
+      "competitors"
+    ],
+    "entity": "Papa Johns - Al Wahda / Al Manhal",
+    "observation": "Papa Johns lists its Al Wahda Mall pizza branch on Hthaymah Street in Al Manhal, Abu Dhabi.",
+    "source_title": "Papa Johns Stores in UAE",
+    "source_url": "https://www.papajohns.ae/stores",
+    "publisher": "Papa Johns UAE",
+    "source_kind": "business",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Abu Dhabi / Al Wahda Mall",
+    "qualifiers": [
+      "Public branch listing; opening status and service catchment need confirmation.",
+      "Presence does not establish sales, market share, footfall, or shop availability."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "AUH-COMP-004",
+    "cities": [
+      "abu_dhabi"
+    ],
+    "topics": [
+      "locations",
+      "competitors"
+    ],
+    "entity": "Allo Beirut - Al Najda / Al Danah",
+    "observation": "Allo Beirut lists its Al Najda branch at 640 Saeed Bin Ahmed Al Otaiba Street, Al Danah, Abu Dhabi.",
+    "source_title": "Allo Beirut locations",
+    "source_url": "https://www.allobeirutstreetfood.com/locations",
+    "publisher": "Allo Beirut",
+    "source_kind": "business",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Abu Dhabi / Al Najda St.",
+    "qualifiers": [
+      "Public branch listing; opening status and service catchment need confirmation.",
+      "Presence does not establish sales, market share, footfall, or shop availability."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "AUH-COMP-005",
+    "cities": [
+      "abu_dhabi"
+    ],
+    "topics": [
+      "locations",
+      "competitors"
+    ],
+    "entity": "Allo Beirut - Khalifa City",
+    "observation": "Allo Beirut lists an Abu Dhabi branch in Khalifa City, Sector 32, with advertised hours of 8 AM to 12:30 AM.",
+    "source_title": "Allo Beirut locations",
+    "source_url": "https://www.allobeirutstreetfood.com/locations",
+    "publisher": "Allo Beirut",
+    "source_kind": "business",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Abu Dhabi / Khalifa City",
+    "qualifiers": [
+      "Public branch listing; opening status and service catchment need confirmation.",
+      "Presence does not establish sales, market share, footfall, or shop availability."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "AUH-COMP-006",
+    "cities": [
+      "abu_dhabi"
+    ],
+    "topics": [
+      "competitors",
+      "menu",
+      "delivery"
+    ],
+    "entity": "Operation Falafel - Madinat Khalifa A",
+    "observation": "Talabat lists Operation Falafel in Madinat Khalifa A, with Arabic, Lebanese, sandwich, shawarma, and falafel categories.",
+    "source_title": "Operation Falafel in Madinat Khalifa - A",
+    "source_url": "https://www.talabat.com/uae/restaurant/704423/operation-falafel-khalifa-city--ad-7?aid=1483",
+    "publisher": "Talabat",
+    "source_kind": "platform",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Restaurant heading and cuisine tags",
+    "qualifiers": [
+      "Khalifa City, Abu Dhabi; the page title refers to the delivery area Masdar City, not a verified street address.",
+      "Only branch heading and cuisine categories were inspected; item prices and delivery catchment were not established."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "AUH-COMP-007",
+    "cities": [
+      "abu_dhabi"
+    ],
+    "topics": [
+      "competitors",
+      "menu",
+      "operations"
+    ],
+    "entity": "Operation Falafel - Zayed International Airport",
+    "observation": "The airport lists Operation Falafel in Terminal A departures, airside Food Park Mezzanine Level 5, open 24 hours, serving shawarma, hummus, falafel, and salad bowls.",
+    "source_title": "Operation Falafel at Zayed International Airport",
+    "source_url": "https://www.zayedinternationalairport.ae/en/shop-dine-and-experience/dining/restaurants/operation-falafel",
+    "publisher": "Abu Dhabi Airports / Zayed International Airport",
+    "source_kind": "business",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Description; Highlights; Open; Location",
+    "qualifiers": [
+      "Airside airport concession serving departing passengers; not a comparable street-site catchment or pricing benchmark.",
+      "Airport hours and access do not apply to other branches; confirm current concession operation."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "UAE-DEL-001",
+    "cities": [
+      "dubai",
+      "abu_dhabi"
+    ],
+    "topics": [
+      "delivery",
+      "competitors"
+    ],
+    "entity": "Papa Johns UAE - delivery and takeaway",
+    "observation": "Papa Johns states that UAE branches offer delivery and takeaway and share the same menu and prices.",
+    "source_title": "Papa Johns Stores in UAE",
+    "source_url": "https://www.papajohns.ae/stores",
+    "publisher": "Papa Johns UAE",
+    "source_kind": "business",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Store directory introduction",
+    "qualifiers": [
+      "UAE-wide company statement supported by Dubai and Abu Dhabi branch entries.",
+      "Delivery catchments, fees, promotions, and item availability were not verified at checkout."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "UAE-PRICE-001",
+    "cities": [
+      "dubai",
+      "abu_dhabi"
+    ],
+    "topics": [
+      "menu",
+      "pricing",
+      "competitors"
+    ],
+    "entity": "Papa Johns - All The Meats pizza",
+    "observation": "The UAE web menu lists All The Meats pizza at AED 33 for 8 inches, AED 50 for 10 inches, and AED 69 for 13 inches; toppings include beef, beef sausage, pepperoni, and turkey ham.",
+    "source_title": "Papa Johns UAE Menu & Prices (AED)",
+    "source_url": "https://www.papajohns.ae/menu",
+    "publisher": "Papa Johns UAE",
+    "source_kind": "business",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Pizzas / All The Meats",
+    "qualifiers": [
+      "Public UAE website menu; the store directory states shared menus and prices across branches in both cities.",
+      "No branch checkout selected; crust options, extras, fees, tax treatment, and availability need confirmation."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "UAE-MENU-001",
+    "cities": [
+      "dubai",
+      "abu_dhabi"
+    ],
+    "topics": [
+      "menu",
+      "pricing"
+    ],
+    "entity": "Papa Johns - Butter Chicken pizza",
+    "observation": "The UAE web menu lists Butter Chicken pizza with Makhani sauce and chicken at AED 33 for 8 inches, AED 50 for 10 inches, and AED 69 for 13 inches.",
+    "source_title": "Papa Johns UAE Menu & Prices (AED)",
+    "source_url": "https://www.papajohns.ae/menu",
+    "publisher": "Papa Johns UAE",
+    "source_kind": "business",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Pizzas / Butter Chicken",
+    "qualifiers": [
+      "Public UAE website menu; the store directory states shared menus and prices across branches in both cities.",
+      "No branch checkout selected; crust options, extras, fees, tax treatment, and availability need confirmation.",
+      "An observed competitor flavor variant does not establish local customer preferences."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "UAE-PRICE-002",
+    "cities": [
+      "dubai",
+      "abu_dhabi"
+    ],
+    "topics": [
+      "pricing",
+      "menu",
+      "marketing"
+    ],
+    "entity": "Papa Johns - Papa's Solo Meal",
+    "observation": "Papa's Solo Meal is listed at AED 37 for one small 8-inch pizza, potato wedges, and a canned drink.",
+    "source_title": "Papa Johns UAE Menu & Prices (AED)",
+    "source_url": "https://www.papajohns.ae/menu",
+    "publisher": "Papa Johns UAE",
+    "source_kind": "business",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Deals / Papa's Solo Meal",
+    "qualifiers": [
+      "Public UAE website menu; the store directory states shared menus and prices across branches in both cities.",
+      "No branch checkout selected; crust options, extras, fees, tax treatment, and availability need confirmation.",
+      "Bundle price, not a standalone pizza price; no offer expiry was shown."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "UAE-PRICE-003",
+    "cities": [
+      "dubai",
+      "abu_dhabi"
+    ],
+    "topics": [
+      "pricing",
+      "menu",
+      "marketing"
+    ],
+    "entity": "Papa Johns - Papa's Meal for Two",
+    "observation": "Papa's Meal for Two is listed at AED 69 for one medium pizza, two starters, and two canned drinks.",
+    "source_title": "Papa Johns UAE Menu & Prices (AED)",
+    "source_url": "https://www.papajohns.ae/menu",
+    "publisher": "Papa Johns UAE",
+    "source_kind": "business",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Deals / Papa's Meal for Two",
+    "qualifiers": [
+      "Public UAE website menu; the store directory states shared menus and prices across branches in both cities.",
+      "No branch checkout selected; crust options, extras, fees, tax treatment, and availability need confirmation.",
+      "Bundle price; starter choices and current deal availability need confirmation; no expiry was shown."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "DXB-PRICE-001",
+    "cities": [
+      "dubai"
+    ],
+    "topics": [
+      "menu",
+      "pricing",
+      "competitors"
+    ],
+    "entity": "Allo Beirut JBR - pizza",
+    "observation": "The JBR Deliveroo menu lists Pepperoni pizza at AED 40 and Margherita pizza at AED 38.",
+    "source_title": "Allo Beirut - JBR delivery menu",
+    "source_url": "https://deliveroo.ae/en/menu/dubai/jbr/allo-beirut-jbr",
+    "publisher": "Deliveroo",
+    "source_kind": "platform",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Pizza / Pizza Pepperoni; Pizza Margherita",
+    "qualifiers": [
+      "JBR, Dubai branch, anonymous Deliveroo listing with no delivery address selected; menu visibility can vary.",
+      "Pizza diameter and weight were not specified. Observed item prices are not a completed checkout total; delivery charges, extras, and tax treatment were not verified.",
+      "No publication date shown; recheck menu, price, and availability before a decision."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "DXB-PRICE-002",
+    "cities": [
+      "dubai"
+    ],
+    "topics": [
+      "menu",
+      "pricing"
+    ],
+    "entity": "Allo Beirut JBR - falafel sandwich sizes",
+    "observation": "The JBR Deliveroo menu lists regular falafel sandwich at AED 13, large at AED 18, and saj bread version at AED 19.",
+    "source_title": "Allo Beirut - JBR delivery menu",
+    "source_url": "https://deliveroo.ae/en/menu/dubai/jbr/allo-beirut-jbr",
+    "publisher": "Deliveroo",
+    "source_kind": "platform",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Falafel / Falafel Sandwich Regular; Large; Saj",
+    "qualifiers": [
+      "JBR, Dubai branch, anonymous Deliveroo listing with no delivery address selected; menu visibility can vary.",
+      "Size labels and bread differ; gram weights were not specified. Observed item prices are not a completed checkout total; delivery charges, extras, and tax treatment were not verified.",
+      "No publication date shown; recheck menu, price, and availability before a decision."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "DXB-MENU-001",
+    "cities": [
+      "dubai"
+    ],
+    "topics": [
+      "menu",
+      "pricing"
+    ],
+    "entity": "Allo Beirut JBR - vegetarian halloumi wrap",
+    "observation": "The JBR Deliveroo menu lists a vegetarian halloumi wrap with avocado sauce and rocca at AED 35.",
+    "source_title": "Allo Beirut - JBR delivery menu",
+    "source_url": "https://deliveroo.ae/en/menu/dubai/jbr/allo-beirut-jbr",
+    "publisher": "Deliveroo",
+    "source_kind": "platform",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Healthy Vegetarian Halloumi Wrap",
+    "qualifiers": [
+      "JBR, Dubai branch, anonymous Deliveroo listing with no delivery address selected; menu visibility can vary.",
+      "Portion weight was not specified; category label is the menu description, not nutritional or allergen verification. Observed item prices are not a completed checkout total; delivery charges, extras, and tax treatment were not verified.",
+      "No publication date shown; recheck menu, price, and availability before a decision."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "AUH-PRICE-001",
+    "cities": [
+      "abu_dhabi"
+    ],
+    "topics": [
+      "menu",
+      "pricing",
+      "competitors"
+    ],
+    "entity": "Allo Beirut Khalifa City - chicken shawarma sizes",
+    "observation": "The Khalifa City Deliveroo menu lists small chicken shawarma sandwich at AED 11, regular at AED 15.50, and large at AED 26.",
+    "source_title": "Allo Beirut - Khalifa City delivery menu",
+    "source_url": "https://deliveroo.ae/en/menu/abu-dhabi/khalifa-city/allo-beirut-khalifa-city/",
+    "publisher": "Deliveroo",
+    "source_kind": "platform",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Shawarma / Chicken Shawarma Sandwich Small; Regular; Large",
+    "qualifiers": [
+      "Khalifa City, Abu Dhabi branch, anonymous Deliveroo listing with no delivery address selected; menu visibility can vary.",
+      "Small, regular, and large are menu labels; weights were not specified. Observed item prices are not a completed checkout total; delivery charges, extras, and tax treatment were not verified.",
+      "No publication date shown; recheck menu, price, and availability before a decision."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "AUH-PRICE-002",
+    "cities": [
+      "abu_dhabi"
+    ],
+    "topics": [
+      "menu",
+      "pricing"
+    ],
+    "entity": "Allo Beirut Khalifa City - beef shawarma sizes",
+    "observation": "The Khalifa City Deliveroo menu lists regular beef shawarma sandwich at AED 16.50 and large at AED 27.",
+    "source_title": "Allo Beirut - Khalifa City delivery menu",
+    "source_url": "https://deliveroo.ae/en/menu/abu-dhabi/khalifa-city/allo-beirut-khalifa-city/",
+    "publisher": "Deliveroo",
+    "source_kind": "platform",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Shawarma / Beef Shawarma Sandwich Regular; Large",
+    "qualifiers": [
+      "Khalifa City, Abu Dhabi branch, anonymous Deliveroo listing with no delivery address selected; menu visibility can vary.",
+      "Regular and large are menu labels; weights were not specified. Observed item prices are not a completed checkout total; delivery charges, extras, and tax treatment were not verified.",
+      "No publication date shown; recheck menu, price, and availability before a decision."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "AUH-PRICE-003",
+    "cities": [
+      "abu_dhabi"
+    ],
+    "topics": [
+      "menu",
+      "pricing"
+    ],
+    "entity": "Allo Beirut Khalifa City - grilled tawouk sandwiches",
+    "observation": "The Khalifa City Deliveroo menu lists white shish tawouk sandwich at AED 25 and red shish tawouk sandwich at AED 27.",
+    "source_title": "Allo Beirut - Khalifa City delivery menu",
+    "source_url": "https://deliveroo.ae/en/menu/abu-dhabi/khalifa-city/allo-beirut-khalifa-city/",
+    "publisher": "Deliveroo",
+    "source_kind": "platform",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "BBQ Grills / White Shish Tawouk Sandwich; Red Shish Tawouk Sandwich",
+    "qualifiers": [
+      "Khalifa City, Abu Dhabi branch, anonymous Deliveroo listing with no delivery address selected; menu visibility can vary.",
+      "Sandwich portions; not prices for the separately listed skewer platters. Observed item prices are not a completed checkout total; delivery charges, extras, and tax treatment were not verified.",
+      "No publication date shown; recheck menu, price, and availability before a decision."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "AUH-MENU-001",
+    "cities": [
+      "abu_dhabi"
+    ],
+    "topics": [
+      "menu",
+      "pricing"
+    ],
+    "entity": "Allo Beirut Khalifa City - manakish",
+    "observation": "The Khalifa City Deliveroo menu lists zaatar manakish at AED 12, Akkawi cheese at AED 22, and Lahm b Ajine meat manakish at AED 22.",
+    "source_title": "Allo Beirut - Khalifa City delivery menu",
+    "source_url": "https://deliveroo.ae/en/menu/abu-dhabi/khalifa-city/allo-beirut-khalifa-city/",
+    "publisher": "Deliveroo",
+    "source_kind": "platform",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Manakish & Kaak / Zaatar; Akkawi; Lahm b Ajine",
+    "qualifiers": [
+      "Khalifa City, Abu Dhabi branch, anonymous Deliveroo listing with no delivery address selected; menu visibility can vary.",
+      "Individual menu items; diameter and weight were not specified, so they are not equivalent to a sized pizza. Observed item prices are not a completed checkout total; delivery charges, extras, and tax treatment were not verified.",
+      "No publication date shown; recheck menu, price, and availability before a decision."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "UAE-DEL-002",
+    "cities": [
+      "dubai",
+      "abu_dhabi"
+    ],
+    "topics": [
+      "delivery"
+    ],
+    "entity": "Deliveroo UAE - platform riders and pickup",
+    "observation": "Deliveroo describes a UAE partner service using its rider network for delivery and allowing customers to collect orders from the restaurant.",
+    "source_title": "Deliveroo delivery and pickup for UAE partners",
+    "source_url": "https://merchants.deliveroo.com/en-AE/what-we-offer/delivery",
+    "publisher": "Deliveroo",
+    "source_kind": "platform",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Delivery network; Customer flexibility",
+    "qualifiers": [
+      "UAE merchant product description; eligibility and availability at a proposed address need confirmation.",
+      "No verified contractual commission, fees, delivery radius, service level, or sales uplift."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "UAE-DEL-003",
+    "cities": [
+      "dubai",
+      "abu_dhabi"
+    ],
+    "topics": [
+      "delivery",
+      "operations"
+    ],
+    "entity": "Deliveroo UAE - order tracking",
+    "observation": "Deliveroo describes order-status monitoring, real-time rider GPS tracking, and rider-arrival alerts for its delivery service.",
+    "source_title": "Deliveroo delivery and pickup for UAE partners",
+    "source_url": "https://merchants.deliveroo.com/en-AE/what-we-offer/delivery",
+    "publisher": "Deliveroo",
+    "source_kind": "platform",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "End-to-end order tracking",
+    "qualifiers": [
+      "UAE merchant product description; eligibility and availability at a proposed address need confirmation.",
+      "No verified contractual commission, fees, delivery radius, service level, or sales uplift."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "UAE-DEL-004",
+    "cities": [
+      "dubai",
+      "abu_dhabi"
+    ],
+    "topics": [
+      "delivery",
+      "operations"
+    ],
+    "entity": "Deliveroo UAE - Marketplace+ own riders",
+    "observation": "Deliveroo describes Marketplace+ as using restaurant delivery staff, with selectable delivery area, minimum spend, and delivery fees, plus an option to request a platform rider.",
+    "source_title": "Deliveroo Marketplace+ for UAE partners",
+    "source_url": "https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace",
+    "publisher": "Deliveroo",
+    "source_kind": "platform",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Benefits of Marketplace+; Receiving orders; Delivering orders",
+    "qualifiers": [
+      "UAE merchant product description; eligibility and availability at a proposed address need confirmation.",
+      "No verified contractual commission, fees, delivery radius, service level, or sales uplift."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "UAE-MKT-001",
+    "cities": [
+      "dubai",
+      "abu_dhabi"
+    ],
+    "topics": [
+      "marketing"
+    ],
+    "entity": "Deliveroo UAE - native advertising",
+    "observation": "Deliveroo offers Marketer Adverts as native advertising within its app for partner businesses.",
+    "source_title": "Deliveroo growth tools for UAE partners",
+    "source_url": "https://merchants.deliveroo.com/en-AE/why-deliveroo/growth",
+    "publisher": "Deliveroo",
+    "source_kind": "platform",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Get more eyes on your brand",
+    "qualifiers": [
+      "UAE merchant product description; eligibility and availability at a proposed address need confirmation.",
+      "No verified contractual commission, fees, delivery radius, service level, or sales uplift.",
+      "Provider marketing description; campaign cost and local acquisition performance were not measured."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "UAE-MKT-002",
+    "cities": [
+      "dubai",
+      "abu_dhabi"
+    ],
+    "topics": [
+      "marketing",
+      "pricing"
+    ],
+    "entity": "Deliveroo UAE - promotional offers",
+    "observation": "Deliveroo describes partner promotions including free delivery and buy-one-get-one-free offers.",
+    "source_title": "Deliveroo growth tools for UAE partners",
+    "source_url": "https://merchants.deliveroo.com/en-AE/why-deliveroo/growth",
+    "publisher": "Deliveroo",
+    "source_kind": "platform",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Increase your order volume and basket size",
+    "qualifiers": [
+      "UAE merchant product description; eligibility and availability at a proposed address need confirmation.",
+      "No verified contractual commission, fees, delivery radius, service level, or sales uplift.",
+      "Promotion funding, eligibility, discount cost, and effect on contribution per order require verification."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "UAE-MKT-003",
+    "cities": [
+      "dubai",
+      "abu_dhabi"
+    ],
+    "topics": [
+      "marketing"
+    ],
+    "entity": "Deliveroo UAE - business insights",
+    "observation": "Deliveroo describes partner insights about business performance and customers.",
+    "source_title": "Deliveroo growth tools for UAE partners",
+    "source_url": "https://merchants.deliveroo.com/en-AE/why-deliveroo/growth",
+    "publisher": "Deliveroo",
+    "source_kind": "platform",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Fuel your growth with bespoke insights",
+    "qualifiers": [
+      "UAE merchant product description; eligibility and availability at a proposed address need confirmation.",
+      "No verified contractual commission, fees, delivery radius, service level, or sales uplift.",
+      "This establishes an advertised feature, not access to a prospective restaurant customer dataset."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "AUH-MKT-001",
+    "cities": [
+      "abu_dhabi"
+    ],
+    "topics": [
+      "marketing"
+    ],
+    "entity": "Abu Dhabi - 2025 culture and leisure events",
+    "observation": "Abu Dhabi Media Office reports that DCT delivered 252 culture and leisure events in 2025 with more than 4.2 million attendees; festival coverage included Abu Dhabi, Al Ain, and Al Dhafra.",
+    "source_title": "Abu Dhabi culture and tourism performance in 2025",
+    "source_url": "https://www.mediaoffice.abudhabi/en/tourism/abu-dhabis-culture-and-tourism-sectors-delivered-strong-growth-in-2025-with-26m-visitors/",
+    "publisher": "Abu Dhabi Media Office",
+    "source_kind": "official",
+    "published_on": "2026-04-06",
+    "checked_on": "2026-10-13",
+    "locator": "2025 culture, leisure and MICE events paragraphs",
+    "qualifiers": [
+      "Historical 2025 emirate-level reporting, published 2026-04-06; includes regions beyond Abu Dhabi city.",
+      "Event attendance is not a count of unique restaurant customers, current event dates, or shop-level demand."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "DXB-OPS-002",
+    "cities": [
+      "dubai"
+    ],
+    "topics": [
+      "operations"
+    ],
+    "entity": "Dubai Municipality - food handler training",
+    "observation": "Dubai Municipality guidance requires food handling staff, supervisors, and managers to receive formal food safety training appropriate to their work activity.",
+    "source_title": "Requirements for Integrated Training Management System for Food Establishments, DM-FSD-GU64, version 2",
+    "source_url": "https://dmpmedia.dm.gov.ae/uploads/2024/02/3.-DM-FSD-GU64-Requirements-for-Integrated-Training-Management-System-for-Food-Establishments-2.pdf",
+    "publisher": "Dubai Municipality",
+    "source_kind": "official",
+    "published_on": "2023-08-31",
+    "checked_on": "2026-10-13",
+    "locator": "PDF page 4, Introduction; page 7, Regulatory Approach",
+    "qualifiers": [
+      "Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-13.",
+      "Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "DXB-OPS-003",
+    "cities": [
+      "dubai"
+    ],
+    "topics": [
+      "operations"
+    ],
+    "entity": "Dubai Municipality - person in charge and Foodwatch",
+    "observation": "Dubai Municipality guidance assigns food safety responsibilities to trained Persons in Charge and states that they should use Foodwatch to perform food safety checks.",
+    "source_title": "Requirements for Integrated Training Management System for Food Establishments, DM-FSD-GU64, version 2",
+    "source_url": "https://dmpmedia.dm.gov.ae/uploads/2024/02/3.-DM-FSD-GU64-Requirements-for-Integrated-Training-Management-System-for-Food-Establishments-2.pdf",
+    "publisher": "Dubai Municipality",
+    "source_kind": "official",
+    "published_on": "2023-08-31",
+    "checked_on": "2026-10-13",
+    "locator": "PDF page 7, Regulatory Approach / Step 2.2 and Step 3.2",
+    "qualifiers": [
+      "Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-13.",
+      "Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "DXB-DEL-001",
+    "cities": [
+      "dubai"
+    ],
+    "topics": [
+      "delivery",
+      "operations",
+      "suppliers"
+    ],
+    "entity": "Dubai Municipality - transport cold chain",
+    "observation": "Dubai Municipality guidance specifies transportation units capable of holding hot food at 60 C or above, cold food at 5 C or below, and frozen food at -18 C or below.",
+    "source_title": "Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2",
+    "source_url": "https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf",
+    "publisher": "Dubai Municipality",
+    "source_kind": "official",
+    "published_on": "2023-08-31",
+    "checked_on": "2026-10-13",
+    "locator": "PDF pages 13-14, section 1.2.2 Temperature Control Requirements",
+    "qualifiers": [
+      "Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-13.",
+      "Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.",
+      "Transport holding requirements, not cooking temperatures or evidence that a supplier or vehicle meets them."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "DXB-DEL-002",
+    "cities": [
+      "dubai"
+    ],
+    "topics": [
+      "delivery",
+      "operations"
+    ],
+    "entity": "Dubai Municipality - sealed delivery and separation",
+    "observation": "Dubai Municipality delivery guidance requires sealed food containers and separation of hot and cold items into insulated secondary units during transport.",
+    "source_title": "Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2",
+    "source_url": "https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf",
+    "publisher": "Dubai Municipality",
+    "source_kind": "official",
+    "published_on": "2023-08-31",
+    "checked_on": "2026-10-13",
+    "locator": "PDF page 18, section 1.4.1(e)-(f)",
+    "qualifiers": [
+      "Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-13.",
+      "Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "AUH-OPS-001",
+    "cities": [
+      "abu_dhabi"
+    ],
+    "topics": [
+      "operations"
+    ],
+    "entity": "ADAFSA - Essential Food Safety Training",
+    "observation": "ADAFSA describes Essential Food Safety Training for food handlers in Abu Dhabi, covering cross-contamination, cooking or processing, cleaning, chilling, and food safety management.",
+    "source_title": "ADAFSA food safety programmes",
+    "source_url": "https://prod.adafsa.gov.ae/en/work/food-safety/Pages/default.aspx",
+    "publisher": "Abu Dhabi Agriculture and Food Safety Authority",
+    "source_kind": "official",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Essential Food Safety Training Program (EFST)",
+    "qualifiers": [
+      "Emirate of Abu Dhabi programme; cooking/processing and food safety management modules apply where relevant.",
+      "Programme summary does not establish training prices, staff wages, staffing ratios, or all premises requirements."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "AUH-OPS-002",
+    "cities": [
+      "abu_dhabi"
+    ],
+    "topics": [
+      "operations"
+    ],
+    "entity": "ADAFSA - documented self-inspection",
+    "observation": "ADAFSA describes periodic operator self-inspections using its approved checklist, with records of findings, corrective actions, and follow-up available to inspectors.",
+    "source_title": "ADAFSA food safety programmes",
+    "source_url": "https://prod.adafsa.gov.ae/en/work/food-safety/Pages/default.aspx",
+    "publisher": "Abu Dhabi Agriculture and Food Safety Authority",
+    "source_kind": "official",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Self-Inspection; Self-Inspection Objectives",
+    "qualifiers": [
+      "Abu Dhabi authority summary; the checklist depends on establishment type and applicable rules.",
+      "No staffing level, inspection frequency in days, or compliance guarantee was established."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "UAE-SUP-001",
+    "cities": [
+      "dubai",
+      "abu_dhabi"
+    ],
+    "topics": [
+      "suppliers"
+    ],
+    "entity": "Bidfood UAE - beef and cheese catalogue categories",
+    "observation": "Bidfood UAE lists 2026-2027 catalogues for a beef protein category and premium cheeses.",
+    "source_title": "Bidfood UAE presence and catalogues",
+    "source_url": "https://www.bidfoodme.com/presence/uae",
+    "publisher": "Bidfood Middle East",
+    "source_kind": "business",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Our Catalogues / Center of The Plate 2026-2027; Premium Cheeses 2026-2027 (embedded catalogue metadata)",
+    "qualifiers": [
+      "Supplier-owned catalogue categories only; specific beef cuts and pizza cheese suitability require samples and specifications.",
+      "No verified stock, prices, halal documentation, allergen documentation, minimum order, credit terms, or capacity."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "UAE-SUP-002",
+    "cities": [
+      "dubai",
+      "abu_dhabi"
+    ],
+    "topics": [
+      "suppliers"
+    ],
+    "entity": "Bidfood UAE - distribution service statement",
+    "observation": "Bidfood states that its UAE distribution centres deliver to all emirates daily and provides myBidfood for online ordering.",
+    "source_title": "Bidfood UAE presence and catalogues",
+    "source_url": "https://www.bidfoodme.com/presence/uae",
+    "publisher": "Bidfood Middle East",
+    "source_kind": "business",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "UAE overview; Distribution centers delivering to all Emirates daily",
+    "qualifiers": [
+      "Supplier service claim, not an independently verified delivery commitment to a proposed Dubai or Abu Dhabi site.",
+      "Delivery schedule, minimum order, lead times, substitutions, stock continuity, and cold chain need written confirmation."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "DXB-SUP-001",
+    "cities": [
+      "dubai"
+    ],
+    "topics": [
+      "suppliers"
+    ],
+    "entity": "Bidfood - Dubai distribution centre",
+    "observation": "Bidfood lists a Dubai distribution centre in Dubai Investment Park 2, plot 597-974.",
+    "source_title": "Bidfood UAE contact and distribution centres",
+    "source_url": "https://www.bidfoodme.com/get-in-touch/uae",
+    "publisher": "Bidfood Middle East",
+    "source_kind": "business",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Dubai / HORECA Trade L.L.C Dubai Distribution Center",
+    "qualifiers": [
+      "Public supplier contact location; not proof of branch-specific delivery coverage, product certification, prices, or capacity."
+    ],
+    "valid_until": null
+  },
+  {
+    "id": "AUH-SUP-001",
+    "cities": [
+      "abu_dhabi"
+    ],
+    "topics": [
+      "suppliers"
+    ],
+    "entity": "Bidfood - Abu Dhabi distribution centre",
+    "observation": "Bidfood lists an Abu Dhabi distribution centre in Mussafah, ICAD 2, M-41 Industrial Area.",
+    "source_title": "Bidfood UAE contact and distribution centres",
+    "source_url": "https://www.bidfoodme.com/get-in-touch/uae",
+    "publisher": "Bidfood Middle East",
+    "source_kind": "business",
+    "published_on": null,
+    "checked_on": "2026-10-13",
+    "locator": "Abu Dhabi / HORECA Trade L.L.C Abu Dhabi Distribution Center",
+    "qualifiers": [
+      "Public supplier contact location; not proof of branch-specific delivery coverage, product certification, prices, or capacity."
+    ],
+    "valid_until": null
+  }
+]

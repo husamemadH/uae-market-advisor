@@ -1,12 +1,13 @@
 import json
 from datetime import date, timedelta
 from pathlib import Path
+from typing import get_args
 from unittest.mock import Mock
 
 import pytest
 
 import app
-from evidence import DEFAULT_EVIDENCE_FILE, MAX_PAYLOAD_CHARACTERS, EvidenceDataError, EvidenceStore
+from evidence import City, Topic, DEFAULT_EVIDENCE_FILE, MAX_PAYLOAD_CHARACTERS, EvidenceDataError, EvidenceStore
 
 
 ON_DATE = date(2026, 10, 12)
@@ -33,6 +34,43 @@ def test_production_dataset_does_not_load_test_fixtures(records):
     store = EvidenceStore.load(DEFAULT_EVIDENCE_FILE)
     fixture_ids = {record["id"] for record in records}
     assert not fixture_ids.intersection(record.id for record in store.records)
+
+
+def test_production_research_is_retrievable_for_each_city_and_topic():
+    store = EvidenceStore.load(DEFAULT_EVIDENCE_FILE)
+    for city in get_args(City):
+        for topic in get_args(Topic):
+            result = store.lookup_market_evidence([city], [topic])
+            assert result.status == "ok", (city, topic)
+            assert result.data.matched_count >= 2, (city, topic)
+            assert result.data.records, (city, topic)
+            assert len(result.model_dump_json()) <= MAX_PAYLOAD_CHARACTERS
+            for record in result.data.records:
+                assert city in record.cities and topic in record.topics
+                assert record.locator and record.qualifiers
+                assert record.source_url.host != "example.invalid"
+
+
+def test_research_coverage_summary_matches_dataset_and_references():
+    store = EvidenceStore.load(DEFAULT_EVIDENCE_FILE)
+    report = json.loads(DEFAULT_EVIDENCE_FILE.with_name("research_coverage.json").read_text(encoding="utf-8"))
+    by_id = {record.id: record for record in store.records}
+    assert report["record_count"] == len(by_id)
+    assert report["source_count"] == len({str(record.source_url) for record in store.records})
+    for city in get_args(City):
+        assert set(report["coverage"][city]) == set(get_args(Topic))
+        for topic, coverage in report["coverage"][city].items():
+            expected = {record.id for record in store.records if city in record.cities and topic in record.topics}
+            assert coverage["count"] == len(expected)
+            assert set(coverage["record_ids"]) == expected
+        for group, reference_key in [("candidate_areas", "basis_record_ids"), ("competitor_examples", "record_ids")]:
+            assert len(report[group][city]) >= 3
+            for entry in report[group][city]:
+                assert entry[reference_key]
+                assert all(city in by_id[record_id].cities for record_id in entry[reference_key])
+    for sample in report["manually_compared_samples"]:
+        assert set(sample["record_ids"]) <= by_id.keys()
+    assert report["known_gaps"]
 
 
 def test_empty_dataset_reports_no_results(tmp_path):

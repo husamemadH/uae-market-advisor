@@ -1,0 +1,538 @@
+{
+  "checked_on": "2026-10-13",
+  "dataset": "market_evidence.json",
+  "record_count": 48,
+  "source_count": 22,
+  "scope": "Initial, manually curated research for a Jordanian pizza and kebab concept considering Dubai and Abu Dhabi. Coverage counts describe available observations, not a completed market study.",
+  "methodology": [
+    "Search results were used to discover leads; records were written from inspected source pages or linked official PDFs. Factual observations are paraphrases, not recommendations.",
+    "Undated pages retain published_on=null. checked_on records inspection, not publication. Copyright years and site-wide update dates are not treated as publication dates.",
+    "Both-city tags on UAE menus, merchant services, and distribution claims indicate shared applicability; they do not establish identical customer behavior or site-specific availability.",
+    "Prices preserve menu item, displayed portion, branch or national menu, and ordering channel. No completed checkout was made and tax treatment, extras, and delivery fees were not verified.",
+    "Dynamic delivery menus can change within an inspection. An Al Najda menu exposed different subsets, so the Abu Dhabi sandwich records use the inspected Khalifa City menu. Availability must be checked again.",
+    "Only metadata and catalogue category descriptions were inspected for Bidfood products; individual product specifications and supplier quotes were not verified.",
+    "Records with old publication dates deliberately retain needs_review flags. A newly checked historical source is not a current market measurement.",
+    "This file documents research coverage and gaps; runtime retrieval reads market_evidence.json only."
+  ],
+  "coverage": {
+    "dubai": {
+      "locations": {
+        "count": 8,
+        "record_ids": [
+          "DXB-LOC-001",
+          "DXB-COMP-001",
+          "DXB-COMP-002",
+          "DXB-COMP-003",
+          "DXB-COMP-004",
+          "DXB-COMP-005",
+          "DXB-COMP-006",
+          "DXB-COMP-007"
+        ]
+      },
+      "competitors": {
+        "count": 11,
+        "record_ids": [
+          "DXB-COMP-001",
+          "DXB-COMP-002",
+          "DXB-COMP-003",
+          "DXB-COMP-004",
+          "DXB-COMP-005",
+          "DXB-COMP-006",
+          "DXB-OPS-001",
+          "DXB-COMP-007",
+          "UAE-DEL-001",
+          "UAE-PRICE-001",
+          "DXB-PRICE-001"
+        ]
+      },
+      "menu": {
+        "count": 7,
+        "record_ids": [
+          "UAE-PRICE-001",
+          "UAE-MENU-001",
+          "UAE-PRICE-002",
+          "UAE-PRICE-003",
+          "DXB-PRICE-001",
+          "DXB-PRICE-002",
+          "DXB-MENU-001"
+        ]
+      },
+      "pricing": {
+        "count": 8,
+        "record_ids": [
+          "UAE-PRICE-001",
+          "UAE-MENU-001",
+          "UAE-PRICE-002",
+          "UAE-PRICE-003",
+          "DXB-PRICE-001",
+          "DXB-PRICE-002",
+          "DXB-MENU-001",
+          "UAE-MKT-002"
+        ]
+      },
+      "marketing": {
+        "count": 5,
+        "record_ids": [
+          "UAE-PRICE-002",
+          "UAE-PRICE-003",
+          "UAE-MKT-001",
+          "UAE-MKT-002",
+          "UAE-MKT-003"
+        ]
+      },
+      "delivery": {
+        "count": 7,
+        "record_ids": [
+          "DXB-COMP-004",
+          "UAE-DEL-001",
+          "UAE-DEL-002",
+          "UAE-DEL-003",
+          "UAE-DEL-004",
+          "DXB-DEL-001",
+          "DXB-DEL-002"
+        ]
+      },
+      "operations": {
+        "count": 8,
+        "record_ids": [
+          "DXB-COMP-006",
+          "DXB-OPS-001",
+          "UAE-DEL-003",
+          "UAE-DEL-004",
+          "DXB-OPS-002",
+          "DXB-OPS-003",
+          "DXB-DEL-001",
+          "DXB-DEL-002"
+        ]
+      },
+      "suppliers": {
+        "count": 4,
+        "record_ids": [
+          "DXB-DEL-001",
+          "UAE-SUP-001",
+          "UAE-SUP-002",
+          "DXB-SUP-001"
+        ]
+      }
+    },
+    "abu_dhabi": {
+      "locations": {
+        "count": 8,
+        "record_ids": [
+          "AUH-LOC-001",
+          "AUH-COMP-001",
+          "AUH-LOC-002",
+          "AUH-COMP-002",
+          "AUH-LOC-003",
+          "AUH-COMP-003",
+          "AUH-COMP-004",
+          "AUH-COMP-005"
+        ]
+      },
+      "competitors": {
+        "count": 10,
+        "record_ids": [
+          "AUH-COMP-001",
+          "AUH-COMP-002",
+          "AUH-COMP-003",
+          "AUH-COMP-004",
+          "AUH-COMP-005",
+          "AUH-COMP-006",
+          "AUH-COMP-007",
+          "UAE-DEL-001",
+          "UAE-PRICE-001",
+          "AUH-PRICE-001"
+        ]
+      },
+      "menu": {
+        "count": 10,
+        "record_ids": [
+          "AUH-COMP-006",
+          "AUH-COMP-007",
+          "UAE-PRICE-001",
+          "UAE-MENU-001",
+          "UAE-PRICE-002",
+          "UAE-PRICE-003",
+          "AUH-PRICE-001",
+          "AUH-PRICE-002",
+          "AUH-PRICE-003",
+          "AUH-MENU-001"
+        ]
+      },
+      "pricing": {
+        "count": 9,
+        "record_ids": [
+          "UAE-PRICE-001",
+          "UAE-MENU-001",
+          "UAE-PRICE-002",
+          "UAE-PRICE-003",
+          "AUH-PRICE-001",
+          "AUH-PRICE-002",
+          "AUH-PRICE-003",
+          "AUH-MENU-001",
+          "UAE-MKT-002"
+        ]
+      },
+      "marketing": {
+        "count": 6,
+        "record_ids": [
+          "UAE-PRICE-002",
+          "UAE-PRICE-003",
+          "UAE-MKT-001",
+          "UAE-MKT-002",
+          "UAE-MKT-003",
+          "AUH-MKT-001"
+        ]
+      },
+      "delivery": {
+        "count": 5,
+        "record_ids": [
+          "AUH-COMP-006",
+          "UAE-DEL-001",
+          "UAE-DEL-002",
+          "UAE-DEL-003",
+          "UAE-DEL-004"
+        ]
+      },
+      "operations": {
+        "count": 5,
+        "record_ids": [
+          "AUH-COMP-007",
+          "UAE-DEL-003",
+          "UAE-DEL-004",
+          "AUH-OPS-001",
+          "AUH-OPS-002"
+        ]
+      },
+      "suppliers": {
+        "count": 3,
+        "record_ids": [
+          "UAE-SUP-001",
+          "UAE-SUP-002",
+          "AUH-SUP-001"
+        ]
+      }
+    }
+  },
+  "candidate_areas": {
+    "dubai": [
+      {
+        "area": "Deira",
+        "basis_record_ids": [
+          "DXB-LOC-001",
+          "DXB-COMP-001"
+        ],
+        "observed_basis": "Heritage/souk setting and listed pizza branches in Al Muraqqabat and Port Saeed; these are different parts of the district."
+      },
+      {
+        "area": "Al Barsha",
+        "basis_record_ids": [
+          "DXB-COMP-002",
+          "DXB-COMP-004"
+        ],
+        "observed_basis": "Listed pizza and Lebanese street-food restaurants in mall and Hessa Street settings; the latter advertises late delivery."
+      },
+      {
+        "area": "Dubai Marina",
+        "basis_record_ids": [
+          "DXB-COMP-003",
+          "DXB-COMP-006"
+        ],
+        "observed_basis": "Listed pizza branch near a metro station and a restaurant at a residential hotel with extended advertised hours. JBR records are nearby comparisons, not the same catchment."
+      }
+    ],
+    "abu_dhabi": [
+      {
+        "area": "Al Zahiyah",
+        "basis_record_ids": [
+          "AUH-LOC-001",
+          "AUH-COMP-001"
+        ],
+        "observed_basis": "Tourism guide describes restaurants, parks, and nearby landmarks; a pizza branch is listed at Abu Dhabi Mall."
+      },
+      {
+        "area": "Khalidiya",
+        "basis_record_ids": [
+          "AUH-LOC-002",
+          "AUH-COMP-002"
+        ],
+        "observed_basis": "Mall dining and leisure facilities near the Corniche, plus a listed pizza branch in Al Khalidiyah; district boundaries and exact units need site review."
+      },
+      {
+        "area": "Al Wahda / Al Manhal",
+        "basis_record_ids": [
+          "AUH-LOC-003",
+          "AUH-COMP-003"
+        ],
+        "observed_basis": "Retail, hypermarket, and dining anchor; branch directory places Al Wahda Mall in Al Manhal."
+      }
+    ]
+  },
+  "candidate_area_limit": "Investigation shortlist only. No area has a verified vacant unit, rent, customer profile, footfall, delivery catchment, or expected order count. Mall observations do not describe all surrounding streets.",
+  "competitor_examples": {
+    "dubai": [
+      {
+        "brand": "Papa Johns",
+        "category": "Pizza chain",
+        "record_ids": [
+          "DXB-COMP-001",
+          "DXB-COMP-002",
+          "DXB-COMP-003",
+          "UAE-PRICE-001"
+        ]
+      },
+      {
+        "brand": "Allo Beirut",
+        "category": "Lebanese street food, shawarma, grills, sandwiches, and pizza",
+        "record_ids": [
+          "DXB-COMP-004",
+          "DXB-COMP-005",
+          "DXB-PRICE-001"
+        ]
+      },
+      {
+        "brand": "Operation Falafel",
+        "category": "Middle Eastern street food",
+        "record_ids": [
+          "DXB-COMP-007"
+        ]
+      },
+      {
+        "brand": "Zaroob",
+        "category": "Restaurant with extended hours; detailed menu not curated",
+        "record_ids": [
+          "DXB-COMP-006",
+          "DXB-OPS-001"
+        ]
+      }
+    ],
+    "abu_dhabi": [
+      {
+        "brand": "Papa Johns",
+        "category": "Pizza chain",
+        "record_ids": [
+          "AUH-COMP-001",
+          "AUH-COMP-002",
+          "AUH-COMP-003",
+          "UAE-PRICE-001"
+        ]
+      },
+      {
+        "brand": "Allo Beirut",
+        "category": "Lebanese shawarma, grilled sandwiches, and manakish",
+        "record_ids": [
+          "AUH-COMP-004",
+          "AUH-COMP-005",
+          "AUH-PRICE-001",
+          "AUH-PRICE-003"
+        ]
+      },
+      {
+        "brand": "Operation Falafel",
+        "category": "Arabic/Lebanese sandwiches, shawarma, and falafel",
+        "record_ids": [
+          "AUH-COMP-006",
+          "AUH-COMP-007"
+        ],
+        "limit": "Khalifa branch platform heading only; airport concession has restricted airside access and is not a street-site pricing benchmark."
+      }
+    ]
+  },
+  "price_comparison_limits": [
+    "Sized national Papa Johns pizzas can support comparison by diameter. Allo Beirut pizza diameters are unspecified; its prices are not size-equivalent.",
+    "Shawarma, grilled tawouk sandwiches, falafel, manakish, and meal bundles are distinct products. Their prices must not be combined into one like-for-like average.",
+    "Dubai JBR and Abu Dhabi Khalifa City are specific branches on Deliveroo; their prices do not establish city averages or dine-in prices.",
+    "Several prices come from the same brands. They establish observed examples, not the distribution of independent neighborhood competitor prices."
+  ],
+  "known_gaps": [
+    {
+      "topics": [
+        "locations"
+      ],
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "missing": [
+        "Unit-level rents and deposits",
+        "Service charges and fit-out costs",
+        "Lease/use approvals and kitchen extraction",
+        "Pedestrian counts by daypart",
+        "Resident/worker/tourist customer mix",
+        "Parking and rider pickup at exact units"
+      ],
+      "next_research": "Obtain dated unit quotes, inspect premises, and count access/footfall at candidate sites."
+    },
+    {
+      "topics": [
+        "competitors",
+        "menu",
+        "pricing"
+      ],
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "missing": [
+        "Broader independent kebab and pizza competitor sample",
+        "Verified portion weights and pizza diameters on delivery menus",
+        "Dine-in/takeaway versus delivery price comparison",
+        "Current checkout VAT, fees, add-ons, stock, and promotions",
+        "Competitor sales and market share"
+      ],
+      "next_research": "Check local branch menus and matched portions/channels; do not infer city averages from these examples."
+    },
+    {
+      "topics": [
+        "marketing"
+      ],
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "missing": [
+        "City-specific target customer research",
+        "Local campaign cost and customer acquisition cost",
+        "Repeat purchase and conversion measurements",
+        "Current neighborhood event dates and activation permission",
+        "Ramadan and seasonal ordering patterns"
+      ],
+      "next_research": "Confirm local calendars, run small measured campaigns, and interview prospective customers. Historical event totals are context only."
+    },
+    {
+      "topics": [
+        "delivery"
+      ],
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "missing": [
+        "Signed merchant commission and fee quotes",
+        "Promotion funding and payment settlement terms",
+        "Own-rider wages, vehicles, insurance, and permits",
+        "Actual address eligibility and usable radius",
+        "Travel times, packaging quality, and refund rates"
+      ],
+      "next_research": "Request merchant terms and test deliveries from exact sites; no commission percentage or profitable radius is assumed."
+    },
+    {
+      "topics": [
+        "operations"
+      ],
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "missing": [
+        "Staff wages and hiring/visa/onboarding costs",
+        "Peak-hour staffing and kitchen capacity",
+        "Current activity-specific licensing and food safety amendments",
+        "Waste, utilities, and preparation time",
+        "Training provider prices"
+      ],
+      "next_research": "Confirm current requirements with the responsible authority and measure a proposed kitchen workflow. Dubai PDFs are dated 2023 and already need review."
+    },
+    {
+      "topics": [
+        "suppliers"
+      ],
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "missing": [
+        "Second independent supplier and backup sources",
+        "Beef/lamb/chicken cut and fat specifications",
+        "Pizza cheese performance and flour specifications",
+        "Halal and allergen documents",
+        "Samples, actual stock, cold-chain compliance, and rejection policy",
+        "Quotes, minimum orders, credit terms, lead times, and capacity"
+      ],
+      "next_research": "Bidfood is an initial example only. Obtain specifications, samples, and written terms from multiple suppliers; listed centres do not prove suitability."
+    },
+    {
+      "topics": [
+        "locations",
+        "competitors",
+        "menu",
+        "pricing",
+        "marketing",
+        "delivery",
+        "operations",
+        "suppliers"
+      ],
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "missing": [
+        "The restaurant own recipes, costs, proposed format, budget, target customers, and delivery mix",
+        "Reliable site-level order demand forecast"
+      ],
+      "next_research": "Gather business inputs and pilot evidence before calculating feasible prices, staffing, or profitability."
+    }
+  ],
+  "manually_compared_samples": [
+    {
+      "record_ids": [
+        "UAE-PRICE-001",
+        "UAE-MENU-001"
+      ],
+      "checked": "Compared item headings, AED values, and 8/10/13-inch sizes against the restaurant-owned menu."
+    },
+    {
+      "record_ids": [
+        "DXB-PRICE-001",
+        "DXB-PRICE-002"
+      ],
+      "checked": "Compared JBR pizza and falafel labels and prices against the branch Deliveroo menu; missing sizes retained."
+    },
+    {
+      "record_ids": [
+        "AUH-PRICE-001",
+        "AUH-PRICE-002",
+        "AUH-PRICE-003",
+        "AUH-MENU-001"
+      ],
+      "checked": "Compared Khalifa City shawarma sizes, tawouk sandwiches, and manakish against the displayed branch menu."
+    },
+    {
+      "record_ids": [
+        "AUH-COMP-003",
+        "AUH-COMP-004"
+      ],
+      "checked": "Compared Al Manhal and Al Danah branch addresses against official directories; neither was relabelled as Al Zahiyah."
+    },
+    {
+      "record_ids": [
+        "DXB-OPS-002",
+        "DXB-OPS-003",
+        "DXB-DEL-001",
+        "DXB-DEL-002"
+      ],
+      "checked": "Compared PDF introduction, PIC responsibilities, temperature-control clauses, and delivery container clauses; preserved issue date and Dubai scope."
+    },
+    {
+      "record_ids": [
+        "AUH-OPS-001",
+        "AUH-OPS-002"
+      ],
+      "checked": "Compared EFST modules and self-inspection documentation against ADAFSA programme text."
+    },
+    {
+      "record_ids": [
+        "UAE-SUP-001",
+        "DXB-SUP-001",
+        "AUH-SUP-001"
+      ],
+      "checked": "Compared supplier embedded catalogue labels and visible city distribution-centre addresses; did not infer stock or certification."
+    },
+    {
+      "record_ids": [
+        "AUH-COMP-007"
+      ],
+      "checked": "Compared airport airside location and hours; excluded it as a neighborhood price benchmark."
+    }
+  ]
+}

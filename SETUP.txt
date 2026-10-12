@@ -95,10 +95,15 @@ Dependencies
 Current limitations
   Conversation, an initial calculator, and typed answers are implemented.
   The evidence loader and local retrieval are implemented. The production
-  dataset is empty; synthetic records live only in tests/fixtures/.
+  dataset contains 48 manually researched observations from 22 sources,
+  inspected on 2026-10-13, covering all eight topics in both cities.
+  data/research_coverage.json records coverage, candidate areas, competitor
+  examples, comparison limits, and remaining research gaps. Counts indicate
+  initial coverage, not a complete market study. Synthetic records live only
+  in tests/fixtures/.
   The local lookup is not yet registered as an agent tool. Schema checks
   validate source metadata; they do not inspect or verify the source itself.
-  Researched market data, agent evidence/search tools, citation validation, durable business profiles,
+  Agent evidence/search tools, citation validation, durable business profiles,
   session resume, exports, and executive evaluations are not implemented yet.
   Delivery mix, commission sensitivity, fixed costs, margins, and break-even
   are not implemented. The current final-answer schema has no evidence sections.
@@ -109,6 +114,17 @@ Current limitations
   Local storage alone does not give the model unlimited memory. Failed or
   cancelled runs may be saved for diagnostics; Agno omits them from history.
   Requests use OpenRouter credits. No OpenAI API key is required.
+
+Research maintenance
+  Update source observations only after inspecting the actual source page.
+  Keep published_on null when no publication date is shown; checked_on is
+  the inspection date. Preserve branch, portion, channel, and price qualifiers.
+  Recheck menus and branch listings before decisions. The dated Dubai safety
+  PDFs and historical Abu Dhabi event report already carry review flags;
+  inspection does not turn older material into a current measurement.
+  Rent, footfall, demand, wages, commissions, and supplier quotes are gaps,
+  not verified numbers. Supplier coverage currently has one company example.
+  Update research_coverage.json alongside the dataset when coverage changes.
 
 Offline checks
   uv run pytest -q
