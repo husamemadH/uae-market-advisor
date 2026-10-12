@@ -1,12 +1,12 @@
 {
-  "checked_on": "2026-10-13",
+  "checked_on": "2026-10-12",
   "dataset": "market_evidence.json",
   "record_count": 48,
   "source_count": 22,
   "scope": "Initial, manually curated research for a Jordanian pizza and kebab concept considering Dubai and Abu Dhabi. Coverage counts describe available observations, not a completed market study.",
   "methodology": [
     "Search results were used to discover leads; records were written from inspected source pages or linked official PDFs. Factual observations are paraphrases, not recommendations.",
-    "Undated pages retain published_on=null. checked_on records inspection, not publication. Copyright years and site-wide update dates are not treated as publication dates.",
+    "Undated pages retain published_on=null. checked_on is the UTC calendar date of inspection, not publication. Copyright years and site-wide update dates are not treated as publication dates.",
     "Both-city tags on UAE menus, merchant services, and distribution claims indicate shared applicability; they do not establish identical customer behavior or site-specific availability.",
     "Prices preserve menu item, displayed portion, branch or national menu, and ordering channel. No completed checkout was made and tax treatment, extras, and delivery fees were not verified.",
     "Dynamic delivery menus can change within an inspection. An Al Najda menu exposed different subsets, so the Abu Dhabi sandwich records use the inspected Khalifa City menu. Availability must be checked again.",
@@ -534,5 +534,6 @@
       ],
       "checked": "Compared airport airside location and hours; excluded it as a neighborhood price benchmark."
     }
-  ]
+  ],
+  "inspection_timezone": "UTC"
 }

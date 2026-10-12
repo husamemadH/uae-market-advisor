@@ -11,6 +11,9 @@ from evidence import City, Topic, DEFAULT_EVIDENCE_FILE, MAX_PAYLOAD_CHARACTERS,
 
 
 ON_DATE = date(2026, 10, 12)
+# Validate the checked-in research snapshot at its inspection date, regardless
+# of the test runner's timezone or the date on which tests are rerun.
+RESEARCH_ON_DATE = date(2026, 10, 12)
 FIXTURE_FILE = Path(__file__).parent / "fixtures" / "synthetic_evidence.json"
 
 
@@ -24,23 +27,26 @@ def store():
     return EvidenceStore.load(FIXTURE_FILE, on_date=ON_DATE)
 
 
+@pytest.fixture
+def research_store():
+    return EvidenceStore.load(DEFAULT_EVIDENCE_FILE, on_date=RESEARCH_ON_DATE)
+
+
 def load_records(tmp_path, records):
     path = tmp_path / "evidence.json"
     path.write_text(json.dumps(records), encoding="utf-8")
     return EvidenceStore.load(path, on_date=ON_DATE)
 
 
-def test_production_dataset_does_not_load_test_fixtures(records):
-    store = EvidenceStore.load(DEFAULT_EVIDENCE_FILE)
+def test_production_dataset_does_not_load_test_fixtures(records, research_store):
     fixture_ids = {record["id"] for record in records}
-    assert not fixture_ids.intersection(record.id for record in store.records)
+    assert not fixture_ids.intersection(record.id for record in research_store.records)
 
 
-def test_production_research_is_retrievable_for_each_city_and_topic():
-    store = EvidenceStore.load(DEFAULT_EVIDENCE_FILE)
+def test_production_research_is_retrievable_for_each_city_and_topic(research_store):
     for city in get_args(City):
         for topic in get_args(Topic):
-            result = store.lookup_market_evidence([city], [topic])
+            result = research_store.lookup_market_evidence([city], [topic])
             assert result.status == "ok", (city, topic)
             assert result.data.matched_count >= 2, (city, topic)
             assert result.data.records, (city, topic)
@@ -51,16 +57,16 @@ def test_production_research_is_retrievable_for_each_city_and_topic():
                 assert record.source_url.host != "example.invalid"
 
 
-def test_research_coverage_summary_matches_dataset_and_references():
-    store = EvidenceStore.load(DEFAULT_EVIDENCE_FILE)
+def test_research_coverage_summary_matches_dataset_and_references(research_store):
     report = json.loads(DEFAULT_EVIDENCE_FILE.with_name("research_coverage.json").read_text(encoding="utf-8"))
-    by_id = {record.id: record for record in store.records}
+    by_id = {record.id: record for record in research_store.records}
+    assert date.fromisoformat(report["checked_on"]) == RESEARCH_ON_DATE
     assert report["record_count"] == len(by_id)
-    assert report["source_count"] == len({str(record.source_url) for record in store.records})
+    assert report["source_count"] == len({str(record.source_url) for record in research_store.records})
     for city in get_args(City):
         assert set(report["coverage"][city]) == set(get_args(Topic))
         for topic, coverage in report["coverage"][city].items():
-            expected = {record.id for record in store.records if city in record.cities and topic in record.topics}
+            expected = {record.id for record in research_store.records if city in record.cities and topic in record.topics}
             assert coverage["count"] == len(expected)
             assert set(coverage["record_ids"]) == expected
         for group, reference_key in [("candidate_areas", "basis_record_ids"), ("competitor_examples", "record_ids")]:

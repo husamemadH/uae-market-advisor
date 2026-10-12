@@ -96,7 +96,7 @@ Current limitations
   Conversation, an initial calculator, and typed answers are implemented.
   The evidence loader and local retrieval are implemented. The production
   dataset contains 48 manually researched observations from 22 sources,
-  inspected on 2026-10-13, covering all eight topics in both cities.
+  inspected on 2026-10-12 UTC, covering all eight topics in both cities.
   data/research_coverage.json records coverage, candidate areas, competitor
   examples, comparison limits, and remaining research gaps. Counts indicate
   initial coverage, not a complete market study. Synthetic records live only
@@ -118,7 +118,7 @@ Current limitations
 Research maintenance
   Update source observations only after inspecting the actual source page.
   Keep published_on null when no publication date is shown; checked_on is
-  the inspection date. Preserve branch, portion, channel, and price qualifiers.
+  the UTC inspection date. Preserve branch, portion, channel, and price qualifiers.
   Recheck menus and branch listings before decisions. The dated Dubai safety
   PDFs and historical Abu Dhabi event report already carry review flags;
   inspection does not turn older material into a current measurement.
