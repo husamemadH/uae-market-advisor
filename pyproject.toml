@@ -1,0 +1,10 @@
+[project]
+name = "uae-market-advisor"
+version = "0.1.0"
+description = "An Agno advisor for a Jordanian restaurant expanding into the UAE"
+requires-python = ">=3.12"
+dependencies = [
+    "agno>=3.1.3",
+    "openai>=3.29.0",
+    "python-dotenv>=1.2.4",
+]

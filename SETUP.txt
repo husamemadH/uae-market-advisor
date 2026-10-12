@@ -1,0 +1,42 @@
+UAE Market Expansion Advisor
+
+Requirements
+  Python 3.12 and uv.
+  An OpenRouter API key with access to deepseek/deepseek-v4.1-flash and
+  sufficient credits. Get a key at https://openrouter.ai/settings/keys.
+
+Setup (run inside this project directory)
+  uv sync --locked
+  cp .env.example .env
+  Edit .env and set OPENROUTER_API_KEY to your key.
+
+Run
+  uv run python app.py
+
+Current behavior
+  Sends one fixed question through Agno to DeepSeek V4.1 Flash on OpenRouter
+  and prints the answer in the terminal. A missing key exits before making
+  a model request. Existing environment variables take precedence over .env.
+  Model requests have a 45-second timeout, a 4,096-token completion limit,
+  and no automatic client retries. Provider errors exit with a short message.
+
+How the code works
+  load_dotenv loads the local API key.
+  OpenRouter configures the gateway, exact model ID, token limit, and timeout.
+  Agent defines the restaurant context and instructions.
+  print_response submits the question and renders the answer.
+
+Dependencies
+  agno: agent framework.
+  openai: API client used by Agno's OpenRouter adapter.
+  python-dotenv: local environment configuration.
+  uv.lock pins the resolved dependency versions for reproducible installation.
+
+Current limitations
+  This establishes the model connection. Researched market data, tools,
+  conversation history, and evaluations will be added as implementation grows.
+  Requests use OpenRouter credits. No OpenAI API key is required.
+
+References
+  https://docs.agno.com/models/providers/gateways/openrouter/overview
+  https://openrouter.ai/deepseek/deepseek-v4.1-flash
