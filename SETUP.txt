@@ -13,31 +13,68 @@ Setup (run inside this project directory)
 Run
   uv run python app.py
 
+Commands
+  /help  Show supported questions and commands.
+  /new   Start a fresh conversation with no previous chat context.
+  /quit  Exit. Ctrl+D or Ctrl+C at the prompt also exits.
+  Ctrl+C during a request cancels it and returns to the prompt.
+
+Example conversation
+  We are considering a takeaway branch in Dubai. What information do you need?
+  How would those questions change for Abu Dhabi?
+  /new
+
 Current behavior
-  Sends one fixed question through Agno to DeepSeek V4.1 Flash on OpenRouter
-  and prints the answer in the terminal. A missing key exits before making
-  a model request. Existing environment variables take precedence over .env.
+  Interactive terminal chat through Agno and DeepSeek V4.1 Flash on OpenRouter.
+  Each launch and /new creates a UUID session. Chats persist locally in
+  runtime/sessions.db, which Git ignores. /new keeps stored chats but starts
+  with empty context. Agno includes the three most recent completed turns
+  from the same session in each request; older stored history is not sent.
+  A missing key exits before making a model request. Existing environment
+  variables take precedence over .env. Blank input and commands make no
+  model request. Questions over 8,000 characters are rejected locally.
+  A progress indicator appears while waiting; only completed answers are
+  displayed, with Markdown formatting and without raw model reasoning.
   Model requests have a 45-second timeout, a 4,096-token completion limit,
-  and no automatic client retries. Provider errors exit with an HTTP status
-  and guidance for authentication (401), credits (402), or rate limits (429).
+  and no automatic client or agent retries. Failed and cancelled runs return
+  to the prompt. Agno may log provider diagnostics and return an error status;
+  the CLI then shows a general failure message instead of an answer. Raised
+  provider exceptions receive HTTP-specific guidance.
 
 How the code works
   load_dotenv loads the local API key.
   OpenRouter configures the gateway, exact model ID, token limit, and timeout.
-  Agent defines the restaurant context and instructions.
-  print_response submits the question and renders the answer.
+  advisor.py creates the Agent, configures SqliteDb and history, and exposes
+  answer_question(question, session_id, agent) as the shared service boundary.
+  app.py handles input and commands, checks run status, and renders answers.
+  Agent.run submits a turn and lets Agno manage context and persistence.
 
 Dependencies
   agno: agent framework.
   openai: API client used by Agno's OpenRouter adapter.
   python-dotenv: local environment configuration.
+  sqlalchemy: required by Agno's SQLite adapter.
+  rich: terminal Markdown and progress rendering.
+  pytest: development dependency for offline checks.
   uv.lock pins the resolved dependency versions for reproducible installation.
+  The SQLAlchemy asyncio extra supplies greenlet because Agno's SQLite module
+  imports both adapters, even though this application uses synchronous calls.
 
 Current limitations
-  This establishes the model connection. Researched market data, tools,
-  conversation history, and evaluations will be added as implementation grows.
+  Milestone 02: conversation and bounded history, not researched advice.
+  Researched market data, tools, source validation, durable business profiles,
+  session resume, exports, and executive evaluations are not implemented yet.
+  Local storage alone does not give the model unlimited memory. Failed or
+  cancelled runs may be saved for diagnostics; Agno omits them from history.
   Requests use OpenRouter credits. No OpenAI API key is required.
+
+Offline checks
+  uv run pytest -q
+  Tests mock inference and use temporary SQLite files. No API credits needed.
+  docs/MILESTONE_02.txt records the offline and live history checks.
 
 References
   https://docs.agno.com/models/providers/gateways/openrouter/overview
   https://openrouter.ai/deepseek/deepseek-v4.1-flash
+  https://docs.agno.com/database/chat-history
+  https://docs.agno.com/database/providers/sqlite/overview

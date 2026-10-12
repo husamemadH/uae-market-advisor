@@ -1,18 +1,92 @@
 import os
 import sys
-from pathlib import Path
+from uuid import uuid4
 
 from agno.agent import Agent
 from agno.exceptions import ModelProviderError
-from agno.models.openrouter import OpenRouter
+from agno.run import RunStatus
 from dotenv import load_dotenv
+from rich.console import Console
+from rich.markdown import Markdown
+
+from advisor import PROJECT_DIR, answer_question, create_agent
 
 
-MODEL_ID = "deepseek/deepseek-v4.1-flash"
+HELP_TEXT = """Ask about expanding our Jordanian pizza and kebab restaurant into Dubai or Abu Dhabi.
+Follow-up questions use the three most recent completed turns.
+This early version has no researched market data or tools.
+
+/help  Show this help
+/new   Start a fresh conversation; previous chats remain stored locally
+/quit  Exit
+
+Questions are limited to 8,000 characters. Ctrl+C cancels a request;
+Ctrl+C at the prompt or Ctrl+D exits."""
+
+
+def chat_loop(agent: Agent, console: Console) -> int:
+    session_id = str(uuid4())
+    console.print("UAE Market Expansion Advisor — Dubai and Abu Dhabi", markup=False)
+    console.print("Type /help for commands. No researched market data is connected yet.")
+    console.print(f"Session: {session_id}")
+
+    while True:
+        try:
+            question = console.input("\nYou> ").strip()
+        except (EOFError, KeyboardInterrupt):
+            console.print("\nGoodbye.")
+            return 0
+
+        if not question:
+            continue
+        if question == "/quit":
+            console.print("Goodbye.")
+            return 0
+        if question == "/help":
+            console.print(HELP_TEXT, markup=False)
+            continue
+        if question == "/new":
+            session_id = str(uuid4())
+            console.print(f"New conversation. Session: {session_id}")
+            continue
+        if question.startswith("/"):
+            console.print("Unknown command. Type /help for available commands.")
+            continue
+
+        try:
+            with console.status("Preparing your answer..."):
+                response = answer_question(question, session_id, agent)
+        except KeyboardInterrupt:
+            console.print("Request cancelled. You can ask another question.")
+            continue
+        except ValueError as exc:
+            console.print(str(exc), markup=False)
+            continue
+        except ModelProviderError as exc:
+            guidance = {
+                401: "Authentication failed. Check OPENROUTER_API_KEY.",
+                402: "Check your available OpenRouter credits and key spending limit.",
+                429: "Rate limit reached. Wait before retrying.",
+            }.get(exc.status_code, "Check your model access and connection.")
+            console.print(f"OpenRouter request failed (HTTP {exc.status_code}). {guidance}")
+            continue
+
+        if response.status == RunStatus.cancelled:
+            console.print("Request cancelled. You can ask another question.")
+        elif response.status != RunStatus.completed:
+            console.print(
+                "The request failed. Check your API key, credits, model access, "
+                "connection, and local session storage before trying again."
+            )
+        elif not isinstance(response.content, str) or not response.content.strip():
+            console.print("No answer was returned. You can try another question.")
+        else:
+            console.print("\nAdvisor:")
+            console.print(Markdown(response.content))
 
 
 def main() -> int:
-    load_dotenv(Path(__file__).with_name(".env"))
+    load_dotenv(PROJECT_DIR / ".env")
     api_key = os.getenv("OPENROUTER_API_KEY", "").strip()
 
     if not api_key:
@@ -22,44 +96,15 @@ def main() -> int:
         )
         return 1
 
-    agent = Agent(
-        name="UAE Market Expansion Advisor",
-        model=OpenRouter(
-            id=MODEL_ID,
-            api_key=api_key,
-            max_tokens=4096,
-            timeout=45,
-            client_params={"max_retries": 0},
-        ),
-        instructions=[
-            "You advise a Jordanian restaurant specializing in meaty pizza and kebab sandwiches.",
-            "The restaurant is considering expansion into Dubai and Abu Dhabi.",
-            "Keep answers concise and distinguish assumptions from verified facts.",
-        ],
-        markdown=True,
-    )
-
     try:
-        agent.print_response(
-            "In two sentences, explain how you would help us evaluate expansion into "
-            "Dubai and Abu Dhabi. Describe your approach without making market claims."
-        )
-    except ModelProviderError as exc:
-        guidance = {
-            401: "Authentication failed. Replace OPENROUTER_API_KEY in .env with a valid "
-            "key from https://openrouter.ai/settings/keys. Existing environment "
-            "variables take precedence over .env.",
-            402: "The request exceeds your available credits or spending limit. "
-            "Check your OpenRouter balance and key limit, or reduce max_tokens.",
-            429: "OpenRouter or the model provider rate-limited the request. "
-            "Wait before retrying and check your usage limits.",
-        }.get(exc.status_code, "Check your model access and connection.")
+        agent = create_agent(api_key)
+    except OSError:
         print(
-            f"OpenRouter request failed (HTTP {exc.status_code}). {guidance}",
+            "Could not create local session storage under runtime/.",
             file=sys.stderr,
         )
         return 1
-    return 0
+    return chat_loop(agent, Console())
 
 
 if __name__ == "__main__":
