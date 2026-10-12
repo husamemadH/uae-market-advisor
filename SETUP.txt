@@ -70,6 +70,15 @@ How the code works
   answers.py defines the small Pydantic response and its Markdown renderer.
   app.py handles input and commands and displays only completed typed answers.
   Agent.run submits a turn and lets Agno manage context and persistence.
+  evidence.py validates data/market_evidence.json at startup and provides
+  local city/topic filtering with deterministic keyword ranking. Returned
+  records retain their source metadata, qualifiers, and freshness flags.
+  Both-city lookups interleave results without duplicating shared records.
+  Lookups return up to 8 records by default (maximum 12) within an 8,000-
+  character serialized JSON result, reporting how many matches were omitted.
+  Menu, pricing, competitor, dated-offer, and business/platform location
+  records use a 30-day review window; other context uses 180 days. Publication
+  and inspection dates both affect review flags. Expired offers are flagged.
 
 Dependencies
   agno: agent framework.
@@ -85,7 +94,11 @@ Dependencies
 
 Current limitations
   Conversation, an initial calculator, and typed answers are implemented.
-  Researched market data, evidence/search tools, source validation, durable business profiles,
+  The evidence loader and local retrieval are implemented. The production
+  dataset is empty; synthetic records live only in tests/fixtures/.
+  The local lookup is not yet registered as an agent tool. Schema checks
+  validate source metadata; they do not inspect or verify the source itself.
+  Researched market data, agent evidence/search tools, citation validation, durable business profiles,
   session resume, exports, and executive evaluations are not implemented yet.
   Delivery mix, commission sensitivity, fixed costs, margins, and break-even
   are not implemented. The current final-answer schema has no evidence sections.

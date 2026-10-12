@@ -11,6 +11,7 @@ from rich.markdown import Markdown
 
 from advisor import PROJECT_DIR, answer_question, create_agent
 from answers import AdvisorAnswer, render_answer
+from evidence import DEFAULT_EVIDENCE_FILE, EvidenceDataError, EvidenceStore
 
 
 HELP_TEXT = """Ask about expanding our Jordanian pizza and kebab restaurant into Dubai or Abu Dhabi.
@@ -96,6 +97,13 @@ def main() -> int:
             "Set OPENROUTER_API_KEY in .env or your environment before running the app.",
             file=sys.stderr,
         )
+        return 1
+
+    try:
+        # Validate curated data before serving questions. Agent integration comes later.
+        EvidenceStore.load(DEFAULT_EVIDENCE_FILE)
+    except EvidenceDataError as exc:
+        print(str(exc), file=sys.stderr)
         return 1
 
     try:
