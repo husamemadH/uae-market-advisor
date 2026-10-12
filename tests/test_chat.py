@@ -12,13 +12,18 @@ from rich.console import Console
 
 import app
 from advisor import MAX_INPUT_LENGTH, answer_question, create_agent
+from answers import AdvisorAnswer
+
+
+def typed_answer(text):
+    return AdvisorAnswer(answer=text, assumptions=[], next_steps=[], questions=[])
 
 
 def run_cli(monkeypatch, inputs, answer=None):
     console = Console(file=StringIO(), color_system=None, width=100)
     monkeypatch.setattr(console, "input", Mock(side_effect=inputs))
     responder = Mock(
-        return_value=answer or RunOutput(status=RunStatus.completed, content="A completed answer.")
+        return_value=answer or RunOutput(status=RunStatus.completed, content=typed_answer("A completed answer."))
     )
     monkeypatch.setattr(app, "answer_question", responder)
     assert app.chat_loop(Mock(), console) == 0
@@ -65,7 +70,7 @@ def test_incomplete_runs_are_not_displayed_as_answers(monkeypatch, status):
 def test_request_interrupt_returns_to_prompt(monkeypatch):
     console = Console(file=StringIO(), color_system=None)
     monkeypatch.setattr(console, "input", Mock(side_effect=["Question", "Another question", "/quit"]))
-    responder = Mock(side_effect=[KeyboardInterrupt(), RunOutput(status=RunStatus.completed, content="Recovered.")])
+    responder = Mock(side_effect=[KeyboardInterrupt(), RunOutput(status=RunStatus.completed, content=typed_answer("Recovered."))])
     monkeypatch.setattr(app, "answer_question", responder)
     assert app.chat_loop(Mock(), console) == 0
     assert responder.call_args_list[0].args[1] == responder.call_args_list[1].args[1]
@@ -96,7 +101,7 @@ def test_sqlite_history_survives_agent_recreation_and_stays_bounded(tmp_path, mo
 
     def respond(self, messages, **kwargs):
         contexts.append([(message.role, message.content) for message in messages])
-        content = "Acknowledged."
+        content = typed_answer("Acknowledged.").model_dump_json()
         messages.append(Message(role="assistant", content=content))
         return ModelResponse(role="assistant", content=content)
 

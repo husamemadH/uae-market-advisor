@@ -10,11 +10,13 @@ from rich.console import Console
 from rich.markdown import Markdown
 
 from advisor import PROJECT_DIR, answer_question, create_agent
+from answers import AdvisorAnswer, render_answer
 
 
 HELP_TEXT = """Ask about expanding our Jordanian pizza and kebab restaurant into Dubai or Abu Dhabi.
 Follow-up questions use the three most recent completed turns.
-This early version has no researched market data or tools.
+This early version can calculate contribution per order from supplied inputs.
+No researched market data is connected yet.
 
 /help  Show this help
 /new   Start a fresh conversation; previous chats remain stored locally
@@ -78,11 +80,11 @@ def chat_loop(agent: Agent, console: Console) -> int:
                 "The request failed. Check your API key, credits, model access, "
                 "connection, and local session storage before trying again."
             )
-        elif not isinstance(response.content, str) or not response.content.strip():
-            console.print("No answer was returned. You can try another question.")
+        elif not isinstance(response.content, AdvisorAnswer):
+            console.print("The answer could not be validated. Please try again.")
         else:
             console.print("\nAdvisor:")
-            console.print(Markdown(response.content))
+            console.print(Markdown(render_answer(response.content)))
 
 
 def main() -> int:

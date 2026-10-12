@@ -23,6 +23,9 @@ Example conversation
   We are considering a takeaway branch in Dubai. What information do you need?
   How would those questions change for Abu Dhabi?
   /new
+  Using hypothetical inputs: revenue 40 AED per order, food cost 12,
+  packaging 2, and other variable costs 1, calculate contribution per order.
+  Keep those costs and change revenue to 42 AED. Calculate again.
 
 Current behavior
   Interactive terminal chat through Agno and DeepSeek V4.1 Flash on OpenRouter.
@@ -35,6 +38,19 @@ Current behavior
   model request. Questions over 8,000 characters are rejected locally.
   A progress indicator appears while waiting; only completed answers are
   displayed, with Markdown formatting and without raw model reasoning.
+  One typed Python tool calculates contribution per order using decimal
+  arithmetic. Revenue, food, packaging, and other variable costs are all
+  required; use explicit zero where appropriate. All inputs are scenario
+  assumptions, not researched figures. The result includes the inputs,
+  formula, contribution, and warnings for nonpositive contribution.
+  Agno requests a native JSON schema and parses final output into a small
+  AdvisorAnswer object: answer, assumptions, next_steps, and questions.
+  The service rejects completed output that is not that expected type.
+  OpenRouter receives provider.require_parameters=true through extra_body,
+  so routing requires support for our requested parameters. Only the selected
+  model is requested; no cross-model fallback is configured. Morph is the
+  preferred provider after a successful inspected native-schema/tool turn;
+  compatible same-model provider fallback remains enabled.
   Model requests have a 45-second timeout, a 4,096-token completion limit,
   and no automatic client or agent retries. Failed and cancelled runs return
   to the prompt. Agno may log provider diagnostics and return an error status;
@@ -46,7 +62,13 @@ How the code works
   OpenRouter configures the gateway, exact model ID, token limit, and timeout.
   advisor.py creates the Agent, configures SqliteDb and history, and exposes
   answer_question(question, session_id, agent) as the shared service boundary.
-  app.py handles input and commands, checks run status, and renders answers.
+  economics.py defines calculate_unit_economics. Agno converts its typed
+  parameters and docstring into the tool schema; the model requests a call,
+  Agno executes the Python function, then sends its result back to the model.
+  A user turn can therefore make multiple paid model requests. Tool execution
+  is bounded to six calls per turn. The function makes no model requests.
+  answers.py defines the small Pydantic response and its Markdown renderer.
+  app.py handles input and commands and displays only completed typed answers.
   Agent.run submits a turn and lets Agno manage context and persistence.
 
 Dependencies
@@ -55,15 +77,22 @@ Dependencies
   python-dotenv: local environment configuration.
   sqlalchemy: required by Agno's SQLite adapter.
   rich: terminal Markdown and progress rendering.
+  pydantic: explicitly declared dependency for typed final answers.
   pytest: development dependency for offline checks.
   uv.lock pins the resolved dependency versions for reproducible installation.
   The SQLAlchemy asyncio extra supplies greenlet because Agno's SQLite module
   imports both adapters, even though this application uses synchronous calls.
 
 Current limitations
-  Milestone 02: conversation and bounded history, not researched advice.
-  Researched market data, tools, source validation, durable business profiles,
+  Conversation, an initial calculator, and typed answers are implemented.
+  Researched market data, evidence/search tools, source validation, durable business profiles,
   session resume, exports, and executive evaluations are not implemented yet.
+  Delivery mix, commission sensitivity, fixed costs, margins, and break-even
+  are not implemented. The current final-answer schema has no evidence sections.
+  Schema validation checks structure, not factual truth or whether a model's
+  explanation correctly reflects a tool result. No answer-repair call or
+  separate parser model is used. Native schema failures are not silently
+  replaced with another model or an unvalidated plain-text answer.
   Local storage alone does not give the model unlimited memory. Failed or
   cancelled runs may be saved for diagnostics; Agno omits them from history.
   Requests use OpenRouter credits. No OpenAI API key is required.
@@ -71,10 +100,11 @@ Current limitations
 Offline checks
   uv run pytest -q
   Tests mock inference and use temporary SQLite files. No API credits needed.
-  docs/MILESTONE_02.txt records the offline and live history checks.
 
 References
   https://docs.agno.com/models/providers/gateways/openrouter/overview
   https://openrouter.ai/deepseek/deepseek-v4.1-flash
   https://docs.agno.com/database/chat-history
   https://docs.agno.com/database/providers/sqlite/overview
+  https://docs.agno.com/input-output/structured-output/agent
+  https://openrouter.ai/docs/guides/routing/provider-selection
