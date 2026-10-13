@@ -12,7 +12,6 @@ from openai import OpenAI
 
 import web_search
 from advisor import answer_question, answer_sources, create_agent, export_answer, last_answer
-from answers import AnswerValidationError
 from evidence import EvidenceStore
 from settings import Settings
 from web_search import SearchRecord
@@ -163,9 +162,10 @@ def test_real_agno_search_loop_persists_sources_and_falls_back_to_curated_eviden
         if mode == "ok":
             assert isinstance(result.sources[returned["search_id"]], SearchRecord)
             assert "search snippet; page not inspected" in result.markdown
-            with pytest.raises(AnswerValidationError) as error:
-                answer_question("Reuse previous search citation", session_id, agent)
-            assert error.value.category == "unretrieved_evidence"
+            failed = answer_question("Reuse previous search citation", session_id, agent)
+            assert failed.error_category == "validation"
+            assert failed.record.validation_errors == ["unretrieved_evidence"]
+            assert failed.content is None
         else:
             assert returned["search"]["status"] == "unavailable"
             assert result.warnings

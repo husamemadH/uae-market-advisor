@@ -12,6 +12,7 @@ from pydantic import ValidationError
 
 from advisor import answer_question, create_agent, export_answer, last_answer
 from answers import AdvisorAnswer, AnswerSection, Statement, render_answer
+from observability import RunLog
 from sessions import SessionStore
 from turn_tools import TurnRegistry
 
@@ -101,8 +102,16 @@ def test_actual_agno_tool_loop_with_native_schema_and_reasoning_metadata(
                 "object": "chat.completion",
                 "created": 0,
                 "model": "deepseek/deepseek-v4.1-flash",
+                "provider": "fixture-provider",
                 "choices": [{"index": 0, "message": message, "finish_reason": finish_reason}],
-                "usage": {"prompt_tokens": 1, "completion_tokens": 1, "total_tokens": 2},
+                "usage": {
+                    "prompt_tokens": 11 if len(requests) == 1 else 17,
+                    "completion_tokens": 3 if len(requests) == 1 else 5,
+                    "total_tokens": 14 if len(requests) == 1 else 22,
+                    "completion_tokens_details": {"reasoning_tokens": 1},
+                    "prompt_tokens_details": {"cached_tokens": 2},
+                    "cost": 0.001 if len(requests) == 1 else 0.002,
+                },
             },
         )
 
@@ -124,6 +133,21 @@ def test_actual_agno_tool_loop_with_native_schema_and_reasoning_metadata(
     assert f"{contribution} AED" in result.content.sections[0].items[0].text
     assert f"| Contribution per order | {contribution}.00 | AED/order |" in result.markdown
     assert len(requests) == 2
+    assert result.usage.model_requests == 2
+    assert result.usage.input_tokens == 28
+    assert result.usage.output_tokens == 8
+    assert result.usage.reasoning_tokens == 2
+    assert result.usage.cached_tokens == 4
+    assert result.usage.reported_cost_usd == Decimal("0.003")
+    assert result.usage.usage_complete
+    assert result.record.provider_if_available == ["fixture-provider"]
+    assert result.record.tool_events[0].name == "calculate_unit_economics"
+    assert result.record.tool_events[0].result_count == 1
+    assert result.record.tool_events[0].duration_ms >= 0
+    records, unreadable = RunLog(tmp_path / "runs.jsonl").records(session_id)
+    assert unreadable == 0
+    assert records == [result.record]
+    assert "Fixture reasoning" not in (tmp_path / "runs.jsonl").read_text()
     for request in requests:
         assert request["provider"]["require_parameters"] is True
         assert request["provider"]["order"] == ["Morph"]
@@ -185,8 +209,10 @@ def test_actual_agno_tool_loop_with_native_schema_and_reasoning_metadata(
 def test_service_rejects_completed_untyped_content(content):
     agent = Mock()
     agent.run.return_value = RunOutput(status=RunStatus.completed, content=content)
-    with pytest.raises(ValueError, match="could not be validated"):
-        answer_question("Question", str(uuid4()), agent)
+    result = answer_question("Question", str(uuid4()), agent)
+    assert result.error_category == "validation"
+    assert result.content is None
+    assert result.markdown == ""
 
 
 def test_answer_schema_rejects_empty_headline_and_extra_fields():

@@ -18,9 +18,11 @@ from advisor import (
     create_agent,
     export_answer,
     last_answer,
+    session_usage,
 )
 from answers import AdvisorAnswer
 from evidence import DEFAULT_EVIDENCE_FILE, EvidenceDataError, EvidenceStore
+from observability import RunLogError
 from profiles import render_profile
 from sessions import SessionStorageError, SessionStore
 from settings import Settings
@@ -39,6 +41,7 @@ Set ADVISOR_SEARCH_ENABLED=false to use curated evidence without live search.
 /new   Reset profile, history, and last answer; previous sessions remain stored
 /sources  Show sources cited by the latest validated answer in this session
 /export  Save that answer, sources, assumptions, and calculations as Markdown
+/usage  Show recorded model usage and USD cost for this session
 /quit  Exit
 
 Fields: startup_budget_aed (positive), monthly_rent_budget_aed (zero or positive),
@@ -107,6 +110,8 @@ def chat_loop(
                 elif command == "/unset" and len(arguments) == 1:
                     sessions.update_profile(session_id, arguments[0], None)
                     console.print(f"{arguments[0]} is now unknown.", markup=False)
+                elif command == "/usage" and not arguments:
+                    console.print(session_usage(session_id, agent), markup=False)
                 elif command in {"/sources", "/export"} and not arguments:
                     result = last_answer(session_id, agent)
                     if result is None:
@@ -120,7 +125,7 @@ def chat_loop(
                     console.print(
                         "Unknown command or arguments. Type /help for available commands."
                     )
-            except (ValueError, SessionStorageError) as exc:
+            except (ValueError, SessionStorageError, RunLogError) as exc:
                 console.print(str(exc), markup=False)
             except OSError:
                 console.print("Could not write the answer export. Check runtime/exports/.")
@@ -148,14 +153,20 @@ def chat_loop(
             console.print("Request cancelled. You can ask another question.")
         elif response.status != RunStatus.completed:
             console.print(
-                "The request failed. Check your API key, credits, model access, "
-                "connection, and local session storage before trying again."
+                getattr(response, "error_message", None) or "The request failed. Please try again.",
+                markup=False,
             )
         elif not isinstance(response.content, AdvisorAnswer):
             console.print("The answer could not be validated. Please try again.")
         else:
             console.print("\nAdvisor:")
             console.print(Markdown(response.markdown))
+        if response.run_id:
+            console.print(f"Run: {response.run_id}", markup=False)
+        for warning in getattr(response, "warnings", []):
+            # Tool warnings already appear in the rendered answer. Operational warnings do not.
+            if response.status != RunStatus.completed or warning not in response.markdown:
+                console.print(f"Warning: {warning}", markup=False)
 
 
 def main(argv: list[str] | None = None) -> int:

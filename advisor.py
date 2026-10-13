@@ -2,14 +2,15 @@ import json
 import logging
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
+from hashlib import sha256
 from pathlib import Path
+from time import perf_counter
 from typing import Any
 from uuid import uuid4
 
 from agno.agent import Agent
 from agno.db.sqlite import SqliteDb
 from agno.exceptions import OutputCheckError
-from agno.models.openrouter import OpenRouter
 from agno.run import RunContext, RunStatus
 from agno.run.agent import RunOutput
 
@@ -21,8 +22,21 @@ from answers import (
     validate_answer,
 )
 from evidence import EvidenceItem, EvidenceStore
+from observability import (
+    CURRENT_TURN,
+    ERROR_MESSAGES,
+    RunLog,
+    RunLogError,
+    RunRecord,
+    TurnObservation,
+    UsageSummary,
+    error_category,
+    render_usage,
+    summarize_usage,
+)
 from profiles import BusinessProfile, profile_from_state
-from sessions import SessionStore, validate_session_id
+from runtime_adapters import ObservedOpenRouter, ObservedSqliteDb
+from sessions import SessionStorageError, SessionStore, validate_session_id
 from settings import Settings
 from turn_tools import MAX_TOOL_CALLS, REGISTRY_KEY, TurnRegistry, build_tools, get_registry
 from web_search import MarketSearch, SearchRecord
@@ -32,6 +46,7 @@ PROJECT_DIR = Path(__file__).resolve().parent
 DEFAULT_DB_FILE = PROJECT_DIR / "runtime" / "sessions.db"
 DEFAULT_EXPORT_DIR = PROJECT_DIR / "runtime" / "exports"
 MAX_INPUT_LENGTH = 8000
+PROMPT_VERSION = "10.1"
 logger = logging.getLogger(__name__)
 
 
@@ -46,8 +61,11 @@ class ApplicationResult:
     calculations: dict[str, dict[str, Any]] = field(default_factory=dict)
     warnings: list[str] = field(default_factory=list)
     run_id: str | None = None
-    usage: Any = None
+    usage: UsageSummary = field(default_factory=UsageSummary)
     tools: list[Any] = field(default_factory=list)
+    error_category: str | None = None
+    error_message: str | None = None
+    record: RunRecord | None = None
 
 
 def advisor_instructions(
@@ -179,6 +197,9 @@ def create_agent(
     db_file.parent.mkdir(parents=True, exist_ok=True)
 
     def instructions(run_context: RunContext) -> list[str]:
+        trace = CURRENT_TURN.get()
+        if trace is not None and trace.storage_failed:
+            raise SessionStorageError()
         return advisor_instructions(
             search_enabled=settings.search_enabled,
             profile=profile_from_state(run_context.session_state),
@@ -186,7 +207,7 @@ def create_agent(
 
     return Agent(
         name="UAE Market Expansion Advisor",
-        model=OpenRouter(
+        model=ObservedOpenRouter(
             id=MODEL_ID,
             api_key=api_key,
             max_tokens=4096,
@@ -194,7 +215,20 @@ def create_agent(
             client_params={"max_retries": 0},
             extra_body={"provider": {"require_parameters": True, "order": ["Morph"]}},
         ),
-        db=SqliteDb(db_file=str(db_file)),
+        db=ObservedSqliteDb(db_file=str(db_file)),
+        metadata={
+            "prompt_version": PROMPT_VERSION,
+            "evidence_dataset_version": sha256(
+                json.dumps(
+                    [
+                        record.model_dump(mode="json", exclude={"needs_review", "expired"})
+                        for record in store.records
+                    ],
+                    sort_keys=True,
+                    ensure_ascii=False,
+                ).encode()
+            ).hexdigest(),
+        },
         add_history_to_context=True,
         num_history_runs=3,
         cache_session=False,
@@ -212,6 +246,18 @@ def create_agent(
     )
 
 
+def run_log_for_agent(agent: Agent) -> RunLog | None:
+    if isinstance(agent.db, SqliteDb) and agent.db.db_file:
+        return RunLog(Path(agent.db.db_file).parent / "runs.jsonl")
+    return None
+
+
+def session_usage(session_id: str, agent: Agent) -> str:
+    SessionStore(agent.db).load(session_id)
+    log = run_log_for_agent(agent)
+    return render_usage(*log.records(session_id)) if log else "Usage recording is unavailable."
+
+
 def answer_question(question: str, session_id: str, agent: Agent) -> ApplicationResult:
     """Run one question with fresh registries; expose only validated final answers."""
     question = question.strip()
@@ -221,28 +267,95 @@ def answer_question(question: str, session_id: str, agent: Agent) -> Application
         raise ValueError(f"Keep questions within {MAX_INPUT_LENGTH:,} characters.")
     validate_session_id(session_id)
     registry = TurnRegistry()
-    response = agent.run(
-        question, session_id=session_id, stream=False, dependencies={REGISTRY_KEY: registry}
+    trace = TurnObservation()
+    token = CURRENT_TURN.set(trace)
+    start, timestamp = perf_counter(), datetime.now(timezone.utc)
+    result = ApplicationResult(status=RunStatus.error, run_id=str(uuid4()))
+    try:
+        response = agent.run(
+            question,
+            session_id=session_id,
+            run_id=result.run_id,
+            stream=False,
+            dependencies={REGISTRY_KEY: registry},
+        )
+        result.tools = response.tools or []
+        if registry.validation_error:
+            raise AnswerValidationError(registry.validation_error)
+        if trace.storage_failed:
+            result.error_category = "storage"
+        elif response.status == RunStatus.completed:
+            # Also validate at the public service boundary before producing display output.
+            markdown = render_answer(response.content, registry)
+            if isinstance(agent.db, SqliteDb):
+                saved = agent.db.get_run(result.run_id)
+                if saved is None or saved.status != RunStatus.completed:
+                    raise SessionStorageError()
+            result.markdown = markdown
+            result.content = response.content
+            result.status = RunStatus.completed
+            result.sources = dict(registry.evidence)
+            result.calculations = dict(registry.calculations)
+        elif response.status == RunStatus.cancelled:
+            result.status = RunStatus.cancelled
+            result.error_category = "cancelled"
+        else:
+            result.error_category = trace.error or "internal"
+    except AnswerValidationError as exc:
+        registry.validation_error = exc.category
+        result.error_category = "validation"
+    except (Exception, KeyboardInterrupt) as exc:
+        result.error_category = error_category(exc)
+        if result.error_category == "cancelled":
+            result.status = RunStatus.cancelled
+    finally:
+        CURRENT_TURN.reset(token)
+    if trace.storage_failed:
+        result.error_category = "storage"
+        result.status = RunStatus.error
+    result.warnings = list(registry.warnings)
+    if result.error_category:
+        result.error_message = ERROR_MESSAGES[result.error_category]
+    result.usage = summarize_usage(trace.requests)
+    metadata = agent.metadata if isinstance(agent.metadata, dict) else {}
+    result.record = RunRecord(
+        **result.usage.model_dump(),
+        run_id=result.run_id,
+        session_id=session_id,
+        timestamp_utc=timestamp,
+        model_requested=MODEL_ID,
+        model_reported_if_available=list(
+            dict.fromkeys(
+                request.model_reported for request in trace.requests if request.model_reported
+            )
+        )
+        or None,
+        provider_if_available=list(
+            dict.fromkeys(
+                request.provider_reported for request in trace.requests if request.provider_reported
+            )
+        )
+        or None,
+        prompt_version=PROMPT_VERSION,
+        evidence_dataset_version=metadata.get("evidence_dataset_version"),
+        question=question,
+        outcome=result.status.value.lower(),
+        error_category=result.error_category,
+        requests=trace.requests,
+        tool_events=trace.tool_events,
+        evidence_ids=list(registry.evidence),
+        calculation_ids=list(registry.calculations),
+        latency_ms=(perf_counter() - start) * 1000,
+        tool_output_characters=registry.output_characters,
+        validation_errors=[registry.validation_error] if registry.validation_error else [],
+        warnings=list(result.warnings),
     )
-    if registry.validation_error:
-        raise AnswerValidationError(registry.validation_error)
-    result = ApplicationResult(
-        status=response.status,
-        run_id=response.run_id,
-        usage=response.metrics,
-        tools=response.tools or [],
-        warnings=list(registry.warnings),
-    )
-    if response.status == RunStatus.completed:
-        # Also validate at the public service boundary before producing display output.
+    if log := run_log_for_agent(agent):
         try:
-            result.markdown = render_answer(response.content, registry)
-        except AnswerValidationError as exc:
-            logger.warning("Answer validation failed: %s", exc.category)
-            raise
-        result.content = response.content
-        result.sources = dict(registry.evidence)
-        result.calculations = dict(registry.calculations)
+            log.append(result.record)
+        except RunLogError as exc:
+            result.warnings.append(str(exc))
+            result.record.warnings.append(str(exc))
     return result
 
 
@@ -292,7 +405,6 @@ def last_answer(session_id: str, agent: Agent) -> ApplicationResult | None:
         calculations=dict(registry.calculations),
         warnings=list(registry.warnings),
         run_id=run.run_id,
-        usage=run.metrics,
         tools=run.tools or [],
     )
 

@@ -27,6 +27,7 @@ Commands
   /new              Reset profile, history, and last answer in a fresh session.
   /sources          Show sources cited by the latest validated answer.
   /export           Save that answer as Markdown under runtime/exports/.
+  /usage            Show the latest run and recorded session usage/cost.
   /quit             Exit. Ctrl+D or Ctrl+C at the prompt also exits.
   Ctrl+C during a request cancels it and returns to the prompt.
   Commands make no model or search requests. Previous sessions remain stored
@@ -72,6 +73,81 @@ Sources and export
   cancelled question leaves the preceding validated answer available. A new
   session has no answer to export. Saved source dates describe the original
   answer; exporting does not recheck a page or refresh old research.
+
+Usage and failures (milestone 10)
+  Every accepted question receives a UUID run ID before inference. The CLI
+  displays it for successful, failed, and cancelled requests. /usage makes no
+  model calls and works after --session resume. /new starts a session with no
+  recorded usage. Commands, blank input, and rejected inputs are not model turns.
+  Usage includes every observed model request, including tool continuations
+  and failures. It reports input/output tokens, cached/reasoning counts when
+  supplied, and actual OpenRouter cost in USD. Reasoning is part of output
+  tokens and cache reads are part of input tokens; neither is added again.
+  Missing values remain Unknown. If any request lacks a field, that field's
+  turn total is unknown. Known request costs are retained as an explicitly
+  incomplete subtotal. A reported zero remains zero. Core usage is complete
+  when every observed request provides input tokens, output tokens, and cost;
+  optional reasoning/cache counters can still be unknown. No price estimate
+  is configured, so estimated_cost_usd and estimate_basis remain null.
+  Session totals cover only recorded turns, including failed/cancelled turns.
+  They cannot establish costs for older, unlogged conversations or requests
+  whose usage was not returned. They are not an account-wide spending cap.
+
+  runtime/runs.jsonl holds one JSON object per accepted question. Custom
+  database paths put this log next to the SQLite file. Records include:
+    run/session IDs and UTC start time; requested model; reported model/provider
+    values when available; prompt version; SHA-256 of the loaded evidence data;
+    question; outcome and error category; per-request usage and generation IDs;
+    actual tool wrapper timings, statuses and result counts; returned evidence
+    and calculation IDs; total latency; returned tool characters; validation
+    categories and warnings; complete/unknown aggregate usage and cost.
+  Freshness flags are excluded from the dataset hash. Logs retain the question
+  locally; avoid putting secrets in questions. Records do not copy raw model
+  answers, raw reasoning, HTTP headers, API configuration, or raw provider
+  exception text. The whole runtime/ directory is
+  gitignored. The future evaluation runner can use ApplicationResult.record
+  alongside its validated answer and Markdown output.
+  Tool timings cover wrappers actually entered, including limit/failure
+  responses. Calls refused by Agno before wrapper execution are not timed as
+  executed tools. The 24,000-character budget covers serialized wrapper
+  outputs; framework-generated argument/limit diagnostics can add context
+  outside that budget. Model timings cover each adapter invocation; total latency
+  includes the turn and persistence verification, excluding log-file writing.
+  An unreadable JSONL line is skipped with an explicit warning. If a log write
+  fails, a valid answer is still shown with a warning that usage history is
+  incomplete. Inspect that warning before relying on recorded session totals.
+
+  The service returns ApplicationResult with error_category/error_message and
+  no answer content for authentication, credits, rate limits, timeout,
+  connection, model/configuration, provider, validation, storage, cancellation,
+  and unexpected failures. A failed answer never renders as completed. Bad
+  citations and malformed typed output are recorded as validation failures.
+  SQLite failures are observed even when Agno catches them internally. A new
+  completed run must be readable from SQLite before the service displays it.
+  Failed session reads prevent inference; failed writes do not claim a saved
+  answer. A failed turn does not replace the last validated answer for export.
+  Agno can still print its own provider diagnostics to the terminal; our JSONL
+  records and user guidance use categories rather than raw exception text.
+
+  Limits remain: 6 tools/turn, 2 searches/turn, 24,000 returned tool characters,
+  8,000 characters per lookup/search, and 4,096 completion tokens per model
+  response. Refused tool calls execute no lookup/search/calculation. Invalid
+  calculator inputs produce no calculation ID. Timeouts are 45 seconds per
+  model request and 10 seconds per search, not a hard whole-turn deadline.
+  Multiple requests and provider-internal routing can add latency. The installed
+  OpenAI SDK defaults to two retries; our instantiated client has max_retries=0
+  and the Agno agent has retries=0. There is no automatic answer repair.
+
+  Live smoke check recorded 2026-10-13 21:30 UTC (2026-10-14 in Amman): one
+  synthetic Dubai calculator turn, search disabled, with a manually selected
+  USD 0.05 development allowance (not an enforced account cap). Two requests
+  reported 7,591 input tokens, 965 output tokens, 3,456 cached tokens, and zero
+  reasoning tokens. Total reported cost: USD 0.000899569. Agno's cost and the
+  sum of OpenRouter's two generation-record costs matched exactly; native
+  token totals matched too. Responses reported DeepSeek V4.1 Flash and Morph.
+  Calculator output was 20 AED contribution/order, 1,500 orders/month and
+  50 orders/day. Raw local observations are under runtime/milestone10-smoke/.
+  This verifies one integration turn; advisory quality evaluation is milestone 11.
 
 Example conversation
   Give me two Dubai areas to investigate for a takeaway pizza and kebab branch.
@@ -171,9 +247,8 @@ Current behavior
   compatible same-model provider fallback remains enabled.
   Model requests have a 45-second timeout, a 4,096-token completion limit,
   and no automatic client or agent retries. Failed and cancelled runs return
-  to the prompt. Agno may log provider diagnostics and return an error status;
-  the CLI then shows a general failure message instead of an answer. Raised
-  provider exceptions receive HTTP-specific guidance.
+  to the prompt with categorized guidance and a run ID. A multi-request turn
+  can exceed 45 seconds. Provider-internal failover is outside our retry count.
 
 How the code works
   load_dotenv loads the local API key.
@@ -211,7 +286,17 @@ How the code works
   of the three-turn history window. The agent holds no shared mutable profile.
   answers.py defines the response schema, reference checks, and Markdown renderer.
   answer_question returns ApplicationResult with the validated answer, rendered
-  Markdown, sources, calculations, warnings, and available usage information.
+  Markdown, sources, calculations, warnings, normalized usage, a RunRecord,
+  and categorized errors. Input validation raises ValueError before inference;
+  operational and answer-validation failures return an unsuccessful result.
+  observability.py defines per-turn observations, nullable usage aggregation,
+  local JSONL logging, and /usage rendering. A ContextVar confines mutable
+  observations to the active service call and is reset on success or failure.
+  runtime_adapters.py extends the existing synchronous OpenRouter adapter and
+  SQLite adapter to observe usage/error boundaries. Agno still handles the
+  SDK request, response parsing, reasoning metadata, tool loop, and persistence.
+  Observations read optional usage fields before Agno substitutes zero counters;
+  provider names come from actual responses, never from the configured preference.
   advisor.py also restores saved answers, renders cited sources, and exports
   revalidated application results. Restoration uses only the selected run's
   stored tool results, never citations from another turn or session.
@@ -251,10 +336,12 @@ Current limitations
   initial coverage, not a complete market study. Synthetic records live only
   in tests/fixtures/.
   Local evidence retrieval and citation validation are connected to the advisor.
-  Milestone 09 is implemented: typed business profiles, explicit session resume,
-  cited sources, and answer export. Usage reporting and executive evaluations
-  are later milestones. The application is a local single-user program;
+  Milestones 09 and 10 are implemented: typed business profiles, explicit resume,
+  cited sources, answer export, usage reporting, run records, and failure handling.
+  Executive evaluation is the next milestone. The application is a local single-user program;
   simultaneous writers to the same session are not supported.
+  Observations cover synchronous, nonstreaming calls through answer_question.
+  Direct agent.run calls bypass the application record and error handling.
   Calculator scenarios do not prove demand, profitability, or investment
   viability. Hypothetical inputs do not automatically become profile facts.
   Numeric validation cannot prove the model copied the user's intended inputs.
@@ -319,3 +406,4 @@ References
   https://docs.agno.com/input-output/structured-output/agent
   https://docs.agno.com/tools/toolkits/search/websearch
   https://openrouter.ai/docs/guides/routing/provider-selection
+  https://openrouter.ai/docs/cookbook/administration/usage-accounting

@@ -10,6 +10,7 @@ from pydantic import StrictInt
 
 from economics import calculate_unit_economics as calculate
 from evidence import City, EvidenceItem, EvidenceStore, Topic
+from observability import timed_tool
 from web_search import MarketSearch, SearchRecord
 
 MAX_TOOL_CALLS = 6
@@ -109,6 +110,7 @@ def _can_return_data(registry: TurnRegistry) -> bool:
 def build_tools(store: EvidenceStore, search: MarketSearch | None = None) -> list:
     search = search if search is not None else MarketSearch()
 
+    @timed_tool
     def lookup_market_evidence(
         run_context: RunContext,
         cities: list[City],
@@ -130,6 +132,7 @@ def build_tools(store: EvidenceStore, search: MarketSearch | None = None) -> lis
         result = store.lookup_market_evidence(cities, topics, query, limit)
         return _return_result(registry, result.model_dump(mode="json"))
 
+    @timed_tool
     def calculate_unit_economics(
         run_context: RunContext,
         scenario_label: str,
@@ -175,6 +178,7 @@ def build_tools(store: EvidenceStore, search: MarketSearch | None = None) -> lis
         )
         return _return_result(registry, result)
 
+    @timed_tool
     def search_market_web(run_context: RunContext, query: str, city: City | None = None) -> str:
         """Find uninspected web research leads when curated evidence leaves a gap.
 

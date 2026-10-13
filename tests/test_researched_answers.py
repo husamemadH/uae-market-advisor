@@ -320,9 +320,10 @@ def test_real_agno_lookup_and_followup_registry_isolation_with_failed_run_persis
         for tool in requests[0]["tools"]:
             assert "run_context" not in tool["function"]["parameters"]["properties"]
         assert "advisor_turn" not in requests[0]["messages"][0]["content"]
-        with pytest.raises(AnswerValidationError) as error:
-            answer_question("Reuse the previous citation", session_id, agent)
-        assert error.value.category == "unretrieved_evidence"
+        failed = answer_question("Reuse the previous citation", session_id, agent)
+        assert failed.error_category == "validation"
+        assert failed.record.validation_errors == ["unretrieved_evidence"]
+        assert failed.content is None
         saved = agent.get_session(session_id=session_id)
         assert [r.status for r in saved.runs] == [RunStatus.completed, RunStatus.error]
         third = answer_question("Retrieve again for this question", session_id, agent)
