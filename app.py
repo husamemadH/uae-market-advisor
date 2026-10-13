@@ -10,14 +10,15 @@ from rich.console import Console
 from rich.markdown import Markdown
 
 from advisor import PROJECT_DIR, answer_question, create_agent
-from answers import AdvisorAnswer, render_answer
+from answers import AdvisorAnswer
 from evidence import DEFAULT_EVIDENCE_FILE, EvidenceDataError, EvidenceStore
 
 
 HELP_TEXT = """Ask about expanding our Jordanian pizza and kebab restaurant into Dubai or Abu Dhabi.
 Follow-up questions use the three most recent completed turns.
 This early version can calculate contribution per order from supplied inputs.
-No researched market data is connected yet.
+Curated research supports advice with source links, inspection dates, and limitations.
+Coverage is incomplete; there is no live web search yet.
 
 /help  Show this help
 /new   Start a fresh conversation; previous chats remain stored locally
@@ -30,7 +31,7 @@ Ctrl+C at the prompt or Ctrl+D exits."""
 def chat_loop(agent: Agent, console: Console) -> int:
     session_id = str(uuid4())
     console.print("UAE Market Expansion Advisor — Dubai and Abu Dhabi", markup=False)
-    console.print("Type /help for commands. No researched market data is connected yet.")
+    console.print("Type /help for commands. Research-backed answers include sources and limitations.")
     console.print(f"Session: {session_id}")
 
     while True:
@@ -85,7 +86,7 @@ def chat_loop(agent: Agent, console: Console) -> int:
             console.print("The answer could not be validated. Please try again.")
         else:
             console.print("\nAdvisor:")
-            console.print(Markdown(render_answer(response.content)))
+            console.print(Markdown(response.markdown))
 
 
 def main() -> int:
@@ -100,14 +101,13 @@ def main() -> int:
         return 1
 
     try:
-        # Validate curated data before serving questions. Agent integration comes later.
-        EvidenceStore.load(DEFAULT_EVIDENCE_FILE)
+        store = EvidenceStore.load(DEFAULT_EVIDENCE_FILE)
     except EvidenceDataError as exc:
         print(str(exc), file=sys.stderr)
         return 1
 
     try:
-        agent = create_agent(api_key)
+        agent = create_agent(api_key, evidence_store=store)
     except OSError:
         print(
             "Could not create local session storage under runtime/.",

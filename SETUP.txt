@@ -20,6 +20,10 @@ Commands
   Ctrl+C during a request cancels it and returns to the prompt.
 
 Example conversation
+  Give me two Dubai areas to investigate for a takeaway pizza and kebab branch.
+  Name relevant competitors, cite the research, and explain what is unknown.
+  Now do the same for Abu Dhabi.
+  /new
   We are considering a takeaway branch in Dubai. What information do you need?
   How would those questions change for Abu Dhabi?
   /new
@@ -38,14 +42,29 @@ Current behavior
   model request. Questions over 8,000 characters are rejected locally.
   A progress indicator appears while waiting; only completed answers are
   displayed, with Markdown formatting and without raw model reasoning.
-  One typed Python tool calculates contribution per order using decimal
+  The research tool retrieves curated observations with source links, dates,
+  and qualifiers. Each question gets a fresh evidence/calculation registry;
+  factual follow-ups must retrieve their supporting records again.
+  A second typed Python tool calculates contribution per order using decimal
   arithmetic. Revenue, food, packaging, and other variable costs are all
   required; use explicit zero where appropriate. All inputs are scenario
   assumptions, not researched figures. The result includes the inputs,
   formula, contribution, and warnings for nonpositive contribution.
-  Agno requests a native JSON schema and parses final output into a small
-  AdvisorAnswer object: answer, assumptions, next_steps, and questions.
-  The service rejects completed output that is not that expected type.
+  Agno requests a native JSON schema and parses output into AdvisorAnswer:
+  kind, cities, headline, sections, assumptions, next_steps, and questions.
+  Statements identify facts, inferences, proposals, assumptions, or calculations.
+  Facts must reference curated records returned during this question; calculations
+  must reference successful results from this question. Research leads are
+  reserved for the later search implementation and currently fail validation.
+  The application generates numbered source links from the registry, retains
+  source qualifiers and review flags, and renders exact calculator inputs/results.
+  Model text is plain text; model-supplied web URLs fail validation.
+  Advice needs a substantive section and a next step; clarification needs a
+  question. Sections/items/text are bounded, with at most two questions.
+  A post-hook rejects invalid answers before they are stored as completed runs.
+  Validation errors log a category and return a recoverable message. The service
+  validates again before rendering. Failed answers are excluded from successful
+  conversation history; there is no automatic answer repair call.
   OpenRouter receives provider.require_parameters=true through extra_body,
   so routing requires support for our requested parameters. Only the selected
   model is requested; no cross-model fallback is configured. Morph is the
@@ -62,13 +81,17 @@ How the code works
   OpenRouter configures the gateway, exact model ID, token limit, and timeout.
   advisor.py creates the Agent, configures SqliteDb and history, and exposes
   answer_question(question, session_id, agent) as the shared service boundary.
-  economics.py defines calculate_unit_economics. Agno converts its typed
+  turn_tools.py wraps local retrieval and economics.py's calculator. Agno converts typed
   parameters and docstring into the tool schema; the model requests a call,
   Agno executes the Python function, then sends its result back to the model.
   A user turn can therefore make multiple paid model requests. Tool execution
-  is bounded to six calls per turn. The function makes no model requests.
-  answers.py defines the small Pydantic response and its Markdown renderer.
-  app.py handles input and commands and displays only completed typed answers.
+  is bounded to six calls shared by both tools per turn. Tools make no model requests.
+  TurnRegistry holds only returned evidence and successful calculation results.
+  It is injected through Agno RunContext dependencies and is not model input.
+  answers.py defines the response schema, reference checks, and Markdown renderer.
+  answer_question returns ApplicationResult with the validated answer, rendered
+  Markdown, sources, calculations, warnings, and available usage information.
+  app.py handles commands and displays that shared result.
   Agent.run submits a turn and lets Agno manage context and persistence.
   evidence.py validates data/market_evidence.json at startup and provides
   local city/topic filtering with deterministic keyword ranking. Returned
@@ -101,16 +124,18 @@ Current limitations
   examples, comparison limits, and remaining research gaps. Counts indicate
   initial coverage, not a complete market study. Synthetic records live only
   in tests/fixtures/.
-  The local lookup is not yet registered as an agent tool. Schema checks
-  validate source metadata; they do not inspect or verify the source itself.
-  Agent evidence/search tools, citation validation, durable business profiles,
+  Local evidence retrieval and citation validation are connected to the advisor.
+  Live web search, durable business profiles,
   session resume, exports, and executive evaluations are not implemented yet.
   Delivery mix, commission sensitivity, fixed costs, margins, and break-even
-  are not implemented. The current final-answer schema has no evidence sections.
+  are not implemented.
   Schema validation checks structure, not factual truth or whether a model's
   explanation correctly reflects a tool result. No answer-repair call or
   separate parser model is used. Native schema failures are not silently
   replaced with another model or an unvalidated plain-text answer.
+  A retrieved source ID does not prove that the source supports its attached
+  statement. Inferences/proposals and uncited headline/assumption text still
+  need semantic review; a model-assigned label is not proof of factual accuracy.
   Local storage alone does not give the model unlimited memory. Failed or
   cancelled runs may be saved for diagnostics; Agno omits them from history.
   Requests use OpenRouter credits. No OpenAI API key is required.

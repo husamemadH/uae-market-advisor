@@ -1,4 +1,3 @@
-import ast
 import json
 from unittest.mock import Mock
 from uuid import uuid4
@@ -11,7 +10,8 @@ from openai import OpenAI
 from pydantic import ValidationError
 
 from advisor import answer_question, create_agent
-from answers import AdvisorAnswer, render_answer
+from answers import AdvisorAnswer, AnswerSection, Statement, render_answer
+from turn_tools import TurnRegistry
 
 
 def test_actual_agno_tool_loop_with_native_schema_and_reasoning_metadata(tmp_path):
@@ -40,9 +40,15 @@ def test_actual_agno_tool_loop_with_native_schema_and_reasoning_metadata(tmp_pat
             finish_reason = "tool_calls"
         else:
             message = {"role": "assistant", "content": json.dumps({
-                "answer": "Contribution is 25 AED per order.",
+                "kind": "advice", "cities": ["dubai"], "headline": "Contribution calculation.",
+                "sections": [{"title": "Result", "items": [{
+                    "text": "Contribution is 25 AED per order.", "basis": "calculation",
+                    "evidence_ids": [], "calculation_ids": [json.loads(next(
+                        m["content"] for m in reversed(body["messages"]) if m["role"] == "tool"
+                    ))["data"]["calculation_id"]],
+                }]}],
                 "assumptions": ["Synthetic inputs; excludes fixed costs."],
-                "next_steps": [], "questions": [],
+                "next_steps": ["Check the supplied costs."], "questions": [],
             })}
             finish_reason = "stop"
         return httpx.Response(200, json={
@@ -59,7 +65,8 @@ def test_actual_agno_tool_loop_with_native_schema_and_reasoning_metadata(tmp_pat
 
     assert result.status == RunStatus.completed
     assert isinstance(result.content, AdvisorAnswer)
-    assert "25 AED" in result.content.answer
+    assert "25 AED" in result.content.sections[0].items[0].text
+    assert "| Contribution per order | 25.00 |" in result.markdown
     assert len(requests) == 2
     for request in requests:
         assert request["provider"]["require_parameters"] is True
@@ -68,8 +75,8 @@ def test_actual_agno_tool_loop_with_native_schema_and_reasoning_metadata(tmp_pat
         assert request["response_format"]["json_schema"]["strict"] is True
         assert request["model"] == "deepseek/deepseek-v4.1-flash"
     tool_message = next(message for message in requests[1]["messages"] if message["role"] == "tool")
-    # Agno serializes a dictionary tool return with str(), rather than JSON.
-    assert ast.literal_eval(tool_message["content"])["data"]["contribution_per_order_aed"] == "25"
+    # Wrappers return JSON text, including the application-generated calculation ID.
+    assert json.loads(tool_message["content"])["data"]["contribution_per_order_aed"] == "25"
     assistant = next(message for message in requests[1]["messages"] if message.get("tool_calls"))
     assert assistant["reasoning_details"] == reasoning
     assert result.tools[0].tool_name == "calculate_unit_economics"
@@ -84,16 +91,23 @@ def test_service_rejects_completed_untyped_content(content):
         answer_question("Question", str(uuid4()), agent)
 
 
-def test_answer_schema_rejects_empty_answer_and_extra_fields():
-    for answer in [{"answer": "  "}, {"answer": "Text", "unexpected": True}]:
+def test_answer_schema_rejects_empty_headline_and_extra_fields():
+    base = dict(kind="insufficient_evidence", cities=[], sections=[], assumptions=[], next_steps=[], questions=[])
+    for fields in [{"headline": "  "}, {"headline": "Text", "unexpected": True}]:
         with pytest.raises(ValidationError):
-            AdvisorAnswer.model_validate({"assumptions": [], "next_steps": [], "questions": [], **answer})
+            AdvisorAnswer.model_validate({**base, **fields})
 
 
 def test_renderer_uses_answer_fields():
-    answer = AdvisorAnswer(answer="25 AED per order.", assumptions=["Hypothetical."], next_steps=["Check inputs."], questions=[])
-    output = render_answer(answer)
-    assert "25 AED per order." in output
+    answer = AdvisorAnswer(
+        kind="advice", cities=["dubai"], headline="Review the scenario.",
+        sections=[AnswerSection(title="Scenario", items=[Statement(
+            text="Use the supplied costs as assumptions.", basis="assumption", evidence_ids=[], calculation_ids=[],
+        )])],
+        assumptions=["Hypothetical."], next_steps=["Check inputs."], questions=[],
+    )
+    output = render_answer(answer, TurnRegistry())
+    assert "Review the scenario." in output
     assert "Hypothetical." in output
     assert "Check inputs." in output
-    assert '"answer"' not in output
+    assert '"headline"' not in output

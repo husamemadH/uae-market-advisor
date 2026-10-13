@@ -17,7 +17,8 @@ def test_saved_messages_and_answers_survive_database_reopen(tmp_path, monkeypatc
         question = next(message.content for message in reversed(messages) if message.role == "user")
         model_calls.append(question)
         answer = AdvisorAnswer(
-            answer=f"Saved answer for: {question}",
+            kind="insufficient_evidence", cities=["dubai"], sections=[],
+            headline=f"Saved answer for: {question}",
             assumptions=["Synthetic database test."],
             next_steps=["Review this scenario."],
             questions=["Would you like to adjust the scenario?"],

@@ -11,19 +11,20 @@ from agno.run.agent import RunOutput
 from rich.console import Console
 
 import app
-from advisor import MAX_INPUT_LENGTH, answer_question, create_agent
+from advisor import ApplicationResult, MAX_INPUT_LENGTH, answer_question, create_agent
 from answers import AdvisorAnswer
 
 
 def typed_answer(text):
-    return AdvisorAnswer(answer=text, assumptions=[], next_steps=[], questions=[])
+    return AdvisorAnswer(kind="insufficient_evidence", cities=["dubai"], headline=text,
+                         sections=[], assumptions=[], next_steps=[], questions=[])
 
 
 def run_cli(monkeypatch, inputs, answer=None):
     console = Console(file=StringIO(), color_system=None, width=100)
     monkeypatch.setattr(console, "input", Mock(side_effect=inputs))
     responder = Mock(
-        return_value=answer or RunOutput(status=RunStatus.completed, content=typed_answer("A completed answer."))
+        return_value=answer or ApplicationResult(status=RunStatus.completed, content=typed_answer("A completed answer."), markdown="A completed answer.")
     )
     monkeypatch.setattr(app, "answer_question", responder)
     assert app.chat_loop(Mock(), console) == 0
@@ -70,7 +71,7 @@ def test_incomplete_runs_are_not_displayed_as_answers(monkeypatch, status):
 def test_request_interrupt_returns_to_prompt(monkeypatch):
     console = Console(file=StringIO(), color_system=None)
     monkeypatch.setattr(console, "input", Mock(side_effect=["Question", "Another question", "/quit"]))
-    responder = Mock(side_effect=[KeyboardInterrupt(), RunOutput(status=RunStatus.completed, content=typed_answer("Recovered."))])
+    responder = Mock(side_effect=[KeyboardInterrupt(), ApplicationResult(status=RunStatus.completed, content=typed_answer("Recovered."), markdown="Recovered.")])
     monkeypatch.setattr(app, "answer_question", responder)
     assert app.chat_loop(Mock(), console) == 0
     assert responder.call_args_list[0].args[1] == responder.call_args_list[1].args[1]
