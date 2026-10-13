@@ -15,7 +15,7 @@ from evidence import DEFAULT_EVIDENCE_FILE, EvidenceDataError, EvidenceStore
 
 HELP_TEXT = """Ask about expanding our Jordanian pizza and kebab restaurant into Dubai or Abu Dhabi.
 Follow-up questions use the three most recent completed turns.
-This early version can calculate contribution per order from supplied inputs.
+Calculate contribution, margin, and break-even from explicit scenario inputs.
 Curated research supports advice with source links, inspection dates, and limitations.
 Coverage is incomplete; there is no live web search yet.
 

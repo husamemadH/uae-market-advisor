@@ -4,9 +4,9 @@ import json
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Any
-from uuid import uuid4
 
 from agno.run import RunContext
+from pydantic import StrictInt
 
 from economics import calculate_unit_economics as calculate
 from evidence import City, EvidenceItem, EvidenceStore, Topic
@@ -81,14 +81,27 @@ def build_tools(store: EvidenceStore) -> list:
         food_cost_per_order_aed: Decimal,
         packaging_per_order_aed: Decimal,
         other_variable_cost_per_order_aed: Decimal,
+        delivery_share: Decimal,
+        delivery_commission_rate: Decimal,
+        monthly_fixed_costs_aed: Decimal,
+        operating_days_per_month: StrictInt,
     ) -> str:
-        """Calculate contribution per order from explicit AED scenario inputs.
+        """Calculate contribution, margin, and monthly/daily operating break-even.
 
-        All four amounts are required, including explicit zero costs. Revenue
-        must be positive and net of discounts/pass-through tax; costs must be
-        nonnegative. Ask for missing inputs. Label hypothetical inputs clearly.
-        This models per-order variable costs only, not fixed costs or break-even.
-        Cite the returned calculation_id for calculations in the final answer.
+        All eight numeric inputs are required; use explicit zero where applicable.
+        Call only after all inputs are available. If any are missing, ask the user
+        instead of calling. Never fill required arguments with placeholders, even
+        labelled illustrative ones. Invent inputs only for a hypothetical example
+        explicitly requested by the user, and identify every invented value.
+        Revenue is positive AED/order, net of discounts and pass-through tax.
+        Food, packaging and other variable costs are nonnegative averages per order.
+        Delivery share and commission are fractions 0-1: 25 percent means 0.25.
+        Commission applies to supplied revenue on delivery orders; exclude it from
+        other variable costs. Monthly fixed costs must not double-count per-order
+        costs. Operating days must be an integer 1-31. Label the input basis as
+        user-provided, sourced, or hypothetical. Arithmetic does not verify demand.
+        Cite calculation_id even for not_viable_under_inputs results: nonpositive
+        contribution has null break-even values, and more volume does not fix it.
         """
         registry = get_registry(run_context)
         if not registry.take_call():
@@ -99,11 +112,14 @@ def build_tools(store: EvidenceStore) -> list:
             food_cost_per_order_aed,
             packaging_per_order_aed,
             other_variable_cost_per_order_aed,
+            delivery_share,
+            delivery_commission_rate,
+            monthly_fixed_costs_aed,
+            operating_days_per_month,
         )
         if result["status"] == "ok":
-            calculation_id = f"CALC-{uuid4().hex}"
-            result["data"]["calculation_id"] = calculation_id
-            registry.calculations[calculation_id] = result["data"]
+            calculation_id = result["data"]["calculation_id"]
+            registry.calculations[calculation_id] = result
         registry.note_warnings(result["warnings"])
         return json.dumps(result)
 

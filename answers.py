@@ -92,14 +92,70 @@ def _plain(text: str) -> str:
     return re.sub(r"([\\`*_{}\[\]<>()#!|~])", r"\\\1", " ".join(text.splitlines()))
 
 
-def _money(value: str) -> str:
+def _display_number(value: str, *, percent: bool = False) -> str:
     amount = Decimal(value)
     # Avoid the default decimal context rejecting otherwise valid large inputs.
     from decimal import localcontext
 
     with localcontext() as context:
         context.prec = max(28, len(amount.as_tuple().digits) + abs(amount.adjusted()) + 4)
+        if percent:
+            amount *= 100
         return format(amount.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP), ".2f")
+
+
+def _render_calculation(data: dict, number: int) -> str:
+    inputs = data["inputs"]
+    input_labels = {
+        "average_order_revenue_aed": "Revenue per order",
+        "food_cost_per_order_aed": "Food cost",
+        "packaging_per_order_aed": "Packaging",
+        "other_variable_cost_per_order_aed": "Other variable costs (excluding commission)",
+    }
+    rows = [
+        f"| {label} | {_display_number(inputs[key])} | AED/order |"
+        for key, label in input_labels.items()
+    ]
+    rows.extend(
+        [
+            f"| Delivery share | {_display_number(inputs['delivery_share'], percent=True)} | % |",
+            f"| Delivery commission rate | {_display_number(inputs['delivery_commission_rate'], percent=True)} | % |",
+            f"| Monthly fixed costs | {_display_number(inputs['monthly_fixed_costs_aed'])} | AED/month |",
+            f"| Operating days per month | {inputs['operating_days_per_month']} | days |",
+        ]
+    )
+    result_labels = {
+        "weighted_delivery_fee_per_order_aed": "Weighted delivery fee",
+        "variable_cost_per_order_aed": "Total variable costs",
+        "contribution_per_order_aed": "Contribution per order",
+    }
+    result_rows = [
+        f"| {label} | {_display_number(data[key])} | AED/order |"
+        for key, label in result_labels.items()
+    ]
+    result_rows.append(
+        f"| Contribution margin | {_display_number(data['contribution_margin'], percent=True)} | % |"
+    )
+    for period, unit in (("month", "orders/month"), ("day", "orders/day")):
+        value = data[f"break_even_orders_{period}"]
+        display = "Not achievable under these inputs" if value is None else str(value)
+        result_rows.append(f"| Break-even per {period} | {display} | {unit} |")
+    rendered = (
+        f"**Calculation {number}: {_plain(data['scenario_label'])}**\n\n"
+        "| Input | Value | Unit |\n| --- | ---: | --- |\n"
+        + "\n".join(rows)
+        + "\n\n| Result | Value | Unit |\n| --- | ---: | --- |\n"
+        + "\n".join(result_rows)
+        + "\n\nAmounts and percentages are displayed to two decimals; break-even uses unrounded "
+        "values and rounds orders up. Commission applies to supplied revenue on delivery orders. "
+        "This is scenario arithmetic, not verified demand or a profit forecast."
+    )
+    if data["viability"] == "not_viable_under_inputs":
+        rendered += (
+            "\n\n**Not viable under these inputs:** contribution is zero or negative. "
+            "Increasing order volume alone does not fix this scenario."
+        )
+    return rendered
 
 
 def render_answer(answer: AdvisorAnswer, registry: TurnRegistry) -> str:
@@ -141,24 +197,7 @@ def render_answer(answer: AdvisorAnswer, registry: TurnRegistry) -> str:
             )
         parts.append("\n\n".join([lines[0], "\n".join(lines[1:])]))
     for ref, number in calc_numbers.items():
-        data = registry.calculations[ref]
-        labels = {
-            "average_order_revenue_aed": "Revenue per order",
-            "food_cost_per_order_aed": "Food cost",
-            "packaging_per_order_aed": "Packaging",
-            "other_variable_cost_per_order_aed": "Other variable costs",
-        }
-        rows = [f"| {label} | {_money(data['inputs'][key])} |" for key, label in labels.items()]
-        rows.extend(
-            [
-                f"| Total variable costs | {_money(data['variable_cost_per_order_aed'])} |",
-                f"| Contribution per order | {_money(data['contribution_per_order_aed'])} |",
-            ]
-        )
-        parts.append(
-            f"**Calculation {number}: {_plain(data['scenario_label'])}**\n\n"
-            "| Input / result | AED |\n| --- | ---: |\n" + "\n".join(rows)
-        )
+        parts.append(_render_calculation(registry.calculations[ref]["data"], number))
     for title, items in (
         ("Assumptions and limitations", answer.assumptions),
         ("Next steps", answer.next_steps),

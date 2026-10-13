@@ -7,6 +7,7 @@ from uuid import uuid4
 import httpx
 import pytest
 from agno.run import RunContext, RunStatus
+from agno.tools.function import Function
 from openai import OpenAI
 from pydantic import ValidationError
 
@@ -174,18 +175,70 @@ def test_model_markdown_is_plain_text_not_an_authoritative_link():
 def test_successful_calculations_get_ids_and_invalid_calculations_do_not(store):
     registry = TurnRegistry()
     _, calculate = build_tools(store)
-    bad = json.loads(calculate(context(registry), "Invalid", 0, 12, 2, 1))
+    bad = json.loads(calculate(context(registry), "Invalid", 0, 12, 2, 1, 0.5, 0.25, 30000, 30))
     assert bad["status"] == "invalid_input"
     assert not registry.calculations
-    good = json.loads(calculate(context(registry), "Supplied example", 40, 12, 2, 1))
+    good = json.loads(
+        calculate(context(registry), "Supplied example", 40, 12, 2, 1, 0.5, 0.25, 30000, 30)
+    )
     ref = good["data"]["calculation_id"]
-    assert registry.calculations[ref]["contribution_per_order_aed"] == "25"
+    assert registry.calculations[ref] == good
     output = render_answer(answer(basis="calculation", calculation_ids=[ref]), registry)
-    assert "| Revenue per order | 40.00 |" in output
-    assert "| Food cost | 12.00 |" in output
-    assert "| Contribution per order | 25.00 |" in output
+    assert "| Revenue per order | 40.00 | AED/order |" in output
+    assert "| Food cost | 12.00 | AED/order |" in output
+    assert "| Contribution per order | 20.00 | AED/order |" in output
+    assert "| Delivery share | 50.00 | % |" in output
+    assert "| Delivery commission rate | 25.00 | % |" in output
+    assert "| Monthly fixed costs | 30000.00 | AED/month |" in output
+    assert "| Operating days per month | 30 | days |" in output
+    assert "| Weighted delivery fee | 5.00 | AED/order |" in output
+    assert "| Contribution margin | 50.00 | % |" in output
+    assert "| Break-even per month | 1500 | orders/month |" in output
+    assert "| Break-even per day | 50 | orders/day |" in output
     with pytest.raises(AnswerValidationError):
         validate_answer(answer(basis="calculation", calculation_ids=[ref]), TurnRegistry())
+
+
+@pytest.mark.parametrize("revenue", [15, 10])
+def test_nonviable_calculation_is_registered_and_rendered_without_inventing_break_even(
+    store, revenue
+):
+    registry = TurnRegistry()
+    _, calculate = build_tools(store)
+    result = json.loads(
+        calculate(context(registry), "Nonviable", revenue, 12, 2, 1, 0, 0, 30000, 30)
+    )
+    ref = result["data"]["calculation_id"]
+    assert registry.calculations[ref] == result
+    assert registry.warnings == result["warnings"]
+    output = render_answer(answer(basis="calculation", calculation_ids=[ref]), registry)
+    assert "**Not viable under these inputs:**" in output
+    assert "| Break-even per month | Not achievable under these inputs |" in output
+    assert "| Break-even per day | Not achievable under these inputs |" in output
+    assert "None" not in output
+
+
+def test_renderer_rounds_half_up_and_displays_zero_break_even_as_zero(store):
+    registry = TurnRegistry()
+    _, calculate = build_tools(store)
+    result = json.loads(calculate(context(registry), "Rounding", "40.005", 12, 2, 1, 0, 0, 0, 30))
+    ref = result["data"]["calculation_id"]
+    output = render_answer(answer(basis="calculation", calculation_ids=[ref]), registry)
+    assert "| Revenue per order | 40.01 | AED/order |" in output
+    assert "| Contribution per order | 25.01 | AED/order |" in output
+    assert "| Break-even per month | 0 | orders/month |" in output
+    assert "| Break-even per day | 0 | orders/day |" in output
+    assert "to two decimals" in output
+
+
+@pytest.mark.parametrize("days", [True, 30.0, 1.5])
+def test_agno_argument_validation_does_not_coerce_operating_days(store, days):
+    registry = TurnRegistry()
+    _, calculate = build_tools(store)
+    function = Function.from_callable(calculate)
+    with pytest.raises(ValidationError):
+        function.entrypoint(context(registry), "Invalid days", 40, 12, 2, 1, 0.5, 0.25, 30000, days)
+    assert not registry.calculations
 
 
 def test_shared_tool_budget_limits_lookup_and_calculator(store):
@@ -194,7 +247,10 @@ def test_shared_tool_budget_limits_lookup_and_calculator(store):
     lookup, calculate = build_tools(store)
     for _ in range(MAX_TOOL_CALLS):
         lookup(ctx, ["dubai"], ["pricing"], "no_matches")
-    assert json.loads(calculate(ctx, "Example", 40, 12, 2, 1))["status"] == "limit_reached"
+    assert (
+        json.loads(calculate(ctx, "Example", 40, 12, 2, 1, 0.5, 0.25, 30000, 30))["status"]
+        == "limit_reached"
+    )
     assert json.loads(lookup(ctx, ["dubai"], ["pricing"]))["status"] == "limit_reached"
     assert not registry.calculations and not registry.evidence
     assert len(registry.warnings) == 1

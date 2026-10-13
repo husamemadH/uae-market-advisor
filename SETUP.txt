@@ -28,8 +28,12 @@ Example conversation
   How would those questions change for Abu Dhabi?
   /new
   Using hypothetical inputs: revenue 40 AED per order, food cost 12,
-  packaging 2, and other variable costs 1, calculate contribution per order.
+  packaging 2, other variable costs 1 excluding commission, delivery share
+  50%, delivery commission 25%, monthly fixed costs 30,000 AED, and 30
+  operating days, calculate contribution, margin, and break-even for Dubai.
   Keep those costs and change revenue to 42 AED. Calculate again.
+  Expected first result: weighted delivery fee 5 AED/order, contribution
+  20 AED/order, margin 50%, break-even 1,500 orders/month and 50 orders/day.
 
 Current behavior
   Interactive terminal chat through Agno and DeepSeek V4.1 Flash on OpenRouter.
@@ -45,11 +49,27 @@ Current behavior
   The research tool retrieves curated observations with source links, dates,
   and qualifiers. Each question gets a fresh evidence/calculation registry;
   factual follow-ups must retrieve their supporting records again.
-  A second typed Python tool calculates contribution per order using decimal
-  arithmetic. Revenue, food, packaging, and other variable costs are all
-  required; use explicit zero where appropriate. All inputs are scenario
-  assumptions, not researched figures. The result includes the inputs,
-  formula, contribution, and warnings for nonpositive contribution.
+  A second typed Python tool calculates weighted delivery commission,
+  contribution per order, contribution margin, and operating break-even.
+  All eight numeric inputs are required: revenue, food cost, packaging,
+  other variable costs, delivery share, commission rate, monthly fixed costs,
+  and operating days. Use explicit zero where appropriate. The agent asks
+  for missing inputs or labels an explicitly requested hypothetical example.
+  Identify whether inputs are user-provided, sourced, or hypothetical.
+  Rates use fractions (0.25 for 25%) inside the tool. Operating days must be
+  an integer from 1 to 31. Invalid/nonfinite numbers produce no calculation.
+  Revenue is net of discounts and pass-through tax. Commission applies to
+  that revenue on delivery orders; other variable costs exclude that fee.
+  Fixed costs exclude costs already included per order. Different contract
+  bases or extra fees require normalized inputs or an explicit limitation.
+  Decimal arithmetic retains precision until display. Currency and percentage
+  displays round half-up to two decimals; break-even uses unrounded amounts
+  and rounds orders upward. Positive contribution with zero fixed costs gives
+  zero break-even orders. Zero/negative contribution produces the viability
+  value not_viable_under_inputs and null break-even values, with a warning.
+  Status remains ok for this valid computation; it does not mean the business
+  is viable. The result includes a generated calculation ID, all inputs,
+  formulas, outputs, and warnings. The complete result enters the turn registry.
   Agno requests a native JSON schema and parses output into AdvisorAnswer:
   kind, cities, headline, sections, assumptions, next_steps, and questions.
   Statements identify facts, inferences, proposals, assumptions, or calculations.
@@ -86,7 +106,9 @@ How the code works
   Agno executes the Python function, then sends its result back to the model.
   A user turn can therefore make multiple paid model requests. Tool execution
   is bounded to six calls shared by both tools per turn. Tools make no model requests.
-  TurnRegistry holds only returned evidence and successful calculation results.
+  TurnRegistry holds only returned evidence and valid calculation results,
+  including nonviable scenarios. Each calculation entry stores the complete
+  status/data/warnings envelope; result.calculations[id]["data"] holds its values.
   It is injected through Agno RunContext dependencies and is not model input.
   answers.py defines the response schema, reference checks, and Markdown renderer.
   answer_question returns ApplicationResult with the validated answer, rendered
@@ -117,7 +139,7 @@ Dependencies
   imports both adapters, even though this application uses synchronous calls.
 
 Current limitations
-  Conversation, an initial calculator, and typed answers are implemented.
+  Conversation, the scenario economics calculator, and typed answers are implemented.
   The evidence loader and local retrieval are implemented. The production
   dataset contains 48 manually researched observations from 22 sources,
   inspected on 2026-10-12 UTC, covering all eight topics in both cities.
@@ -128,8 +150,13 @@ Current limitations
   Local evidence retrieval and citation validation are connected to the advisor.
   Live web search, durable business profiles,
   session resume, exports, and executive evaluations are not implemented yet.
-  Delivery mix, commission sensitivity, fixed costs, margins, and break-even
-  are not implemented.
+  Calculator scenarios do not prove demand, profitability, or investment
+  viability. Hypothetical inputs do not automatically become profile facts.
+  Numeric validation cannot prove the model copied the user's intended inputs.
+  Instructions require clarification for missing inputs and forbid placeholders;
+  review the displayed input table as well as the model's explanation.
+  Repeating decimal margins use the calculator's decimal precision; orders
+  are calculated directly from unrounded contribution, not from that margin.
   Schema validation checks structure, not factual truth or whether a model's
   explanation correctly reflects a tool result. No answer-repair call or
   separate parser model is used. Native schema failures are not silently

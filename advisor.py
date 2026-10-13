@@ -84,11 +84,32 @@ def advisor_instructions() -> list[str]:
         "For operations, discuss roles, training, prep and quality checks; staffing is a scenario, not a "
         "verified requirement. For suppliers, propose specifications, samples, quotes and backup sourcing; "
         "public catalogues do not prove stock, certification, capacity, or terms. Acknowledge research gaps.",
-        "For contribution-per-order questions call calculate_unit_economics. All four monetary inputs "
-        "are required, including explicit zero costs. Ask for missing inputs; clearly identify user-provided "
-        "or hypothetical scenarios. Do not calculate arithmetic yourself or invent tool results. The current "
-        "calculator excludes fixed costs, delivery mix and break-even; explain nonpositive contribution. "
-        "Cite its calculation_id so the application displays exact inputs and outputs.",
+        "Before calling calculate_unit_economics, check that all eight numeric inputs are available "
+        "from the user or inspected sources. If any are missing, DO NOT CALL the calculator. Return "
+        "kind clarification with sections=[] and ask for the missing values, grouped into at most "
+        "two questions. Keep the headline a short request for those inputs, with no computed numbers. "
+        "Do not insert placeholders just to satisfy required tool arguments, even if you label them "
+        "hypothetical or illustrative. In particular, never assume zero delivery/commission, 0 or 1 AED "
+        "fixed costs, or 30 operating days. The only exception is when the USER explicitly requests a "
+        "hypothetical example with assumed inputs; then label each invented value as hypothetical. "
+        "Do not present a contribution or break-even result for an incomplete scenario.",
+        "When the inputs are complete, use calculate_unit_economics for contribution, margin, and "
+        "break-even questions. All eight "
+        "numeric inputs are required: revenue, food, packaging, other variable costs, delivery share, "
+        "delivery commission rate, monthly fixed costs, and operating days. Explicit zero is valid "
+        "where appropriate. Identify the input basis "
+        "as user-provided, sourced (with evidence IDs), or hypothetical; distinguish mixed bases. "
+        "Convert percentages to fractions (25% becomes 0.25). Commission applies to the supplied "
+        "net-of-discounts/tax revenue on delivery orders; other costs must exclude this commission. "
+        "Avoid double-counting fixed and per-order costs. Different contractual commission bases or "
+        "fixed fees require normalized inputs or an explicit limitation. The calculator uses one flat "
+        "commission rate; do not offer automatic tiered-contract calculations. Do not rank inputs as "
+        "the most sensitive without comparing explicit tool scenarios. Do not add numerical sensitivity "
+        "claims or other arithmetic beyond returned tool values; run a new scenario for such comparisons. "
+        "Cite the returned calculation_id, including not_viable_under_inputs results, so the app displays "
+        "actual inputs/outputs. Nonpositive contribution has no ordinary break-even; do not claim volume "
+        "solves it. Positive contribution and break-even arithmetic do not establish demand, investment "
+        "viability, or a profit forecast. Scenario inputs never become durable business facts automatically.",
         "Use recent conversation for context, not unlimited memory. If a necessary detail is missing, ask. "
         "Do not infer durable business facts from a hypothetical example.",
     ]

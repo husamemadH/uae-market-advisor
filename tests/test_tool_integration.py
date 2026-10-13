@@ -1,4 +1,5 @@
 import json
+from decimal import Decimal
 from unittest.mock import Mock
 from uuid import uuid4
 
@@ -15,15 +16,24 @@ from turn_tools import TurnRegistry
 
 
 @pytest.mark.integration
-def test_actual_agno_tool_loop_with_native_schema_and_reasoning_metadata(tmp_path):
+@pytest.mark.parametrize(
+    "food,contribution,monthly,daily", [(12, "20", 1500, 50), (40, "-8", None, None)]
+)
+def test_actual_agno_tool_loop_with_native_schema_and_reasoning_metadata(
+    tmp_path, food, contribution, monthly, daily
+):
     # Mock HTTP, retaining the real SDK, adapter, tool execution, and schema parsing.
     requests = []
     arguments = {
         "scenario_label": "Synthetic fixture",
         "average_order_revenue_aed": 40,
-        "food_cost_per_order_aed": 12,
+        "food_cost_per_order_aed": food,
         "packaging_per_order_aed": 2,
         "other_variable_cost_per_order_aed": 1,
+        "delivery_share": 0.5,
+        "delivery_commission_rate": 0.25,
+        "monthly_fixed_costs_aed": 30000,
+        "operating_days_per_month": 30,
     }
     reasoning = [{"type": "reasoning.text", "text": "Fixture reasoning", "id": "reasoning-1"}]
 
@@ -60,7 +70,7 @@ def test_actual_agno_tool_loop_with_native_schema_and_reasoning_metadata(tmp_pat
                                 "title": "Result",
                                 "items": [
                                     {
-                                        "text": "Contribution is 25 AED per order.",
+                                        "text": f"Contribution is {contribution} AED per order.",
                                         "basis": "calculation",
                                         "evidence_ids": [],
                                         "calculation_ids": [
@@ -76,7 +86,7 @@ def test_actual_agno_tool_loop_with_native_schema_and_reasoning_metadata(tmp_pat
                                 ],
                             }
                         ],
-                        "assumptions": ["Synthetic inputs; excludes fixed costs."],
+                        "assumptions": ["Synthetic inputs; not researched market figures."],
                         "next_steps": ["Check the supplied costs."],
                         "questions": [],
                     }
@@ -95,17 +105,20 @@ def test_actual_agno_tool_loop_with_native_schema_and_reasoning_metadata(tmp_pat
             },
         )
 
+    db_file = tmp_path / "sessions.db"
+    session_id = str(uuid4())
     with httpx.Client(transport=httpx.MockTransport(respond)) as http_client:
-        agent = create_agent("fixture-key", tmp_path / "sessions.db")
+        agent = create_agent("fixture-key", db_file)
         agent.model.client = OpenAI(
             api_key="fixture-key", base_url="https://openrouter.ai/api/v1", http_client=http_client
         )
-        result = answer_question("Calculate from the synthetic inputs.", str(uuid4()), agent)
+        result = answer_question("Calculate from the synthetic inputs.", session_id, agent)
+        agent.db.close()
 
     assert result.status == RunStatus.completed
     assert isinstance(result.content, AdvisorAnswer)
-    assert "25 AED" in result.content.sections[0].items[0].text
-    assert "| Contribution per order | 25.00 |" in result.markdown
+    assert f"{contribution} AED" in result.content.sections[0].items[0].text
+    assert f"| Contribution per order | {contribution}.00 | AED/order |" in result.markdown
     assert len(requests) == 2
     for request in requests:
         assert request["provider"]["require_parameters"] is True
@@ -115,11 +128,38 @@ def test_actual_agno_tool_loop_with_native_schema_and_reasoning_metadata(tmp_pat
         assert request["model"] == "deepseek/deepseek-v4.1-flash"
     tool_message = next(message for message in requests[1]["messages"] if message["role"] == "tool")
     # Wrappers return JSON text, including the application-generated calculation ID.
-    assert json.loads(tool_message["content"])["data"]["contribution_per_order_aed"] == "25"
+    payload = json.loads(tool_message["content"])
+    assert Decimal(payload["data"]["contribution_per_order_aed"]) == Decimal(contribution)
+    assert payload["data"]["break_even_orders_month"] == monthly
+    assert payload["data"]["break_even_orders_day"] == daily
+    ref = payload["data"]["calculation_id"]
+    assert result.calculations == {ref: payload}
+    if monthly is None:
+        assert payload["data"]["viability"] == "not_viable_under_inputs"
+        assert "**Not viable under these inputs:**" in result.markdown
     assistant = next(message for message in requests[1]["messages"] if message.get("tool_calls"))
     assert assistant["reasoning_details"] == reasoning
     assert result.tools[0].tool_name == "calculate_unit_economics"
     assert result.tools[0].tool_args == arguments
+    schema = next(
+        t["function"]["parameters"]
+        for t in requests[0]["tools"]
+        if t["function"]["name"] == "calculate_unit_economics"
+    )
+    assert set(schema["required"]) == set(arguments)
+    assert schema["properties"]["operating_days_per_month"]["type"] == "integer"
+
+    # Reopen the actual SQLite database and check the complete tool result,
+    # not just the model's narrative. This also covers nonviable calculations.
+    reader = create_agent("fixture-key", db_file)
+    try:
+        saved = reader.get_session(session_id=session_id)
+        assert saved.runs[0].status == RunStatus.completed
+        assert json.loads(saved.runs[0].tools[0].result) == payload
+        stored_answer = AdvisorAnswer.model_validate(saved.runs[0].content)
+        assert stored_answer.sections[0].items[0].calculation_ids == [ref]
+    finally:
+        reader.db.close()
 
 
 @pytest.mark.parametrize("content", ["raw answer", None, {"answer": "unparsed dictionary"}])
