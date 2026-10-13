@@ -81,7 +81,7 @@ class EvidenceRecord(BaseModel):
 
 
 class EvidenceItem(EvidenceRecord):
-    """Loaded source record with freshness flags calculated by the application."""
+    """Loaded source record with freshness flags calculated by the application at run time."""
 
     needs_review: bool
     expired: bool
@@ -205,20 +205,23 @@ class EvidenceStore:
         query_tokens = _tokens(request.query)
         scored = []
         for record in self.records:
+            # A record must match at least one requested city and topic.
             if not set(record.cities).intersection(request.cities) or not set(
                 record.topics
             ).intersection(request.topics):
                 continue
+            # Score by the number of query words found in the record.
             score = len(query_tokens & _tokens(f"{record.entity} {record.observation}"))
             if query_tokens and score == 0:
                 continue
             scored.append((score, record))
+        # Sort by score, then record ID to resolve ties consistently.
         ranked = [
             record for score, record in sorted(scored, key=lambda item: (-item[0], item[1].id))
         ]
         if not ranked:
             return _result([], 0, status="no_results")
-
+        # Alternate cities and avoid duplicate records while respecting limits.
         queues = {
             city: deque(record for record in ranked if city in record.cities)
             for city in CITY_ORDER

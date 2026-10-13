@@ -2,6 +2,8 @@ from decimal import Decimal, DecimalException, localcontext
 from typing import Any
 from uuid import uuid4
 
+# A delivery share of 0.5 means 50 of every 100 orders use delivery.
+
 
 def calculate_unit_economics(
     scenario_label: str,
