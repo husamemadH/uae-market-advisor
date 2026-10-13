@@ -117,7 +117,7 @@ def test_missing_key_never_constructs_agent(monkeypatch, capsys):
     monkeypatch.setenv("OPENROUTER_API_KEY", "")
     builder = Mock()
     monkeypatch.setattr(app, "create_agent", builder)
-    assert app.main() == 1
+    assert app.main([]) == 1
     builder.assert_not_called()
     assert "Set OPENROUTER_API_KEY" in capsys.readouterr().err
 

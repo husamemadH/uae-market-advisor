@@ -11,7 +11,7 @@ from agno.run import RunStatus
 from openai import OpenAI
 
 import web_search
-from advisor import answer_question, create_agent
+from advisor import answer_question, answer_sources, create_agent, export_answer, last_answer
 from answers import AnswerValidationError
 from evidence import EvidenceStore
 from settings import Settings
@@ -181,5 +181,19 @@ def test_real_agno_search_loop_persists_sources_and_falls_back_to_curated_eviden
         assert json.loads(saved.runs[0].tools[1].result) == returned["search"]
         if mode == "ok":
             assert saved.runs[1].status == RunStatus.error
+        # Failed follow-ups do not replace the last validated answer on resume.
+        restored = last_answer(session_id, reader)
+        assert restored.run_id == result.run_id
+        assert restored.markdown == result.markdown
+        sources = answer_sources(restored)
+        record = returned["lookup"]["data"]["records"][0]
+        assert record["source_url"] in sources
+        assert record["checked_on"] in sources
+        path = export_answer(restored, tmp_path / "exports")
+        assert path.read_text() == result.markdown + "\n"
+        if mode == "ok":
+            assert "search snippet; page not inspected" in sources
+            fetched_at = result.sources[returned["search_id"]].fetched_at
+            assert fetched_at.isoformat() in sources
     finally:
         reader.db.close()

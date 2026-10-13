@@ -215,44 +215,58 @@ def render_answer(answer: AdvisorAnswer, registry: TurnRegistry) -> str:
     ):
         if items:
             parts.append(f"**{title}**\n\n" + "\n".join(f"- {_plain(item)}" for item in items))
-    if urls:
-        sources = []
-        for url, number in numbers.items():
-            records = [
-                registry.evidence[ref]
-                for ref in evidence_ids
-                if str(registry.evidence[ref].source_url) == url
-            ]
-            # Prefer inspected metadata if a search result points to the same page.
-            first = next(
-                (record for record in records if isinstance(record, EvidenceItem)), records[0]
-            )
-            publisher = f" — {_plain(first.publisher)}" if isinstance(first, EvidenceItem) else ""
-            sources.append(f"{number}. [{_plain(first.source_title)}](<{url}>){publisher}")
-            for record in records:
-                if isinstance(record, SearchRecord):
-                    sources.append(
-                        "   - **Research lead — search snippet; page not inspected.** "
-                        f"Fetched {record.fetched_at.isoformat()} (UTC)."
-                    )
-                    sources.append(f"     Search query: {_plain(record.query)}.")
-                    if record.snippet:
-                        sources.append(
-                            f"     Snippet (untrusted source text): {_plain(record.snippet)}"
-                        )
-                    continue
-                dates = f"checked {record.checked_on.isoformat()} UTC"
-                if record.published_on:
-                    dates += f"; published {record.published_on.isoformat()}"
-                if record.valid_until:
-                    dates += f"; valid until {record.valid_until.isoformat()}"
-                flags = "; EXPIRED" if record.expired else ""
-                if record.needs_review:
-                    flags += "; NEEDS REVIEW"
-                sources.append(f"   - {_plain(record.entity)}: {dates}{flags}.")
-                if record.locator:
-                    sources.append(f"     Location in source: {_plain(record.locator)}.")
-                for qualifier in record.qualifiers:
-                    sources.append(f"     - {_plain(qualifier)}")
-        parts.append("**Sources**\n\n" + "\n".join(sources))
+    source_text = render_sources(answer, registry)
+    if source_text:
+        parts.append(source_text)
     return "\n\n".join(parts)
+
+
+def render_sources(answer: AdvisorAnswer, registry: TurnRegistry) -> str:
+    """Render only cited sources, with the same numbering as the complete answer."""
+    validate_answer(answer, registry)
+    evidence_ids = list(
+        dict.fromkeys(
+            ref
+            for section in answer.sections
+            for item in section.items
+            for ref in item.evidence_ids
+        )
+    )
+    urls = list(dict.fromkeys(str(registry.evidence[ref].source_url) for ref in evidence_ids))
+    sources = []
+    for number, url in enumerate(urls, 1):
+        records = [
+            registry.evidence[ref]
+            for ref in evidence_ids
+            if str(registry.evidence[ref].source_url) == url
+        ]
+        # Prefer inspected metadata if a search result points to the same page.
+        first = next((record for record in records if isinstance(record, EvidenceItem)), records[0])
+        publisher = f" — {_plain(first.publisher)}" if isinstance(first, EvidenceItem) else ""
+        sources.append(f"{number}. [{_plain(first.source_title)}](<{url}>){publisher}")
+        for record in records:
+            if isinstance(record, SearchRecord):
+                sources.append(
+                    "   - **Research lead — search snippet; page not inspected.** "
+                    f"Fetched {record.fetched_at.isoformat()} (UTC)."
+                )
+                sources.append(f"     Search query: {_plain(record.query)}.")
+                if record.snippet:
+                    sources.append(
+                        f"     Snippet (untrusted source text): {_plain(record.snippet)}"
+                    )
+                continue
+            dates = f"checked {record.checked_on.isoformat()} UTC"
+            if record.published_on:
+                dates += f"; published {record.published_on.isoformat()}"
+            if record.valid_until:
+                dates += f"; valid until {record.valid_until.isoformat()}"
+            flags = "; EXPIRED" if record.expired else ""
+            if record.needs_review:
+                flags += "; NEEDS REVIEW"
+            sources.append(f"   - {_plain(record.entity)}: {dates}{flags}.")
+            if record.locator:
+                sources.append(f"     Location in source: {_plain(record.locator)}.")
+            for qualifier in record.qualifiers:
+                sources.append(f"     - {_plain(qualifier)}")
+    return "**Sources**\n\n" + "\n".join(sources) if sources else ""

@@ -10,8 +10,9 @@ from agno.run.agent import RunOutput
 from openai import OpenAI
 from pydantic import ValidationError
 
-from advisor import answer_question, create_agent
+from advisor import answer_question, create_agent, export_answer, last_answer
 from answers import AdvisorAnswer, AnswerSection, Statement, render_answer
+from sessions import SessionStore
 from turn_tools import TurnRegistry
 
 
@@ -106,13 +107,16 @@ def test_actual_agno_tool_loop_with_native_schema_and_reasoning_metadata(
         )
 
     db_file = tmp_path / "sessions.db"
-    session_id = str(uuid4())
     with httpx.Client(transport=httpx.MockTransport(respond)) as http_client:
         agent = create_agent("fixture-key", db_file)
+        sessions = SessionStore(agent.db)
+        session_id = sessions.new()
+        sessions.update_profile(session_id, "monthly_rent_budget_aed", "12000 AED")
         agent.model.client = OpenAI(
             api_key="fixture-key", base_url="https://openrouter.ai/api/v1", http_client=http_client
         )
         result = answer_question("Calculate from the synthetic inputs.", session_id, agent)
+        assert sessions.profile(session_id).monthly_rent_budget_aed == Decimal("12000")
         agent.db.close()
 
     assert result.status == RunStatus.completed
@@ -158,6 +162,21 @@ def test_actual_agno_tool_loop_with_native_schema_and_reasoning_metadata(
         assert json.loads(saved.runs[0].tools[0].result) == payload
         stored_answer = AdvisorAnswer.model_validate(saved.runs[0].content)
         assert stored_answer.sections[0].items[0].calculation_ids == [ref]
+        restored = last_answer(session_id, reader)
+        assert restored.markdown == result.markdown
+        assert restored.calculations == result.calculations
+        path = export_answer(restored, tmp_path / "exports")
+        exported = path.read_text()
+        assert "Synthetic inputs; not researched market figures." in exported
+        assert "| Monthly fixed costs | 30000.00 | AED/month |" in exported
+        assert f"| Contribution per order | {contribution}.00 | AED/order |" in exported
+        if monthly is None:
+            assert "Not viable under these inputs" in exported
+        restored.calculations[ref]["data"]["contribution_per_order_aed"] = "999999"
+        assert (
+            last_answer(session_id, reader).calculations[ref]["data"]["contribution_per_order_aed"]
+            == payload["data"]["contribution_per_order_aed"]
+        )
     finally:
         reader.db.close()
 

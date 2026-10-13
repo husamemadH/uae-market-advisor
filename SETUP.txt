@@ -14,12 +14,64 @@ Setup (run inside this project directory)
 
 Run
   uv run python app.py
+  uv run python app.py --session SESSION_ID
+  Use the exact UUID printed by a previous launch to resume it, including its
+  saved profile and last validated answer. Invalid or unknown IDs are rejected.
+  A launch without --session starts a new, empty conversation.
 
 Commands
-  /help  Show supported questions and commands.
-  /new   Start a fresh conversation with no previous chat context.
-  /quit  Exit. Ctrl+D or Ctrl+C at the prompt also exits.
+  /help             Show supported questions, fields, and commands.
+  /profile          Show saved business constraints and unknown fields.
+  /set FIELD VALUE  Validate and save one business constraint without inference.
+  /unset FIELD      Return a supported field to unknown without inference.
+  /new              Reset profile, history, and last answer in a fresh session.
+  /sources          Show sources cited by the latest validated answer.
+  /export           Save that answer as Markdown under runtime/exports/.
+  /quit             Exit. Ctrl+D or Ctrl+C at the prompt also exits.
   Ctrl+C during a request cancels it and returns to the prompt.
+  Commands make no model or search requests. Previous sessions remain stored
+  after /new. A session is saved even before its first question.
+
+Business profile
+  Fixed identity: Jordan; meaty pizza and kebab sandwiches; Dubai and Abu Dhabi.
+  Six editable fields start unknown:
+    startup_budget_aed        Positive investment budget; not monthly costs.
+    monthly_rent_budget_aed   Zero or positive monthly rent constraint.
+    branch_format            takeaway, dine_in, delivery_kitchen, or mixed.
+    target_audience          Single-line text, at most 200 characters.
+    positioning              value, mid_market, or premium.
+    planned_opening          Single-line text, at most 100 characters;
+                             retained as supplied, not interpreted as a date.
+  Monetary field names explicitly specify AED. Accept a decimal number with
+  an optional AED suffix, at most 14 integer digits and two decimal places.
+  Reject other currencies, negative values, nonfinite values, commas, and
+  arithmetic expressions. No conversion is performed.
+  Example commands:
+    /set startup_budget_aed 300000 AED
+    /set monthly_rent_budget_aed 12000
+    /set branch_format takeaway
+    /set target_audience office workers
+    /profile
+    /unset planned_opening
+  Only /set and /unset change durable values. Ordinary conversation constraints
+  remain in the bounded chat history. A hypothetical example or explicit
+  scenario override does not change the profile. Ambiguous conflicts require
+  clarification. A startup budget or rent budget is not a calculator's total
+  monthly fixed costs. Profile values are user inputs, not market evidence.
+
+Sources and export
+  /sources displays only cited records, numbered as in the answer, including
+  inspection dates, qualifiers, review flags, and search-lead provenance.
+  /export includes the validated answer, assumptions, next steps, warnings,
+  citations, and actual calculator inputs and outputs. Generated filenames
+  include a UTC timestamp and UUID; existing exports are not overwritten.
+  No path argument is accepted. Exported Markdown remains gitignored.
+  Both commands work after resume without calling inference or search. They
+  rebuild the latest completed answer from its saved tool results and validate
+  references again; corrupt/unverifiable saved output is refused. A failed or
+  cancelled question leaves the preceding validated answer available. A new
+  session has no answer to export. Saved source dates describe the original
+  answer; exporting does not recheck a page or refresh old research.
 
 Example conversation
   Give me two Dubai areas to investigate for a takeaway pizza and kebab branch.
@@ -42,9 +94,10 @@ Example conversation
 
 Current behavior
   Interactive terminal chat through Agno and DeepSeek V4.1 Flash on OpenRouter.
-  Each launch and /new creates a UUID session. Chats persist locally in
-  runtime/sessions.db, which Git ignores. /new keeps stored chats but starts
-  with empty context. Agno includes the three most recent completed turns
+  A launch without --session and /new create UUID sessions. Chats and explicit
+  business profiles persist locally in runtime/sessions.db, which Git ignores.
+  /new keeps stored chats but starts with empty context and an unknown profile.
+  Agno includes the three most recent completed turns
   from the same session in each request; older stored history is not sent.
   A missing key exits before making a model request. Existing environment
   variables take precedence over .env. Blank input and commands make no
@@ -150,10 +203,19 @@ How the code works
   application retry. Small process startup/cleanup overhead is included in
   observed latency; this is not a deadline for the whole model conversation.
   settings.py validates the public search-enabled flag at startup.
+  profiles.py defines immutable typed business constraints and deterministic
+  command validation. sessions.py reads and updates the business_profile key
+  in Agno session state through SQLite, with explicit session IDs and copies
+  of loaded objects. No agent tool can write profile values. The instruction
+  callback reads the current run's profile on every question, independently
+  of the three-turn history window. The agent holds no shared mutable profile.
   answers.py defines the response schema, reference checks, and Markdown renderer.
   answer_question returns ApplicationResult with the validated answer, rendered
   Markdown, sources, calculations, warnings, and available usage information.
-  app.py handles commands and displays that shared result.
+  advisor.py also restores saved answers, renders cited sources, and exports
+  revalidated application results. Restoration uses only the selected run's
+  stored tool results, never citations from another turn or session.
+  app.py handles commands, explicit --session resume, and displays shared results.
   Agent.run submits a turn and lets Agno manage context and persistence.
   evidence.py validates data/market_evidence.json at startup and provides
   local city/topic filtering with deterministic keyword ranking. Returned
@@ -189,8 +251,10 @@ Current limitations
   initial coverage, not a complete market study. Synthetic records live only
   in tests/fixtures/.
   Local evidence retrieval and citation validation are connected to the advisor.
-  Durable business profiles,
-  session resume, exports, and executive evaluations are not implemented yet.
+  Milestone 09 is implemented: typed business profiles, explicit session resume,
+  cited sources, and answer export. Usage reporting and executive evaluations
+  are later milestones. The application is a local single-user program;
+  simultaneous writers to the same session are not supported.
   Calculator scenarios do not prove demand, profitability, or investment
   viability. Hypothetical inputs do not automatically become profile facts.
   Numeric validation cannot prove the model copied the user's intended inputs.

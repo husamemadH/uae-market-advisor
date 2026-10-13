@@ -316,6 +316,6 @@ def test_corrupt_evidence_stops_startup_before_agent_creation(tmp_path, monkeypa
     monkeypatch.setenv("OPENROUTER_API_KEY", "test-key")
     builder = Mock()
     monkeypatch.setattr(app, "create_agent", builder)
-    assert app.main() == 1
+    assert app.main([]) == 1
     builder.assert_not_called()
     assert "research dataset" in capsys.readouterr().err

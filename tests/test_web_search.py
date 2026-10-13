@@ -401,7 +401,7 @@ def test_bad_search_setting_fails_before_model_construction(monkeypatch, capsys)
     monkeypatch.setenv("ADVISOR_SEARCH_ENABLED", "maybe")
     builder = Mock()
     monkeypatch.setattr(app, "create_agent", builder)
-    assert app.main() == 1
+    assert app.main([]) == 1
     builder.assert_not_called()
     assert "must be true or false" in capsys.readouterr().err
 
