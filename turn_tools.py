@@ -9,7 +9,7 @@ from uuid import uuid4
 from agno.run import RunContext
 
 from economics import calculate_unit_economics as calculate
-from evidence import City, Topic, EvidenceItem, EvidenceStore
+from evidence import City, EvidenceItem, EvidenceStore, Topic
 
 MAX_TOOL_CALLS = 6
 REGISTRY_KEY = "advisor_turn"
@@ -93,8 +93,13 @@ def build_tools(store: EvidenceStore) -> list:
         registry = get_registry(run_context)
         if not registry.take_call():
             return _limit_result(registry)
-        result = calculate(scenario_label, average_order_revenue_aed, food_cost_per_order_aed,
-                           packaging_per_order_aed, other_variable_cost_per_order_aed)
+        result = calculate(
+            scenario_label,
+            average_order_revenue_aed,
+            food_cost_per_order_aed,
+            packaging_per_order_aed,
+            other_variable_cost_per_order_aed,
+        )
         if result["status"] == "ok":
             calculation_id = f"CALC-{uuid4().hex}"
             result["data"]["calculation_id"] = calculation_id

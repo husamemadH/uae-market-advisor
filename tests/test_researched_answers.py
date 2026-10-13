@@ -12,29 +12,48 @@ from pydantic import ValidationError
 
 from advisor import answer_question, create_agent
 from answers import AdvisorAnswer, AnswerValidationError, render_answer, validate_answer
-from evidence import EvidenceStore, MAX_PAYLOAD_CHARACTERS
+from evidence import MAX_PAYLOAD_CHARACTERS, EvidenceStore
 from turn_tools import MAX_TOOL_CALLS, REGISTRY_KEY, TurnRegistry, build_tools
 
 
 @pytest.fixture
 def store():
-    return EvidenceStore.load(Path(__file__).parent / "fixtures" / "synthetic_evidence.json", on_date=date(2026, 10, 12))
+    return EvidenceStore.load(
+        Path(__file__).parent / "fixtures" / "synthetic_evidence.json", on_date=date(2026, 10, 12)
+    )
 
 
 def context(registry):
-    return RunContext(run_id=str(uuid4()), session_id=str(uuid4()), dependencies={REGISTRY_KEY: registry})
+    return RunContext(
+        run_id=str(uuid4()), session_id=str(uuid4()), dependencies={REGISTRY_KEY: registry}
+    )
 
 
 def answer(*, basis="fact", evidence_ids=None, calculation_ids=None, **changes):
-    return AdvisorAnswer.model_validate({
-        "kind": "advice", "cities": ["dubai"], "headline": "Compare the supplied observations.",
-        "sections": [{"title": "Dubai", "items": [{
-            "text": "A synthetic menu observation for this test.", "basis": basis,
-            "evidence_ids": evidence_ids or [], "calculation_ids": calculation_ids or [],
-        }]}],
-        "assumptions": [], "next_steps": ["Check the branch before making a decision."], "questions": [],
-        **changes,
-    })
+    return AdvisorAnswer.model_validate(
+        {
+            "kind": "advice",
+            "cities": ["dubai"],
+            "headline": "Compare the supplied observations.",
+            "sections": [
+                {
+                    "title": "Dubai",
+                    "items": [
+                        {
+                            "text": "A synthetic menu observation for this test.",
+                            "basis": basis,
+                            "evidence_ids": evidence_ids or [],
+                            "calculation_ids": calculation_ids or [],
+                        }
+                    ],
+                }
+            ],
+            "assumptions": [],
+            "next_steps": ["Check the branch before making a decision."],
+            "questions": [],
+            **changes,
+        }
+    )
 
 
 def test_lookup_registers_only_returned_records_and_preserves_json_limit(store):
@@ -54,22 +73,38 @@ def test_lookup_registers_only_returned_records_and_preserves_json_limit(store):
 def test_lookup_invalid_and_empty_results_cannot_register_evidence(store):
     registry = TurnRegistry()
     lookup, _ = build_tools(store)
-    assert json.loads(lookup(context(registry), ["dubai"], ["pricing"], "no_matching_keyword"))["status"] == "no_results"
-    assert json.loads(lookup(context(registry), ["amman"], ["pricing"]))["status"] == "invalid_input"
+    assert (
+        json.loads(lookup(context(registry), ["dubai"], ["pricing"], "no_matching_keyword"))[
+            "status"
+        ]
+        == "no_results"
+    )
+    assert (
+        json.loads(lookup(context(registry), ["amman"], ["pricing"]))["status"] == "invalid_input"
+    )
     assert not registry.evidence
     assert registry.tool_calls == 2
 
 
-@pytest.mark.parametrize("kwargs,category", [
-    ({}, "fact_without_evidence"),
-    ({"evidence_ids": ["invented"]}, "unretrieved_evidence"),
-    ({"evidence_ids": ["SEARCH-1"]}, "unretrieved_evidence"),
-    ({"basis": "calculation"}, "calculation_without_result"),
-    ({"basis": "calculation", "calculation_ids": ["CALC-old-turn"]}, "unregistered_calculation"),
-    ({"basis": "proposal", "evidence_ids": ["invented"]}, "unretrieved_evidence"),
-    ({"basis": "research_lead"}, "search_not_available"),
-    ({"basis": "proposal", "headline": "See https://made-up.invalid/source"}, "model_supplied_url"),
-])
+@pytest.mark.parametrize(
+    "kwargs,category",
+    [
+        ({}, "fact_without_evidence"),
+        ({"evidence_ids": ["invented"]}, "unretrieved_evidence"),
+        ({"evidence_ids": ["SEARCH-1"]}, "unretrieved_evidence"),
+        ({"basis": "calculation"}, "calculation_without_result"),
+        (
+            {"basis": "calculation", "calculation_ids": ["CALC-old-turn"]},
+            "unregistered_calculation",
+        ),
+        ({"basis": "proposal", "evidence_ids": ["invented"]}, "unretrieved_evidence"),
+        ({"basis": "research_lead"}, "search_not_available"),
+        (
+            {"basis": "proposal", "headline": "See https://made-up.invalid/source"},
+            "model_supplied_url",
+        ),
+    ],
+)
 def test_invalid_references_fail_the_whole_answer(kwargs, category):
     with pytest.raises(AnswerValidationError) as error:
         render_answer(answer(**kwargs), TurnRegistry())
@@ -79,17 +114,25 @@ def test_invalid_references_fail_the_whole_answer(kwargs, category):
 def test_evidence_must_apply_to_an_answer_city(store):
     record = next(r for r in store.records if r.cities == ["abu_dhabi"])
     with pytest.raises(AnswerValidationError) as error:
-        validate_answer(answer(evidence_ids=[record.id]), TurnRegistry(evidence={record.id: record}))
+        validate_answer(
+            answer(evidence_ids=[record.id]), TurnRegistry(evidence={record.id: record})
+        )
     assert error.value.category == "evidence_city_mismatch"
 
 
-@pytest.mark.parametrize("changes", [
-    {"sections": []}, {"next_steps": []}, {"cities": []},
-    {"cities": ["dubai", "dubai"]}, {"kind": "clarification", "questions": []},
-    {"source_url": "https://invented.invalid"},
-    {"questions": ["One?", "Two?", "Three?"]},
-    {"sections": [{"title": "Empty", "items": []}]},
-])
+@pytest.mark.parametrize(
+    "changes",
+    [
+        {"sections": []},
+        {"next_steps": []},
+        {"cities": []},
+        {"cities": ["dubai", "dubai"]},
+        {"kind": "clarification", "questions": []},
+        {"source_url": "https://invented.invalid"},
+        {"questions": ["One?", "Two?", "Three?"]},
+        {"sections": [{"title": "Empty", "items": []}]},
+    ],
+)
 def test_answer_contract_requires_substance_and_bounds(changes):
     with pytest.raises(ValidationError):
         answer(basis="proposal", **changes)
@@ -97,10 +140,16 @@ def test_answer_contract_requires_substance_and_bounds(changes):
 
 def test_renderer_deduplicates_pages_without_losing_dates_qualifiers_or_flags(store):
     first = store.records[0]
-    second = first.model_copy(update={
-        "id": "SYN-SECOND", "entity": "Another observation", "needs_review": True, "expired": True,
-        "valid_until": date(2026, 10, 1), "qualifiers": ["Second observation qualifier."],
-    })
+    second = first.model_copy(
+        update={
+            "id": "SYN-SECOND",
+            "entity": "Another observation",
+            "needs_review": True,
+            "expired": True,
+            "valid_until": date(2026, 10, 1),
+            "qualifiers": ["Second observation qualifier."],
+        }
+    )
     registry = TurnRegistry(evidence={r.id: r for r in (first, second)})
     output = render_answer(answer(evidence_ids=[first.id, second.id]), registry)
     assert "[1](<https://example.invalid/fixtures/dubai-menu>)" in output
@@ -115,7 +164,9 @@ def test_renderer_deduplicates_pages_without_losing_dates_qualifiers_or_flags(st
 
 
 def test_model_markdown_is_plain_text_not_an_authoritative_link():
-    output = render_answer(answer(basis="proposal", headline="[Fake source](javascript:alert)"), TurnRegistry())
+    output = render_answer(
+        answer(basis="proposal", headline="[Fake source](javascript:alert)"), TurnRegistry()
+    )
     assert "[Fake source](javascript:" not in output
     assert r"\[Fake source\]" in output
 
@@ -149,7 +200,10 @@ def test_shared_tool_budget_limits_lookup_and_calculator(store):
     assert len(registry.warnings) == 1
 
 
-def test_real_agno_lookup_and_followup_registry_isolation_with_failed_run_persistence(tmp_path, store):
+@pytest.mark.integration
+def test_real_agno_lookup_and_followup_registry_isolation_with_failed_run_persistence(
+    tmp_path, store
+):
     requests = []
     calls = Counter()
     ref = store.records[0].id
@@ -160,26 +214,48 @@ def test_real_agno_lookup_and_followup_registry_isolation_with_failed_run_persis
         question = next(m["content"] for m in reversed(body["messages"]) if m["role"] == "user")
         calls[question] += 1
         if question != "Reuse the previous citation" and calls[question] == 1:
-            message = {"role": "assistant", "content": None, "tool_calls": [{
-                "id": f"call-{len(requests)}", "type": "function", "function": {
-                    "name": "lookup_market_evidence",
-                    "arguments": json.dumps({"cities": ["dubai"], "topics": ["pricing"], "query": "pizza", "limit": 1}),
-                },
-            }]}
+            message = {
+                "role": "assistant",
+                "content": None,
+                "tool_calls": [
+                    {
+                        "id": f"call-{len(requests)}",
+                        "type": "function",
+                        "function": {
+                            "name": "lookup_market_evidence",
+                            "arguments": json.dumps(
+                                {
+                                    "cities": ["dubai"],
+                                    "topics": ["pricing"],
+                                    "query": "pizza",
+                                    "limit": 1,
+                                }
+                            ),
+                        },
+                    }
+                ],
+            }
             reason = "tool_calls"
         else:
             message = {"role": "assistant", "content": answer(evidence_ids=[ref]).model_dump_json()}
             reason = "stop"
-        return httpx.Response(200, json={
-            "id": f"fixture-{len(requests)}", "object": "chat.completion", "created": 0,
-            "model": "deepseek/deepseek-v4.1-flash",
-            "choices": [{"index": 0, "message": message, "finish_reason": reason}],
-            "usage": {"prompt_tokens": 1, "completion_tokens": 1, "total_tokens": 2},
-        })
+        return httpx.Response(
+            200,
+            json={
+                "id": f"fixture-{len(requests)}",
+                "object": "chat.completion",
+                "created": 0,
+                "model": "deepseek/deepseek-v4.1-flash",
+                "choices": [{"index": 0, "message": message, "finish_reason": reason}],
+                "usage": {"prompt_tokens": 1, "completion_tokens": 1, "total_tokens": 2},
+            },
+        )
 
     with httpx.Client(transport=httpx.MockTransport(respond)) as http_client:
         agent = create_agent("fixture-key", tmp_path / "sessions.db", evidence_store=store)
-        agent.model.client = OpenAI(api_key="fixture-key", base_url="https://openrouter.ai/api/v1", http_client=http_client)
+        agent.model.client = OpenAI(
+            api_key="fixture-key", base_url="https://openrouter.ai/api/v1", http_client=http_client
+        )
         session_id = str(uuid4())
         first = answer_question("Find Dubai pizza evidence", session_id, agent)
         assert first.status == RunStatus.completed

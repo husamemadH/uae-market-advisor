@@ -49,10 +49,14 @@ def calculate_unit_economics(
         return {"status": "invalid_input", "data": None, "warnings": warnings}
 
     revenue = values["average_order_revenue_aed"]
-    variable_cost = sum(value for name, value in values.items() if name != "average_order_revenue_aed")
+    variable_cost = sum(
+        value for name, value in values.items() if name != "average_order_revenue_aed"
+    )
     contribution = revenue - variable_cost
     if contribution <= 0:
-        warnings.append("Contribution is nonpositive under these inputs; volume alone does not fix it.")
+        warnings.append(
+            "Contribution is nonpositive under these inputs; volume alone does not fix it."
+        )
     return {
         "status": "ok",
         "data": {

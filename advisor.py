@@ -145,12 +145,18 @@ def answer_question(question: str, session_id: str, agent: Agent) -> Application
     if len(question) > MAX_INPUT_LENGTH:
         raise ValueError(f"Keep questions within {MAX_INPUT_LENGTH:,} characters.")
     registry = TurnRegistry()
-    response = agent.run(question, session_id=session_id, stream=False,
-                         dependencies={REGISTRY_KEY: registry})
+    response = agent.run(
+        question, session_id=session_id, stream=False, dependencies={REGISTRY_KEY: registry}
+    )
     if registry.validation_error:
         raise AnswerValidationError(registry.validation_error)
-    result = ApplicationResult(status=response.status, run_id=response.run_id, usage=response.metrics,
-                               tools=response.tools or [], warnings=list(registry.warnings))
+    result = ApplicationResult(
+        status=response.status,
+        run_id=response.run_id,
+        usage=response.metrics,
+        tools=response.tools or [],
+        warnings=list(registry.warnings),
+    )
     if response.status == RunStatus.completed:
         # Also validate at the public service boundary before producing display output.
         try:

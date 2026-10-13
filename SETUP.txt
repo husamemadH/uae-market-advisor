@@ -111,6 +111,7 @@ Dependencies
   rich: terminal Markdown and progress rendering.
   pydantic: explicitly declared dependency for typed final answers.
   pytest: development dependency for offline checks.
+  ruff: development dependency for linting, import sorting, and formatting.
   uv.lock pins the resolved dependency versions for reproducible installation.
   The SQLAlchemy asyncio extra supplies greenlet because Agno's SQLite module
   imports both adapters, even though this application uses synchronous calls.
@@ -154,6 +155,25 @@ Research maintenance
 Offline checks
   uv run pytest -q
   Tests mock inference and use temporary SQLite files. No API credits needed.
+
+  Run the same checks as CI:
+    uv run ruff check .
+    uv run ruff format --check .
+    uv run pytest -q -m "not integration"
+    uv run pytest -q -m integration
+
+  Fix imports/lint issues and apply formatting locally:
+    uv run ruff check --fix .
+    uv run ruff format .
+  Review the fixes before committing; some lint issues need manual changes.
+
+  GitHub Actions runs three independent jobs on pull requests and main pushes:
+  lint/formatting, unit tests, and integration tests. Each uses uv.lock.
+  Integration tests carry @pytest.mark.integration and exercise real Agno
+  flows or SQLite persistence while replacing model inference. All other
+  tests run in the unit job. Unknown markers fail collection to catch typos.
+  A plain pytest run still runs both groups. CI checks formatting without
+  rewriting code; apply formatting locally before submitting changes.
 
 References
   https://docs.agno.com/models/providers/gateways/openrouter/overview

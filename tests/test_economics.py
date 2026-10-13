@@ -6,7 +6,9 @@ from economics import calculate_unit_economics
 
 
 def calculate(revenue="40", food="12", packaging="2", other="1"):
-    return calculate_unit_economics("Synthetic test", Decimal(revenue), Decimal(food), Decimal(packaging), Decimal(other))
+    return calculate_unit_economics(
+        "Synthetic test", Decimal(revenue), Decimal(food), Decimal(packaging), Decimal(other)
+    )
 
 
 def test_contribution_from_synthetic_inputs():
@@ -22,10 +24,17 @@ def test_decimal_arithmetic_keeps_precision_until_display():
     assert calculate("40.005", "12", "2", "1")["data"]["contribution_per_order_aed"] == "25.005"
 
 
-@pytest.mark.parametrize("kwargs", [
-    {"revenue": "0"}, {"revenue": "-1"}, {"food": "-1"},
-    {"packaging": "-1"}, {"other": "NaN"}, {"revenue": "Infinity"},
-])
+@pytest.mark.parametrize(
+    "kwargs",
+    [
+        {"revenue": "0"},
+        {"revenue": "-1"},
+        {"food": "-1"},
+        {"packaging": "-1"},
+        {"other": "NaN"},
+        {"revenue": "Infinity"},
+    ],
+)
 def test_invalid_numbers_return_no_calculation(kwargs):
     result = calculate(**kwargs)
     assert result["status"] == "invalid_input"

@@ -14,6 +14,7 @@ from answers import AdvisorAnswer, AnswerSection, Statement, render_answer
 from turn_tools import TurnRegistry
 
 
+@pytest.mark.integration
 def test_actual_agno_tool_loop_with_native_schema_and_reasoning_metadata(tmp_path):
     # Mock HTTP, retaining the real SDK, adapter, tool execution, and schema parsing.
     requests = []
@@ -31,36 +32,74 @@ def test_actual_agno_tool_loop_with_native_schema_and_reasoning_metadata(tmp_pat
         requests.append(body)
         if len(requests) == 1:
             message = {
-                "role": "assistant", "content": None,
+                "role": "assistant",
+                "content": None,
                 "reasoning_details": reasoning,
-                "tool_calls": [{"id": "call-calculator", "type": "function", "function": {
-                    "name": "calculate_unit_economics", "arguments": json.dumps(arguments),
-                }}],
+                "tool_calls": [
+                    {
+                        "id": "call-calculator",
+                        "type": "function",
+                        "function": {
+                            "name": "calculate_unit_economics",
+                            "arguments": json.dumps(arguments),
+                        },
+                    }
+                ],
             }
             finish_reason = "tool_calls"
         else:
-            message = {"role": "assistant", "content": json.dumps({
-                "kind": "advice", "cities": ["dubai"], "headline": "Contribution calculation.",
-                "sections": [{"title": "Result", "items": [{
-                    "text": "Contribution is 25 AED per order.", "basis": "calculation",
-                    "evidence_ids": [], "calculation_ids": [json.loads(next(
-                        m["content"] for m in reversed(body["messages"]) if m["role"] == "tool"
-                    ))["data"]["calculation_id"]],
-                }]}],
-                "assumptions": ["Synthetic inputs; excludes fixed costs."],
-                "next_steps": ["Check the supplied costs."], "questions": [],
-            })}
+            message = {
+                "role": "assistant",
+                "content": json.dumps(
+                    {
+                        "kind": "advice",
+                        "cities": ["dubai"],
+                        "headline": "Contribution calculation.",
+                        "sections": [
+                            {
+                                "title": "Result",
+                                "items": [
+                                    {
+                                        "text": "Contribution is 25 AED per order.",
+                                        "basis": "calculation",
+                                        "evidence_ids": [],
+                                        "calculation_ids": [
+                                            json.loads(
+                                                next(
+                                                    m["content"]
+                                                    for m in reversed(body["messages"])
+                                                    if m["role"] == "tool"
+                                                )
+                                            )["data"]["calculation_id"]
+                                        ],
+                                    }
+                                ],
+                            }
+                        ],
+                        "assumptions": ["Synthetic inputs; excludes fixed costs."],
+                        "next_steps": ["Check the supplied costs."],
+                        "questions": [],
+                    }
+                ),
+            }
             finish_reason = "stop"
-        return httpx.Response(200, json={
-            "id": f"fixture-{len(requests)}", "object": "chat.completion", "created": 0,
-            "model": "deepseek/deepseek-v4.1-flash",
-            "choices": [{"index": 0, "message": message, "finish_reason": finish_reason}],
-            "usage": {"prompt_tokens": 1, "completion_tokens": 1, "total_tokens": 2},
-        })
+        return httpx.Response(
+            200,
+            json={
+                "id": f"fixture-{len(requests)}",
+                "object": "chat.completion",
+                "created": 0,
+                "model": "deepseek/deepseek-v4.1-flash",
+                "choices": [{"index": 0, "message": message, "finish_reason": finish_reason}],
+                "usage": {"prompt_tokens": 1, "completion_tokens": 1, "total_tokens": 2},
+            },
+        )
 
     with httpx.Client(transport=httpx.MockTransport(respond)) as http_client:
         agent = create_agent("fixture-key", tmp_path / "sessions.db")
-        agent.model.client = OpenAI(api_key="fixture-key", base_url="https://openrouter.ai/api/v1", http_client=http_client)
+        agent.model.client = OpenAI(
+            api_key="fixture-key", base_url="https://openrouter.ai/api/v1", http_client=http_client
+        )
         result = answer_question("Calculate from the synthetic inputs.", str(uuid4()), agent)
 
     assert result.status == RunStatus.completed
@@ -92,7 +131,14 @@ def test_service_rejects_completed_untyped_content(content):
 
 
 def test_answer_schema_rejects_empty_headline_and_extra_fields():
-    base = dict(kind="insufficient_evidence", cities=[], sections=[], assumptions=[], next_steps=[], questions=[])
+    base = dict(
+        kind="insufficient_evidence",
+        cities=[],
+        sections=[],
+        assumptions=[],
+        next_steps=[],
+        questions=[],
+    )
     for fields in [{"headline": "  "}, {"headline": "Text", "unexpected": True}]:
         with pytest.raises(ValidationError):
             AdvisorAnswer.model_validate({**base, **fields})
@@ -100,11 +146,25 @@ def test_answer_schema_rejects_empty_headline_and_extra_fields():
 
 def test_renderer_uses_answer_fields():
     answer = AdvisorAnswer(
-        kind="advice", cities=["dubai"], headline="Review the scenario.",
-        sections=[AnswerSection(title="Scenario", items=[Statement(
-            text="Use the supplied costs as assumptions.", basis="assumption", evidence_ids=[], calculation_ids=[],
-        )])],
-        assumptions=["Hypothetical."], next_steps=["Check inputs."], questions=[],
+        kind="advice",
+        cities=["dubai"],
+        headline="Review the scenario.",
+        sections=[
+            AnswerSection(
+                title="Scenario",
+                items=[
+                    Statement(
+                        text="Use the supplied costs as assumptions.",
+                        basis="assumption",
+                        evidence_ids=[],
+                        calculation_ids=[],
+                    )
+                ],
+            )
+        ],
+        assumptions=["Hypothetical."],
+        next_steps=["Check inputs."],
+        questions=[],
     )
     output = render_answer(answer, TurnRegistry())
     assert "Review the scenario." in output

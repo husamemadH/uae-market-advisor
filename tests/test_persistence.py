@@ -1,5 +1,6 @@
 from uuid import uuid4
 
+import pytest
 from agno.models.message import Message
 from agno.models.openrouter import OpenRouter
 from agno.models.response import ModelResponse
@@ -9,6 +10,7 @@ from advisor import answer_question, create_agent
 from answers import AdvisorAnswer
 
 
+@pytest.mark.integration
 def test_saved_messages_and_answers_survive_database_reopen(tmp_path, monkeypatch):
     # Only inference is replaced. Every write/read uses the real SQLite adapter.
     model_calls = []
@@ -17,7 +19,9 @@ def test_saved_messages_and_answers_survive_database_reopen(tmp_path, monkeypatc
         question = next(message.content for message in reversed(messages) if message.role == "user")
         model_calls.append(question)
         answer = AdvisorAnswer(
-            kind="insufficient_evidence", cities=["dubai"], sections=[],
+            kind="insufficient_evidence",
+            cities=["dubai"],
+            sections=[],
             headline=f"Saved answer for: {question}",
             assumptions=["Synthetic database test."],
             next_steps=["Review this scenario."],
@@ -59,7 +63,9 @@ def test_saved_messages_and_answers_survive_database_reopen(tmp_path, monkeypatc
                 question, expected_answer = expected_runs[run.run_id]
                 assert run.status == RunStatus.completed
                 assert run.session_id == session_id
-                assert [message.content for message in run.messages if message.role == "user"] == [question]
+                assert [message.content for message in run.messages if message.role == "user"] == [
+                    question
+                ]
 
                 # Check the saved final answer and the saved assistant message.
                 # Agno can deserialize structured content as a dict or JSON text.
@@ -69,11 +75,18 @@ def test_saved_messages_and_answers_survive_database_reopen(tmp_path, monkeypatc
                     else AdvisorAnswer.model_validate(run.content)
                 )
                 assert stored_answer == expected_answer
-                assistant_messages = [message for message in run.messages if message.role == "assistant"]
+                assistant_messages = [
+                    message for message in run.messages if message.role == "assistant"
+                ]
                 assert len(assistant_messages) == 1
-                assert AdvisorAnswer.model_validate_json(assistant_messages[0].content) == expected_answer
+                assert (
+                    AdvisorAnswer.model_validate_json(assistant_messages[0].content)
+                    == expected_answer
+                )
 
         assert reader.get_session(session_id=str(uuid4())) is None
-        assert model_calls == [question for questions in scenarios.values() for question in questions]
+        assert model_calls == [
+            question for questions in scenarios.values() for question in questions
+        ]
     finally:
         reader.db.close()

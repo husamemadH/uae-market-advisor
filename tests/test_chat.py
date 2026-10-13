@@ -11,20 +11,32 @@ from agno.run.agent import RunOutput
 from rich.console import Console
 
 import app
-from advisor import ApplicationResult, MAX_INPUT_LENGTH, answer_question, create_agent
+from advisor import MAX_INPUT_LENGTH, ApplicationResult, answer_question, create_agent
 from answers import AdvisorAnswer
 
 
 def typed_answer(text):
-    return AdvisorAnswer(kind="insufficient_evidence", cities=["dubai"], headline=text,
-                         sections=[], assumptions=[], next_steps=[], questions=[])
+    return AdvisorAnswer(
+        kind="insufficient_evidence",
+        cities=["dubai"],
+        headline=text,
+        sections=[],
+        assumptions=[],
+        next_steps=[],
+        questions=[],
+    )
 
 
 def run_cli(monkeypatch, inputs, answer=None):
     console = Console(file=StringIO(), color_system=None, width=100)
     monkeypatch.setattr(console, "input", Mock(side_effect=inputs))
     responder = Mock(
-        return_value=answer or ApplicationResult(status=RunStatus.completed, content=typed_answer("A completed answer."), markdown="A completed answer.")
+        return_value=answer
+        or ApplicationResult(
+            status=RunStatus.completed,
+            content=typed_answer("A completed answer."),
+            markdown="A completed answer.",
+        )
     )
     monkeypatch.setattr(app, "answer_question", responder)
     assert app.chat_loop(Mock(), console) == 0
@@ -40,7 +52,9 @@ def test_commands_and_blank_input_do_not_call_model(monkeypatch):
 
 
 def test_follow_ups_share_session_and_new_resets_it(monkeypatch):
-    responder, output = run_cli(monkeypatch, ["First question", "Follow-up", "/new", "New question", "/quit"])
+    responder, output = run_cli(
+        monkeypatch, ["First question", "Follow-up", "/new", "New question", "/quit"]
+    )
     session_ids = [call.args[1] for call in responder.call_args_list]
     assert session_ids[0] == session_ids[1]
     assert session_ids[2] != session_ids[0]
@@ -59,7 +73,8 @@ def test_exit_at_prompt(monkeypatch, end):
 @pytest.mark.parametrize("status", [RunStatus.cancelled, RunStatus.error])
 def test_incomplete_runs_are_not_displayed_as_answers(monkeypatch, status):
     responder, output = run_cli(
-        monkeypatch, ["Question", "/quit"],
+        monkeypatch,
+        ["Question", "/quit"],
         RunOutput(status=status, content="PARTIAL_CONTENT", reasoning_content="RAW_REASONING"),
     )
     assert responder.call_count == 1
@@ -70,8 +85,19 @@ def test_incomplete_runs_are_not_displayed_as_answers(monkeypatch, status):
 
 def test_request_interrupt_returns_to_prompt(monkeypatch):
     console = Console(file=StringIO(), color_system=None)
-    monkeypatch.setattr(console, "input", Mock(side_effect=["Question", "Another question", "/quit"]))
-    responder = Mock(side_effect=[KeyboardInterrupt(), ApplicationResult(status=RunStatus.completed, content=typed_answer("Recovered."), markdown="Recovered.")])
+    monkeypatch.setattr(
+        console, "input", Mock(side_effect=["Question", "Another question", "/quit"])
+    )
+    responder = Mock(
+        side_effect=[
+            KeyboardInterrupt(),
+            ApplicationResult(
+                status=RunStatus.completed,
+                content=typed_answer("Recovered."),
+                markdown="Recovered.",
+            ),
+        ]
+    )
     monkeypatch.setattr(app, "answer_question", responder)
     assert app.chat_loop(Mock(), console) == 0
     assert responder.call_args_list[0].args[1] == responder.call_args_list[1].args[1]
@@ -96,6 +122,7 @@ def test_missing_key_never_constructs_agent(monkeypatch, capsys):
     assert "Set OPENROUTER_API_KEY" in capsys.readouterr().err
 
 
+@pytest.mark.integration
 def test_sqlite_history_survives_agent_recreation_and_stays_bounded(tmp_path, monkeypatch):
     # Replace only inference: Agno still builds context and writes/reads real SQLite.
     contexts = []
@@ -125,6 +152,7 @@ def test_sqlite_history_survives_agent_recreation_and_stays_bounded(tmp_path, mo
     assert [content for role, content in contexts[-1] if role == "user"] == ["Fresh session"]
 
 
+@pytest.mark.integration
 def test_agno_cancellation_is_not_a_success(tmp_path, monkeypatch):
     def interrupt(self, **kwargs):
         raise KeyboardInterrupt()

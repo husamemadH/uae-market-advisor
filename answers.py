@@ -1,7 +1,7 @@
 """Structured advice, reference validation, and a shared Markdown renderer."""
 
 import re
-from decimal import Decimal, ROUND_HALF_UP
+from decimal import ROUND_HALF_UP, Decimal
 from typing import Annotated, Literal
 
 from pydantic import BaseModel, ConfigDict, Field, StringConstraints, model_validator
@@ -54,7 +54,9 @@ class AdvisorAnswer(AnswerModel):
 class AnswerValidationError(ValueError):
     def __init__(self, category: str):
         self.category = category
-        super().__init__("The answer could not be validated against this question's tool results. Please try again.")
+        super().__init__(
+            "The answer could not be validated against this question's tool results. Please try again."
+        )
 
 
 def validate_answer(answer: AdvisorAnswer, registry: TurnRegistry) -> None:
@@ -94,6 +96,7 @@ def _money(value: str) -> str:
     amount = Decimal(value)
     # Avoid the default decimal context rejecting otherwise valid large inputs.
     from decimal import localcontext
+
     with localcontext() as context:
         context.prec = max(28, len(amount.as_tuple().digits) + abs(amount.adjusted()) + 4)
         return format(amount.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP), ".2f")
@@ -102,8 +105,22 @@ def _money(value: str) -> str:
 def render_answer(answer: AdvisorAnswer, registry: TurnRegistry) -> str:
     """Validate, then render references and exact calculator values from this turn."""
     validate_answer(answer, registry)
-    evidence_ids = list(dict.fromkeys(ref for section in answer.sections for item in section.items for ref in item.evidence_ids))
-    calculation_ids = list(dict.fromkeys(ref for section in answer.sections for item in section.items for ref in item.calculation_ids))
+    evidence_ids = list(
+        dict.fromkeys(
+            ref
+            for section in answer.sections
+            for item in section.items
+            for ref in item.evidence_ids
+        )
+    )
+    calculation_ids = list(
+        dict.fromkeys(
+            ref
+            for section in answer.sections
+            for item in section.items
+            for ref in item.calculation_ids
+        )
+    )
     # Deduplicate pages while retaining which observations, dates, and limits were cited.
     urls = list(dict.fromkeys(str(registry.evidence[ref].source_url) for ref in evidence_ids))
     numbers = {url: number for number, url in enumerate(urls, 1)}
@@ -113,11 +130,15 @@ def render_answer(answer: AdvisorAnswer, registry: TurnRegistry) -> str:
         lines = [f"**{_plain(section.title)}**"]
         for item in section.items:
             suffix = ""
-            for url in dict.fromkeys(str(registry.evidence[ref].source_url) for ref in item.evidence_ids):
+            for url in dict.fromkeys(
+                str(registry.evidence[ref].source_url) for ref in item.evidence_ids
+            ):
                 suffix += f" [{numbers[url]}](<{url}>)"
             for ref in dict.fromkeys(item.calculation_ids):
                 suffix += f" (Calculation {calc_numbers[ref]})"
-            lines.append(f"- **{item.basis.replace('_', ' ').capitalize()}:** {_plain(item.text)}{suffix}")
+            lines.append(
+                f"- **{item.basis.replace('_', ' ').capitalize()}:** {_plain(item.text)}{suffix}"
+            )
         parts.append("\n\n".join([lines[0], "\n".join(lines[1:])]))
     for ref, number in calc_numbers.items():
         data = registry.calculations[ref]
@@ -128,12 +149,16 @@ def render_answer(answer: AdvisorAnswer, registry: TurnRegistry) -> str:
             "other_variable_cost_per_order_aed": "Other variable costs",
         }
         rows = [f"| {label} | {_money(data['inputs'][key])} |" for key, label in labels.items()]
-        rows.extend([
-            f"| Total variable costs | {_money(data['variable_cost_per_order_aed'])} |",
-            f"| Contribution per order | {_money(data['contribution_per_order_aed'])} |",
-        ])
-        parts.append(f"**Calculation {number}: {_plain(data['scenario_label'])}**\n\n"
-                     "| Input / result | AED |\n| --- | ---: |\n" + "\n".join(rows))
+        rows.extend(
+            [
+                f"| Total variable costs | {_money(data['variable_cost_per_order_aed'])} |",
+                f"| Contribution per order | {_money(data['contribution_per_order_aed'])} |",
+            ]
+        )
+        parts.append(
+            f"**Calculation {number}: {_plain(data['scenario_label'])}**\n\n"
+            "| Input / result | AED |\n| --- | ---: |\n" + "\n".join(rows)
+        )
     for title, items in (
         ("Assumptions and limitations", answer.assumptions),
         ("Next steps", answer.next_steps),
@@ -145,9 +170,15 @@ def render_answer(answer: AdvisorAnswer, registry: TurnRegistry) -> str:
     if urls:
         sources = []
         for url, number in numbers.items():
-            records = [registry.evidence[ref] for ref in evidence_ids if str(registry.evidence[ref].source_url) == url]
+            records = [
+                registry.evidence[ref]
+                for ref in evidence_ids
+                if str(registry.evidence[ref].source_url) == url
+            ]
             first = records[0]
-            sources.append(f"{number}. [{_plain(first.source_title)}](<{url}>) — {_plain(first.publisher)}")
+            sources.append(
+                f"{number}. [{_plain(first.source_title)}](<{url}>) — {_plain(first.publisher)}"
+            )
             for record in records:
                 dates = f"checked {record.checked_on.isoformat()} UTC"
                 if record.published_on:

@@ -6,11 +6,28 @@ from datetime import date
 from pathlib import Path
 from typing import Literal
 
-from pydantic import BaseModel, ConfigDict, Field, HttpUrl, TypeAdapter, ValidationError, field_validator, model_validator
-
+from pydantic import (
+    BaseModel,
+    ConfigDict,
+    Field,
+    HttpUrl,
+    TypeAdapter,
+    ValidationError,
+    field_validator,
+    model_validator,
+)
 
 City = Literal["dubai", "abu_dhabi"]
-Topic = Literal["locations", "competitors", "menu", "pricing", "marketing", "delivery", "operations", "suppliers"]
+Topic = Literal[
+    "locations",
+    "competitors",
+    "menu",
+    "pricing",
+    "marketing",
+    "delivery",
+    "operations",
+    "suppliers",
+]
 DEFAULT_EVIDENCE_FILE = Path(__file__).resolve().parent / "data" / "market_evidence.json"
 MAX_PAYLOAD_CHARACTERS = 8000
 CITY_ORDER: tuple[City, ...] = ("dubai", "abu_dhabi")
@@ -116,10 +133,14 @@ def _result(records: list[EvidenceItem], matched_count: int, status="ok") -> Evi
     if omitted_count:
         warnings.append("Some matching records were omitted to respect result or payload limits.")
     if any(record.needs_review for record in records):
-        warnings.append("Some returned records need review; inspect their dates and freshness flags.")
+        warnings.append(
+            "Some returned records need review; inspect their dates and freshness flags."
+        )
     return EvidenceResult(
         status=status,
-        data=EvidencePayload(records=records, matched_count=matched_count, omitted_count=omitted_count),
+        data=EvidencePayload(
+            records=records, matched_count=matched_count, omitted_count=omitted_count
+        ),
         warnings=warnings,
     )
 
@@ -129,7 +150,9 @@ class EvidenceStore:
     records: tuple[EvidenceItem, ...]
 
     @classmethod
-    def load(cls, path: Path = DEFAULT_EVIDENCE_FILE, *, on_date: date | None = None) -> "EvidenceStore":
+    def load(
+        cls, path: Path = DEFAULT_EVIDENCE_FILE, *, on_date: date | None = None
+    ) -> "EvidenceStore":
         """Validate all records and derive freshness using today's date or a supplied test date."""
         on_date = on_date or date.today()
         try:
@@ -141,7 +164,9 @@ class EvidenceStore:
         except ValidationError as exc:
             error = exc.errors()[0]
             location = ".".join(str(part) for part in error["loc"]) or "dataset"
-            raise EvidenceDataError(f"Invalid research data at {path}, {location}: {error['msg']}") from exc
+            raise EvidenceDataError(
+                f"Invalid research data at {path}, {location}: {error['msg']}"
+            ) from exc
 
         seen = set()
         loaded = []
@@ -152,7 +177,9 @@ class EvidenceStore:
                 raise EvidenceDataError(f"Evidence {record.id} has a checked date in the future.")
             seen.add(record.id)
             needs_review, expired = _review_flags(record, on_date)
-            loaded.append(EvidenceItem(**record.model_dump(), needs_review=needs_review, expired=expired))
+            loaded.append(
+                EvidenceItem(**record.model_dump(), needs_review=needs_review, expired=expired)
+            )
         return cls(records=tuple(loaded))
 
     def lookup_market_evidence(
@@ -178,19 +205,24 @@ class EvidenceStore:
         query_tokens = _tokens(request.query)
         scored = []
         for record in self.records:
-            if not set(record.cities).intersection(request.cities) or not set(record.topics).intersection(request.topics):
+            if not set(record.cities).intersection(request.cities) or not set(
+                record.topics
+            ).intersection(request.topics):
                 continue
             score = len(query_tokens & _tokens(f"{record.entity} {record.observation}"))
             if query_tokens and score == 0:
                 continue
             scored.append((score, record))
-        ranked = [record for score, record in sorted(scored, key=lambda item: (-item[0], item[1].id))]
+        ranked = [
+            record for score, record in sorted(scored, key=lambda item: (-item[0], item[1].id))
+        ]
         if not ranked:
             return _result([], 0, status="no_results")
 
         queues = {
             city: deque(record for record in ranked if city in record.cities)
-            for city in CITY_ORDER if city in request.cities
+            for city in CITY_ORDER
+            if city in request.cities
         }
         selected = []
         seen = set()

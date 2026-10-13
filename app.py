@@ -13,7 +13,6 @@ from advisor import PROJECT_DIR, answer_question, create_agent
 from answers import AdvisorAnswer
 from evidence import DEFAULT_EVIDENCE_FILE, EvidenceDataError, EvidenceStore
 
-
 HELP_TEXT = """Ask about expanding our Jordanian pizza and kebab restaurant into Dubai or Abu Dhabi.
 Follow-up questions use the three most recent completed turns.
 This early version can calculate contribution per order from supplied inputs.
@@ -31,7 +30,9 @@ Ctrl+C at the prompt or Ctrl+D exits."""
 def chat_loop(agent: Agent, console: Console) -> int:
     session_id = str(uuid4())
     console.print("UAE Market Expansion Advisor — Dubai and Abu Dhabi", markup=False)
-    console.print("Type /help for commands. Research-backed answers include sources and limitations.")
+    console.print(
+        "Type /help for commands. Research-backed answers include sources and limitations."
+    )
     console.print(f"Session: {session_id}")
 
     while True:
