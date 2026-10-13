@@ -6,8 +6,9 @@ from typing import Annotated, Literal
 
 from pydantic import BaseModel, ConfigDict, Field, StringConstraints, model_validator
 
-from evidence import City
+from evidence import City, EvidenceItem
 from turn_tools import TurnRegistry
+from web_search import SearchRecord
 
 Text = Annotated[str, StringConstraints(strip_whitespace=True, min_length=1, max_length=700)]
 Reference = Annotated[str, StringConstraints(strip_whitespace=True, min_length=1, max_length=100)]
@@ -71,17 +72,25 @@ def validate_answer(answer: AdvisorAnswer, registry: TurnRegistry) -> None:
                 record = registry.evidence.get(record_id)
                 if record is None:
                     raise AnswerValidationError("unretrieved_evidence")
-                if not set(record.cities).intersection(answer.cities):
+                cities = (
+                    record.cities
+                    if isinstance(record, EvidenceItem)
+                    else ([record.city] if record.city else [])
+                )
+                if cities and not set(cities).intersection(answer.cities):
                     raise AnswerValidationError("evidence_city_mismatch")
             if any(ref not in registry.calculations for ref in item.calculation_ids):
                 raise AnswerValidationError("unregistered_calculation")
-            if item.basis == "fact" and not item.evidence_ids:
+            if item.basis == "fact" and not any(
+                isinstance(registry.evidence[ref], EvidenceItem) for ref in item.evidence_ids
+            ):
                 raise AnswerValidationError("fact_without_evidence")
             if item.basis == "calculation" and not item.calculation_ids:
                 raise AnswerValidationError("calculation_without_result")
-            # Search is a later milestone. Curated records cannot masquerade as snippets.
-            if item.basis == "research_lead":
-                raise AnswerValidationError("search_not_available")
+            if item.basis == "research_lead" and not any(
+                isinstance(registry.evidence[ref], SearchRecord) for ref in item.evidence_ids
+            ):
+                raise AnswerValidationError("research_lead_without_search")
     # Model text is plain text; only the renderer is allowed to create source links.
     if any(re.search(r"https?://|www\.", text, re.IGNORECASE) for text in texts):
         raise AnswerValidationError("model_supplied_url")
@@ -214,11 +223,24 @@ def render_answer(answer: AdvisorAnswer, registry: TurnRegistry) -> str:
                 for ref in evidence_ids
                 if str(registry.evidence[ref].source_url) == url
             ]
-            first = records[0]
-            sources.append(
-                f"{number}. [{_plain(first.source_title)}](<{url}>) — {_plain(first.publisher)}"
+            # Prefer inspected metadata if a search result points to the same page.
+            first = next(
+                (record for record in records if isinstance(record, EvidenceItem)), records[0]
             )
+            publisher = f" — {_plain(first.publisher)}" if isinstance(first, EvidenceItem) else ""
+            sources.append(f"{number}. [{_plain(first.source_title)}](<{url}>){publisher}")
             for record in records:
+                if isinstance(record, SearchRecord):
+                    sources.append(
+                        "   - **Research lead — search snippet; page not inspected.** "
+                        f"Fetched {record.fetched_at.isoformat()} (UTC)."
+                    )
+                    sources.append(f"     Search query: {_plain(record.query)}.")
+                    if record.snippet:
+                        sources.append(
+                            f"     Snippet (untrusted source text): {_plain(record.snippet)}"
+                        )
+                    continue
                 dates = f"checked {record.checked_on.isoformat()} UTC"
                 if record.published_on:
                     dates += f"; published {record.published_on.isoformat()}"

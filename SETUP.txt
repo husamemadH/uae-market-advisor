@@ -9,6 +9,8 @@ Setup (run inside this project directory)
   uv sync --locked
   cp .env.example .env
   Edit .env and set OPENROUTER_API_KEY to your key.
+  ADVISOR_SEARCH_ENABLED defaults to true. Set it to false to disable live
+  search. Only true/false are accepted; invalid values stop startup.
 
 Run
   uv run python app.py
@@ -34,6 +36,9 @@ Example conversation
   Keep those costs and change revenue to 42 AED. Calculate again.
   Expected first result: weighted delivery fee 5 AED/order, contribution
   20 AED/order, margin 50%, break-even 1,500 orders/month and 50 orders/day.
+  /new
+  Search for official Dubai restaurant food safety pages. Treat search snippets
+  as research leads and tell me which original pages I should inspect.
 
 Current behavior
   Interactive terminal chat through Agno and DeepSeek V4.1 Flash on OpenRouter.
@@ -49,6 +54,26 @@ Current behavior
   The research tool retrieves curated observations with source links, dates,
   and qualifiers. Each question gets a fresh evidence/calculation registry;
   factual follow-ups must retrieve their supporting records again.
+  search_market_web wraps Agno WebSearchTools with news disabled and at most
+  four results per search. Use a 3-300 character public topic query; the app
+  adds the selected city and UAE context. Never put credentials, financial
+  details, a private business profile, or conversation text in a search query.
+  Search is limited to two invocations per question, including failures,
+  invalid requests, and disabled-mode requests. All count toward the six-tool
+  limit. Each snippet is at most 600 characters, each title 200, and each URL
+  2,000. Malformed URLs/results and duplicate URLs are omitted. Results have
+  application-generated SEARCH IDs, the submitted query, and a UTC fetched
+  timestamp. Search never fetches the returned pages or adds them to the
+  curated dataset. A fetched timestamp is not a page publication/check date.
+  Search records are labelled research leads. They cannot by themselves
+  establish verified prices, rents, commission terms, licensing duties, or
+  profit claims. Source titles/snippets are untrusted data; embedded instructions
+  do not authorize tools or change the advisor's rules. These instructions and
+  citation checks reduce risk but do not prove that the model interprets text
+  correctly. The renderer escapes snippet/title markup and shows provenance.
+  A disabled, timed-out, or failed search returns a friendly tool warning.
+  Curated retrieval and calculations remain available. An empty search does
+  not establish that something does not exist.
   A second typed Python tool calculates weighted delivery commission,
   contribution per order, contribution margin, and operating break-even.
   All eight numeric inputs are required: revenue, food cost, packaging,
@@ -74,8 +99,9 @@ Current behavior
   kind, cities, headline, sections, assumptions, next_steps, and questions.
   Statements identify facts, inferences, proposals, assumptions, or calculations.
   Facts must reference curated records returned during this question; calculations
-  must reference successful results from this question. Research leads are
-  reserved for the later search implementation and currently fail validation.
+  must reference valid results from this question. Research leads must reference
+  search records returned during this question; curated records alone cannot
+  satisfy a research-lead reference. A search-only fact fails validation.
   The application generates numbered source links from the registry, retains
   source qualifiers and review flags, and renders exact calculator inputs/results.
   Model text is plain text; model-supplied web URLs fail validation.
@@ -105,11 +131,25 @@ How the code works
   parameters and docstring into the tool schema; the model requests a call,
   Agno executes the Python function, then sends its result back to the model.
   A user turn can therefore make multiple paid model requests. Tool execution
-  is bounded to six calls shared by both tools per turn. Tools make no model requests.
-  TurnRegistry holds only returned evidence and valid calculation results,
+  is bounded to six calls shared by all three tools per turn. Tools make no model requests.
+  TurnRegistry holds only returned curated evidence/search leads and valid calculation results,
   including nonviable scenarios. Each calculation entry stores the complete
   status/data/warnings envelope; result.calculations[id]["data"] holds its values.
   It is injected through Agno RunContext dependencies and is not model input.
+  The combined serialized tool-output budget is 24,000 characters per turn,
+  including calculator results and warnings. Space is reserved for limit
+  envelopes. Each retrieval/search response also stays within 8,000 characters.
+  Whole records are omitted to fit; a calculation is returned whole or replaced
+  with a limit result. Only records/results actually returned are registered.
+  Omitted records cannot be cited. Limits count characters, not model tokens.
+  web_search.py normalizes provider results into typed SearchRecord objects.
+  It invokes the installed Agno toolkit in a subprocess with a 10-second
+  deadline. Timeout/interrupt kills and waits for the worker so it does not
+  leave a background search running. DDGS may try multiple providers inside
+  that deadline; its own per-request timeout is also 10 seconds. There is no
+  application retry. Small process startup/cleanup overhead is included in
+  observed latency; this is not a deadline for the whole model conversation.
+  settings.py validates the public search-enabled flag at startup.
   answers.py defines the response schema, reference checks, and Markdown renderer.
   answer_question returns ApplicationResult with the validated answer, rendered
   Markdown, sources, calculations, warnings, and available usage information.
@@ -134,6 +174,7 @@ Dependencies
   pydantic: explicitly declared dependency for typed final answers.
   pytest: development dependency for offline checks.
   ruff: development dependency for linting, import sorting, and formatting.
+  ddgs: search provider library used by Agno WebSearchTools; no search API key required.
   uv.lock pins the resolved dependency versions for reproducible installation.
   The SQLAlchemy asyncio extra supplies greenlet because Agno's SQLite module
   imports both adapters, even though this application uses synchronous calls.
@@ -148,7 +189,7 @@ Current limitations
   initial coverage, not a complete market study. Synthetic records live only
   in tests/fixtures/.
   Local evidence retrieval and citation validation are connected to the advisor.
-  Live web search, durable business profiles,
+  Durable business profiles,
   session resume, exports, and executive evaluations are not implemented yet.
   Calculator scenarios do not prove demand, profitability, or investment
   viability. Hypothetical inputs do not automatically become profile facts.
@@ -167,6 +208,10 @@ Current limitations
   Local storage alone does not give the model unlimited memory. Failed or
   cancelled runs may be saved for diagnostics; Agno omits them from history.
   Requests use OpenRouter credits. No OpenAI API key is required.
+  Live search can fail or return stale, misleading, or malicious snippets.
+  Snippets are not full-page research. Human inspection is required before
+  adding findings to the curated evidence dataset. DDGS provider availability
+  may vary even when the code and dependency lockfile have not changed.
 
 Research maintenance
   Update source observations only after inspecting the actual source page.
@@ -208,4 +253,5 @@ References
   https://docs.agno.com/database/chat-history
   https://docs.agno.com/database/providers/sqlite/overview
   https://docs.agno.com/input-output/structured-output/agent
+  https://docs.agno.com/tools/toolkits/search/websearch
   https://openrouter.ai/docs/guides/routing/provider-selection

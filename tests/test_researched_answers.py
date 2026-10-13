@@ -59,7 +59,7 @@ def answer(*, basis="fact", evidence_ids=None, calculation_ids=None, **changes):
 
 def test_lookup_registers_only_returned_records_and_preserves_json_limit(store):
     registry = TurnRegistry()
-    lookup, _ = build_tools(store)
+    lookup, _, _ = build_tools(store)
     payload = lookup(context(registry), ["dubai"], ["pricing"], limit=1)
     result = json.loads(payload)
     returned = {r["id"] for r in result["data"]["records"]}
@@ -73,7 +73,7 @@ def test_lookup_registers_only_returned_records_and_preserves_json_limit(store):
 
 def test_lookup_invalid_and_empty_results_cannot_register_evidence(store):
     registry = TurnRegistry()
-    lookup, _ = build_tools(store)
+    lookup, _, _ = build_tools(store)
     assert (
         json.loads(lookup(context(registry), ["dubai"], ["pricing"], "no_matching_keyword"))[
             "status"
@@ -99,7 +99,7 @@ def test_lookup_invalid_and_empty_results_cannot_register_evidence(store):
             "unregistered_calculation",
         ),
         ({"basis": "proposal", "evidence_ids": ["invented"]}, "unretrieved_evidence"),
-        ({"basis": "research_lead"}, "search_not_available"),
+        ({"basis": "research_lead"}, "research_lead_without_search"),
         (
             {"basis": "proposal", "headline": "See https://made-up.invalid/source"},
             "model_supplied_url",
@@ -174,7 +174,7 @@ def test_model_markdown_is_plain_text_not_an_authoritative_link():
 
 def test_successful_calculations_get_ids_and_invalid_calculations_do_not(store):
     registry = TurnRegistry()
-    _, calculate = build_tools(store)
+    _, calculate, _ = build_tools(store)
     bad = json.loads(calculate(context(registry), "Invalid", 0, 12, 2, 1, 0.5, 0.25, 30000, 30))
     assert bad["status"] == "invalid_input"
     assert not registry.calculations
@@ -204,7 +204,7 @@ def test_nonviable_calculation_is_registered_and_rendered_without_inventing_brea
     store, revenue
 ):
     registry = TurnRegistry()
-    _, calculate = build_tools(store)
+    _, calculate, _ = build_tools(store)
     result = json.loads(
         calculate(context(registry), "Nonviable", revenue, 12, 2, 1, 0, 0, 30000, 30)
     )
@@ -220,7 +220,7 @@ def test_nonviable_calculation_is_registered_and_rendered_without_inventing_brea
 
 def test_renderer_rounds_half_up_and_displays_zero_break_even_as_zero(store):
     registry = TurnRegistry()
-    _, calculate = build_tools(store)
+    _, calculate, _ = build_tools(store)
     result = json.loads(calculate(context(registry), "Rounding", "40.005", 12, 2, 1, 0, 0, 0, 30))
     ref = result["data"]["calculation_id"]
     output = render_answer(answer(basis="calculation", calculation_ids=[ref]), registry)
@@ -234,7 +234,7 @@ def test_renderer_rounds_half_up_and_displays_zero_break_even_as_zero(store):
 @pytest.mark.parametrize("days", [True, 30.0, 1.5])
 def test_agno_argument_validation_does_not_coerce_operating_days(store, days):
     registry = TurnRegistry()
-    _, calculate = build_tools(store)
+    _, calculate, _ = build_tools(store)
     function = Function.from_callable(calculate)
     with pytest.raises(ValidationError):
         function.entrypoint(context(registry), "Invalid days", 40, 12, 2, 1, 0.5, 0.25, 30000, days)
@@ -244,7 +244,7 @@ def test_agno_argument_validation_does_not_coerce_operating_days(store, days):
 def test_shared_tool_budget_limits_lookup_and_calculator(store):
     registry = TurnRegistry()
     ctx = context(registry)
-    lookup, calculate = build_tools(store)
+    lookup, calculate, _ = build_tools(store)
     for _ in range(MAX_TOOL_CALLS):
         lookup(ctx, ["dubai"], ["pricing"], "no_matches")
     assert (

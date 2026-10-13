@@ -12,12 +12,14 @@ from rich.markdown import Markdown
 from advisor import PROJECT_DIR, answer_question, create_agent
 from answers import AdvisorAnswer
 from evidence import DEFAULT_EVIDENCE_FILE, EvidenceDataError, EvidenceStore
+from settings import Settings
 
 HELP_TEXT = """Ask about expanding our Jordanian pizza and kebab restaurant into Dubai or Abu Dhabi.
 Follow-up questions use the three most recent completed turns.
 Calculate contribution, margin, and break-even from explicit scenario inputs.
 Curated research supports advice with source links, inspection dates, and limitations.
-Coverage is incomplete; there is no live web search yet.
+Optional live search finds research leads; snippets are not verified market facts.
+Set ADVISOR_SEARCH_ENABLED=false to use curated evidence without live search.
 
 /help  Show this help
 /new   Start a fresh conversation; previous chats remain stored locally
@@ -102,13 +104,19 @@ def main() -> int:
         return 1
 
     try:
+        settings = Settings.from_environment()
+    except ValueError as exc:
+        print(str(exc), file=sys.stderr)
+        return 1
+
+    try:
         store = EvidenceStore.load(DEFAULT_EVIDENCE_FILE)
     except EvidenceDataError as exc:
         print(str(exc), file=sys.stderr)
         return 1
 
     try:
-        agent = create_agent(api_key, evidence_store=store)
+        agent = create_agent(api_key, evidence_store=store, settings=settings)
     except OSError:
         print(
             "Could not create local session storage under runtime/.",
