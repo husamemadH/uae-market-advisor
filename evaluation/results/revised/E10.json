@@ -1,0 +1,257 @@
+{
+  "case": {
+    "id": "E10",
+    "question": "Calculate contribution, margin and monthly/daily break-even for this synthetic scenario for a Dubai branch. Average order revenue after discounts and excluding pass-through tax is AED 40, food cost AED 12, packaging AED 2, other variable costs AED 1 excluding commission, delivery share 50%, delivery commission 25% of that revenue, monthly fixed costs AED 30000 excluding per-order costs, and 30 operating days per month. These are hypothetical inputs, not verified market costs.",
+    "cities": [
+      "dubai"
+    ],
+    "topics": [],
+    "profile": {},
+    "followup_of": null,
+    "expected": [
+      "Actual calculator tool call and cited result",
+      "Weighted delivery fee AED 5; variable costs AED 20; contribution AED 20; margin 50%",
+      "1500 monthly and 50 daily break-even orders",
+      "Scenario limitations, no demand or profit guarantee"
+    ]
+  },
+  "status": "completed",
+  "session_id": "a3494819-6d75-4690-a232-f07ec2d767b9",
+  "run_id": "982fa900-2ac8-44a5-b401-02bdf34f7074",
+  "profile_before": {
+    "restaurant_origin": "Jordan",
+    "core_products": [
+      "meaty pizza",
+      "kebab sandwiches"
+    ],
+    "target_cities": [
+      "Dubai",
+      "Abu Dhabi"
+    ],
+    "startup_budget_aed": null,
+    "monthly_rent_budget_aed": null,
+    "branch_format": null,
+    "target_audience": null,
+    "positioning": null,
+    "planned_opening": null
+  },
+  "profile_after": {
+    "restaurant_origin": "Jordan",
+    "core_products": [
+      "meaty pizza",
+      "kebab sandwiches"
+    ],
+    "target_cities": [
+      "Dubai",
+      "Abu Dhabi"
+    ],
+    "startup_budget_aed": null,
+    "monthly_rent_budget_aed": null,
+    "branch_format": null,
+    "target_audience": null,
+    "positioning": null,
+    "planned_opening": null
+  },
+  "answer": {
+    "kind": "advice",
+    "cities": [
+      "dubai"
+    ],
+    "headline": "Hypothetical Dubai scenario: AED 20.00 contribution per order, 50.0% margin, break-even at 1,500 orders/month (50/day)",
+    "sections": [
+      {
+        "title": "Scenario result (all inputs hypothetical)",
+        "items": [
+          {
+            "text": "Calculation: blended delivery commission cost is AED 5.00 per order (AED 40 revenue x 50% delivery share x 25% commission), giving total variable cost of AED 20.00 per order and contribution of AED 20.00 per order, a 50.0% contribution margin. Break-even is 1,500 orders per month, equivalent to 50 orders per day at 30 operating days. These are outputs from the eight inputs you supplied, all of which you labelled hypothetical — they are not observed Dubai market costs, and no demand exists merely because the arithmetic works.",
+            "basis": "calculation",
+            "evidence_ids": [],
+            "calculation_ids": [
+              "CALC-46fe23ea94ad496db9f459f7e5ed3e18"
+            ]
+          },
+          {
+            "text": "Calculation: contribution is positive, so an ordinary break-even volume exists. This says nothing about whether such volume is achievable, nor about investment return, cash payback or profit; the AED 30,000 monthly fixed cost is a hypothetical figure and excludes per-order costs by construction.",
+            "basis": "calculation",
+            "evidence_ids": [],
+            "calculation_ids": [
+              "CALC-46fe23ea94ad496db9f459f7e5ed3e18"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "What would have to be validated before treating this as a Dubai plan",
+        "items": [
+          {
+            "text": "Assumption: the AED 40 average order, AED 12 food cost, AED 2 packaging, AED 1 other variable cost, 50% delivery share, 25% commission, AED 30,000 monthly fixed cost and 30 operating days are your invented scenario values, not verified Dubai figures. Each would need replacing with inspected evidence — supplier quotes for food and packaging, a signed commission schedule, and a costed fixed-cost list — before any real decision.",
+            "basis": "assumption",
+            "evidence_ids": [],
+            "calculation_ids": []
+          },
+          {
+            "text": "Proposal: because the result is highly exposed to the delivery share and commission rate, rerun the same model at two or three alternative (share, commission) pairs sourced from actual platform or aggregator terms, and keep each run as a separate labelled scenario rather than blending them.",
+            "basis": "proposal",
+            "evidence_ids": [],
+            "calculation_ids": []
+          },
+          {
+            "text": "Proposal: replace the single AED 40 revenue with at least two realistic baskets matching your concept — for example a shared meaty-pizza basket and a single kebab-sandwich basket — with their own food and packaging costs, and test break-even at each. We have not researched Dubai menu prices or costs for this turn, so treat these as test inputs, not market ranges.",
+            "basis": "proposal",
+            "evidence_ids": [],
+            "calculation_ids": []
+          }
+        ]
+      }
+    ],
+    "assumptions": [
+      "All eight numeric inputs were supplied by you and are hypothetical; none are researched Dubai market facts.",
+      "The calculation applies one flat 25% commission to delivery-order revenue; tiered, fixed-fee or differently-based contracts would need normalised inputs.",
+      "Monthly fixed costs of AED 30,000 exclude per-order costs and any delivery commission, as specified."
+    ],
+    "next_steps": [
+      "Run a second calculation using commission and delivery-share values taken from an actual platform contract or written offer, so the break-even reflects real terms.",
+      "Build a fixed-cost list for a Dubai site (rent, salaries, utilities, licences, insurance) and replace the AED 30,000 placeholder.",
+      "Obtain supplier quotes for your two core products' main ingredients and packaging to replace the AED 12/AED 2 figures.",
+      "If you want these constraints to persist, set them explicitly with /set (for example startup_budget_aed or monthly_rent_budget_aed); I cannot save natural-language requests."
+    ],
+    "questions": []
+  },
+  "rendered_answer": "Hypothetical Dubai scenario: AED 20.00 contribution per order, 50.0% margin, break-even at 1,500 orders/month \\(50/day\\)\n\n**Scenario result \\(all inputs hypothetical\\)**\n\n- **Calculation:** Calculation: blended delivery commission cost is AED 5.00 per order \\(AED 40 revenue x 50% delivery share x 25% commission\\), giving total variable cost of AED 20.00 per order and contribution of AED 20.00 per order, a 50.0% contribution margin. Break-even is 1,500 orders per month, equivalent to 50 orders per day at 30 operating days. These are outputs from the eight inputs you supplied, all of which you labelled hypothetical — they are not observed Dubai market costs, and no demand exists merely because the arithmetic works. (Calculation 1)\n- **Calculation:** Calculation: contribution is positive, so an ordinary break-even volume exists. This says nothing about whether such volume is achievable, nor about investment return, cash payback or profit; the AED 30,000 monthly fixed cost is a hypothetical figure and excludes per-order costs by construction. (Calculation 1)\n\n**What would have to be validated before treating this as a Dubai plan**\n\n- **Assumption:** Assumption: the AED 40 average order, AED 12 food cost, AED 2 packaging, AED 1 other variable cost, 50% delivery share, 25% commission, AED 30,000 monthly fixed cost and 30 operating days are your invented scenario values, not verified Dubai figures. Each would need replacing with inspected evidence — supplier quotes for food and packaging, a signed commission schedule, and a costed fixed-cost list — before any real decision.\n- **Proposal:** Proposal: because the result is highly exposed to the delivery share and commission rate, rerun the same model at two or three alternative \\(share, commission\\) pairs sourced from actual platform or aggregator terms, and keep each run as a separate labelled scenario rather than blending them.\n- **Proposal:** Proposal: replace the single AED 40 revenue with at least two realistic baskets matching your concept — for example a shared meaty-pizza basket and a single kebab-sandwich basket — with their own food and packaging costs, and test break-even at each. We have not researched Dubai menu prices or costs for this turn, so treat these as test inputs, not market ranges.\n\n**Calculation 1: Synthetic Dubai branch scenario \\(hypothetical inputs\\)**\n\n| Input | Value | Unit |\n| --- | ---: | --- |\n| Revenue per order | 40.00 | AED/order |\n| Food cost | 12.00 | AED/order |\n| Packaging | 2.00 | AED/order |\n| Other variable costs (excluding commission) | 1.00 | AED/order |\n| Delivery share | 50.00 | % |\n| Delivery commission rate | 25.00 | % |\n| Monthly fixed costs | 30000.00 | AED/month |\n| Operating days per month | 30 | days |\n\n| Result | Value | Unit |\n| --- | ---: | --- |\n| Weighted delivery fee | 5.00 | AED/order |\n| Total variable costs | 20.00 | AED/order |\n| Contribution per order | 20.00 | AED/order |\n| Contribution margin | 50.00 | % |\n| Break-even per month | 1500 | orders/month |\n| Break-even per day | 50 | orders/day |\n\nAmounts and percentages are displayed to two decimals; break-even uses unrounded values and rounds orders up. Commission applies to supplied revenue on delivery orders. This is scenario arithmetic, not verified demand or a profit forecast.\n\n**Assumptions and limitations**\n\n- All eight numeric inputs were supplied by you and are hypothetical; none are researched Dubai market facts.\n- The calculation applies one flat 25% commission to delivery-order revenue; tiered, fixed-fee or differently-based contracts would need normalised inputs.\n- Monthly fixed costs of AED 30,000 exclude per-order costs and any delivery commission, as specified.\n\n**Next steps**\n\n- Run a second calculation using commission and delivery-share values taken from an actual platform contract or written offer, so the break-even reflects real terms.\n- Build a fixed-cost list for a Dubai site \\(rent, salaries, utilities, licences, insurance\\) and replace the AED 30,000 placeholder.\n- Obtain supplier quotes for your two core products' main ingredients and packaging to replace the AED 12/AED 2 figures.\n- If you want these constraints to persist, set them explicitly with /set \\(for example startup\\_budget\\_aed or monthly\\_rent\\_budget\\_aed\\); I cannot save natural-language requests.",
+  "cited_evidence_ids": [],
+  "retrieved_sources": {},
+  "calculations": {
+    "CALC-46fe23ea94ad496db9f459f7e5ed3e18": {
+      "status": "ok",
+      "data": {
+        "calculation_id": "CALC-46fe23ea94ad496db9f459f7e5ed3e18",
+        "scenario_label": "Synthetic Dubai branch scenario (hypothetical inputs)",
+        "currency": "AED",
+        "inputs": {
+          "average_order_revenue_aed": "40",
+          "food_cost_per_order_aed": "12",
+          "packaging_per_order_aed": "2",
+          "other_variable_cost_per_order_aed": "1",
+          "delivery_share": "0.5",
+          "delivery_commission_rate": "0.25",
+          "monthly_fixed_costs_aed": "30000",
+          "operating_days_per_month": 30
+        },
+        "viability": "positive_contribution",
+        "weighted_delivery_fee_per_order_aed": "5.000",
+        "variable_cost_per_order_aed": "20.000",
+        "contribution_per_order_aed": "20.000",
+        "contribution_margin": "0.500",
+        "break_even_orders_month": 1500,
+        "break_even_orders_day": 50,
+        "formulas": {
+          "weighted_delivery_fee": "revenue * delivery_share * delivery_commission_rate",
+          "variable_cost": "food_cost + packaging + other_variable_cost + weighted_delivery_fee",
+          "contribution_per_order": "revenue - variable_cost",
+          "contribution_margin": "contribution_per_order / revenue",
+          "break_even_orders_month": "ceil(monthly_fixed_costs / contribution_per_order)",
+          "break_even_orders_day": "ceil(break_even_orders_month / operating_days_per_month)"
+        }
+      },
+      "warnings": []
+    }
+  },
+  "tool_trace": [
+    {
+      "name": "calculate_unit_economics",
+      "arguments": {
+        "scenario_label": "Synthetic Dubai branch scenario (hypothetical inputs)",
+        "average_order_revenue_aed": 40,
+        "food_cost_per_order_aed": 12,
+        "packaging_per_order_aed": 2,
+        "other_variable_cost_per_order_aed": 1,
+        "delivery_share": 0.5,
+        "delivery_commission_rate": 0.25,
+        "monthly_fixed_costs_aed": 30000,
+        "operating_days_per_month": 30
+      },
+      "result": "{\"status\":\"ok\",\"data\":{\"calculation_id\":\"CALC-46fe23ea94ad496db9f459f7e5ed3e18\",\"scenario_label\":\"Synthetic Dubai branch scenario (hypothetical inputs)\",\"currency\":\"AED\",\"inputs\":{\"average_order_revenue_aed\":\"40\",\"food_cost_per_order_aed\":\"12\",\"packaging_per_order_aed\":\"2\",\"other_variable_cost_per_order_aed\":\"1\",\"delivery_share\":\"0.5\",\"delivery_commission_rate\":\"0.25\",\"monthly_fixed_costs_aed\":\"30000\",\"operating_days_per_month\":30},\"viability\":\"positive_contribution\",\"weighted_delivery_fee_per_order_aed\":\"5.000\",\"variable_cost_per_order_aed\":\"20.000\",\"contribution_per_order_aed\":\"20.000\",\"contribution_margin\":\"0.500\",\"break_even_orders_month\":1500,\"break_even_orders_day\":50,\"formulas\":{\"weighted_delivery_fee\":\"revenue * delivery_share * delivery_commission_rate\",\"variable_cost\":\"food_cost + packaging + other_variable_cost + weighted_delivery_fee\",\"contribution_per_order\":\"revenue - variable_cost\",\"contribution_margin\":\"contribution_per_order / revenue\",\"break_even_orders_month\":\"ceil(monthly_fixed_costs / contribution_per_order)\",\"break_even_orders_day\":\"ceil(break_even_orders_month / operating_days_per_month)\"}},\"warnings\":[]}",
+      "error": false
+    }
+  ],
+  "record": {
+    "model_requests": 2,
+    "input_tokens": 8797,
+    "output_tokens": 1106,
+    "reasoning_tokens": 0,
+    "cached_tokens": 8064,
+    "reported_cost_usd": "0.00097790",
+    "known_reported_cost_usd": "0.00097790",
+    "estimated_cost_usd": null,
+    "estimate_basis": null,
+    "usage_complete": true,
+    "schema_version": 1,
+    "run_id": "982fa900-2ac8-44a5-b401-02bdf34f7074",
+    "session_id": "a3494819-6d75-4690-a232-f07ec2d767b9",
+    "timestamp_utc": "2026-10-14T13:27:23.719080Z",
+    "model_requested": "deepseek/deepseek-v4.1-flash",
+    "model_reported_if_available": [
+      "deepseek/deepseek-v4.1-flash"
+    ],
+    "provider_if_available": [
+      "Morph"
+    ],
+    "prompt_version": "11.1",
+    "evidence_dataset_version": "a226a6b54cf292e9b2f6f6e9c51112957bff64195bc8182e0b579dd1f79ca3c5",
+    "question": "Calculate contribution, margin and monthly/daily break-even for this synthetic scenario for a Dubai branch. Average order revenue after discounts and excluding pass-through tax is AED 40, food cost AED 12, packaging AED 2, other variable costs AED 1 excluding commission, delivery share 50%, delivery commission 25% of that revenue, monthly fixed costs AED 30000 excluding per-order costs, and 30 operating days per month. These are hypothetical inputs, not verified market costs.",
+    "outcome": "completed",
+    "error_category": null,
+    "tool_events": [
+      {
+        "name": "calculate_unit_economics",
+        "duration_ms": 0.13281300198286772,
+        "status": "ok",
+        "result_count": 1
+      }
+    ],
+    "requests": [
+      {
+        "generation_id": "gen-1791984443-S74euM2UkYOTQOe4cnqq",
+        "model_reported": "deepseek/deepseek-v4.1-flash",
+        "provider_reported": "Morph",
+        "duration_ms": 2159.1922469669953,
+        "outcome": "completed",
+        "input_tokens": 4119,
+        "output_tokens": 225,
+        "reasoning_tokens": 0,
+        "cached_tokens": 3968,
+        "reported_cost_usd": "0.00021994"
+      },
+      {
+        "generation_id": "gen-1791984445-kX1GMn3q984sr7nS7tXp",
+        "model_reported": "deepseek/deepseek-v4.1-flash",
+        "provider_reported": "Morph",
+        "duration_ms": 25846.40560497064,
+        "outcome": "completed",
+        "input_tokens": 4678,
+        "output_tokens": 881,
+        "reasoning_tokens": 0,
+        "cached_tokens": 4096,
+        "reported_cost_usd": "0.00075796"
+      }
+    ],
+    "evidence_ids": [],
+    "calculation_ids": [
+      "CALC-46fe23ea94ad496db9f459f7e5ed3e18"
+    ],
+    "latency_ms": 28097.252862004098,
+    "tool_output_characters": 1145,
+    "validation_errors": [],
+    "warnings": []
+  },
+  "warnings": [],
+  "error_category": null,
+  "error_message": null,
+  "checks": {
+    "reference_integrity": true,
+    "requested_cities_present": true,
+    "durable_profile_unchanged": true,
+    "calculator_exact": true,
+    "claim_support": "requires review"
+  }
+}

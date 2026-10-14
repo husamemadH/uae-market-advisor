@@ -1,0 +1,590 @@
+{
+  "case": {
+    "id": "E10",
+    "question": "Calculate contribution, margin and monthly/daily break-even for this synthetic scenario for a Dubai branch. Average order revenue after discounts and excluding pass-through tax is AED 40, food cost AED 12, packaging AED 2, other variable costs AED 1 excluding commission, delivery share 50%, delivery commission 25% of that revenue, monthly fixed costs AED 30000 excluding per-order costs, and 30 operating days per month. These are hypothetical inputs, not verified market costs.",
+    "cities": [
+      "dubai"
+    ],
+    "topics": [],
+    "profile": {},
+    "followup_of": null,
+    "expected": [
+      "Actual calculator tool call and cited result",
+      "Weighted delivery fee AED 5; variable costs AED 20; contribution AED 20; margin 50%",
+      "1500 monthly and 50 daily break-even orders",
+      "Scenario limitations, no demand or profit guarantee"
+    ]
+  },
+  "status": "completed",
+  "session_id": "74db4c9e-d64b-4461-b926-4b278c225975",
+  "run_id": "e74d106a-8ce6-4737-8581-ae98a6143392",
+  "profile_before": {
+    "restaurant_origin": "Jordan",
+    "core_products": [
+      "meaty pizza",
+      "kebab sandwiches"
+    ],
+    "target_cities": [
+      "Dubai",
+      "Abu Dhabi"
+    ],
+    "startup_budget_aed": null,
+    "monthly_rent_budget_aed": null,
+    "branch_format": null,
+    "target_audience": null,
+    "positioning": null,
+    "planned_opening": null
+  },
+  "profile_after": {
+    "restaurant_origin": "Jordan",
+    "core_products": [
+      "meaty pizza",
+      "kebab sandwiches"
+    ],
+    "target_cities": [
+      "Dubai",
+      "Abu Dhabi"
+    ],
+    "startup_budget_aed": null,
+    "monthly_rent_budget_aed": null,
+    "branch_format": null,
+    "target_audience": null,
+    "positioning": null,
+    "planned_opening": null
+  },
+  "answer": {
+    "kind": "advice",
+    "cities": [
+      "dubai"
+    ],
+    "headline": "Hypothetical Dubai unit economics: AED 20 contribution per order (50% margin); break-even 1,500 orders/month, 50/day — all inputs are hypothetical, not verified market costs.",
+    "sections": [
+      {
+        "title": "Calculated results for your hypothetical scenario",
+        "items": [
+          {
+            "text": "Inputs used: revenue AED 40 net of discounts and pass-through tax; food AED 12, packaging AED 2, other variable AED 1 excluding commission; delivery share 50%; commission 25% of supplied revenue on delivery orders; monthly fixed costs AED 30,000; 30 operating days. All values are hypothetical, supplied by you, not verified market costs.",
+            "basis": "assumption",
+            "evidence_ids": [],
+            "calculation_ids": [
+              "CALC-020fda32804c4fddaf9391c592887682"
+            ]
+          },
+          {
+            "text": "Weighted delivery fee: AED 5.00 per order (40 x 0.50 x 0.25). Total variable cost: AED 20.00 per order (12 + 2 + 1 + 5).",
+            "basis": "calculation",
+            "evidence_ids": [],
+            "calculation_ids": [
+              "CALC-020fda32804c4fddaf9391c592887682"
+            ]
+          },
+          {
+            "text": "Contribution per order: AED 20.00; contribution margin: 0.50 (50%).",
+            "basis": "calculation",
+            "evidence_ids": [],
+            "calculation_ids": [
+              "CALC-020fda32804c4fddaf9391c592887682"
+            ]
+          },
+          {
+            "text": "Monthly break-even: 1,500 orders (rounded up); daily break-even: 50 orders over 30 operating days.",
+            "basis": "calculation",
+            "evidence_ids": [],
+            "calculation_ids": [
+              "CALC-020fda32804c4fddaf9391c592887682"
+            ]
+          },
+          {
+            "text": "Contribution is positive under these hypothetical inputs, so ordinary break-even arithmetic exists. That does not establish demand, nor viability of an investment or a profit forecast.",
+            "basis": "inference",
+            "evidence_ids": [],
+            "calculation_ids": [
+              "CALC-020fda32804c4fddaf9391c592887682"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "How the inputs could be checked against evidence later",
+        "items": [
+          {
+            "text": "Observed Dubai peer pizza item prices give a partial reference point only: a JBR delivery menu listed Pepperoni pizza at AED 40 and Margherita at AED 38. That is one branch, one channel, item-level, not a city average, and not a completed checkout total (delivery charges, extras, tax treatment unverified), so it does not validate your AED 40 net revenue assumption.",
+            "basis": "fact",
+            "evidence_ids": [
+              "DXB-PRICE-001"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Aggregator commission, radius, fees, and service levels are not verified in the retrieved evidence; platform merchant pages describe rider-network delivery and a self-delivery option with selectable area, minimum spend, and delivery fees, but state no verified contractual commission. Your 25% commission and 50% delivery share therefore remain unverified assumptions.",
+            "basis": "fact",
+            "evidence_ids": [
+              "UAE-DEL-002",
+              "UAE-DEL-004"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Delivery packaging assumptions interact with regulation: Dubai Municipality guidance requires sealed food containers and separation of hot and cold items in insulated secondary units during transport. This supports testing your AED 2 packaging figure against compliant container and bagging specifications.",
+            "basis": "fact",
+            "evidence_ids": [
+              "DXB-DEL-002"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Existing Dubai operators to benchmark your format and routing against include Allo Beirut's Hessa Street branch in Al Barsha (advertised delivery until 4 AM) and UAE-wide pizza chains such as Papa Johns. A public branch listing shows an address and advertised hours only; it does not show trading status, footfall, sales, or shop availability.",
+            "basis": "fact",
+            "evidence_ids": [
+              "DXB-COMP-004",
+              "UAE-DEL-001"
+            ],
+            "calculation_ids": []
+          }
+        ]
+      },
+      {
+        "title": "What to do with these numbers",
+        "items": [
+          {
+            "text": "Plug your real costed recipe cards, actual packaging SKUs, and the commission and fee terms in a signed contract into the same eight inputs, then rerun. Commission bases and fixed platform fees that differ from a flat percentage would need normalizing or an explicit limitation.",
+            "basis": "proposal",
+            "evidence_ids": [],
+            "calculation_ids": []
+          },
+          {
+            "text": "Because 50% of orders are assumed to come via aggregators at 25%, the AED 5.00 weighted fee is a material single point of failure. Test a lower-delivery-share scenario and a higher-commission scenario separately rather than assuming the spread is stable.",
+            "basis": "proposal",
+            "evidence_ids": [
+              "UAE-DEL-002",
+              "UAE-DEL-004"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "The 50-orders/day figure is an arithmetic threshold under hypothetical inputs, not a demand forecast. Treat it as a target to be validated by site-level evidence (delivery-app density testing from candidate addresses, comparable-item pricing checks, and a limited pilot before committing to fixed costs).",
+            "basis": "proposal",
+            "evidence_ids": [
+              "DXB-PRICE-001"
+            ],
+            "calculation_ids": [
+              "CALC-020fda32804c4fddaf9391c592887682"
+            ]
+          }
+        ]
+      }
+    ],
+    "assumptions": [
+      "All eight numeric inputs (revenue 40, food 12, packaging 2, other variable 1, delivery share 0.50, commission 0.25, fixed costs 30,000, 30 days) are hypothetical values you supplied for illustration, not verified market costs.",
+      "Fixed costs of AED 30,000 exclude per-order costs and any per-order platform fees beyond the commission rate modeled; no double-counting was intended.",
+      "Commission is modeled as a flat 25% applied to the supplied net revenue on delivery orders only.",
+      "Currency AED; monthly costs as stated; one Dubai branch, single-site scenario."
+    ],
+    "next_steps": [
+      "Replace each hypothetical input with a sourced or user-verified value (recipe costing, packaging quote, inspected platform terms, rent and labour build) and rerun the calculator, citing the new calculation ID.",
+      "Inspect actual aggregator merchant terms for commission, fixed fees, radius, and any delivery-fee treatment before treating 25% as a planning figure.",
+      "Run two additional explicit scenarios: lower delivery share with same commission, and same delivery share with higher commission, to see whether break-even volume stays within your operating capacity.",
+      "Confirm delivery packaging meets Dubai Municipality's sealed-container and hot/cold separation guidance and update the packaging cost accordingly.",
+      "Use /set to store any figures you want treated as lasting plan constraints (e.g. monthly rent budget), so future advice uses them instead of placeholders."
+    ],
+    "questions": []
+  },
+  "rendered_answer": "Hypothetical Dubai unit economics: AED 20 contribution per order \\(50% margin\\); break-even 1,500 orders/month, 50/day — all inputs are hypothetical, not verified market costs.\n\n**Calculated results for your hypothetical scenario**\n\n- **Assumption:** Inputs used: revenue AED 40 net of discounts and pass-through tax; food AED 12, packaging AED 2, other variable AED 1 excluding commission; delivery share 50%; commission 25% of supplied revenue on delivery orders; monthly fixed costs AED 30,000; 30 operating days. All values are hypothetical, supplied by you, not verified market costs. (Calculation 1)\n- **Calculation:** Weighted delivery fee: AED 5.00 per order \\(40 x 0.50 x 0.25\\). Total variable cost: AED 20.00 per order \\(12 + 2 + 1 + 5\\). (Calculation 1)\n- **Calculation:** Contribution per order: AED 20.00; contribution margin: 0.50 \\(50%\\). (Calculation 1)\n- **Calculation:** Monthly break-even: 1,500 orders \\(rounded up\\); daily break-even: 50 orders over 30 operating days. (Calculation 1)\n- **Inference:** Contribution is positive under these hypothetical inputs, so ordinary break-even arithmetic exists. That does not establish demand, nor viability of an investment or a profit forecast. (Calculation 1)\n\n**How the inputs could be checked against evidence later**\n\n- **Fact:** Observed Dubai peer pizza item prices give a partial reference point only: a JBR delivery menu listed Pepperoni pizza at AED 40 and Margherita at AED 38. That is one branch, one channel, item-level, not a city average, and not a completed checkout total \\(delivery charges, extras, tax treatment unverified\\), so it does not validate your AED 40 net revenue assumption. [1](<https://deliveroo.ae/en/menu/dubai/jbr/allo-beirut-jbr>)\n- **Fact:** Aggregator commission, radius, fees, and service levels are not verified in the retrieved evidence; platform merchant pages describe rider-network delivery and a self-delivery option with selectable area, minimum spend, and delivery fees, but state no verified contractual commission. Your 25% commission and 50% delivery share therefore remain unverified assumptions. [2](<https://merchants.deliveroo.com/en-AE/what-we-offer/delivery>) [3](<https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace>)\n- **Fact:** Delivery packaging assumptions interact with regulation: Dubai Municipality guidance requires sealed food containers and separation of hot and cold items in insulated secondary units during transport. This supports testing your AED 2 packaging figure against compliant container and bagging specifications. [4](<https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf>)\n- **Fact:** Existing Dubai operators to benchmark your format and routing against include Allo Beirut's Hessa Street branch in Al Barsha \\(advertised delivery until 4 AM\\) and UAE-wide pizza chains such as Papa Johns. A public branch listing shows an address and advertised hours only; it does not show trading status, footfall, sales, or shop availability. [5](<https://www.allobeirutstreetfood.com/locations>) [6](<https://www.papajohns.ae/stores>)\n\n**What to do with these numbers**\n\n- **Proposal:** Plug your real costed recipe cards, actual packaging SKUs, and the commission and fee terms in a signed contract into the same eight inputs, then rerun. Commission bases and fixed platform fees that differ from a flat percentage would need normalizing or an explicit limitation.\n- **Proposal:** Because 50% of orders are assumed to come via aggregators at 25%, the AED 5.00 weighted fee is a material single point of failure. Test a lower-delivery-share scenario and a higher-commission scenario separately rather than assuming the spread is stable. [2](<https://merchants.deliveroo.com/en-AE/what-we-offer/delivery>) [3](<https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace>)\n- **Proposal:** The 50-orders/day figure is an arithmetic threshold under hypothetical inputs, not a demand forecast. Treat it as a target to be validated by site-level evidence \\(delivery-app density testing from candidate addresses, comparable-item pricing checks, and a limited pilot before committing to fixed costs\\). [1](<https://deliveroo.ae/en/menu/dubai/jbr/allo-beirut-jbr>) (Calculation 1)\n\n**Calculation 1: Dubai hypothetical: AED40 AOV, 50% delivery @25% commission**\n\n| Input | Value | Unit |\n| --- | ---: | --- |\n| Revenue per order | 40.00 | AED/order |\n| Food cost | 12.00 | AED/order |\n| Packaging | 2.00 | AED/order |\n| Other variable costs (excluding commission) | 1.00 | AED/order |\n| Delivery share | 50.00 | % |\n| Delivery commission rate | 25.00 | % |\n| Monthly fixed costs | 30000.00 | AED/month |\n| Operating days per month | 30 | days |\n\n| Result | Value | Unit |\n| --- | ---: | --- |\n| Weighted delivery fee | 5.00 | AED/order |\n| Total variable costs | 20.00 | AED/order |\n| Contribution per order | 20.00 | AED/order |\n| Contribution margin | 50.00 | % |\n| Break-even per month | 1500 | orders/month |\n| Break-even per day | 50 | orders/day |\n\nAmounts and percentages are displayed to two decimals; break-even uses unrounded values and rounds orders up. Commission applies to supplied revenue on delivery orders. This is scenario arithmetic, not verified demand or a profit forecast.\n\n**Assumptions and limitations**\n\n- All eight numeric inputs \\(revenue 40, food 12, packaging 2, other variable 1, delivery share 0.50, commission 0.25, fixed costs 30,000, 30 days\\) are hypothetical values you supplied for illustration, not verified market costs.\n- Fixed costs of AED 30,000 exclude per-order costs and any per-order platform fees beyond the commission rate modeled; no double-counting was intended.\n- Commission is modeled as a flat 25% applied to the supplied net revenue on delivery orders only.\n- Currency AED; monthly costs as stated; one Dubai branch, single-site scenario.\n\n**Next steps**\n\n- Replace each hypothetical input with a sourced or user-verified value \\(recipe costing, packaging quote, inspected platform terms, rent and labour build\\) and rerun the calculator, citing the new calculation ID.\n- Inspect actual aggregator merchant terms for commission, fixed fees, radius, and any delivery-fee treatment before treating 25% as a planning figure.\n- Run two additional explicit scenarios: lower delivery share with same commission, and same delivery share with higher commission, to see whether break-even volume stays within your operating capacity.\n- Confirm delivery packaging meets Dubai Municipality's sealed-container and hot/cold separation guidance and update the packaging cost accordingly.\n- Use /set to store any figures you want treated as lasting plan constraints \\(e.g. monthly rent budget\\), so future advice uses them instead of placeholders.\n\n**Tool warnings**\n\n- Some matching records were omitted to respect result or payload limits.\n- Some returned records need review; inspect their dates and freshness flags.\n\n**Sources**\n\n1. [Allo Beirut - JBR delivery menu](<https://deliveroo.ae/en/menu/dubai/jbr/allo-beirut-jbr>) — Deliveroo\n   - Allo Beirut JBR - pizza: checked 2026-10-12 UTC.\n     Location in source: Pizza / Pizza Pepperoni; Pizza Margherita.\n     - JBR, Dubai branch, anonymous Deliveroo listing with no delivery address selected; menu visibility can vary.\n     - Pizza diameter and weight were not specified. Observed item prices are not a completed checkout total; delivery charges, extras, and tax treatment were not verified.\n     - No publication date shown; recheck menu, price, and availability before a decision.\n2. [Deliveroo delivery and pickup for UAE partners](<https://merchants.deliveroo.com/en-AE/what-we-offer/delivery>) — Deliveroo\n   - Deliveroo UAE - platform riders and pickup: checked 2026-10-12 UTC.\n     Location in source: Delivery network; Customer flexibility.\n     - UAE merchant product description; eligibility and availability at a proposed address need confirmation.\n     - No verified contractual commission, fees, delivery radius, service level, or sales uplift.\n3. [Deliveroo Marketplace+ for UAE partners](<https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace>) — Deliveroo\n   - Deliveroo UAE - Marketplace+ own riders: checked 2026-10-12 UTC.\n     Location in source: Benefits of Marketplace+; Receiving orders; Delivering orders.\n     - UAE merchant product description; eligibility and availability at a proposed address need confirmation.\n     - No verified contractual commission, fees, delivery radius, service level, or sales uplift.\n4. [Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2](<https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf>) — Dubai Municipality\n   - Dubai Municipality - sealed delivery and separation: checked 2026-10-12 UTC; published 2023-08-31; NEEDS REVIEW.\n     Location in source: PDF page 18, section 1.4.1\\(e\\)-\\(f\\).\n     - Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\n     - Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\n5. [Allo Beirut locations](<https://www.allobeirutstreetfood.com/locations>) — Allo Beirut\n   - Allo Beirut - Al Barsha / Hessa Street: checked 2026-10-12 UTC.\n     Location in source: Dubai / Hessa St..\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n     - Advertised delivery hours do not establish overnight demand or the proposed site catchment.\n6. [Papa Johns Stores in UAE](<https://www.papajohns.ae/stores>) — Papa Johns UAE\n   - Papa Johns UAE - delivery and takeaway: checked 2026-10-12 UTC.\n     Location in source: Store directory introduction.\n     - UAE-wide company statement supported by Dubai and Abu Dhabi branch entries.\n     - Delivery catchments, fees, promotions, and item availability were not verified at checkout.",
+  "cited_evidence_ids": [
+    "DXB-COMP-004",
+    "DXB-DEL-002",
+    "DXB-PRICE-001",
+    "UAE-DEL-001",
+    "UAE-DEL-002",
+    "UAE-DEL-004"
+  ],
+  "retrieved_sources": {
+    "DXB-COMP-004": {
+      "id": "DXB-COMP-004",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "locations",
+        "competitors",
+        "delivery"
+      ],
+      "entity": "Allo Beirut - Al Barsha / Hessa Street",
+      "observation": "Allo Beirut lists its Hessa Street branch in Al Barsha, Dubai, and advertises delivery until 4 AM.",
+      "source_title": "Allo Beirut locations",
+      "source_url": "https://www.allobeirutstreetfood.com/locations",
+      "publisher": "Allo Beirut",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Dubai / Hessa St.",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability.",
+        "Advertised delivery hours do not establish overnight demand or the proposed site catchment."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-DEL-002": {
+      "id": "DXB-DEL-002",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "delivery",
+        "operations"
+      ],
+      "entity": "Dubai Municipality - sealed delivery and separation",
+      "observation": "Dubai Municipality delivery guidance requires sealed food containers and separation of hot and cold items into insulated secondary units during transport.",
+      "source_title": "Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2",
+      "source_url": "https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf",
+      "publisher": "Dubai Municipality",
+      "source_kind": "official",
+      "published_on": "2023-08-31",
+      "checked_on": "2026-10-12",
+      "locator": "PDF page 18, section 1.4.1(e)-(f)",
+      "qualifiers": [
+        "Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.",
+        "Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist."
+      ],
+      "valid_until": null,
+      "needs_review": true,
+      "expired": false
+    },
+    "DXB-PRICE-001": {
+      "id": "DXB-PRICE-001",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "menu",
+        "pricing",
+        "competitors"
+      ],
+      "entity": "Allo Beirut JBR - pizza",
+      "observation": "The JBR Deliveroo menu lists Pepperoni pizza at AED 40 and Margherita pizza at AED 38.",
+      "source_title": "Allo Beirut - JBR delivery menu",
+      "source_url": "https://deliveroo.ae/en/menu/dubai/jbr/allo-beirut-jbr",
+      "publisher": "Deliveroo",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Pizza / Pizza Pepperoni; Pizza Margherita",
+      "qualifiers": [
+        "JBR, Dubai branch, anonymous Deliveroo listing with no delivery address selected; menu visibility can vary.",
+        "Pizza diameter and weight were not specified. Observed item prices are not a completed checkout total; delivery charges, extras, and tax treatment were not verified.",
+        "No publication date shown; recheck menu, price, and availability before a decision."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-PRICE-002": {
+      "id": "DXB-PRICE-002",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "menu",
+        "pricing"
+      ],
+      "entity": "Allo Beirut JBR - falafel sandwich sizes",
+      "observation": "The JBR Deliveroo menu lists regular falafel sandwich at AED 13, large at AED 18, and saj bread version at AED 19.",
+      "source_title": "Allo Beirut - JBR delivery menu",
+      "source_url": "https://deliveroo.ae/en/menu/dubai/jbr/allo-beirut-jbr",
+      "publisher": "Deliveroo",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Falafel / Falafel Sandwich Regular; Large; Saj",
+      "qualifiers": [
+        "JBR, Dubai branch, anonymous Deliveroo listing with no delivery address selected; menu visibility can vary.",
+        "Size labels and bread differ; gram weights were not specified. Observed item prices are not a completed checkout total; delivery charges, extras, and tax treatment were not verified.",
+        "No publication date shown; recheck menu, price, and availability before a decision."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "UAE-DEL-001": {
+      "id": "UAE-DEL-001",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "delivery",
+        "competitors"
+      ],
+      "entity": "Papa Johns UAE - delivery and takeaway",
+      "observation": "Papa Johns states that UAE branches offer delivery and takeaway and share the same menu and prices.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Store directory introduction",
+      "qualifiers": [
+        "UAE-wide company statement supported by Dubai and Abu Dhabi branch entries.",
+        "Delivery catchments, fees, promotions, and item availability were not verified at checkout."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "UAE-DEL-002": {
+      "id": "UAE-DEL-002",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "delivery"
+      ],
+      "entity": "Deliveroo UAE - platform riders and pickup",
+      "observation": "Deliveroo describes a UAE partner service using its rider network for delivery and allowing customers to collect orders from the restaurant.",
+      "source_title": "Deliveroo delivery and pickup for UAE partners",
+      "source_url": "https://merchants.deliveroo.com/en-AE/what-we-offer/delivery",
+      "publisher": "Deliveroo",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Delivery network; Customer flexibility",
+      "qualifiers": [
+        "UAE merchant product description; eligibility and availability at a proposed address need confirmation.",
+        "No verified contractual commission, fees, delivery radius, service level, or sales uplift."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "UAE-DEL-003": {
+      "id": "UAE-DEL-003",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "delivery",
+        "operations"
+      ],
+      "entity": "Deliveroo UAE - order tracking",
+      "observation": "Deliveroo describes order-status monitoring, real-time rider GPS tracking, and rider-arrival alerts for its delivery service.",
+      "source_title": "Deliveroo delivery and pickup for UAE partners",
+      "source_url": "https://merchants.deliveroo.com/en-AE/what-we-offer/delivery",
+      "publisher": "Deliveroo",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "End-to-end order tracking",
+      "qualifiers": [
+        "UAE merchant product description; eligibility and availability at a proposed address need confirmation.",
+        "No verified contractual commission, fees, delivery radius, service level, or sales uplift."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "UAE-DEL-004": {
+      "id": "UAE-DEL-004",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "delivery",
+        "operations"
+      ],
+      "entity": "Deliveroo UAE - Marketplace+ own riders",
+      "observation": "Deliveroo describes Marketplace+ as using restaurant delivery staff, with selectable delivery area, minimum spend, and delivery fees, plus an option to request a platform rider.",
+      "source_title": "Deliveroo Marketplace+ for UAE partners",
+      "source_url": "https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace",
+      "publisher": "Deliveroo",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Benefits of Marketplace+; Receiving orders; Delivering orders",
+      "qualifiers": [
+        "UAE merchant product description; eligibility and availability at a proposed address need confirmation.",
+        "No verified contractual commission, fees, delivery radius, service level, or sales uplift."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    }
+  },
+  "calculations": {
+    "CALC-020fda32804c4fddaf9391c592887682": {
+      "status": "ok",
+      "data": {
+        "calculation_id": "CALC-020fda32804c4fddaf9391c592887682",
+        "scenario_label": "Dubai hypothetical: AED40 AOV, 50% delivery @25% commission",
+        "currency": "AED",
+        "inputs": {
+          "average_order_revenue_aed": "40",
+          "food_cost_per_order_aed": "12",
+          "packaging_per_order_aed": "2",
+          "other_variable_cost_per_order_aed": "1",
+          "delivery_share": "0.5",
+          "delivery_commission_rate": "0.25",
+          "monthly_fixed_costs_aed": "30000",
+          "operating_days_per_month": 30
+        },
+        "viability": "positive_contribution",
+        "weighted_delivery_fee_per_order_aed": "5.000",
+        "variable_cost_per_order_aed": "20.000",
+        "contribution_per_order_aed": "20.000",
+        "contribution_margin": "0.500",
+        "break_even_orders_month": 1500,
+        "break_even_orders_day": 50,
+        "formulas": {
+          "weighted_delivery_fee": "revenue * delivery_share * delivery_commission_rate",
+          "variable_cost": "food_cost + packaging + other_variable_cost + weighted_delivery_fee",
+          "contribution_per_order": "revenue - variable_cost",
+          "contribution_margin": "contribution_per_order / revenue",
+          "break_even_orders_month": "ceil(monthly_fixed_costs / contribution_per_order)",
+          "break_even_orders_day": "ceil(break_even_orders_month / operating_days_per_month)"
+        }
+      },
+      "warnings": []
+    }
+  },
+  "tool_trace": [
+    {
+      "name": "calculate_unit_economics",
+      "arguments": {
+        "scenario_label": "Dubai hypothetical: AED40 AOV, 50% delivery @25% commission",
+        "average_order_revenue_aed": 40,
+        "food_cost_per_order_aed": 12,
+        "packaging_per_order_aed": 2,
+        "other_variable_cost_per_order_aed": 1,
+        "delivery_share": 0.5,
+        "delivery_commission_rate": 0.25,
+        "monthly_fixed_costs_aed": 30000,
+        "operating_days_per_month": 30
+      },
+      "result": "{\"status\":\"ok\",\"data\":{\"calculation_id\":\"CALC-020fda32804c4fddaf9391c592887682\",\"scenario_label\":\"Dubai hypothetical: AED40 AOV, 50% delivery @25% commission\",\"currency\":\"AED\",\"inputs\":{\"average_order_revenue_aed\":\"40\",\"food_cost_per_order_aed\":\"12\",\"packaging_per_order_aed\":\"2\",\"other_variable_cost_per_order_aed\":\"1\",\"delivery_share\":\"0.5\",\"delivery_commission_rate\":\"0.25\",\"monthly_fixed_costs_aed\":\"30000\",\"operating_days_per_month\":30},\"viability\":\"positive_contribution\",\"weighted_delivery_fee_per_order_aed\":\"5.000\",\"variable_cost_per_order_aed\":\"20.000\",\"contribution_per_order_aed\":\"20.000\",\"contribution_margin\":\"0.500\",\"break_even_orders_month\":1500,\"break_even_orders_day\":50,\"formulas\":{\"weighted_delivery_fee\":\"revenue * delivery_share * delivery_commission_rate\",\"variable_cost\":\"food_cost + packaging + other_variable_cost + weighted_delivery_fee\",\"contribution_per_order\":\"revenue - variable_cost\",\"contribution_margin\":\"contribution_per_order / revenue\",\"break_even_orders_month\":\"ceil(monthly_fixed_costs / contribution_per_order)\",\"break_even_orders_day\":\"ceil(break_even_orders_month / operating_days_per_month)\"}},\"warnings\":[]}",
+      "error": false
+    },
+    {
+      "name": "lookup_market_evidence",
+      "arguments": {
+        "cities": [
+          "dubai"
+        ],
+        "topics": [
+          "pricing",
+          "delivery"
+        ],
+        "query": "meaty pizza kebab sandwich delivery aggregator commission",
+        "limit": 8
+      },
+      "result": "{\"status\":\"ok\",\"data\":{\"records\":[{\"id\":\"DXB-COMP-004\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\",\"delivery\"],\"entity\":\"Allo Beirut - Al Barsha / Hessa Street\",\"observation\":\"Allo Beirut lists its Hessa Street branch in Al Barsha, Dubai, and advertises delivery until 4 AM.\",\"source_title\":\"Allo Beirut locations\",\"source_url\":\"https://www.allobeirutstreetfood.com/locations\",\"publisher\":\"Allo Beirut\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Dubai / Hessa St.\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\",\"Advertised delivery hours do not establish overnight demand or the proposed site catchment.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-DEL-002\",\"cities\":[\"dubai\"],\"topics\":[\"delivery\",\"operations\"],\"entity\":\"Dubai Municipality - sealed delivery and separation\",\"observation\":\"Dubai Municipality delivery guidance requires sealed food containers and separation of hot and cold items into insulated secondary units during transport.\",\"source_title\":\"Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2\",\"source_url\":\"https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf\",\"publisher\":\"Dubai Municipality\",\"source_kind\":\"official\",\"published_on\":\"2023-08-31\",\"checked_on\":\"2026-10-12\",\"locator\":\"PDF page 18, section 1.4.1(e)-(f)\",\"qualifiers\":[\"Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\",\"Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\"],\"valid_until\":null,\"needs_review\":true,\"expired\":false},{\"id\":\"DXB-PRICE-001\",\"cities\":[\"dubai\"],\"topics\":[\"menu\",\"pricing\",\"competitors\"],\"entity\":\"Allo Beirut JBR - pizza\",\"observation\":\"The JBR Deliveroo menu lists Pepperoni pizza at AED 40 and Margherita pizza at AED 38.\",\"source_title\":\"Allo Beirut - JBR delivery menu\",\"source_url\":\"https://deliveroo.ae/en/menu/dubai/jbr/allo-beirut-jbr\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Pizza / Pizza Pepperoni; Pizza Margherita\",\"qualifiers\":[\"JBR, Dubai branch, anonymous Deliveroo listing with no delivery address selected; menu visibility can vary.\",\"Pizza diameter and weight were not specified. Observed item prices are not a completed checkout total; delivery charges, extras, and tax treatment were not verified.\",\"No publication date shown; recheck menu, price, and availability before a decision.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-PRICE-002\",\"cities\":[\"dubai\"],\"topics\":[\"menu\",\"pricing\"],\"entity\":\"Allo Beirut JBR - falafel sandwich sizes\",\"observation\":\"The JBR Deliveroo menu lists regular falafel sandwich at AED 13, large at AED 18, and saj bread version at AED 19.\",\"source_title\":\"Allo Beirut - JBR delivery menu\",\"source_url\":\"https://deliveroo.ae/en/menu/dubai/jbr/allo-beirut-jbr\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Falafel / Falafel Sandwich Regular; Large; Saj\",\"qualifiers\":[\"JBR, Dubai branch, anonymous Deliveroo listing with no delivery address selected; menu visibility can vary.\",\"Size labels and bread differ; gram weights were not specified. Observed item prices are not a completed checkout total; delivery charges, extras, and tax treatment were not verified.\",\"No publication date shown; recheck menu, price, and availability before a decision.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-DEL-001\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\",\"competitors\"],\"entity\":\"Papa Johns UAE - delivery and takeaway\",\"observation\":\"Papa Johns states that UAE branches offer delivery and takeaway and share the same menu and prices.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Store directory introduction\",\"qualifiers\":[\"UAE-wide company statement supported by Dubai and Abu Dhabi branch entries.\",\"Delivery catchments, fees, promotions, and item availability were not verified at checkout.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-DEL-002\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\"],\"entity\":\"Deliveroo UAE - platform riders and pickup\",\"observation\":\"Deliveroo describes a UAE partner service using its rider network for delivery and allowing customers to collect orders from the restaurant.\",\"source_title\":\"Deliveroo delivery and pickup for UAE partners\",\"source_url\":\"https://merchants.deliveroo.com/en-AE/what-we-offer/delivery\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Delivery network; Customer flexibility\",\"qualifiers\":[\"UAE merchant product description; eligibility and availability at a proposed address need confirmation.\",\"No verified contractual commission, fees, delivery radius, service level, or sales uplift.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-DEL-003\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\",\"operations\"],\"entity\":\"Deliveroo UAE - order tracking\",\"observation\":\"Deliveroo describes order-status monitoring, real-time rider GPS tracking, and rider-arrival alerts for its delivery service.\",\"source_title\":\"Deliveroo delivery and pickup for UAE partners\",\"source_url\":\"https://merchants.deliveroo.com/en-AE/what-we-offer/delivery\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"End-to-end order tracking\",\"qualifiers\":[\"UAE merchant product description; eligibility and availability at a proposed address need confirmation.\",\"No verified contractual commission, fees, delivery radius, service level, or sales uplift.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-DEL-004\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\",\"operations\"],\"entity\":\"Deliveroo UAE - Marketplace+ own riders\",\"observation\":\"Deliveroo describes Marketplace+ as using restaurant delivery staff, with selectable delivery area, minimum spend, and delivery fees, plus an option to request a platform rider.\",\"source_title\":\"Deliveroo Marketplace+ for UAE partners\",\"source_url\":\"https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Benefits of Marketplace+; Receiving orders; Delivering orders\",\"qualifiers\":[\"UAE merchant product description; eligibility and availability at a proposed address need confirmation.\",\"No verified contractual commission, fees, delivery radius, service level, or sales uplift.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false}],\"matched_count\":13,\"omitted_count\":5},\"warnings\":[\"Some matching records were omitted to respect result or payload limits.\",\"Some returned records need review; inspect their dates and freshness flags.\"]}",
+      "error": false
+    }
+  ],
+  "record": {
+    "model_requests": 2,
+    "input_tokens": 9700,
+    "output_tokens": 1857,
+    "reasoning_tokens": 0,
+    "cached_tokens": 7040,
+    "reported_cost_usd": "0.001623440",
+    "known_reported_cost_usd": "0.001623440",
+    "estimated_cost_usd": null,
+    "estimate_basis": null,
+    "usage_complete": true,
+    "schema_version": 1,
+    "run_id": "e74d106a-8ce6-4737-8581-ae98a6143392",
+    "session_id": "74db4c9e-d64b-4461-b926-4b278c225975",
+    "timestamp_utc": "2026-10-14T13:21:54.735366Z",
+    "model_requested": "deepseek/deepseek-v4.1-flash",
+    "model_reported_if_available": [
+      "deepseek/deepseek-v4.1-flash"
+    ],
+    "provider_if_available": [
+      "Morph"
+    ],
+    "prompt_version": "10.1",
+    "evidence_dataset_version": "a226a6b54cf292e9b2f6f6e9c51112957bff64195bc8182e0b579dd1f79ca3c5",
+    "question": "Calculate contribution, margin and monthly/daily break-even for this synthetic scenario for a Dubai branch. Average order revenue after discounts and excluding pass-through tax is AED 40, food cost AED 12, packaging AED 2, other variable costs AED 1 excluding commission, delivery share 50%, delivery commission 25% of that revenue, monthly fixed costs AED 30000 excluding per-order costs, and 30 operating days per month. These are hypothetical inputs, not verified market costs.",
+    "outcome": "completed",
+    "error_category": null,
+    "tool_events": [
+      {
+        "name": "calculate_unit_economics",
+        "duration_ms": 0.12492400128394365,
+        "status": "ok",
+        "result_count": 1
+      },
+      {
+        "name": "lookup_market_evidence",
+        "duration_ms": 0.7094339816831052,
+        "status": "ok",
+        "result_count": 8
+      }
+    ],
+    "requests": [
+      {
+        "generation_id": "gen-1791984114-0xyIA8oW6q1wznb49Jbd",
+        "model_reported": "deepseek/deepseek-v4.1-flash",
+        "provider_reported": "Morph",
+        "duration_ms": 3489.3176380428486,
+        "outcome": "completed",
+        "input_tokens": 3599,
+        "output_tokens": 334,
+        "reasoning_tokens": 0,
+        "cached_tokens": 3456,
+        "reported_cost_usd": "0.000302308"
+      },
+      {
+        "generation_id": "gen-1791984118-LrEssHvKwIf1FDS6fJkz",
+        "model_reported": "deepseek/deepseek-v4.1-flash",
+        "provider_reported": "Morph",
+        "duration_ms": 16853.677596023772,
+        "outcome": "completed",
+        "input_tokens": 6101,
+        "output_tokens": 1523,
+        "reasoning_tokens": 0,
+        "cached_tokens": 3584,
+        "reported_cost_usd": "0.001321132"
+      }
+    ],
+    "evidence_ids": [
+      "DXB-COMP-004",
+      "DXB-DEL-002",
+      "DXB-PRICE-001",
+      "DXB-PRICE-002",
+      "UAE-DEL-001",
+      "UAE-DEL-002",
+      "UAE-DEL-003",
+      "UAE-DEL-004"
+    ],
+    "calculation_ids": [
+      "CALC-020fda32804c4fddaf9391c592887682"
+    ],
+    "latency_ms": 21073.934052954428,
+    "tool_output_characters": 8419,
+    "validation_errors": [],
+    "warnings": [
+      "Some matching records were omitted to respect result or payload limits.",
+      "Some returned records need review; inspect their dates and freshness flags."
+    ]
+  },
+  "warnings": [
+    "Some matching records were omitted to respect result or payload limits.",
+    "Some returned records need review; inspect their dates and freshness flags."
+  ],
+  "error_category": null,
+  "error_message": null,
+  "checks": {
+    "reference_integrity": true,
+    "requested_cities_present": true,
+    "durable_profile_unchanged": true,
+    "calculator_exact": true,
+    "claim_support": "requires review"
+  }
+}

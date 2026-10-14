@@ -1,0 +1,157 @@
+{
+  "mode": "live",
+  "cases": [
+    {
+      "case": "E01",
+      "status": "completed",
+      "score": 6,
+      "reviewer_type": "assistant_provisional",
+      "qualifies": false,
+      "failures": [
+        "Unsupported customer mix, competition ranking and rent positioning."
+      ]
+    },
+    {
+      "case": "E02",
+      "status": "completed",
+      "score": 7,
+      "reviewer_type": "assistant_provisional",
+      "qualifies": false,
+      "failures": []
+    },
+    {
+      "case": "E03",
+      "status": "completed",
+      "score": 9,
+      "reviewer_type": "assistant_provisional",
+      "qualifies": true,
+      "failures": []
+    },
+    {
+      "case": "E04",
+      "status": "completed",
+      "score": 4,
+      "reviewer_type": "assistant_provisional",
+      "qualifies": false,
+      "failures": [
+        "Contradictory portion dimensions and false claim that retrieved pizza diameters were absent."
+      ]
+    },
+    {
+      "case": "E05",
+      "status": "completed",
+      "score": 6,
+      "reviewer_type": "assistant_provisional",
+      "qualifies": false,
+      "failures": [
+        "Contradictory numerical price proposals between headline and sections."
+      ]
+    },
+    {
+      "case": "E06",
+      "status": "completed",
+      "score": 5,
+      "reviewer_type": "assistant_provisional",
+      "qualifies": false,
+      "failures": []
+    },
+    {
+      "case": "E07",
+      "status": "completed",
+      "score": 8,
+      "reviewer_type": "assistant_provisional",
+      "qualifies": true,
+      "failures": []
+    },
+    {
+      "case": "E08",
+      "status": "error",
+      "score": 0,
+      "reviewer_type": "assistant_provisional",
+      "qualifies": false,
+      "failures": [
+        "Fact statement has no evidence IDs; answer blocked by validation."
+      ]
+    },
+    {
+      "case": "E09",
+      "status": "completed",
+      "score": 7,
+      "reviewer_type": "assistant_provisional",
+      "qualifies": false,
+      "failures": []
+    },
+    {
+      "case": "E10",
+      "status": "completed",
+      "score": 9,
+      "reviewer_type": "assistant_provisional",
+      "qualifies": true,
+      "failures": []
+    },
+    {
+      "case": "E11",
+      "status": "error",
+      "score": 0,
+      "reviewer_type": "assistant_provisional",
+      "qualifies": false,
+      "failures": [
+        "Historical IDs cited without current-turn retrieval; answer blocked."
+      ]
+    },
+    {
+      "case": "E12",
+      "status": "completed",
+      "score": 8,
+      "reviewer_type": "assistant_provisional",
+      "qualifies": true,
+      "failures": []
+    }
+  ],
+  "executed": 12,
+  "coverage_by_requested_topic_and_answer_city": {
+    "dubai": [
+      "competitors",
+      "delivery",
+      "locations",
+      "marketing",
+      "menu",
+      "pricing",
+      "suppliers"
+    ],
+    "abu_dhabi": [
+      "competitors",
+      "delivery",
+      "locations",
+      "marketing",
+      "menu",
+      "pricing",
+      "suppliers"
+    ]
+  },
+  "coverage_note": "Tags and city presence only; substantive topic coverage requires review.",
+  "session_sequence_valid": true,
+  "qualifying_reviews": 4,
+  "qualifying_human_reviews": 0,
+  "hard_failures": [
+    "E01: Unsupported customer mix, competition ranking and rent positioning.",
+    "E04: Contradictory portion dimensions and false claim that retrieved pizza diameters were absent.",
+    "E05: Contradictory numerical price proposals between headline and sections.",
+    "E08: Fact statement has no evidence IDs; answer blocked by validation.",
+    "E11: Historical IDs cited without current-turn retrieval; answer blocked."
+  ],
+  "executive_release_gate_passed": false,
+  "review_status": "human review pending",
+  "usage": {
+    "model_requests": 26,
+    "input_tokens": 162532,
+    "output_tokens": 19643,
+    "reasoning_tokens": 0,
+    "cached_tokens": 114560,
+    "reported_cost_usd": "0.018088656",
+    "known_reported_cost_usd": "0.018088656",
+    "estimated_cost_usd": null,
+    "estimate_basis": null,
+    "usage_complete": true
+  }
+}

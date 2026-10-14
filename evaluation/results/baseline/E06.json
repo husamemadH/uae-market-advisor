@@ -1,0 +1,930 @@
+{
+  "case": {
+    "id": "E06",
+    "question": "Give us a 30-day launch marketing plan for each city: Dubai and Abu Dhabi.",
+    "cities": [
+      "dubai",
+      "abu_dhabi"
+    ],
+    "topics": [
+      "marketing"
+    ],
+    "profile": {},
+    "followup_of": null,
+    "expected": [
+      "Timed actions for each city",
+      "Channels and messages",
+      "Partnership options",
+      "Proposed metrics rather than promised results"
+    ]
+  },
+  "status": "completed",
+  "session_id": "d3e6180f-914d-4fa0-8210-f8fea7097993",
+  "run_id": "ecaa616f-b00b-452f-a4db-6fc133b5ec8a",
+  "profile_before": {
+    "restaurant_origin": "Jordan",
+    "core_products": [
+      "meaty pizza",
+      "kebab sandwiches"
+    ],
+    "target_cities": [
+      "Dubai",
+      "Abu Dhabi"
+    ],
+    "startup_budget_aed": null,
+    "monthly_rent_budget_aed": null,
+    "branch_format": null,
+    "target_audience": null,
+    "positioning": null,
+    "planned_opening": null
+  },
+  "profile_after": {
+    "restaurant_origin": "Jordan",
+    "core_products": [
+      "meaty pizza",
+      "kebab sandwiches"
+    ],
+    "target_cities": [
+      "Dubai",
+      "Abu Dhabi"
+    ],
+    "startup_budget_aed": null,
+    "monthly_rent_budget_aed": null,
+    "branch_format": null,
+    "target_audience": null,
+    "positioning": null,
+    "planned_opening": null
+  },
+  "answer": {
+    "kind": "advice",
+    "cities": [
+      "dubai",
+      "abu_dhabi"
+    ],
+    "headline": "Two 30-day launch plans: Dubai (wider delivery-led, aggregator + social) and Abu Dhabi (tighter, community + aggregator, Khalidiya/Al Zahiyah/Khalifa City clusters), both built around observed branch formats and delivery-tooling; no verified traffic or CAC data exists, so treat all targets as test-t",
+    "sections": [
+      {
+        "title": "Shared Foundations (Week 0 before Day 1)",
+        "items": [
+          {
+            "text": "Both cities: script thin outbound (rata outbound) routine: dusk calls key numbers, door-drop simple order cards, and register on aggregators with pickup enabled. Deliveroo UAE merchant tooling covers platform-rider or own-rider Marketplace+ delivery, single-order tracking, and promotional levers, but eligibility, commission and radius at a specific address are unverified.",
+            "basis": "fact",
+            "evidence_ids": [
+              "UAE-DEL-002",
+              "UAE-DEL-003",
+              "UAE-DEL-004",
+              "UAE-MKT-002"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Prepare sealed, hot/cold-separated packaging and insulated transport secondary units. Dubai Municipality delivery guidance (DM-FSD-GU63 v2, issued 2023-08-31, flagged needs_review) specifies sealed containers and separation of hot and cold items; verify current version and whether it applies to your channels before launch.",
+            "basis": "fact",
+            "evidence_ids": [
+              "DXB-DEL-002"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Set one shared menu architecture for both cities (anchor meaty pizza, kebab sandwiches, one family/bundled meal) so launch content is reusable; price each city separately after local cost, commission and packaging inputs. Verify by inspecting menu pages cited below (snippets are leads, not verified prices).",
+            "basis": "proposal",
+            "evidence_ids": [
+              "SEARCH-0c2d458b0c2f4aad802102922299ff6e",
+              "SEARCH-5d5edf9273494f61a01ec3fc45b3ef56"
+            ],
+            "calculation_ids": []
+          }
+        ]
+      },
+      {
+        "title": "Dubai 30-Day Plan",
+        "items": [
+          {
+            "text": "Days 1-7: seed content shoots at one Dubai site and list on aggregators with pickup enabled; run small geo-targeted social for your own borough-level test area, not the whole emirate. Competitor format references in Dubai include pizza branches at Al Ghurair Centre, Deira City Centre, Al Barsha Mall and Marina Diamond, plus Allo Beirut Hessa Street (advertised delivery to 4 AM) and JBR.",
+            "basis": "proposal",
+            "evidence_ids": [
+              "DXB-COMP-001",
+              "DXB-COMP-002",
+              "DXB-COMP-003",
+              "DXB-COMP-004",
+              "DXB-COMP-005"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Days 8-21: run a limited offer through aggregator promotional levers (free delivery or buy-one-get-one style offers are described by Deliveroo UAE); fund only one offer at a time and measure contribution per order, since promotion funding, eligibility and discount cost are unverified.",
+            "basis": "proposal",
+            "evidence_ids": [
+              "UAE-MKT-002"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Days 22-30: push repeat capture - WhatsApp/Instagram follow-up to first-order customers, a Google Maps listing check, and a mystery-shop of your own packaging and delivery time by channel. One-off <br>media",
+            "basis": "proposal",
+            "evidence_ids": [
+              "SEARCH-f13055916760421ab02033c0499698b3",
+              "SEARCH-7463e62a9a134541a3247d2202f05ee5"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Differentiate on Jordanian identity and meat-forward pizza/kebab against the broad-lebanese and global-pizza formats above; the branch listings only show these formats exist at those addresses - they do not establish demand, share or absence of other cuisine.",
+            "basis": "inference",
+            "evidence_ids": [
+              "DXB-COMP-001",
+              "DXB-COMP-004",
+              "DXB-COMP-005"
+            ],
+            "calculation_ids": []
+          }
+        ]
+      },
+      {
+        "title": "Abu Dhabi 30-Day Plan",
+        "items": [
+          {
+            "text": "Days 1-7: prepare in the same manner as Dubai (aggregator sign-up, packaging, photography) but concentrate door-drop and outbound work on one cluster only. Relevant competitor formats are listed around Abu Dhabi Mall/Al Zahiyah, ADNOC 913 Khalidiya, Al Wahda Mall/Al Manhal, Al Najda/Al Danah and Khalifa City (advertised hours 8 AM-12:30 AM). Proximity does not establish a shared delivery catchment; verify each address separately.",
+            "basis": "proposal",
+            "evidence_ids": [
+              "AUH-COMP-001",
+              "AUH-COMP-002",
+              "AUH-COMP-003",
+              "AUH-COMP-004",
+              "AUH-COMP-005"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Days 8-21: run the same limited aggregator offer test as Dubai, one lever at a time, and add one local-office or community trial drop within the chosen cluster. Treat advertised competitor hours (e.g., Khalifa City to 12:30 AM, Dubai Hessa to 4 AM) as leads to test, not as evidence of demand in your trade area.",
+            "basis": "proposal",
+            "evidence_ids": [
+              "UAE-MKT-002",
+              "AUH-COMP-005",
+              "DXB-COMP-004"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Days 22-30: verify review flow - Google Maps, aggregator replies, and a first-month promo teardown per city. Keep the Abu Dhabi and Dubai plans as separate experiments; a result in one cluster should not be assumed to transfer to another district or city.",
+            "basis": "proposal",
+            "evidence_ids": [
+              "SEARCH-f13055916760421ab02033c0499698b3",
+              "SEARCH-7463e62a9a134541a3247d2202f05ee5"
+            ],
+            "calculation_ids": []
+          }
+        ]
+      },
+      {
+        "title": "Measurement and Research Gaps",
+        "items": [
+          {
+            "text": "Marketing research for this question returned no curated marketing records; the social/aggregator leads above are uninspected snippets from a single city-specific search and should be read on the original pages before you rely on them. No verified footfall, demand, cost-per-acquisition, commission or promotion-uptake data exists here.",
+            "basis": "inference",
+            "evidence_ids": [
+              "SEARCH-0c2d458b0c2f4aad802102922299ff6e",
+              "SEARCH-5d5edf9273494f61a01ec3fc45b3ef56",
+              "SEARCH-f13055916760421ab02033c0499698b3",
+              "SEARCH-7463e62a9a134541a3247d2202f05ee5"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Define launch metrics in advance (orders per day per channel, average order value, delivery share, repeat rate) and review weekly; without your cost and price inputs, no break-even or contribution figures are calculated here.",
+            "basis": "proposal",
+            "evidence_ids": [],
+            "calculation_ids": []
+          }
+        ]
+      }
+    ],
+    "assumptions": [
+      "The business is a Jordanian restaurant serving meaty pizza and kebab sandwiches, planning expansion into Dubai and Abu Dhabi (from provided profile).",
+      "No branch exists yet; launch is for a first site in each city.",
+      "Budget, rent budget, branch format, target audience and positioning are unknown and not assumed.",
+      "Advertising, aggregator commissions and promotion funding are unverified and must be costed locally."
+    ],
+    "next_steps": [
+      "Inspect the four marketing lead pages and the aggregator merchant pages before committing spend.",
+      "Confirm publisher/eligibility for aggregator and promotional tools at each actual address before signing.",
+      "Send your price, food cost, packaging cost, delivery share and commission rate so contribution and break-even can be calculated.",
+      "Use /set for lasting constraints such as startup budget, monthly rent budget, branch format and positioning.",
+      "Pre-build the WhatsApp/Instagram/Google Maps listing and review-reply process for both cities before Day 1."
+    ],
+    "questions": []
+  },
+  "rendered_answer": "Two 30-day launch plans: Dubai \\(wider delivery-led, aggregator + social\\) and Abu Dhabi \\(tighter, community + aggregator, Khalidiya/Al Zahiyah/Khalifa City clusters\\), both built around observed branch formats and delivery-tooling; no verified traffic or CAC data exists, so treat all targets as test-t\n\n**Shared Foundations \\(Week 0 before Day 1\\)**\n\n- **Fact:** Both cities: script thin outbound \\(rata outbound\\) routine: dusk calls key numbers, door-drop simple order cards, and register on aggregators with pickup enabled. Deliveroo UAE merchant tooling covers platform-rider or own-rider Marketplace+ delivery, single-order tracking, and promotional levers, but eligibility, commission and radius at a specific address are unverified. [1](<https://merchants.deliveroo.com/en-AE/what-we-offer/delivery>) [2](<https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace>) [3](<https://merchants.deliveroo.com/en-AE/why-deliveroo/growth>)\n- **Fact:** Prepare sealed, hot/cold-separated packaging and insulated transport secondary units. Dubai Municipality delivery guidance \\(DM-FSD-GU63 v2, issued 2023-08-31, flagged needs\\_review\\) specifies sealed containers and separation of hot and cold items; verify current version and whether it applies to your channels before launch. [4](<https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf>)\n- **Proposal:** Set one shared menu architecture for both cities \\(anchor meaty pizza, kebab sandwiches, one family/bundled meal\\) so launch content is reusable; price each city separately after local cost, commission and packaging inputs. Verify by inspecting menu pages cited below \\(snippets are leads, not verified prices\\). [5](<https://www.hikmahaiagency.com/blog/digital-marketing-fnb-dubai-2026>) [6](<https://orbeen.com/dubai-restaurant-hospitality-marketing-in-2026-filling-tables/>)\n\n**Dubai 30-Day Plan**\n\n- **Proposal:** Days 1-7: seed content shoots at one Dubai site and list on aggregators with pickup enabled; run small geo-targeted social for your own borough-level test area, not the whole emirate. Competitor format references in Dubai include pizza branches at Al Ghurair Centre, Deira City Centre, Al Barsha Mall and Marina Diamond, plus Allo Beirut Hessa Street \\(advertised delivery to 4 AM\\) and JBR. [7](<https://www.papajohns.ae/stores>) [8](<https://www.allobeirutstreetfood.com/locations>)\n- **Proposal:** Days 8-21: run a limited offer through aggregator promotional levers \\(free delivery or buy-one-get-one style offers are described by Deliveroo UAE\\); fund only one offer at a time and measure contribution per order, since promotion funding, eligibility and discount cost are unverified. [3](<https://merchants.deliveroo.com/en-AE/why-deliveroo/growth>)\n- **Proposal:** Days 22-30: push repeat capture - WhatsApp/Instagram follow-up to first-order customers, a Google Maps listing check, and a mystery-shop of your own packaging and delivery time by channel. One-off \\<br\\>media [9](<https://blog.evolvxai.com/blog/restaurant-marketing-dubai-complete-guide>) [10](<https://www.funa.digital/restaurant-marketing-dubai-2026.html>)\n- **Inference:** Differentiate on Jordanian identity and meat-forward pizza/kebab against the broad-lebanese and global-pizza formats above; the branch listings only show these formats exist at those addresses - they do not establish demand, share or absence of other cuisine. [7](<https://www.papajohns.ae/stores>) [8](<https://www.allobeirutstreetfood.com/locations>)\n\n**Abu Dhabi 30-Day Plan**\n\n- **Proposal:** Days 1-7: prepare in the same manner as Dubai \\(aggregator sign-up, packaging, photography\\) but concentrate door-drop and outbound work on one cluster only. Relevant competitor formats are listed around Abu Dhabi Mall/Al Zahiyah, ADNOC 913 Khalidiya, Al Wahda Mall/Al Manhal, Al Najda/Al Danah and Khalifa City \\(advertised hours 8 AM-12:30 AM\\). Proximity does not establish a shared delivery catchment; verify each address separately. [7](<https://www.papajohns.ae/stores>) [8](<https://www.allobeirutstreetfood.com/locations>)\n- **Proposal:** Days 8-21: run the same limited aggregator offer test as Dubai, one lever at a time, and add one local-office or community trial drop within the chosen cluster. Treat advertised competitor hours \\(e.g., Khalifa City to 12:30 AM, Dubai Hessa to 4 AM\\) as leads to test, not as evidence of demand in your trade area. [3](<https://merchants.deliveroo.com/en-AE/why-deliveroo/growth>) [8](<https://www.allobeirutstreetfood.com/locations>)\n- **Proposal:** Days 22-30: verify review flow - Google Maps, aggregator replies, and a first-month promo teardown per city. Keep the Abu Dhabi and Dubai plans as separate experiments; a result in one cluster should not be assumed to transfer to another district or city. [9](<https://blog.evolvxai.com/blog/restaurant-marketing-dubai-complete-guide>) [10](<https://www.funa.digital/restaurant-marketing-dubai-2026.html>)\n\n**Measurement and Research Gaps**\n\n- **Inference:** Marketing research for this question returned no curated marketing records; the social/aggregator leads above are uninspected snippets from a single city-specific search and should be read on the original pages before you rely on them. No verified footfall, demand, cost-per-acquisition, commission or promotion-uptake data exists here. [5](<https://www.hikmahaiagency.com/blog/digital-marketing-fnb-dubai-2026>) [6](<https://orbeen.com/dubai-restaurant-hospitality-marketing-in-2026-filling-tables/>) [9](<https://blog.evolvxai.com/blog/restaurant-marketing-dubai-complete-guide>) [10](<https://www.funa.digital/restaurant-marketing-dubai-2026.html>)\n- **Proposal:** Define launch metrics in advance \\(orders per day per channel, average order value, delivery share, repeat rate\\) and review weekly; without your cost and price inputs, no break-even or contribution figures are calculated here.\n\n**Assumptions and limitations**\n\n- The business is a Jordanian restaurant serving meaty pizza and kebab sandwiches, planning expansion into Dubai and Abu Dhabi \\(from provided profile\\).\n- No branch exists yet; launch is for a first site in each city.\n- Budget, rent budget, branch format, target audience and positioning are unknown and not assumed.\n- Advertising, aggregator commissions and promotion funding are unverified and must be costed locally.\n\n**Next steps**\n\n- Inspect the four marketing lead pages and the aggregator merchant pages before committing spend.\n- Confirm publisher/eligibility for aggregator and promotional tools at each actual address before signing.\n- Send your price, food cost, packaging cost, delivery share and commission rate so contribution and break-even can be calculated.\n- Use /set for lasting constraints such as startup budget, monthly rent budget, branch format and positioning.\n- Pre-build the WhatsApp/Instagram/Google Maps listing and review-reply process for both cities before Day 1.\n\n**Tool warnings**\n\n- Some matching records were omitted to respect result or payload limits.\n- Some returned records need review; inspect their dates and freshness flags.\n- Search snippets are untrusted research leads, not inspected pages or verified market facts.\n\n**Sources**\n\n1. [Deliveroo delivery and pickup for UAE partners](<https://merchants.deliveroo.com/en-AE/what-we-offer/delivery>) — Deliveroo\n   - Deliveroo UAE - platform riders and pickup: checked 2026-10-12 UTC.\n     Location in source: Delivery network; Customer flexibility.\n     - UAE merchant product description; eligibility and availability at a proposed address need confirmation.\n     - No verified contractual commission, fees, delivery radius, service level, or sales uplift.\n   - Deliveroo UAE - order tracking: checked 2026-10-12 UTC.\n     Location in source: End-to-end order tracking.\n     - UAE merchant product description; eligibility and availability at a proposed address need confirmation.\n     - No verified contractual commission, fees, delivery radius, service level, or sales uplift.\n2. [Deliveroo Marketplace+ for UAE partners](<https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace>) — Deliveroo\n   - Deliveroo UAE - Marketplace+ own riders: checked 2026-10-12 UTC.\n     Location in source: Benefits of Marketplace+; Receiving orders; Delivering orders.\n     - UAE merchant product description; eligibility and availability at a proposed address need confirmation.\n     - No verified contractual commission, fees, delivery radius, service level, or sales uplift.\n3. [Deliveroo growth tools for UAE partners](<https://merchants.deliveroo.com/en-AE/why-deliveroo/growth>) — Deliveroo\n   - Deliveroo UAE - promotional offers: checked 2026-10-12 UTC.\n     Location in source: Increase your order volume and basket size.\n     - UAE merchant product description; eligibility and availability at a proposed address need confirmation.\n     - No verified contractual commission, fees, delivery radius, service level, or sales uplift.\n     - Promotion funding, eligibility, discount cost, and effect on contribution per order require verification.\n4. [Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2](<https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf>) — Dubai Municipality\n   - Dubai Municipality - sealed delivery and separation: checked 2026-10-12 UTC; published 2023-08-31; NEEDS REVIEW.\n     Location in source: PDF page 18, section 1.4.1\\(e\\)-\\(f\\).\n     - Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\n     - Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\n5. [Digital Marketing for F&B Businesses in Dubai 2026](<https://www.hikmahaiagency.com/blog/digital-marketing-fnb-dubai-2026>)\n   - **Research lead — search snippet; page not inspected.** Fetched 2026-10-14T13:19:49.441471+00:00 (UTC).\n     Search query: Dubai restaurant launch marketing Instagram aggregator promotions 2026 Dubai UAE.\n     Snippet (untrusted source text): Home / Blog Digital Marketing Digital Marketing for F&B Businesses in Dubai 2026 Dubai's food and beverage industry is one of the most competitive in the world, with over 13,000 licensed restaurants and an active delivery market dominated by Talabat and Zomato. This guide covers food delivery app optimisation, Instagram content strategy, dark kitchen marketing, and event catering acquisition ...\n6. [Dubai Restaurant & Hospitality Marketing in 2026: Filling Tables](<https://orbeen.com/dubai-restaurant-hospitality-marketing-in-2026-filling-tables/>)\n   - **Research lead — search snippet; page not inspected.** Fetched 2026-10-14T13:19:49.441471+00:00 (UTC).\n     Search query: Dubai restaurant launch marketing Instagram aggregator promotions 2026 Dubai UAE.\n     Snippet (untrusted source text): A practical guide to restaurant and hospitality marketing in Dubai and the UAE in 2026 — delivery app economics in AED, Instagram-first discovery, influencer dinners, reviews management, and TDRA-compliant SMS/WhatsApp promotions.\n7. [Papa Johns Stores in UAE](<https://www.papajohns.ae/stores>) — Papa Johns UAE\n   - Papa Johns - Deira: checked 2026-10-12 UTC.\n     Location in source: Dubai / Al Ghurair Centre; Deira City Centre.\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n   - Papa Johns - Al Barsha: checked 2026-10-12 UTC.\n     Location in source: Dubai / Al Barsha Mall.\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n   - Papa Johns - Dubai Marina: checked 2026-10-12 UTC.\n     Location in source: Dubai / Marina Diamond.\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n   - Papa Johns - Al Zahiyah: checked 2026-10-12 UTC.\n     Location in source: Abu Dhabi / Abu Dhabi Mall.\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n   - Papa Johns - Khalidiya: checked 2026-10-12 UTC.\n     Location in source: Abu Dhabi / ADNOC 913 Khalidiya.\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n   - Papa Johns - Al Wahda / Al Manhal: checked 2026-10-12 UTC.\n     Location in source: Abu Dhabi / Al Wahda Mall.\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n8. [Allo Beirut locations](<https://www.allobeirutstreetfood.com/locations>) — Allo Beirut\n   - Allo Beirut - Al Barsha / Hessa Street: checked 2026-10-12 UTC.\n     Location in source: Dubai / Hessa St..\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n     - Advertised delivery hours do not establish overnight demand or the proposed site catchment.\n   - Allo Beirut - JBR: checked 2026-10-12 UTC.\n     Location in source: Dubai / JBR; footer / menu categories.\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n   - Allo Beirut - Al Najda / Al Danah: checked 2026-10-12 UTC.\n     Location in source: Abu Dhabi / Al Najda St..\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n   - Allo Beirut - Khalifa City: checked 2026-10-12 UTC.\n     Location in source: Abu Dhabi / Khalifa City.\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n9. [Restaurant Marketing in Dubai: The Complete Guide \\(2026\\)](<https://blog.evolvxai.com/blog/restaurant-marketing-dubai-complete-guide>)\n   - **Research lead — search snippet; page not inspected.** Fetched 2026-10-14T13:19:49.441471+00:00 (UTC).\n     Search query: Dubai restaurant launch marketing Instagram aggregator promotions 2026 Dubai UAE.\n     Snippet (untrusted source text): The definitive restaurant marketing guide for Dubai and UAE owners — covering Google Maps, Instagram, WhatsApp reservations, Talabat optimization, Ramadan iftar campaigns, and corporate client acquisition. No paid ads required.\n10. [Restaurant Marketing in Dubai 2026: The Complete Digital Strategy](<https://www.funa.digital/restaurant-marketing-dubai-2026.html>)\n   - **Research lead — search snippet; page not inspected.** Fetched 2026-10-14T13:19:49.441471+00:00 (UTC).\n     Search query: Dubai restaurant launch marketing Instagram aggregator promotions 2026 Dubai UAE.\n     Snippet (untrusted source text): The full digital marketing playbook for Dubai restaurants — Instagram, TikTok, Google Maps, Talabat, Deliveroo, WhatsApp loyalty, and the strategies that drive covers and delivery orders in 2026.",
+  "cited_evidence_ids": [
+    "AUH-COMP-001",
+    "AUH-COMP-002",
+    "AUH-COMP-003",
+    "AUH-COMP-004",
+    "AUH-COMP-005",
+    "DXB-COMP-001",
+    "DXB-COMP-002",
+    "DXB-COMP-003",
+    "DXB-COMP-004",
+    "DXB-COMP-005",
+    "DXB-DEL-002",
+    "SEARCH-0c2d458b0c2f4aad802102922299ff6e",
+    "SEARCH-5d5edf9273494f61a01ec3fc45b3ef56",
+    "SEARCH-7463e62a9a134541a3247d2202f05ee5",
+    "SEARCH-f13055916760421ab02033c0499698b3",
+    "UAE-DEL-002",
+    "UAE-DEL-003",
+    "UAE-DEL-004",
+    "UAE-MKT-002"
+  ],
+  "retrieved_sources": {
+    "DXB-COMP-001": {
+      "id": "DXB-COMP-001",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Papa Johns - Deira",
+      "observation": "Papa Johns lists pizza branches at Al Ghurair Centre in Al Muraqqabat and Deira City Centre in Port Saeed.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Dubai / Al Ghurair Centre; Deira City Centre",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "AUH-COMP-001": {
+      "id": "AUH-COMP-001",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Papa Johns - Al Zahiyah",
+      "observation": "Papa Johns lists a pizza branch by the Abu Dhabi Mall parking entrance in Al Zahiyah.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Abu Dhabi / Abu Dhabi Mall",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-COMP-002": {
+      "id": "DXB-COMP-002",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Papa Johns - Al Barsha",
+      "observation": "Papa Johns lists a pizza branch at Al Barsha Mall on Al Barsha 2 Street.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Dubai / Al Barsha Mall",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "AUH-COMP-002": {
+      "id": "AUH-COMP-002",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Papa Johns - Khalidiya",
+      "observation": "Papa Johns lists its ADNOC 913 Khalidiya pizza branch on Ash Shoulah Street in Al Khubeirah, Al Khalidiyah.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Abu Dhabi / ADNOC 913 Khalidiya",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-COMP-003": {
+      "id": "DXB-COMP-003",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Papa Johns - Dubai Marina",
+      "observation": "Papa Johns lists a pizza branch at Marina Diamond near Dubai Marina Metro Station.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Dubai / Marina Diamond",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "AUH-COMP-003": {
+      "id": "AUH-COMP-003",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Papa Johns - Al Wahda / Al Manhal",
+      "observation": "Papa Johns lists its Al Wahda Mall pizza branch on Hthaymah Street in Al Manhal, Abu Dhabi.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Abu Dhabi / Al Wahda Mall",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-COMP-004": {
+      "id": "DXB-COMP-004",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "locations",
+        "competitors",
+        "delivery"
+      ],
+      "entity": "Allo Beirut - Al Barsha / Hessa Street",
+      "observation": "Allo Beirut lists its Hessa Street branch in Al Barsha, Dubai, and advertises delivery until 4 AM.",
+      "source_title": "Allo Beirut locations",
+      "source_url": "https://www.allobeirutstreetfood.com/locations",
+      "publisher": "Allo Beirut",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Dubai / Hessa St.",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability.",
+        "Advertised delivery hours do not establish overnight demand or the proposed site catchment."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "AUH-COMP-004": {
+      "id": "AUH-COMP-004",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Allo Beirut - Al Najda / Al Danah",
+      "observation": "Allo Beirut lists its Al Najda branch at 640 Saeed Bin Ahmed Al Otaiba Street, Al Danah, Abu Dhabi.",
+      "source_title": "Allo Beirut locations",
+      "source_url": "https://www.allobeirutstreetfood.com/locations",
+      "publisher": "Allo Beirut",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Abu Dhabi / Al Najda St.",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-COMP-005": {
+      "id": "DXB-COMP-005",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Allo Beirut - JBR",
+      "observation": "Allo Beirut lists a Dubai branch on Al Mamsha Street in Jumeirah Beach Residence; its site includes shawarma, grills, and sandwiches.",
+      "source_title": "Allo Beirut locations",
+      "source_url": "https://www.allobeirutstreetfood.com/locations",
+      "publisher": "Allo Beirut",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Dubai / JBR; footer / menu categories",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "AUH-COMP-005": {
+      "id": "AUH-COMP-005",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Allo Beirut - Khalifa City",
+      "observation": "Allo Beirut lists an Abu Dhabi branch in Khalifa City, Sector 32, with advertised hours of 8 AM to 12:30 AM.",
+      "source_title": "Allo Beirut locations",
+      "source_url": "https://www.allobeirutstreetfood.com/locations",
+      "publisher": "Allo Beirut",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Abu Dhabi / Khalifa City",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-LOC-001": {
+      "id": "DXB-LOC-001",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "locations"
+      ],
+      "entity": "Deira",
+      "observation": "The official Dubai neighbourhood guide describes Deira as a heritage district with traditional souks.",
+      "source_title": "Deira neighbourhood guide",
+      "source_url": "https://www.visitdubai.com/en/explore-dubai/dubai-neighbourhoods/deira",
+      "publisher": "Dubai Department of Economy and Tourism",
+      "source_kind": "official",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Deira heading and introductory description",
+      "qualifiers": [
+        "Tourism guide describes an area or landmark, not a proposed restaurant unit.",
+        "No verified shop rent, footfall, customer mix, or demand estimate."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "UAE-DEL-001": {
+      "id": "UAE-DEL-001",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "delivery",
+        "competitors"
+      ],
+      "entity": "Papa Johns UAE - delivery and takeaway",
+      "observation": "Papa Johns states that UAE branches offer delivery and takeaway and share the same menu and prices.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Store directory introduction",
+      "qualifiers": [
+        "UAE-wide company statement supported by Dubai and Abu Dhabi branch entries.",
+        "Delivery catchments, fees, promotions, and item availability were not verified at checkout."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-DEL-002": {
+      "id": "DXB-DEL-002",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "delivery",
+        "operations"
+      ],
+      "entity": "Dubai Municipality - sealed delivery and separation",
+      "observation": "Dubai Municipality delivery guidance requires sealed food containers and separation of hot and cold items into insulated secondary units during transport.",
+      "source_title": "Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2",
+      "source_url": "https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf",
+      "publisher": "Dubai Municipality",
+      "source_kind": "official",
+      "published_on": "2023-08-31",
+      "checked_on": "2026-10-12",
+      "locator": "PDF page 18, section 1.4.1(e)-(f)",
+      "qualifiers": [
+        "Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.",
+        "Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist."
+      ],
+      "valid_until": null,
+      "needs_review": true,
+      "expired": false
+    },
+    "UAE-DEL-002": {
+      "id": "UAE-DEL-002",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "delivery"
+      ],
+      "entity": "Deliveroo UAE - platform riders and pickup",
+      "observation": "Deliveroo describes a UAE partner service using its rider network for delivery and allowing customers to collect orders from the restaurant.",
+      "source_title": "Deliveroo delivery and pickup for UAE partners",
+      "source_url": "https://merchants.deliveroo.com/en-AE/what-we-offer/delivery",
+      "publisher": "Deliveroo",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Delivery network; Customer flexibility",
+      "qualifiers": [
+        "UAE merchant product description; eligibility and availability at a proposed address need confirmation.",
+        "No verified contractual commission, fees, delivery radius, service level, or sales uplift."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "UAE-DEL-003": {
+      "id": "UAE-DEL-003",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "delivery",
+        "operations"
+      ],
+      "entity": "Deliveroo UAE - order tracking",
+      "observation": "Deliveroo describes order-status monitoring, real-time rider GPS tracking, and rider-arrival alerts for its delivery service.",
+      "source_title": "Deliveroo delivery and pickup for UAE partners",
+      "source_url": "https://merchants.deliveroo.com/en-AE/what-we-offer/delivery",
+      "publisher": "Deliveroo",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "End-to-end order tracking",
+      "qualifiers": [
+        "UAE merchant product description; eligibility and availability at a proposed address need confirmation.",
+        "No verified contractual commission, fees, delivery radius, service level, or sales uplift."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "UAE-DEL-004": {
+      "id": "UAE-DEL-004",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "delivery",
+        "operations"
+      ],
+      "entity": "Deliveroo UAE - Marketplace+ own riders",
+      "observation": "Deliveroo describes Marketplace+ as using restaurant delivery staff, with selectable delivery area, minimum spend, and delivery fees, plus an option to request a platform rider.",
+      "source_title": "Deliveroo Marketplace+ for UAE partners",
+      "source_url": "https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace",
+      "publisher": "Deliveroo",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Benefits of Marketplace+; Receiving orders; Delivering orders",
+      "qualifiers": [
+        "UAE merchant product description; eligibility and availability at a proposed address need confirmation.",
+        "No verified contractual commission, fees, delivery radius, service level, or sales uplift."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "UAE-MKT-002": {
+      "id": "UAE-MKT-002",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "marketing",
+        "pricing"
+      ],
+      "entity": "Deliveroo UAE - promotional offers",
+      "observation": "Deliveroo describes partner promotions including free delivery and buy-one-get-one-free offers.",
+      "source_title": "Deliveroo growth tools for UAE partners",
+      "source_url": "https://merchants.deliveroo.com/en-AE/why-deliveroo/growth",
+      "publisher": "Deliveroo",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Increase your order volume and basket size",
+      "qualifiers": [
+        "UAE merchant product description; eligibility and availability at a proposed address need confirmation.",
+        "No verified contractual commission, fees, delivery radius, service level, or sales uplift.",
+        "Promotion funding, eligibility, discount cost, and effect on contribution per order require verification."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "SEARCH-0c2d458b0c2f4aad802102922299ff6e": {
+      "id": "SEARCH-0c2d458b0c2f4aad802102922299ff6e",
+      "source_kind": "search_snippet",
+      "source_title": "Digital Marketing for F&B Businesses in Dubai 2026",
+      "source_url": "https://www.hikmahaiagency.com/blog/digital-marketing-fnb-dubai-2026",
+      "snippet": "Home / Blog Digital Marketing Digital Marketing for F&B Businesses in Dubai 2026 Dubai's food and beverage industry is one of the most competitive in the world, with over 13,000 licensed restaurants and an active delivery market dominated by Talabat and Zomato. This guide covers food delivery app optimisation, Instagram content strategy, dark kitchen marketing, and event catering acquisition ...",
+      "query": "Dubai restaurant launch marketing Instagram aggregator promotions 2026 Dubai UAE",
+      "city": "dubai",
+      "fetched_at": "2026-10-14T13:19:49.441471Z"
+    },
+    "SEARCH-5d5edf9273494f61a01ec3fc45b3ef56": {
+      "id": "SEARCH-5d5edf9273494f61a01ec3fc45b3ef56",
+      "source_kind": "search_snippet",
+      "source_title": "Dubai Restaurant & Hospitality Marketing in 2026: Filling Tables",
+      "source_url": "https://orbeen.com/dubai-restaurant-hospitality-marketing-in-2026-filling-tables/",
+      "snippet": "A practical guide to restaurant and hospitality marketing in Dubai and the UAE in 2026 — delivery app economics in AED, Instagram-first discovery, influencer dinners, reviews management, and TDRA-compliant SMS/WhatsApp promotions.",
+      "query": "Dubai restaurant launch marketing Instagram aggregator promotions 2026 Dubai UAE",
+      "city": "dubai",
+      "fetched_at": "2026-10-14T13:19:49.441471Z"
+    },
+    "SEARCH-f13055916760421ab02033c0499698b3": {
+      "id": "SEARCH-f13055916760421ab02033c0499698b3",
+      "source_kind": "search_snippet",
+      "source_title": "Restaurant Marketing in Dubai: The Complete Guide (2026)",
+      "source_url": "https://blog.evolvxai.com/blog/restaurant-marketing-dubai-complete-guide",
+      "snippet": "The definitive restaurant marketing guide for Dubai and UAE owners — covering Google Maps, Instagram, WhatsApp reservations, Talabat optimization, Ramadan iftar campaigns, and corporate client acquisition. No paid ads required.",
+      "query": "Dubai restaurant launch marketing Instagram aggregator promotions 2026 Dubai UAE",
+      "city": "dubai",
+      "fetched_at": "2026-10-14T13:19:49.441471Z"
+    },
+    "SEARCH-7463e62a9a134541a3247d2202f05ee5": {
+      "id": "SEARCH-7463e62a9a134541a3247d2202f05ee5",
+      "source_kind": "search_snippet",
+      "source_title": "Restaurant Marketing in Dubai 2026: The Complete Digital Strategy",
+      "source_url": "https://www.funa.digital/restaurant-marketing-dubai-2026.html",
+      "snippet": "The full digital marketing playbook for Dubai restaurants — Instagram, TikTok, Google Maps, Talabat, Deliveroo, WhatsApp loyalty, and the strategies that drive covers and delivery orders in 2026.",
+      "query": "Dubai restaurant launch marketing Instagram aggregator promotions 2026 Dubai UAE",
+      "city": "dubai",
+      "fetched_at": "2026-10-14T13:19:49.441471Z"
+    }
+  },
+  "calculations": {},
+  "tool_trace": [
+    {
+      "name": "lookup_market_evidence",
+      "arguments": {
+        "cities": [
+          "dubai",
+          "abu_dhabi"
+        ],
+        "topics": [
+          "marketing"
+        ],
+        "query": "marketing",
+        "limit": 12
+      },
+      "result": "{\"status\":\"no_results\",\"data\":{\"records\":[],\"matched_count\":0,\"omitted_count\":0},\"warnings\":[]}",
+      "error": false
+    },
+    {
+      "name": "lookup_market_evidence",
+      "arguments": {
+        "cities": [
+          "dubai",
+          "abu_dhabi"
+        ],
+        "topics": [
+          "delivery",
+          "locations"
+        ],
+        "query": "",
+        "limit": 12
+      },
+      "result": "{\"status\":\"ok\",\"data\":{\"records\":[{\"id\":\"DXB-COMP-001\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Papa Johns - Deira\",\"observation\":\"Papa Johns lists pizza branches at Al Ghurair Centre in Al Muraqqabat and Deira City Centre in Port Saeed.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Dubai / Al Ghurair Centre; Deira City Centre\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-COMP-001\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Papa Johns - Al Zahiyah\",\"observation\":\"Papa Johns lists a pizza branch by the Abu Dhabi Mall parking entrance in Al Zahiyah.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Abu Dhabi / Abu Dhabi Mall\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-COMP-002\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Papa Johns - Al Barsha\",\"observation\":\"Papa Johns lists a pizza branch at Al Barsha Mall on Al Barsha 2 Street.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Dubai / Al Barsha Mall\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-COMP-002\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Papa Johns - Khalidiya\",\"observation\":\"Papa Johns lists its ADNOC 913 Khalidiya pizza branch on Ash Shoulah Street in Al Khubeirah, Al Khalidiyah.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Abu Dhabi / ADNOC 913 Khalidiya\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-COMP-003\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Papa Johns - Dubai Marina\",\"observation\":\"Papa Johns lists a pizza branch at Marina Diamond near Dubai Marina Metro Station.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Dubai / Marina Diamond\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-COMP-003\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Papa Johns - Al Wahda / Al Manhal\",\"observation\":\"Papa Johns lists its Al Wahda Mall pizza branch on Hthaymah Street in Al Manhal, Abu Dhabi.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Abu Dhabi / Al Wahda Mall\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-COMP-004\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\",\"delivery\"],\"entity\":\"Allo Beirut - Al Barsha / Hessa Street\",\"observation\":\"Allo Beirut lists its Hessa Street branch in Al Barsha, Dubai, and advertises delivery until 4 AM.\",\"source_title\":\"Allo Beirut locations\",\"source_url\":\"https://www.allobeirutstreetfood.com/locations\",\"publisher\":\"Allo Beirut\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Dubai / Hessa St.\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\",\"Advertised delivery hours do not establish overnight demand or the proposed site catchment.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-COMP-004\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Allo Beirut - Al Najda / Al Danah\",\"observation\":\"Allo Beirut lists its Al Najda branch at 640 Saeed Bin Ahmed Al Otaiba Street, Al Danah, Abu Dhabi.\",\"source_title\":\"Allo Beirut locations\",\"source_url\":\"https://www.allobeirutstreetfood.com/locations\",\"publisher\":\"Allo Beirut\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Abu Dhabi / Al Najda St.\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-COMP-005\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Allo Beirut - JBR\",\"observation\":\"Allo Beirut lists a Dubai branch on Al Mamsha Street in Jumeirah Beach Residence; its site includes shawarma, grills, and sandwiches.\",\"source_title\":\"Allo Beirut locations\",\"source_url\":\"https://www.allobeirutstreetfood.com/locations\",\"publisher\":\"Allo Beirut\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Dubai / JBR; footer / menu categories\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-COMP-005\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Allo Beirut - Khalifa City\",\"observation\":\"Allo Beirut lists an Abu Dhabi branch in Khalifa City, Sector 32, with advertised hours of 8 AM to 12:30 AM.\",\"source_title\":\"Allo Beirut locations\",\"source_url\":\"https://www.allobeirutstreetfood.com/locations\",\"publisher\":\"Allo Beirut\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Abu Dhabi / Khalifa City\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-LOC-001\",\"cities\":[\"dubai\"],\"topics\":[\"locations\"],\"entity\":\"Deira\",\"observation\":\"The official Dubai neighbourhood guide describes Deira as a heritage district with traditional souks.\",\"source_title\":\"Deira neighbourhood guide\",\"source_url\":\"https://www.visitdubai.com/en/explore-dubai/dubai-neighbourhoods/deira\",\"publisher\":\"Dubai Department of Economy and Tourism\",\"source_kind\":\"official\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Deira heading and introductory description\",\"qualifiers\":[\"Tourism guide describes an area or landmark, not a proposed restaurant unit.\",\"No verified shop rent, footfall, customer mix, or demand estimate.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false}],\"matched_count\":23,\"omitted_count\":12},\"warnings\":[\"Some matching records were omitted to respect result or payload limits.\"]}",
+      "error": false
+    },
+    {
+      "name": "lookup_market_evidence",
+      "arguments": {
+        "cities": [
+          "dubai",
+          "abu_dhabi"
+        ],
+        "topics": [
+          "delivery",
+          "pricing",
+          "menu"
+        ],
+        "query": "delivery aggregator",
+        "limit": 12
+      },
+      "result": "{\"status\":\"ok\",\"data\":{\"records\":[{\"id\":\"DXB-COMP-004\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\",\"delivery\"],\"entity\":\"Allo Beirut - Al Barsha / Hessa Street\",\"observation\":\"Allo Beirut lists its Hessa Street branch in Al Barsha, Dubai, and advertises delivery until 4 AM.\",\"source_title\":\"Allo Beirut locations\",\"source_url\":\"https://www.allobeirutstreetfood.com/locations\",\"publisher\":\"Allo Beirut\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Dubai / Hessa St.\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\",\"Advertised delivery hours do not establish overnight demand or the proposed site catchment.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-DEL-001\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\",\"competitors\"],\"entity\":\"Papa Johns UAE - delivery and takeaway\",\"observation\":\"Papa Johns states that UAE branches offer delivery and takeaway and share the same menu and prices.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Store directory introduction\",\"qualifiers\":[\"UAE-wide company statement supported by Dubai and Abu Dhabi branch entries.\",\"Delivery catchments, fees, promotions, and item availability were not verified at checkout.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-DEL-002\",\"cities\":[\"dubai\"],\"topics\":[\"delivery\",\"operations\"],\"entity\":\"Dubai Municipality - sealed delivery and separation\",\"observation\":\"Dubai Municipality delivery guidance requires sealed food containers and separation of hot and cold items into insulated secondary units during transport.\",\"source_title\":\"Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2\",\"source_url\":\"https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf\",\"publisher\":\"Dubai Municipality\",\"source_kind\":\"official\",\"published_on\":\"2023-08-31\",\"checked_on\":\"2026-10-12\",\"locator\":\"PDF page 18, section 1.4.1(e)-(f)\",\"qualifiers\":[\"Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\",\"Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\"],\"valid_until\":null,\"needs_review\":true,\"expired\":false},{\"id\":\"UAE-DEL-002\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\"],\"entity\":\"Deliveroo UAE - platform riders and pickup\",\"observation\":\"Deliveroo describes a UAE partner service using its rider network for delivery and allowing customers to collect orders from the restaurant.\",\"source_title\":\"Deliveroo delivery and pickup for UAE partners\",\"source_url\":\"https://merchants.deliveroo.com/en-AE/what-we-offer/delivery\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Delivery network; Customer flexibility\",\"qualifiers\":[\"UAE merchant product description; eligibility and availability at a proposed address need confirmation.\",\"No verified contractual commission, fees, delivery radius, service level, or sales uplift.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-DEL-003\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\",\"operations\"],\"entity\":\"Deliveroo UAE - order tracking\",\"observation\":\"Deliveroo describes order-status monitoring, real-time rider GPS tracking, and rider-arrival alerts for its delivery service.\",\"source_title\":\"Deliveroo delivery and pickup for UAE partners\",\"source_url\":\"https://merchants.deliveroo.com/en-AE/what-we-offer/delivery\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"End-to-end order tracking\",\"qualifiers\":[\"UAE merchant product description; eligibility and availability at a proposed address need confirmation.\",\"No verified contractual commission, fees, delivery radius, service level, or sales uplift.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-DEL-004\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\",\"operations\"],\"entity\":\"Deliveroo UAE - Marketplace+ own riders\",\"observation\":\"Deliveroo describes Marketplace+ as using restaurant delivery staff, with selectable delivery area, minimum spend, and delivery fees, plus an option to request a platform rider.\",\"source_title\":\"Deliveroo Marketplace+ for UAE partners\",\"source_url\":\"https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Benefits of Marketplace+; Receiving orders; Delivering orders\",\"qualifiers\":[\"UAE merchant product description; eligibility and availability at a proposed address need confirmation.\",\"No verified contractual commission, fees, delivery radius, service level, or sales uplift.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-MKT-002\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"marketing\",\"pricing\"],\"entity\":\"Deliveroo UAE - promotional offers\",\"observation\":\"Deliveroo describes partner promotions including free delivery and buy-one-get-one-free offers.\",\"source_title\":\"Deliveroo growth tools for UAE partners\",\"source_url\":\"https://merchants.deliveroo.com/en-AE/why-deliveroo/growth\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Increase your order volume and basket size\",\"qualifiers\":[\"UAE merchant product description; eligibility and availability at a proposed address need confirmation.\",\"No verified contractual commission, fees, delivery radius, service level, or sales uplift.\",\"Promotion funding, eligibility, discount cost, and effect on contribution per order require verification.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false}],\"matched_count\":7,\"omitted_count\":0},\"warnings\":[\"Some returned records need review; inspect their dates and freshness flags.\"]}",
+      "error": false
+    },
+    {
+      "name": "search_market_web",
+      "arguments": {
+        "query": "Dubai restaurant launch marketing Instagram aggregator promotions 2026",
+        "city": "dubai"
+      },
+      "result": "{\"status\":\"ok\",\"data\":{\"records\":[{\"id\":\"SEARCH-0c2d458b0c2f4aad802102922299ff6e\",\"source_kind\":\"search_snippet\",\"source_title\":\"Digital Marketing for F&B Businesses in Dubai 2026\",\"source_url\":\"https://www.hikmahaiagency.com/blog/digital-marketing-fnb-dubai-2026\",\"snippet\":\"Home / Blog Digital Marketing Digital Marketing for F&B Businesses in Dubai 2026 Dubai's food and beverage industry is one of the most competitive in the world, with over 13,000 licensed restaurants and an active delivery market dominated by Talabat and Zomato. This guide covers food delivery app optimisation, Instagram content strategy, dark kitchen marketing, and event catering acquisition ...\",\"query\":\"Dubai restaurant launch marketing Instagram aggregator promotions 2026 Dubai UAE\",\"city\":\"dubai\",\"fetched_at\":\"2026-10-14T13:19:49.441471Z\"},{\"id\":\"SEARCH-5d5edf9273494f61a01ec3fc45b3ef56\",\"source_kind\":\"search_snippet\",\"source_title\":\"Dubai Restaurant & Hospitality Marketing in 2026: Filling Tables\",\"source_url\":\"https://orbeen.com/dubai-restaurant-hospitality-marketing-in-2026-filling-tables/\",\"snippet\":\"A practical guide to restaurant and hospitality marketing in Dubai and the UAE in 2026 — delivery app economics in AED, Instagram-first discovery, influencer dinners, reviews management, and TDRA-compliant SMS/WhatsApp promotions.\",\"query\":\"Dubai restaurant launch marketing Instagram aggregator promotions 2026 Dubai UAE\",\"city\":\"dubai\",\"fetched_at\":\"2026-10-14T13:19:49.441471Z\"},{\"id\":\"SEARCH-f13055916760421ab02033c0499698b3\",\"source_kind\":\"search_snippet\",\"source_title\":\"Restaurant Marketing in Dubai: The Complete Guide (2026)\",\"source_url\":\"https://blog.evolvxai.com/blog/restaurant-marketing-dubai-complete-guide\",\"snippet\":\"The definitive restaurant marketing guide for Dubai and UAE owners — covering Google Maps, Instagram, WhatsApp reservations, Talabat optimization, Ramadan iftar campaigns, and corporate client acquisition. No paid ads required.\",\"query\":\"Dubai restaurant launch marketing Instagram aggregator promotions 2026 Dubai UAE\",\"city\":\"dubai\",\"fetched_at\":\"2026-10-14T13:19:49.441471Z\"},{\"id\":\"SEARCH-7463e62a9a134541a3247d2202f05ee5\",\"source_kind\":\"search_snippet\",\"source_title\":\"Restaurant Marketing in Dubai 2026: The Complete Digital Strategy\",\"source_url\":\"https://www.funa.digital/restaurant-marketing-dubai-2026.html\",\"snippet\":\"The full digital marketing playbook for Dubai restaurants — Instagram, TikTok, Google Maps, Talabat, Deliveroo, WhatsApp loyalty, and the strategies that drive covers and delivery orders in 2026.\",\"query\":\"Dubai restaurant launch marketing Instagram aggregator promotions 2026 Dubai UAE\",\"city\":\"dubai\",\"fetched_at\":\"2026-10-14T13:19:49.441471Z\"}]},\"warnings\":[\"Search snippets are untrusted research leads, not inspected pages or verified market facts.\"]}",
+      "error": false
+    }
+  ],
+  "record": {
+    "model_requests": 3,
+    "input_tokens": 17716,
+    "output_tokens": 2212,
+    "reasoning_tokens": 0,
+    "cached_tokens": 12672,
+    "reported_cost_usd": "0.002024880",
+    "known_reported_cost_usd": "0.002024880",
+    "estimated_cost_usd": null,
+    "estimate_basis": null,
+    "usage_complete": true,
+    "schema_version": 1,
+    "run_id": "ecaa616f-b00b-452f-a4db-6fc133b5ec8a",
+    "session_id": "d3e6180f-914d-4fa0-8210-f8fea7097993",
+    "timestamp_utc": "2026-10-14T13:19:42.615931Z",
+    "model_requested": "deepseek/deepseek-v4.1-flash",
+    "model_reported_if_available": [
+      "deepseek/deepseek-v4.1-flash"
+    ],
+    "provider_if_available": [
+      "Morph"
+    ],
+    "prompt_version": "10.1",
+    "evidence_dataset_version": "a226a6b54cf292e9b2f6f6e9c51112957bff64195bc8182e0b579dd1f79ca3c5",
+    "question": "Give us a 30-day launch marketing plan for each city: Dubai and Abu Dhabi.",
+    "outcome": "completed",
+    "error_category": null,
+    "tool_events": [
+      {
+        "name": "lookup_market_evidence",
+        "duration_ms": 0.14580402057617903,
+        "status": "no_results",
+        "result_count": 0
+      },
+      {
+        "name": "lookup_market_evidence",
+        "duration_ms": 1.335990964435041,
+        "status": "ok",
+        "result_count": 11
+      },
+      {
+        "name": "lookup_market_evidence",
+        "duration_ms": 0.6733359768986702,
+        "status": "ok",
+        "result_count": 7
+      },
+      {
+        "name": "search_market_web",
+        "duration_ms": 1633.9022920001298,
+        "status": "ok",
+        "result_count": 4
+      }
+    ],
+    "requests": [
+      {
+        "generation_id": "gen-1791983982-K6xhXqH4N1VDKrzQUCNP",
+        "model_reported": "deepseek/deepseek-v4.1-flash",
+        "provider_reported": "Morph",
+        "duration_ms": 3101.030522957444,
+        "outcome": "completed",
+        "input_tokens": 3519,
+        "output_tokens": 200,
+        "reasoning_tokens": 0,
+        "cached_tokens": 3456,
+        "reported_cost_usd": "0.000192868"
+      },
+      {
+        "generation_id": "gen-1791983985-cok4rFxfL2LojbXFfh8k",
+        "model_reported": "deepseek/deepseek-v4.1-flash",
+        "provider_reported": "Morph",
+        "duration_ms": 2086.1861429875717,
+        "outcome": "completed",
+        "input_tokens": 5877,
+        "output_tokens": 174,
+        "reasoning_tokens": 0,
+        "cached_tokens": 3456,
+        "reported_cost_usd": "0.000238092"
+      },
+      {
+        "generation_id": "gen-1791983989-YzX4E6RKYe3DdsfaZSFb",
+        "model_reported": "deepseek/deepseek-v4.1-flash",
+        "provider_reported": "Morph",
+        "duration_ms": 20324.561901041307,
+        "outcome": "completed",
+        "input_tokens": 8320,
+        "output_tokens": 1838,
+        "reasoning_tokens": 0,
+        "cached_tokens": 5760,
+        "reported_cost_usd": "0.00159392"
+      }
+    ],
+    "evidence_ids": [
+      "DXB-COMP-001",
+      "AUH-COMP-001",
+      "DXB-COMP-002",
+      "AUH-COMP-002",
+      "DXB-COMP-003",
+      "AUH-COMP-003",
+      "DXB-COMP-004",
+      "AUH-COMP-004",
+      "DXB-COMP-005",
+      "AUH-COMP-005",
+      "DXB-LOC-001",
+      "UAE-DEL-001",
+      "DXB-DEL-002",
+      "UAE-DEL-002",
+      "UAE-DEL-003",
+      "UAE-DEL-004",
+      "UAE-MKT-002",
+      "SEARCH-0c2d458b0c2f4aad802102922299ff6e",
+      "SEARCH-5d5edf9273494f61a01ec3fc45b3ef56",
+      "SEARCH-f13055916760421ab02033c0499698b3",
+      "SEARCH-7463e62a9a134541a3247d2202f05ee5"
+    ],
+    "calculation_ids": [],
+    "latency_ms": 27610.377616016194,
+    "tool_output_characters": 17099,
+    "validation_errors": [],
+    "warnings": [
+      "Some matching records were omitted to respect result or payload limits.",
+      "Some returned records need review; inspect their dates and freshness flags.",
+      "Search snippets are untrusted research leads, not inspected pages or verified market facts."
+    ]
+  },
+  "warnings": [
+    "Some matching records were omitted to respect result or payload limits.",
+    "Some returned records need review; inspect their dates and freshness flags.",
+    "Search snippets are untrusted research leads, not inspected pages or verified market facts."
+  ],
+  "error_category": null,
+  "error_message": null,
+  "checks": {
+    "reference_integrity": true,
+    "requested_cities_present": true,
+    "durable_profile_unchanged": true,
+    "calculator_exact": null,
+    "claim_support": "requires review"
+  }
+}

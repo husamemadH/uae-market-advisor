@@ -1,0 +1,266 @@
+[
+  {
+    "case_id": "E01",
+    "run_id": "017752ff-db3b-4c1f-94a6-392d1e98f329",
+    "reviewer": "Codex, implementation assistant",
+    "reviewer_type": "assistant_provisional",
+    "scores": {
+      "relevance": 2,
+      "evidence_support": 0,
+      "actionability": 2,
+      "business_reasoning": 1,
+      "clarity": 0
+    },
+    "hard_failures": [
+      "Unsupported neighborhood/customer characterization inside an inference."
+    ],
+    "claim_checks": [
+      "DXB-LOC-001 establishes heritage/souks, not the claimed dense mixed residential/trade district.",
+      "DXB-COMP-002/004 establish listings, not current operation; a later disclaimer does not repair the initial operates claim.",
+      "Observed pizza prices match DXB-PRICE-001 and UAE-PRICE-001, but are peripheral to the question."
+    ],
+    "notes": "Three candidates and concrete checks, but excessive unrelated detail and unsupported site rationale.",
+    "improvement": "Separate sourced observations from proposed site measurements; keep the answer focused."
+  },
+  {
+    "case_id": "E02",
+    "run_id": "04bd72ad-2774-4e7c-8fd1-eae01e07bbb0",
+    "reviewer": "Codex, implementation assistant",
+    "reviewer_type": "assistant_provisional",
+    "scores": {
+      "relevance": 2,
+      "evidence_support": 0,
+      "actionability": 2,
+      "business_reasoning": 1,
+      "clarity": 0
+    },
+    "hard_failures": [
+      "Unsupported traffic, residential composition and relative-rent premises."
+    ],
+    "claim_checks": [
+      "AUH-LOC-001 does not establish dense mixed use, office/hotel/residential mix or mall-generated passing trade.",
+      "AUH-LOC-003 does not establish all-day pedestrian/car traffic.",
+      "AUH-COMP-005 lists a Khalifa City branch; it does not establish a residential-led customer base."
+    ],
+    "notes": "Specific shortlist and useful visits, but proposal labels conceal factual assumptions and the response is long.",
+    "improvement": "Remove unsupported neighborhood descriptions and propose measurements instead."
+  },
+  {
+    "case_id": "E03",
+    "run_id": "b04272ad-4678-4eb2-98a2-87b5775b549d",
+    "reviewer": "Codex, implementation assistant",
+    "reviewer_type": "assistant_provisional",
+    "scores": {
+      "relevance": 1,
+      "evidence_support": 0,
+      "actionability": 1,
+      "business_reasoning": 1,
+      "clarity": 1
+    },
+    "hard_failures": [
+      "Unsupported catchment and district characterization."
+    ],
+    "claim_checks": [
+      "AUH-COMP-001/002/003 establish listed addresses, not central-island catchments.",
+      "DXB-PRICE-001 omits pizza size; comparison to an entry tier cannot establish a like-for-like price premium.",
+      "Retrieval misses Allo Beirut Abu Dhabi and Operation Falafel records already in the dataset."
+    ],
+    "notes": "Comparison is dominated by one chain and has no clear direct/indirect segmentation.",
+    "improvement": "Use focused competitor retrieval, include sandwich alternatives and state differentiation as a test."
+  },
+  {
+    "case_id": "E04",
+    "run_id": "2d849e07-e0dc-4547-bd8f-f19a7906e00d",
+    "reviewer": "Codex, implementation assistant",
+    "reviewer_type": "assistant_provisional",
+    "scores": {
+      "relevance": 1,
+      "evidence_support": 1,
+      "actionability": 1,
+      "business_reasoning": 1,
+      "clarity": 1
+    },
+    "hard_failures": [],
+    "claim_checks": [
+      "UAE-DEL-001 supports one operator sharing a menu, not a broad statement about multi-branch operators.",
+      "AUH-PRICE-001 and UAE-PRICE-001 support observed size labels; proposals still omit concrete kebab portions and named meat pizzas.",
+      "Prices are not completed checkout totals; saying they exclude unverified taxes/fees overstates the records."
+    ],
+    "notes": "Core identity survives, but mostly category counts rather than a usable launch menu; weak operational consequences.",
+    "improvement": "Supply concrete proposed items and portions, distinguish unverified charges from exclusions."
+  },
+  {
+    "case_id": "E05",
+    "run_id": "f3ed4927-a9a7-4ce3-ad9b-5fb858da6b86",
+    "reviewer": "Codex, implementation assistant",
+    "reviewer_type": "assistant_provisional",
+    "scores": {
+      "relevance": 0,
+      "evidence_support": 1,
+      "actionability": 1,
+      "business_reasoning": 1,
+      "clarity": 1
+    },
+    "hard_failures": [],
+    "claim_checks": [
+      "UAE-PRICE-002/003 are real bundle observations, but the answer never states their AED values.",
+      "Relevant standalone pizza and Abu Dhabi shawarma records exist but were not retrieved.",
+      "It correctly refuses to derive an observed citywide range, but also omits explicitly proposed test bands."
+    ],
+    "notes": "Fails the main requested deliverable: no price bands or numerical comparison anchors.",
+    "improvement": "Filter pricing first; retrieve pizza and sandwich observations separately and label proposals."
+  },
+  {
+    "case_id": "E06",
+    "run_id": "ecaa616f-b00b-452f-a4db-6fc133b5ec8a",
+    "reviewer": "Codex, implementation assistant",
+    "reviewer_type": "assistant_provisional",
+    "scores": {
+      "relevance": 1,
+      "evidence_support": 1,
+      "actionability": 1,
+      "business_reasoning": 1,
+      "clarity": 0
+    },
+    "hard_failures": [],
+    "claim_checks": [
+      "UAE-MKT-002 supports promotional options, contradicting the answer claim that no curated marketing records were returned.",
+      "Search snippets are uninspected marketing leads, not evidence of channel effectiveness.",
+      "An outbound routine is labeled fact without supporting evidence; several phrases are garbled."
+    ],
+    "notes": "Timed city plans and metrics exist, but messages and partnerships are weak and presentation is poor.",
+    "improvement": "Prioritize marketing records, group a short timed plan and keep proposed outreach distinct from facts."
+  },
+  {
+    "case_id": "E07",
+    "run_id": "93403dd9-fbfe-40de-979b-abf823fa61b0",
+    "reviewer": "Codex, implementation assistant",
+    "reviewer_type": "assistant_provisional",
+    "scores": {
+      "relevance": 2,
+      "evidence_support": 1,
+      "actionability": 1,
+      "business_reasoning": 1,
+      "clarity": 1
+    },
+    "hard_failures": [
+      "Recommends unsupported /set fields for all eight calculator inputs."
+    ],
+    "claim_checks": [
+      "UAE-DEL-002/004 support channel descriptions but no commission or radius.",
+      "DXB-DEL-001/002 are historical guidance needing review, not verified in-force regulation.",
+      "No evidence supports the harder batching heading for Abu Dhabi; city differences should be tested."
+    ],
+    "notes": "Useful packaging/channel/radius discussion; gives unusable command guidance and excessive detail.",
+    "improvement": "List supported profile fields explicitly; supply calculator scenarios in chat; remove invented city differences."
+  },
+  {
+    "case_id": "E08",
+    "run_id": "02709666-9666-4632-becb-76e0c101a596",
+    "reviewer": "Codex, implementation assistant",
+    "reviewer_type": "assistant_provisional",
+    "scores": {
+      "relevance": 2,
+      "evidence_support": 1,
+      "actionability": 2,
+      "business_reasoning": 1,
+      "clarity": 1
+    },
+    "hard_failures": [
+      "Assumes shared equipment and staffing feasibility without a supplied layout or volume."
+    ],
+    "claim_checks": [
+      "AUH-OPS-001 and DXB-OPS-002 support training descriptions with a stale-source caveat.",
+      "UAE-PRICE-001 is a menu record and cannot support claims that pizza and kebab lines share ovens/flat-tops.",
+      "Headcounts are labeled illustrative, but there is no explicit throughput assumption."
+    ],
+    "notes": "Roles/workflows are useful, no invented wages; staffing feasibility remains untested.",
+    "improvement": "Make staffing a scenario tied to format and measured throughput; do not cite a menu as equipment evidence."
+  },
+  {
+    "case_id": "E09",
+    "run_id": "80d9781d-3ec3-46e3-9275-cf10c5c14547",
+    "reviewer": "Codex, implementation assistant",
+    "reviewer_type": "assistant_provisional",
+    "scores": {
+      "relevance": 2,
+      "evidence_support": 1,
+      "actionability": 2,
+      "business_reasoning": 1,
+      "clarity": 1
+    },
+    "hard_failures": [],
+    "claim_checks": [
+      "AUH-SUP-001/DXB-SUP-001 support distribution-centre addresses, not approved customer pickup.",
+      "UAE-SUP-001/002 are supplier catalog/service claims; the answer appropriately requests quotes and samples.",
+      "AUH-OPS-002 supports self-inspection records generally, not the specific legal applicability asserted for incoming ingredients."
+    ],
+    "notes": "Practical qualification, backups and receiving process; some regulatory extrapolation and repetition.",
+    "improvement": "Keep receiving documentation as a proposal unless the exact obligation is sourced."
+  },
+  {
+    "case_id": "E10",
+    "run_id": "e74d106a-8ce6-4737-8581-ae98a6143392",
+    "reviewer": "Codex, implementation assistant",
+    "reviewer_type": "assistant_provisional",
+    "scores": {
+      "relevance": 2,
+      "evidence_support": 2,
+      "actionability": 2,
+      "business_reasoning": 2,
+      "clarity": 1
+    },
+    "hard_failures": [],
+    "claim_checks": [
+      "The cited actual tool result has all eight exact supplied inputs, AED 5 weighted fee, AED 20 variable cost/contribution, 0.5 margin, 1500/50 orders.",
+      "The answer labels inputs hypothetical and distinguishes break-even from demand/profit.",
+      "DXB-PRICE-001 is correctly described as one branch/channel observation that does not validate average revenue."
+    ],
+    "notes": "Arithmetic passes and limitations are visible; unrelated research greatly lengthens a narrow calculation.",
+    "improvement": "Present the calculation and short scenario limits without an extra market report."
+  },
+  {
+    "case_id": "E11",
+    "run_id": "9085273a-df60-4c64-b659-47d67a7c4395",
+    "reviewer": "Codex, implementation assistant",
+    "reviewer_type": "assistant_provisional",
+    "scores": {
+      "relevance": 0,
+      "evidence_support": 0,
+      "actionability": 0,
+      "business_reasoning": 0,
+      "clarity": 0
+    },
+    "hard_failures": [
+      "Unretrieved historical evidence IDs; answer blocked by validation."
+    ],
+    "claim_checks": [
+      "The rejected answer reuses old IDs including DXB-COMP-001/002/003/005/006, DXB-LOC-001 and prior SEARCH IDs; only DXB-COMP-004 from that shortlist was returned in this turn.",
+      "Stored rejected content also invents premium-rent and walk-in-trade premises and contains corrupted phrasing.",
+      "The service exposes no successful answer and retains the takeaway profile unchanged."
+    ],
+    "notes": "Actual model/tool run failed; no successful follow-up was delivered.",
+    "improvement": "Retrieve the prior named locations and competitors in this turn; omit unreturned claims and IDs."
+  },
+  {
+    "case_id": "E12",
+    "run_id": "90e66e37-e355-44cf-81a3-27dce5aec745",
+    "reviewer": "Codex, implementation assistant",
+    "reviewer_type": "assistant_provisional",
+    "scores": {
+      "relevance": 2,
+      "evidence_support": 2,
+      "actionability": 2,
+      "business_reasoning": 2,
+      "clarity": 1
+    },
+    "hard_failures": [],
+    "claim_checks": [
+      "AUH-LOC-003 explicitly lacks verified shop rents/footfall; no precise rent is invented.",
+      "No profit guarantee or calculation with missing inputs is provided.",
+      "A unit-specific quote and cost-validation path is proposed."
+    ],
+    "notes": "Responsible uncertainty demonstrated; unrelated competitor sections make it longer than necessary.",
+    "improvement": "Give a short refusal of certainty plus the essential site/quote inputs."
+  }
+]

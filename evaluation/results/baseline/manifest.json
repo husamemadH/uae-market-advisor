@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "mode": "live",
+  "started_at_utc": "2026-10-14T13:17:17.951966+00:00",
+  "requested_cases": [
+    "E01",
+    "E02",
+    "E03",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12"
+  ],
+  "execution_order": [
+    "E01",
+    "E11",
+    "E02",
+    "E03",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E12"
+  ],
+  "configuration": {
+    "model": "deepseek/deepseek-v4.1-flash",
+    "max_tokens": 4096,
+    "timeout_seconds": 45,
+    "sdk_retries": 0,
+    "agent_retries": 0,
+    "provider_routing": {
+      "provider": {
+        "require_parameters": true,
+        "order": [
+          "Morph"
+        ]
+      }
+    },
+    "history_turns": 3,
+    "tool_call_limit": 6,
+    "search_enabled": true,
+    "search_call_limit": 2,
+    "tool_output_characters": 24000,
+    "max_cost_usd": "0.10",
+    "budget_policy": "Stop between turns at reported cost threshold or unknown cost; not a hard billing cap.",
+    "prompt_version": "10.1",
+    "evidence_dataset_version": "a226a6b54cf292e9b2f6f6e9c51112957bff64195bc8182e0b579dd1f79ca3c5"
+  },
+  "git_commit": "99076244ebc66379d596248413d4797d808ad5cb",
+  "file_sha256": {
+    "advisor.py": "970434bf75ef54d724ad25479c9d92cfe86f152068cd85d3e3933cc65bc855b5",
+    "answers.py": "5142ecac1879de60ecbdb4509aa0cb20aea27de63f09e5dfecac43305fd526c1",
+    "app.py": "98316afbac438fa1391d11655550f4c2a4449ea3a3910893badfa15ab9531c20",
+    "economics.py": "0c225b69e916de989a81f98db2e8af752ada242190005d2d4ee87e998f1c6ac4",
+    "evaluate.py": "4b964754da1578c8ea7ff0219d6f584994215e285d4d5cbf21b013cebe5c9ee8",
+    "evaluation_fixtures.py": "dd75f3995d68a21301e69c9fb04fe8920e497cf49da02677e88d9bc186139fe9",
+    "evidence.py": "c498b032d51bf74480209726326a601e25a94141b44c9a8a4bac63475c5166dc",
+    "observability.py": "f53bc73715dfb33b163e18db6458c34bad29d2ed453c70be05f61a3b227e2633",
+    "profiles.py": "d63237b82b9a386aafbc194958196fd89686b5e3aa9977c2f2c5cc8f2df5aad8",
+    "runtime_adapters.py": "8668da236093d7ccc2f6e88893b95601e3acecce18d685cdb17dce2495c3e4b5",
+    "sessions.py": "faa4c8046a51676d7551c9502d156131665df2759fdce74b52e754dd0e4041ad",
+    "settings.py": "27792d00d491385ae23f520fb28cadbc8274d328c6ef1419a21f7107efd1288d",
+    "turn_tools.py": "ed10daaf8e980ce6dee22ca585d1cf37410575f914673935a369189e7e952e74",
+    "web_search.py": "cc976a672b696ebd11da6039dcf9dc205f5770216fd852dbee561436f5948d3f",
+    "evaluation/cases.json": "1f58d3181bcf6dcaa3cf282b990337c78956d6140d5d6e1586250574c250ec55",
+    "uv.lock": "26c4cc0c5c0a7902685bc2bf156bc1beb078c1441850d227a92753cda7a30ff0"
+  },
+  "python": "3.12.14",
+  "packages": {
+    "agno": "3.1.3",
+    "openai": "3.29.0",
+    "pydantic": "2.14.1",
+    "ddgs": "9.16.0"
+  },
+  "finished_at_utc": "2026-10-14T13:22:39.836261+00:00",
+  "usage": {
+    "model_requests": 27,
+    "input_tokens": 163870,
+    "output_tokens": 24829,
+    "reasoning_tokens": 0,
+    "cached_tokens": 112896,
+    "reported_cost_usd": "0.022306536",
+    "known_reported_cost_usd": "0.022306536",
+    "estimated_cost_usd": null,
+    "estimate_basis": null,
+    "usage_complete": true
+  },
+  "stop_reason": null
+}

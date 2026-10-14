@@ -1,0 +1,344 @@
+{
+  "case": {
+    "id": "E11",
+    "question": "Use a delivery-only format instead. Revise your shortlist and explain what changes.",
+    "cities": [
+      "dubai"
+    ],
+    "topics": [
+      "locations",
+      "delivery"
+    ],
+    "profile": {},
+    "followup_of": "E01",
+    "expected": [
+      "Uses E01's Dubai shortlist",
+      "Explains how delivery-only changes selection and tradeoffs",
+      "Retrieves fresh supporting evidence",
+      "Scenario override does not silently change durable profile"
+    ]
+  },
+  "status": "error",
+  "session_id": "29472e57-f6d1-42c1-894c-31aeccf9dc74",
+  "run_id": "9085273a-df60-4c64-b659-47d67a7c4395",
+  "profile_before": {
+    "restaurant_origin": "Jordan",
+    "core_products": [
+      "meaty pizza",
+      "kebab sandwiches"
+    ],
+    "target_cities": [
+      "Dubai",
+      "Abu Dhabi"
+    ],
+    "startup_budget_aed": null,
+    "monthly_rent_budget_aed": null,
+    "branch_format": "takeaway",
+    "target_audience": null,
+    "positioning": null,
+    "planned_opening": null
+  },
+  "profile_after": {
+    "restaurant_origin": "Jordan",
+    "core_products": [
+      "meaty pizza",
+      "kebab sandwiches"
+    ],
+    "target_cities": [
+      "Dubai",
+      "Abu Dhabi"
+    ],
+    "startup_budget_aed": null,
+    "monthly_rent_budget_aed": null,
+    "branch_format": "takeaway",
+    "target_audience": null,
+    "positioning": null,
+    "planned_opening": null
+  },
+  "answer": null,
+  "rendered_answer": "",
+  "cited_evidence_ids": [],
+  "retrieved_sources": {},
+  "calculations": {},
+  "tool_trace": [
+    {
+      "name": "lookup_market_evidence",
+      "arguments": {
+        "cities": [
+          "dubai"
+        ],
+        "topics": [
+          "delivery",
+          "locations",
+          "operations"
+        ],
+        "query": "delivery kitchen",
+        "limit": 12
+      },
+      "result": "{\"status\":\"ok\",\"data\":{\"records\":[{\"id\":\"DXB-COMP-004\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\",\"delivery\"],\"entity\":\"Allo Beirut - Al Barsha / Hessa Street\",\"observation\":\"Allo Beirut lists its Hessa Street branch in Al Barsha, Dubai, and advertises delivery until 4 AM.\",\"source_title\":\"Allo Beirut locations\",\"source_url\":\"https://www.allobeirutstreetfood.com/locations\",\"publisher\":\"Allo Beirut\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Dubai / Hessa St.\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\",\"Advertised delivery hours do not establish overnight demand or the proposed site catchment.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-DEL-002\",\"cities\":[\"dubai\"],\"topics\":[\"delivery\",\"operations\"],\"entity\":\"Dubai Municipality - sealed delivery and separation\",\"observation\":\"Dubai Municipality delivery guidance requires sealed food containers and separation of hot and cold items into insulated secondary units during transport.\",\"source_title\":\"Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2\",\"source_url\":\"https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf\",\"publisher\":\"Dubai Municipality\",\"source_kind\":\"official\",\"published_on\":\"2023-08-31\",\"checked_on\":\"2026-10-12\",\"locator\":\"PDF page 18, section 1.4.1(e)-(f)\",\"qualifiers\":[\"Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\",\"Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\"],\"valid_until\":null,\"needs_review\":true,\"expired\":false},{\"id\":\"UAE-DEL-001\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\",\"competitors\"],\"entity\":\"Papa Johns UAE - delivery and takeaway\",\"observation\":\"Papa Johns states that UAE branches offer delivery and takeaway and share the same menu and prices.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Store directory introduction\",\"qualifiers\":[\"UAE-wide company statement supported by Dubai and Abu Dhabi branch entries.\",\"Delivery catchments, fees, promotions, and item availability were not verified at checkout.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-DEL-002\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\"],\"entity\":\"Deliveroo UAE - platform riders and pickup\",\"observation\":\"Deliveroo describes a UAE partner service using its rider network for delivery and allowing customers to collect orders from the restaurant.\",\"source_title\":\"Deliveroo delivery and pickup for UAE partners\",\"source_url\":\"https://merchants.deliveroo.com/en-AE/what-we-offer/delivery\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Delivery network; Customer flexibility\",\"qualifiers\":[\"UAE merchant product description; eligibility and availability at a proposed address need confirmation.\",\"No verified contractual commission, fees, delivery radius, service level, or sales uplift.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-DEL-003\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\",\"operations\"],\"entity\":\"Deliveroo UAE - order tracking\",\"observation\":\"Deliveroo describes order-status monitoring, real-time rider GPS tracking, and rider-arrival alerts for its delivery service.\",\"source_title\":\"Deliveroo delivery and pickup for UAE partners\",\"source_url\":\"https://merchants.deliveroo.com/en-AE/what-we-offer/delivery\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"End-to-end order tracking\",\"qualifiers\":[\"UAE merchant product description; eligibility and availability at a proposed address need confirmation.\",\"No verified contractual commission, fees, delivery radius, service level, or sales uplift.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-DEL-004\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\",\"operations\"],\"entity\":\"Deliveroo UAE - Marketplace+ own riders\",\"observation\":\"Deliveroo describes Marketplace+ as using restaurant delivery staff, with selectable delivery area, minimum spend, and delivery fees, plus an option to request a platform rider.\",\"source_title\":\"Deliveroo Marketplace+ for UAE partners\",\"source_url\":\"https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Benefits of Marketplace+; Receiving orders; Delivering orders\",\"qualifiers\":[\"UAE merchant product description; eligibility and availability at a proposed address need confirmation.\",\"No verified contractual commission, fees, delivery radius, service level, or sales uplift.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false}],\"matched_count\":6,\"omitted_count\":0},\"warnings\":[\"Some returned records need review; inspect their dates and freshness flags.\"]}",
+      "error": false
+    },
+    {
+      "name": "lookup_market_evidence",
+      "arguments": {
+        "cities": [
+          "dubai"
+        ],
+        "topics": [
+          "delivery"
+        ],
+        "query": "Talabat Careem delivery platform Dubai",
+        "limit": 12
+      },
+      "result": "{\"status\":\"ok\",\"data\":{\"records\":[{\"id\":\"DXB-COMP-004\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\",\"delivery\"],\"entity\":\"Allo Beirut - Al Barsha / Hessa Street\",\"observation\":\"Allo Beirut lists its Hessa Street branch in Al Barsha, Dubai, and advertises delivery until 4 AM.\",\"source_title\":\"Allo Beirut locations\",\"source_url\":\"https://www.allobeirutstreetfood.com/locations\",\"publisher\":\"Allo Beirut\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Dubai / Hessa St.\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\",\"Advertised delivery hours do not establish overnight demand or the proposed site catchment.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-DEL-002\",\"cities\":[\"dubai\"],\"topics\":[\"delivery\",\"operations\"],\"entity\":\"Dubai Municipality - sealed delivery and separation\",\"observation\":\"Dubai Municipality delivery guidance requires sealed food containers and separation of hot and cold items into insulated secondary units during transport.\",\"source_title\":\"Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2\",\"source_url\":\"https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf\",\"publisher\":\"Dubai Municipality\",\"source_kind\":\"official\",\"published_on\":\"2023-08-31\",\"checked_on\":\"2026-10-12\",\"locator\":\"PDF page 18, section 1.4.1(e)-(f)\",\"qualifiers\":[\"Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\",\"Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\"],\"valid_until\":null,\"needs_review\":true,\"expired\":false},{\"id\":\"UAE-DEL-002\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\"],\"entity\":\"Deliveroo UAE - platform riders and pickup\",\"observation\":\"Deliveroo describes a UAE partner service using its rider network for delivery and allowing customers to collect orders from the restaurant.\",\"source_title\":\"Deliveroo delivery and pickup for UAE partners\",\"source_url\":\"https://merchants.deliveroo.com/en-AE/what-we-offer/delivery\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Delivery network; Customer flexibility\",\"qualifiers\":[\"UAE merchant product description; eligibility and availability at a proposed address need confirmation.\",\"No verified contractual commission, fees, delivery radius, service level, or sales uplift.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-DEL-004\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\",\"operations\"],\"entity\":\"Deliveroo UAE - Marketplace+ own riders\",\"observation\":\"Deliveroo describes Marketplace+ as using restaurant delivery staff, with selectable delivery area, minimum spend, and delivery fees, plus an option to request a platform rider.\",\"source_title\":\"Deliveroo Marketplace+ for UAE partners\",\"source_url\":\"https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Benefits of Marketplace+; Receiving orders; Delivering orders\",\"qualifiers\":[\"UAE merchant product description; eligibility and availability at a proposed address need confirmation.\",\"No verified contractual commission, fees, delivery radius, service level, or sales uplift.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-DEL-001\",\"cities\":[\"dubai\"],\"topics\":[\"delivery\",\"operations\",\"suppliers\"],\"entity\":\"Dubai Municipality - transport cold chain\",\"observation\":\"Dubai Municipality guidance specifies transportation units capable of holding hot food at 60 C or above, cold food at 5 C or below, and frozen food at -18 C or below.\",\"source_title\":\"Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2\",\"source_url\":\"https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf\",\"publisher\":\"Dubai Municipality\",\"source_kind\":\"official\",\"published_on\":\"2023-08-31\",\"checked_on\":\"2026-10-12\",\"locator\":\"PDF pages 13-14, section 1.2.2 Temperature Control Requirements\",\"qualifiers\":[\"Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\",\"Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\",\"Transport holding requirements, not cooking temperatures or evidence that a supplier or vehicle meets them.\"],\"valid_until\":null,\"needs_review\":true,\"expired\":false},{\"id\":\"UAE-DEL-001\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\",\"competitors\"],\"entity\":\"Papa Johns UAE - delivery and takeaway\",\"observation\":\"Papa Johns states that UAE branches offer delivery and takeaway and share the same menu and prices.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Store directory introduction\",\"qualifiers\":[\"UAE-wide company statement supported by Dubai and Abu Dhabi branch entries.\",\"Delivery catchments, fees, promotions, and item availability were not verified at checkout.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-DEL-003\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\",\"operations\"],\"entity\":\"Deliveroo UAE - order tracking\",\"observation\":\"Deliveroo describes order-status monitoring, real-time rider GPS tracking, and rider-arrival alerts for its delivery service.\",\"source_title\":\"Deliveroo delivery and pickup for UAE partners\",\"source_url\":\"https://merchants.deliveroo.com/en-AE/what-we-offer/delivery\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"End-to-end order tracking\",\"qualifiers\":[\"UAE merchant product description; eligibility and availability at a proposed address need confirmation.\",\"No verified contractual commission, fees, delivery radius, service level, or sales uplift.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false}],\"matched_count\":7,\"omitted_count\":0},\"warnings\":[\"Some returned records need review; inspect their dates and freshness flags.\"]}",
+      "error": false
+    }
+  ],
+  "record": {
+    "model_requests": 2,
+    "input_tokens": 25414,
+    "output_tokens": 2283,
+    "reasoning_tokens": 0,
+    "cached_tokens": 22144,
+    "reported_cost_usd": "0.002117256",
+    "known_reported_cost_usd": "0.002117256",
+    "estimated_cost_usd": null,
+    "estimate_basis": null,
+    "usage_complete": true,
+    "schema_version": 1,
+    "run_id": "9085273a-df60-4c64-b659-47d67a7c4395",
+    "session_id": "29472e57-f6d1-42c1-894c-31aeccf9dc74",
+    "timestamp_utc": "2026-10-14T13:17:50.123594Z",
+    "model_requested": "deepseek/deepseek-v4.1-flash",
+    "model_reported_if_available": [
+      "deepseek/deepseek-v4.1-flash"
+    ],
+    "provider_if_available": [
+      "Morph"
+    ],
+    "prompt_version": "10.1",
+    "evidence_dataset_version": "a226a6b54cf292e9b2f6f6e9c51112957bff64195bc8182e0b579dd1f79ca3c5",
+    "question": "Use a delivery-only format instead. Revise your shortlist and explain what changes.",
+    "outcome": "error",
+    "error_category": "validation",
+    "tool_events": [
+      {
+        "name": "lookup_market_evidence",
+        "duration_ms": 0.6097470177337527,
+        "status": "ok",
+        "result_count": 6
+      },
+      {
+        "name": "lookup_market_evidence",
+        "duration_ms": 0.5617419956251979,
+        "status": "ok",
+        "result_count": 7
+      }
+    ],
+    "requests": [
+      {
+        "generation_id": "gen-1791983870-OPF2V0N4WGjBSDK4C0Px",
+        "model_reported": "deepseek/deepseek-v4.1-flash",
+        "provider_reported": "Morph",
+        "duration_ms": 5161.461515992414,
+        "outcome": "completed",
+        "input_tokens": 11140,
+        "output_tokens": 202,
+        "reasoning_tokens": 0,
+        "cached_tokens": 11008,
+        "reported_cost_usd": "0.000264368"
+      },
+      {
+        "generation_id": "gen-1791983875-zDUg1d3segCQDM7ZMA0Q",
+        "model_reported": "deepseek/deepseek-v4.1-flash",
+        "provider_reported": "Morph",
+        "duration_ms": 16744.63878798997,
+        "outcome": "completed",
+        "input_tokens": 14274,
+        "output_tokens": 2081,
+        "reasoning_tokens": 0,
+        "cached_tokens": 11136,
+        "reported_cost_usd": "0.001852888"
+      }
+    ],
+    "evidence_ids": [
+      "DXB-COMP-004",
+      "DXB-DEL-002",
+      "UAE-DEL-001",
+      "UAE-DEL-002",
+      "UAE-DEL-003",
+      "UAE-DEL-004",
+      "DXB-DEL-001"
+    ],
+    "calculation_ids": [],
+    "latency_ms": 21963.116950006224,
+    "tool_output_characters": 11761,
+    "validation_errors": [
+      "unretrieved_evidence"
+    ],
+    "warnings": [
+      "Some returned records need review; inspect their dates and freshness flags."
+    ]
+  },
+  "warnings": [
+    "Some returned records need review; inspect their dates and freshness flags."
+  ],
+  "error_category": "validation",
+  "error_message": "The answer could not be validated. Please try again.",
+  "checks": {
+    "reference_integrity": null,
+    "requested_cities_present": null,
+    "durable_profile_unchanged": true,
+    "calculator_exact": null,
+    "claim_support": "requires review"
+  },
+  "rejected_answer": {
+    "kind": "advice",
+    "cities": [
+      "dubai"
+    ],
+    "headline": "Delivery-only revision: the three areas stay as candidate search zones, but the site criteria flip from shopfront footfall to kitchen-zone economics — Al Barsha remains first, Deira and Marina/JBR now compete on rent, rider access and licence rather than on passing trade, and a dark-kitchen or low-申",
+    "sections": [
+      {
+        "title": "How the shortlist changes under delivery-only",
+        "items": [
+          {
+            "text": "Al Barsha / Hessa Street — still first, and gains relative weight. Allo Beirut's Hessa Street branch advertises delivery until 4 AM, so a late-window delivery format is already operating in this corridor; Papa Johns also lists a pizza branch at Al Barsha Mall. Under delivery-only you no longer need a prime visible frontage here — you need a licensable kitchen unit, rider parking and a radius test. Competitor presence remains a signal of format precedent, not of demand or unit availability.",
+            "basis": "inference",
+            "evidence_ids": [
+              "DXB-COMP-002",
+              "DXB-COMP-004"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Deira (Al Muraqqabat / Port Saeed) — moves from second to a conditional candidate. Its earlier case rested partly on a souk/heritage district character and on being Alberto's on-foot trade location; that rationale weakens sharply when there is no walk-in channel. It stays on the list because Papa Johns lists branches at Al Ghurair Centre in Al Muraqqabat and Deira City Centre in Port Saeed, which shows burger[pizza chain format precedent in the district. Re-assess Deira purely on kitchen rent, permitted licence category and rider access.",
+            "basis": "inference",
+            "evidence_ids": [
+              "DXB-COMP-001",
+              "DXB-LOC-001"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Dubai Marina / JBR — demoted, not deleted. Three branded operators sit in overlapping categories here (Papa Johns at Marina Diamond, Allo Beirut JBR on Al Mamsha Street, Zaroob Marina at Radisson Blu Residence with 7 AM–5 AM hours). Without a dine-in or footfall advantage, the only remaining reason to pay Marina-area costs is proximity-to-demand for delivery, and no source establishes that. Treat Marina/JBR as a premium-rent option to test only after radius data exists.",
+            "basis": "inference",
+            "evidence_ids": [
+              "DXB-COMP-003",
+              "DXB-COMP-005",
+              "DXB-COMP-006"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "New candidate class to add: a unit in a lower-cost commercial/industrial zone with a short rider drive into a demand district — often called a dark kitchen or cloud kitchen. I have no curated Dubai evidence on specific dark-kitchen operators, licence categories, availability or rental terms, so this is a proposed search category, not a researched option. It does not replace the three areas; it changes what you look for inside them.",
+            "basis": "proposal",
+            "evidence_ids": [],
+            "calculation_ids": []
+          }
+        ]
+      },
+      {
+        "title": "What changes operationally",
+        "items": [
+          {
+            "text": "Drop footfall, frontage, signage visibility and dine-in ambience from your site scoring: none of them generate revenue in a delivery-only model. Add instead: permitted licence category for a kitchen without customer seating, power/gas and ventilation capacity, cold and frozen storage for your meat and dough prep, and a loading point where riders can wait and collect without blocking traffic.",
+            "basis": "proposal",
+            "evidence_ids": [],
+            "calculation_ids": []
+          },
+          {
+            "text": "Push and pull: you can run on platform riders only, or on your own riders via a partner option — Deliveroo describes Marketplace+ as using restaurant delivery staff with a selectable delivery area, minimum spend and delivery fees, plus an option to request a platform rider, while its standard UAE partner service uses the platform rider network and can also offer customer pickup. Platform riders mean less fixed staffing; own riders mean more control of radius and timing but add staffing and vehicle obligations. No commission, fee, radius or service level was verified — request written terms per area.",
+            "basis": "fact",
+            "evidence_ids": [
+              "UAE-DEL-002",
+              "UAE-DEL-004"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Order-level visibility matters more when every order travels: Deliveroo describes order-status monitoring, real-time rider GPS tracking and rider-arrival alerts. Treat this as a reason to route orders through a system with handover timestamps so you can audit late or cold orders without a storefront to fall back on.",
+            "basis": "fact",
+            "evidence_ids": [
+              "UAE-DEL-003"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Packaging and transport specs stop being optional. Dubai Municipality transport guidance requires hot food held at 60 C or above, cold at 5 C or below, frozen at -18 C or below, with sealed containers and hot/cold separated in insulated secondary units. For a delivery-only kebab-and-pizza menu, that means pizza boxes plus insulated bags sized for sandwiches and sides, and a bag plan per rider handover. The guidance is version 2 dated 2023-08-31 and flagged needs_review — re-check for amendments.",
+            "basis": "fact",
+            "evidence_ids": [
+              "DXB-DEL-001",
+              "DXB-DEL-002"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Staffing changes shape: fewer front-of-house roles, more emphasis on prep, assembly, boxing and dispatch. Dubai Municipality guidance requires food handling staff, supervisors and managers to receive formal food safety training appropriate to their work activity (also dated 2023-08-31, needs_review). Specific headcount is your decision, not a researched requirement — build it from your order volume per hour, not from a storefront roster.",
+            "basis": "fact",
+            "evidence_ids": [
+              "DXB-OPS-002"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Even delivery-only, Papa Johns states UAE branches offer delivery and takeaway with a shared menu and prices — your pizza and kebab prices will be compared against that visible chain benchmark (All The Meats AED 33/50/69 for 8/10/13 inch) and against independents such as Allo Beirut JBR (Pepperoni AED 40, Margherita AED 38). Menu breadth can be narrower in delivery-only, but the headline items still compete on price per portion.",
+            "basis": "fact",
+            "evidence_ids": [
+              "UAE-PRICE-001",
+              "DXB-PRICE-001"
+            ],
+            "calculation_ids": []
+          }
+        ]
+      },
+      {
+        "title": "Research gaps and leads",
+        "items": [
+          {
+            "text": "No curated Dubai evidence returned for dark-kitchen or cloud-kitchen operators, licence categories, availability or terms, and no delivery-commission or platform-fee data. Any all-in-cost comparison between the three areas is therefore unavailable from evidence; get quotes directly.",
+            "basis": "inference",
+            "evidence_ids": [],
+            "calculation_ids": []
+          },
+          {
+            "text": "Research lead: a January 2026 Dubizzle classified advertises an Italian takeaway pizzeria shop in Al Barsha with annual rent stated at AED 75,000 and a trade licence and Ejari stated valid to May 2026. The listing is dated and likely stale or withdrawn; it is an uninspected lead, not a verified rent benchmark, and takeaway-shop rent is not the same as delivery-only kitchen rent. Inspect the original page and current comparables.",
+            "basis": "research_lead",
+            "evidence_ids": [
+              "SEARCH-0d9ccc35c4404abb93e62e903cda9f65"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Research lead: directory-style listings (magicpin, Zomato) indicate kebab and takeout restaurants in Al Barsha. These are lead-generation pages, not a verified competitor set; open the originals to confirm which operators are actually active before you build a differentiation plan.",
+            "basis": "research_lead",
+            "evidence_ids": [
+              "SEARCH-ae966ea84e384395b2d77fd48440f81d",
+              "SEARCH-d4b6d52e939d4f1e9b7811c1770c7c66",
+              "SEARCH-33bfa8719c3c4ab5afc6929f79937351"
+            ],
+            "calculation_ids": []
+          }
+        ]
+      }
+    ],
+    "assumptions": [
+      "Delivery-only format replaces takeaway-led; no walk-in or pickup channel is assumed, though platform pickup remains available if you enable it.",
+      "Core products stay meaty pizza and kebab sandwiches with a Jordanian origin.",
+      "This revision covers Dubai only; Abu Dhabi is out of scope for this question.",
+      "Startup budget, rent budget, audience, positioning and opening date remain unset, so no contribution or break-even test was run."
+    ],
+    "next_steps": [
+      "Rewrite your site scorecard before viewing anything: permitted licence for kitchen-only operation, ventilation and power capacity, chilled/frozen storage, rider waiting/parking, and quoted rent and service charges.",
+      "Run a radius test from each candidate address — draw the actual platform delivery boundary and count how much of it is residential towers versus industrial plots.",
+      "Request written delivery terms from at least two platforms per area: commission basis, fixed fees, radius, minimum spend and settlement timing.",
+      "Quote packaging for pizza boxes plus insulated bags under the 60 C / 5 C / -18 C transport requirements before you fix the menu.",
+      "If you want a contribution and break-even calculation, send: average order revenue, food cost per order, packaging per order, other variable cost per order, delivery share of orders, delivery commission rate, monthly fixed costs, and operating days per month — flagging which are measured."
+    ],
+    "questions": [
+      "Do you want the delivery-only shortlist re-ranked against a target monthly rent, or should I keep rent unset until you have quotes?",
+      "Should I treat platform-rider-only as the starting model, or include own-rider delivery as the baseline for the office plan?"
+    ]
+  },
+  "artifact_note": "Rejected structured answer extracted from saved SQLite run after baseline execution; never displayed as a completed answer."
+}

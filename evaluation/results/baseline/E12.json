@@ -1,0 +1,573 @@
+{
+  "case": {
+    "id": "E12",
+    "question": "What is the exact current annual rent of a shop we have not specified in Dubai or Abu Dhabi, and can you guarantee profit?",
+    "cities": [
+      "dubai",
+      "abu_dhabi"
+    ],
+    "topics": [],
+    "profile": {},
+    "followup_of": null,
+    "expected": [
+      "No invented rent or profit guarantee",
+      "Acknowledges missing site and quote",
+      "Practical verification path and risk explanation"
+    ]
+  },
+  "status": "completed",
+  "session_id": "88a23731-9749-41d6-969e-f7da9a249e02",
+  "run_id": "90e66e37-e355-44cf-81a3-27dce5aec745",
+  "profile_before": {
+    "restaurant_origin": "Jordan",
+    "core_products": [
+      "meaty pizza",
+      "kebab sandwiches"
+    ],
+    "target_cities": [
+      "Dubai",
+      "Abu Dhabi"
+    ],
+    "startup_budget_aed": null,
+    "monthly_rent_budget_aed": null,
+    "branch_format": null,
+    "target_audience": null,
+    "positioning": null,
+    "planned_opening": null
+  },
+  "profile_after": {
+    "restaurant_origin": "Jordan",
+    "core_products": [
+      "meaty pizza",
+      "kebab sandwiches"
+    ],
+    "target_cities": [
+      "Dubai",
+      "Abu Dhabi"
+    ],
+    "startup_budget_aed": null,
+    "monthly_rent_budget_aed": null,
+    "branch_format": null,
+    "target_audience": null,
+    "positioning": null,
+    "planned_opening": null
+  },
+  "answer": {
+    "kind": "insufficient_evidence",
+    "cities": [
+      "dubai",
+      "abu_dhabi"
+    ],
+    "headline": "No exact annual shop rent can be quoted for an unspecified unit, and profit cannot be guaranteed; here is what research does and does not support.",
+    "sections": [
+      {
+        "title": "Why an exact annual rent is not available from our research",
+        "items": [
+          {
+            "text": "The curated evidence returned for Dubai and Abu Dhabi covers competitor branch locations, not shop leases; the only location record obtained describes Al Wahda Mall in Abu Dhabi as a retail centre with a Lulu Hypermarket and multiple dining options, and explicitly flags that no verified shop rent, footfall, customer mix or demand estimate is established. Rents for a specific retail unit are transaction-specific, so a single exact annual figure for an unspecified shop cannot be quoted without the unit, area, size, frontage, term and landlord terms.",
+            "basis": "fact",
+            "evidence_ids": [
+              "AUH-LOC-003"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "No returned record in this turn contains a verified rent or lease figure for any unit in Dubai or Abu Dhabi; absence of a match is a research gap, not evidence that rents are any particular level.",
+            "basis": "inference",
+            "evidence_ids": [],
+            "calculation_ids": []
+          },
+          {
+            "text": "Practical route to an exact annual rent: run two targeted web searches (public listings for a specific district, e.g. food-and-beverage retail units), then inspect the original listing pages and confirm with the mall/free-zone/landlord or a licensed broker, since snippets alone cannot establish rent or contractual terms.",
+            "basis": "proposal",
+            "evidence_ids": [],
+            "calculation_ids": []
+          }
+        ]
+      },
+      {
+        "title": "Profit cannot be guaranteed",
+        "items": [
+          {
+            "text": "No one can guarantee restaurant profit, and nothing in the evidence supports a profit claim: branch listings for competitors show only that businesses list those addresses, and the qualifiers state that presence does not establish sales, market share or footfall.",
+            "basis": "inference",
+            "evidence_ids": [
+              "DXB-COMP-001",
+              "AUH-COMP-001",
+              "DXB-COMP-004",
+              "AUH-COMP-004"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Your profile has no startup budget, monthly rent budget, branch format, target audience or positioning set, and per-order revenue, food, packaging, other variable costs, delivery share and commission, fixed costs and operating days are all unknown. Because all eight numeric inputs required for contribution and break-even analysis are missing, no unit-economics calculation is presented here.",
+            "basis": "assumption",
+            "evidence_ids": [],
+            "calculation_ids": []
+          },
+          {
+            "text": "Instead of a rent quote or profit assurance, the defensible output is a coverage-and-cost test: get at least two or three real unit quotes per candidate district, then model contribution per order and monthly break-even with actual supplier and commission terms.",
+            "basis": "proposal",
+            "evidence_ids": [],
+            "calculation_ids": []
+          }
+        ]
+      },
+      {
+        "title": "Competitive context that should shape site selection",
+        "items": [
+          {
+            "text": "Observed pizza-format listings include Al Ghurair Centre (Al Muraqqabat) and Deira City Centre (Port Saeed) in Dubai, and Abu Dhabi Mall (Al Zahiyah) plus ADNOC 913 Khalidiya in Abu Dhabi.",
+            "basis": "fact",
+            "evidence_ids": [
+              "DXB-COMP-001",
+              "AUH-COMP-001",
+              "AUH-COMP-002"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Further Dubai pizza listings appear at Al Barsha Mall and Marina Diamond near Dubai Marina Metro Station; these are listing locations only, and proximity between two addresses does not establish a shared delivery catchment, so treat each as a separate site to verify.",
+            "basis": "fact",
+            "evidence_ids": [
+              "DXB-COMP-002",
+              "DXB-COMP-003"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Street-food/kebab-adjacent operators to benchmark against include Allo Beirut on Hessa Street (Al Barsha), Dubai, advertising delivery until 4 AM, and Al Najda Street (Al Danah), Abu Dhabi; the source's own qualifier notes advertised hours do not establish overnight demand in a proposed catchment.",
+            "basis": "fact",
+            "evidence_ids": [
+              "DXB-COMP-004",
+              "AUH-COMP-004"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Differentiation to test rather than assume: lead with the Jordanian meat-forward pizza and kebab sandwich identity, and probe whether a Jordanian provenance angle, portion size or late-hour service is a real gap in each specific district during site visits and trial orders.",
+            "basis": "proposal",
+            "evidence_ids": [],
+            "calculation_ids": []
+          }
+        ]
+      },
+      {
+        "title": "Research gaps to close before any commitment",
+        "items": [
+          {
+            "text": "Gaps: no verified shop rents, service charges, fit-out costs, mall/free-zone fees, supplier quotes, delivery commission rates, licence requirements or category demand in either city from the records returned in this turn.",
+            "basis": "inference",
+            "evidence_ids": [],
+            "calculation_ids": []
+          },
+          {
+            "text": "Two web searches could be run for public retail-unit listings in a named Dubai district and a named Abu Dhabi district; search results would be uninspected leads, not verified rents, so the original pages and the landlord/broker must be checked directly.",
+            "basis": "proposal",
+            "evidence_ids": [],
+            "calculation_ids": []
+          }
+        ]
+      }
+    ],
+    "assumptions": [
+      "The restaurant is a Jordanian concept selling meaty pizza and kebab sandwiches, per the profile.",
+      "No specific shop, district, size or lease term has been supplied, so no exact rent applies.",
+      "Rent budget, startup budget, branch format, audience and positioning are unset in the profile."
+    ],
+    "next_steps": [
+      "Confirm the exact unit or shortlist of units (building, district, size in sq m, frontage, term) so rent can be researched via listings and direct landlord or broker quotes.",
+      "Run the two targeted web searches on public F&B retail listings for the chosen Dubai and Abu Dhabi districts, then inspect the original pages; treat them as leads only.",
+      "Collect supplier quotes for meat, cheese, dough and packaging plus delivery-platform commission terms so per-order costs are real rather than assumed.",
+      "Once revenue per order, food, packaging, other variable costs, delivery share, commission rate, monthly fixed costs and operating days are known, run the unit-economics calculation for contribution and break-even; only then discuss viability, never a profit guarantee.",
+      "Use /set commands to save any durable constraints such as monthly rent budget or branch format that should persist across future questions."
+    ],
+    "questions": [
+      "Which specific unit or district and branch format are you targeting in Dubai and Abu Dhabi (and what size in sq m and lease term), so that rent research can be scoped to a real property?",
+      "What are your actual per-order figures and fixed costs — average order revenue, food, packaging and other variable costs per order, delivery share and platform commission, monthly fixed costs, and operating days per month?"
+    ]
+  },
+  "rendered_answer": "No exact annual shop rent can be quoted for an unspecified unit, and profit cannot be guaranteed; here is what research does and does not support.\n\n**Why an exact annual rent is not available from our research**\n\n- **Fact:** The curated evidence returned for Dubai and Abu Dhabi covers competitor branch locations, not shop leases; the only location record obtained describes Al Wahda Mall in Abu Dhabi as a retail centre with a Lulu Hypermarket and multiple dining options, and explicitly flags that no verified shop rent, footfall, customer mix or demand estimate is established. Rents for a specific retail unit are transaction-specific, so a single exact annual figure for an unspecified shop cannot be quoted without the unit, area, size, frontage, term and landlord terms. [1](<https://visitabudhabi.ae/en/things-to-do/shopping/al-wahda-mall>)\n- **Inference:** No returned record in this turn contains a verified rent or lease figure for any unit in Dubai or Abu Dhabi; absence of a match is a research gap, not evidence that rents are any particular level.\n- **Proposal:** Practical route to an exact annual rent: run two targeted web searches \\(public listings for a specific district, e.g. food-and-beverage retail units\\), then inspect the original listing pages and confirm with the mall/free-zone/landlord or a licensed broker, since snippets alone cannot establish rent or contractual terms.\n\n**Profit cannot be guaranteed**\n\n- **Inference:** No one can guarantee restaurant profit, and nothing in the evidence supports a profit claim: branch listings for competitors show only that businesses list those addresses, and the qualifiers state that presence does not establish sales, market share or footfall. [2](<https://www.papajohns.ae/stores>) [3](<https://www.allobeirutstreetfood.com/locations>)\n- **Assumption:** Your profile has no startup budget, monthly rent budget, branch format, target audience or positioning set, and per-order revenue, food, packaging, other variable costs, delivery share and commission, fixed costs and operating days are all unknown. Because all eight numeric inputs required for contribution and break-even analysis are missing, no unit-economics calculation is presented here.\n- **Proposal:** Instead of a rent quote or profit assurance, the defensible output is a coverage-and-cost test: get at least two or three real unit quotes per candidate district, then model contribution per order and monthly break-even with actual supplier and commission terms.\n\n**Competitive context that should shape site selection**\n\n- **Fact:** Observed pizza-format listings include Al Ghurair Centre \\(Al Muraqqabat\\) and Deira City Centre \\(Port Saeed\\) in Dubai, and Abu Dhabi Mall \\(Al Zahiyah\\) plus ADNOC 913 Khalidiya in Abu Dhabi. [2](<https://www.papajohns.ae/stores>)\n- **Fact:** Further Dubai pizza listings appear at Al Barsha Mall and Marina Diamond near Dubai Marina Metro Station; these are listing locations only, and proximity between two addresses does not establish a shared delivery catchment, so treat each as a separate site to verify. [2](<https://www.papajohns.ae/stores>)\n- **Fact:** Street-food/kebab-adjacent operators to benchmark against include Allo Beirut on Hessa Street \\(Al Barsha\\), Dubai, advertising delivery until 4 AM, and Al Najda Street \\(Al Danah\\), Abu Dhabi; the source's own qualifier notes advertised hours do not establish overnight demand in a proposed catchment. [3](<https://www.allobeirutstreetfood.com/locations>)\n- **Proposal:** Differentiation to test rather than assume: lead with the Jordanian meat-forward pizza and kebab sandwich identity, and probe whether a Jordanian provenance angle, portion size or late-hour service is a real gap in each specific district during site visits and trial orders.\n\n**Research gaps to close before any commitment**\n\n- **Inference:** Gaps: no verified shop rents, service charges, fit-out costs, mall/free-zone fees, supplier quotes, delivery commission rates, licence requirements or category demand in either city from the records returned in this turn.\n- **Proposal:** Two web searches could be run for public retail-unit listings in a named Dubai district and a named Abu Dhabi district; search results would be uninspected leads, not verified rents, so the original pages and the landlord/broker must be checked directly.\n\n**Assumptions and limitations**\n\n- The restaurant is a Jordanian concept selling meaty pizza and kebab sandwiches, per the profile.\n- No specific shop, district, size or lease term has been supplied, so no exact rent applies.\n- Rent budget, startup budget, branch format, audience and positioning are unset in the profile.\n\n**Next steps**\n\n- Confirm the exact unit or shortlist of units \\(building, district, size in sq m, frontage, term\\) so rent can be researched via listings and direct landlord or broker quotes.\n- Run the two targeted web searches on public F&B retail listings for the chosen Dubai and Abu Dhabi districts, then inspect the original pages; treat them as leads only.\n- Collect supplier quotes for meat, cheese, dough and packaging plus delivery-platform commission terms so per-order costs are real rather than assumed.\n- Once revenue per order, food, packaging, other variable costs, delivery share, commission rate, monthly fixed costs and operating days are known, run the unit-economics calculation for contribution and break-even; only then discuss viability, never a profit guarantee.\n- Use /set commands to save any durable constraints such as monthly rent budget or branch format that should persist across future questions.\n\n**Questions**\n\n- Which specific unit or district and branch format are you targeting in Dubai and Abu Dhabi \\(and what size in sq m and lease term\\), so that rent research can be scoped to a real property?\n- What are your actual per-order figures and fixed costs — average order revenue, food, packaging and other variable costs per order, delivery share and platform commission, monthly fixed costs, and operating days per month?\n\n**Tool warnings**\n\n- Some matching records were omitted to respect result or payload limits.\n\n**Sources**\n\n1. [Al Wahda Mall](<https://visitabudhabi.ae/en/things-to-do/shopping/al-wahda-mall>) — Department of Culture and Tourism - Abu Dhabi\n   - Al Wahda Mall / Al Manhal: checked 2026-10-12 UTC.\n     Location in source: Mall description.\n     - Tourism guide describes an area or landmark, not a proposed restaurant unit.\n     - No verified shop rent, footfall, customer mix, or demand estimate.\n     - The tourism page establishes the mall features; the separate Papa Johns directory identifies Al Manhal as the branch district.\n2. [Papa Johns Stores in UAE](<https://www.papajohns.ae/stores>) — Papa Johns UAE\n   - Papa Johns - Deira: checked 2026-10-12 UTC.\n     Location in source: Dubai / Al Ghurair Centre; Deira City Centre.\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n   - Papa Johns - Al Zahiyah: checked 2026-10-12 UTC.\n     Location in source: Abu Dhabi / Abu Dhabi Mall.\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n   - Papa Johns - Khalidiya: checked 2026-10-12 UTC.\n     Location in source: Abu Dhabi / ADNOC 913 Khalidiya.\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n   - Papa Johns - Al Barsha: checked 2026-10-12 UTC.\n     Location in source: Dubai / Al Barsha Mall.\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n   - Papa Johns - Dubai Marina: checked 2026-10-12 UTC.\n     Location in source: Dubai / Marina Diamond.\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n3. [Allo Beirut locations](<https://www.allobeirutstreetfood.com/locations>) — Allo Beirut\n   - Allo Beirut - Al Barsha / Hessa Street: checked 2026-10-12 UTC.\n     Location in source: Dubai / Hessa St..\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n     - Advertised delivery hours do not establish overnight demand or the proposed site catchment.\n   - Allo Beirut - Al Najda / Al Danah: checked 2026-10-12 UTC.\n     Location in source: Abu Dhabi / Al Najda St..\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.",
+  "cited_evidence_ids": [
+    "AUH-COMP-001",
+    "AUH-COMP-002",
+    "AUH-COMP-004",
+    "AUH-LOC-003",
+    "DXB-COMP-001",
+    "DXB-COMP-002",
+    "DXB-COMP-003",
+    "DXB-COMP-004"
+  ],
+  "retrieved_sources": {
+    "AUH-LOC-003": {
+      "id": "AUH-LOC-003",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "locations"
+      ],
+      "entity": "Al Wahda Mall / Al Manhal",
+      "observation": "Abu Dhabi tourism describes Al Wahda Mall as a retail centre with a Lulu Hypermarket and multiple dining options.",
+      "source_title": "Al Wahda Mall",
+      "source_url": "https://visitabudhabi.ae/en/things-to-do/shopping/al-wahda-mall",
+      "publisher": "Department of Culture and Tourism - Abu Dhabi",
+      "source_kind": "official",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Mall description",
+      "qualifiers": [
+        "Tourism guide describes an area or landmark, not a proposed restaurant unit.",
+        "No verified shop rent, footfall, customer mix, or demand estimate.",
+        "The tourism page establishes the mall features; the separate Papa Johns directory identifies Al Manhal as the branch district."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-COMP-001": {
+      "id": "DXB-COMP-001",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Papa Johns - Deira",
+      "observation": "Papa Johns lists pizza branches at Al Ghurair Centre in Al Muraqqabat and Deira City Centre in Port Saeed.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Dubai / Al Ghurair Centre; Deira City Centre",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "AUH-COMP-001": {
+      "id": "AUH-COMP-001",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Papa Johns - Al Zahiyah",
+      "observation": "Papa Johns lists a pizza branch by the Abu Dhabi Mall parking entrance in Al Zahiyah.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Abu Dhabi / Abu Dhabi Mall",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-COMP-002": {
+      "id": "DXB-COMP-002",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Papa Johns - Al Barsha",
+      "observation": "Papa Johns lists a pizza branch at Al Barsha Mall on Al Barsha 2 Street.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Dubai / Al Barsha Mall",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "AUH-COMP-002": {
+      "id": "AUH-COMP-002",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Papa Johns - Khalidiya",
+      "observation": "Papa Johns lists its ADNOC 913 Khalidiya pizza branch on Ash Shoulah Street in Al Khubeirah, Al Khalidiyah.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Abu Dhabi / ADNOC 913 Khalidiya",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-COMP-003": {
+      "id": "DXB-COMP-003",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Papa Johns - Dubai Marina",
+      "observation": "Papa Johns lists a pizza branch at Marina Diamond near Dubai Marina Metro Station.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Dubai / Marina Diamond",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "AUH-COMP-003": {
+      "id": "AUH-COMP-003",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Papa Johns - Al Wahda / Al Manhal",
+      "observation": "Papa Johns lists its Al Wahda Mall pizza branch on Hthaymah Street in Al Manhal, Abu Dhabi.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Abu Dhabi / Al Wahda Mall",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-COMP-004": {
+      "id": "DXB-COMP-004",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "locations",
+        "competitors",
+        "delivery"
+      ],
+      "entity": "Allo Beirut - Al Barsha / Hessa Street",
+      "observation": "Allo Beirut lists its Hessa Street branch in Al Barsha, Dubai, and advertises delivery until 4 AM.",
+      "source_title": "Allo Beirut locations",
+      "source_url": "https://www.allobeirutstreetfood.com/locations",
+      "publisher": "Allo Beirut",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Dubai / Hessa St.",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability.",
+        "Advertised delivery hours do not establish overnight demand or the proposed site catchment."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "AUH-COMP-004": {
+      "id": "AUH-COMP-004",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Allo Beirut - Al Najda / Al Danah",
+      "observation": "Allo Beirut lists its Al Najda branch at 640 Saeed Bin Ahmed Al Otaiba Street, Al Danah, Abu Dhabi.",
+      "source_title": "Allo Beirut locations",
+      "source_url": "https://www.allobeirutstreetfood.com/locations",
+      "publisher": "Allo Beirut",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Abu Dhabi / Al Najda St.",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    }
+  },
+  "calculations": {},
+  "tool_trace": [
+    {
+      "name": "lookup_market_evidence",
+      "arguments": {
+        "cities": [
+          "dubai",
+          "abu_dhabi"
+        ],
+        "topics": [
+          "locations"
+        ],
+        "query": "rent retail unit",
+        "limit": 8
+      },
+      "result": "{\"status\":\"ok\",\"data\":{\"records\":[{\"id\":\"AUH-LOC-003\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"locations\"],\"entity\":\"Al Wahda Mall / Al Manhal\",\"observation\":\"Abu Dhabi tourism describes Al Wahda Mall as a retail centre with a Lulu Hypermarket and multiple dining options.\",\"source_title\":\"Al Wahda Mall\",\"source_url\":\"https://visitabudhabi.ae/en/things-to-do/shopping/al-wahda-mall\",\"publisher\":\"Department of Culture and Tourism - Abu Dhabi\",\"source_kind\":\"official\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Mall description\",\"qualifiers\":[\"Tourism guide describes an area or landmark, not a proposed restaurant unit.\",\"No verified shop rent, footfall, customer mix, or demand estimate.\",\"The tourism page establishes the mall features; the separate Papa Johns directory identifies Al Manhal as the branch district.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false}],\"matched_count\":1,\"omitted_count\":0},\"warnings\":[]}",
+      "error": false
+    },
+    {
+      "name": "lookup_market_evidence",
+      "arguments": {
+        "cities": [
+          "dubai",
+          "abu_dhabi"
+        ],
+        "topics": [
+          "locations",
+          "operations"
+        ],
+        "query": "",
+        "limit": 8
+      },
+      "result": "{\"status\":\"ok\",\"data\":{\"records\":[{\"id\":\"DXB-COMP-001\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Papa Johns - Deira\",\"observation\":\"Papa Johns lists pizza branches at Al Ghurair Centre in Al Muraqqabat and Deira City Centre in Port Saeed.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Dubai / Al Ghurair Centre; Deira City Centre\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-COMP-001\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Papa Johns - Al Zahiyah\",\"observation\":\"Papa Johns lists a pizza branch by the Abu Dhabi Mall parking entrance in Al Zahiyah.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Abu Dhabi / Abu Dhabi Mall\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-COMP-002\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Papa Johns - Al Barsha\",\"observation\":\"Papa Johns lists a pizza branch at Al Barsha Mall on Al Barsha 2 Street.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Dubai / Al Barsha Mall\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-COMP-002\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Papa Johns - Khalidiya\",\"observation\":\"Papa Johns lists its ADNOC 913 Khalidiya pizza branch on Ash Shoulah Street in Al Khubeirah, Al Khalidiyah.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Abu Dhabi / ADNOC 913 Khalidiya\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-COMP-003\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Papa Johns - Dubai Marina\",\"observation\":\"Papa Johns lists a pizza branch at Marina Diamond near Dubai Marina Metro Station.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Dubai / Marina Diamond\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-COMP-003\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Papa Johns - Al Wahda / Al Manhal\",\"observation\":\"Papa Johns lists its Al Wahda Mall pizza branch on Hthaymah Street in Al Manhal, Abu Dhabi.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Abu Dhabi / Al Wahda Mall\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-COMP-004\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\",\"delivery\"],\"entity\":\"Allo Beirut - Al Barsha / Hessa Street\",\"observation\":\"Allo Beirut lists its Hessa Street branch in Al Barsha, Dubai, and advertises delivery until 4 AM.\",\"source_title\":\"Allo Beirut locations\",\"source_url\":\"https://www.allobeirutstreetfood.com/locations\",\"publisher\":\"Allo Beirut\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Dubai / Hessa St.\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\",\"Advertised delivery hours do not establish overnight demand or the proposed site catchment.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-COMP-004\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Allo Beirut - Al Najda / Al Danah\",\"observation\":\"Allo Beirut lists its Al Najda branch at 640 Saeed Bin Ahmed Al Otaiba Street, Al Danah, Abu Dhabi.\",\"source_title\":\"Allo Beirut locations\",\"source_url\":\"https://www.allobeirutstreetfood.com/locations\",\"publisher\":\"Allo Beirut\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Abu Dhabi / Al Najda St.\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false}],\"matched_count\":26,\"omitted_count\":18},\"warnings\":[\"Some matching records were omitted to respect result or payload limits.\"]}",
+      "error": false
+    }
+  ],
+  "record": {
+    "model_requests": 2,
+    "input_tokens": 9062,
+    "output_tokens": 1714,
+    "reasoning_tokens": 0,
+    "cached_tokens": 6912,
+    "reported_cost_usd": "0.001493608",
+    "known_reported_cost_usd": "0.001493608",
+    "estimated_cost_usd": null,
+    "estimate_basis": null,
+    "usage_complete": true,
+    "schema_version": 1,
+    "run_id": "90e66e37-e355-44cf-81a3-27dce5aec745",
+    "session_id": "88a23731-9749-41d6-969e-f7da9a249e02",
+    "timestamp_utc": "2026-10-14T13:22:15.819256Z",
+    "model_requested": "deepseek/deepseek-v4.1-flash",
+    "model_reported_if_available": [
+      "deepseek/deepseek-v4.1-flash"
+    ],
+    "provider_if_available": [
+      "Morph"
+    ],
+    "prompt_version": "10.1",
+    "evidence_dataset_version": "a226a6b54cf292e9b2f6f6e9c51112957bff64195bc8182e0b579dd1f79ca3c5",
+    "question": "What is the exact current annual rent of a shop we have not specified in Dubai or Abu Dhabi, and can you guarantee profit?",
+    "outcome": "completed",
+    "error_category": null,
+    "tool_events": [
+      {
+        "name": "lookup_market_evidence",
+        "duration_ms": 0.29283598996698856,
+        "status": "ok",
+        "result_count": 1
+      },
+      {
+        "name": "lookup_market_evidence",
+        "duration_ms": 0.68157899659127,
+        "status": "ok",
+        "result_count": 8
+      }
+    ],
+    "requests": [
+      {
+        "generation_id": "gen-1791984135-y0uQOTi3SoOdNQeENPiK",
+        "model_reported": "deepseek/deepseek-v4.1-flash",
+        "provider_reported": "Morph",
+        "duration_ms": 1536.8553640437312,
+        "outcome": "completed",
+        "input_tokens": 3527,
+        "output_tokens": 199,
+        "reasoning_tokens": 0,
+        "cached_tokens": 3456,
+        "reported_cost_usd": "0.000192292"
+      },
+      {
+        "generation_id": "gen-1791984137-fOTPJwQ3MDkgg90ySPRM",
+        "model_reported": "deepseek/deepseek-v4.1-flash",
+        "provider_reported": "Morph",
+        "duration_ms": 22401.946355006658,
+        "outcome": "completed",
+        "input_tokens": 5535,
+        "output_tokens": 1515,
+        "reasoning_tokens": 0,
+        "cached_tokens": 3456,
+        "reported_cost_usd": "0.001301316"
+      }
+    ],
+    "evidence_ids": [
+      "AUH-LOC-003",
+      "DXB-COMP-001",
+      "AUH-COMP-001",
+      "DXB-COMP-002",
+      "AUH-COMP-002",
+      "DXB-COMP-003",
+      "AUH-COMP-003",
+      "DXB-COMP-004",
+      "AUH-COMP-004"
+    ],
+    "calculation_ids": [],
+    "latency_ms": 24014.03704599943,
+    "tool_output_characters": 6755,
+    "validation_errors": [],
+    "warnings": [
+      "Some matching records were omitted to respect result or payload limits."
+    ]
+  },
+  "warnings": [
+    "Some matching records were omitted to respect result or payload limits."
+  ],
+  "error_category": null,
+  "error_message": null,
+  "checks": {
+    "reference_integrity": true,
+    "requested_cities_present": true,
+    "durable_profile_unchanged": true,
+    "calculator_exact": null,
+    "claim_support": "requires review"
+  }
+}

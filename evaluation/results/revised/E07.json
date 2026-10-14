@@ -1,0 +1,531 @@
+{
+  "case": {
+    "id": "E07",
+    "question": "How should delivery strategy differ between Dubai and Abu Dhabi?",
+    "cities": [
+      "dubai",
+      "abu_dhabi"
+    ],
+    "topics": [
+      "delivery"
+    ],
+    "profile": {},
+    "followup_of": null,
+    "expected": [
+      "Packaging, channel and radius considerations",
+      "City-specific evidence or honest limits on differentiation",
+      "No invented contractual commissions"
+    ]
+  },
+  "status": "completed",
+  "session_id": "955df8a1-b936-4d65-90e5-8ed12aed82f6",
+  "run_id": "1ffd7648-b263-44eb-af21-c7ccde9dc4d4",
+  "profile_before": {
+    "restaurant_origin": "Jordan",
+    "core_products": [
+      "meaty pizza",
+      "kebab sandwiches"
+    ],
+    "target_cities": [
+      "Dubai",
+      "Abu Dhabi"
+    ],
+    "startup_budget_aed": null,
+    "monthly_rent_budget_aed": null,
+    "branch_format": null,
+    "target_audience": null,
+    "positioning": null,
+    "planned_opening": null
+  },
+  "profile_after": {
+    "restaurant_origin": "Jordan",
+    "core_products": [
+      "meaty pizza",
+      "kebab sandwiches"
+    ],
+    "target_cities": [
+      "Dubai",
+      "Abu Dhabi"
+    ],
+    "startup_budget_aed": null,
+    "monthly_rent_budget_aed": null,
+    "branch_format": null,
+    "target_audience": null,
+    "positioning": null,
+    "planned_opening": null
+  },
+  "answer": {
+    "kind": "advice",
+    "cities": [
+      "dubai",
+      "abu_dhabi"
+    ],
+    "headline": "Provisional delivery plan: treat delivery and Abu Dhabi as validation phases first; build a fixed-cost own-rider zone in Dubai only after measured radius tests, and keep platform and own-rider options in both cities.",
+    "sections": [
+      {
+        "title": "Evidence base and city differentiation",
+        "items": [
+          {
+            "text": "Deliveroo, a UAE-wide platform, describes two distinct UAE partner models: a platform-rider network with customer pickup, and Marketplace+ where restaurant staff deliver within a selectable area, minimum spend and delivery fee, with an option to request a platform rider. Both are described UAE-wide, not as city-specific, so channel choice is a testable configuration rather than a supported Dubai-versus-Abu Dhabi difference.",
+            "basis": "fact",
+            "evidence_ids": [
+              "UAE-DEL-002",
+              "UAE-DEL-004"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Curated evidence shows delivery-active sandwich/pizza-relevant operators in both cities: Allo Beirut lists a Hessa Street (Al Barsha) Dubai branch advertising delivery until 4 AM, and Talabat lists Operation Falafel in Madinat Khalifa A, Abu Dhabi with sandwich and shawarma categories. These are listings only; neither establishes order volume, catchment, or delivery saturation.",
+            "basis": "fact",
+            "evidence_ids": [
+              "DXB-COMP-004",
+              "AUH-COMP-006"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Gap: no curated or searched evidence establishes Dubai-versus-Abu Dhabi differences in delivery commissions, fees, rider availability, delivery radius, order density, or overnight demand. Treat any city-level delivery difference as unknown until measured; the platform own-rider/minimum-spend levers are the supported dials, not city-level facts.",
+            "basis": "fact",
+            "evidence_ids": [
+              "UAE-DEL-002",
+              "UAE-DEL-004"
+            ],
+            "calculation_ids": []
+          }
+        ]
+      },
+      {
+        "title": "Proposed Dubai delivery play",
+        "items": [
+          {
+            "text": "Proposal: launch Dubai on platform-rider channels plus pickup (both described as Deliveroo UAE options), keep own-rider delivery off in month 1-2, and add Marketplace+-style own-rider delivery only for one defined zone once measured order density justifies the shift cost. Selectable delivery area and minimum spend are platform-documented levers, not chosen radii.",
+            "basis": "proposal",
+            "evidence_ids": [
+              "UAE-DEL-002",
+              "UAE-DEL-004"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Proposal: test a late-evening and post-midnight Dubai window in the Hessa Street/Al Barsha operating environment, where a listed operator advertises delivery until 4 AM. Measure orders, prep load and rider wait per hour before extending hours; the advertised 4 AM window does not establish demand.",
+            "basis": "proposal",
+            "evidence_ids": [
+              "DXB-COMP-004"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Proposal: apply sealed containers, hot/cold separation into insulated secondary units, and 60 C hot / 5 C cold / -18 C frozen holding to Dubai deliveries, per Dubai Municipality guidance. That guidance is version 2 issued 2023-08-31 and flagged needs_review, so confirm current amendments and activity-specific applicability before procurement.",
+            "basis": "proposal",
+            "evidence_ids": [
+              "DXB-DEL-002",
+              "DXB-DEL-001"
+            ],
+            "calculation_ids": []
+          }
+        ]
+      },
+      {
+        "title": "Proposed Abu Dhabi delivery play and shared mechanics",
+        "items": [
+          {
+            "text": "Proposal: run Abu Dhabi first on platform-rider channels plus pickup, mirroring the Dubai launch configuration, in a Khalifa City/Madinat Khalifa-type area where a sandwich and shawarma operator is listed on Talabat. Selectability of delivery area and minimum spend is the documented lever; the correct catchment there is unverified.",
+            "basis": "proposal",
+            "evidence_ids": [
+              "UAE-DEL-002",
+              "UAE-DEL-004",
+              "AUH-COMP-006"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Proposal: in both cities, keep kebab sandwiches as the fast-moving delivery SKU and structure pizza for insulated transport; run a matched radius test (e.g. 3 km vs 5 km, same menu and pricing) per city and per channel, recording order frequency, prep-to-pickup time and packaging leakage rather than assuming a radius.",
+            "basis": "proposal",
+            "evidence_ids": [],
+            "calculation_ids": []
+          },
+          {
+            "text": "Proposal: use platform order tracking and rider-arrival alerts (described as UAE Deliveroo features) plus a hot-bag handover check in both cities, and quote all launch channels with the platform before committing to any own-rider zone or commission-dependent expansion.",
+            "basis": "proposal",
+            "evidence_ids": [
+              "UAE-DEL-003",
+              "UAE-DEL-004"
+            ],
+            "calculation_ids": []
+          }
+        ]
+      }
+    ],
+    "assumptions": [
+      "User profile: Jordanian-origin restaurant (assumption), core products meaty pizza and kebab sandwiches (assumption), target cities Dubai and Abu Dhabi (assumption); startup budget, rent budget, branch format, audience, positioning and opening date are unset.",
+      "Assumption: one production kitchen per city serving delivery, no existing rider fleet or platform contracts, and the same menu and price list used in both cities."
+    ],
+    "next_steps": [
+      "Request written platform quotes for each city and each model (platform rider vs own rider / Marketplace+-style), listing commission basis, fixed fees, delivery radius, delivery fee and minimum spend before building a numeric delivery model.",
+      "Run a two-week per-city measurement grid: order counts by 2-hour band, prep time, rider wait, failed/completed deliveries, packaging leaks and repeat rate at two candidate radii.",
+      "Determine cold-chain and delivery-vehicle requirements for each emirate and confirm the current version of the Dubai Municipality food-transport guidance before specifying bags and vehicles.",
+      "Once per-order revenue, food, packaging, other variable costs, delivery share, commission rate, monthly fixed costs and operating days are all known or sourced, ask for the delivery unit-economics calculation; do not treat the current plan as a profitability forecast."
+    ],
+    "questions": []
+  },
+  "rendered_answer": "Provisional delivery plan: treat delivery and Abu Dhabi as validation phases first; build a fixed-cost own-rider zone in Dubai only after measured radius tests, and keep platform and own-rider options in both cities.\n\n**Evidence base and city differentiation**\n\n- **Fact:** Deliveroo, a UAE-wide platform, describes two distinct UAE partner models: a platform-rider network with customer pickup, and Marketplace+ where restaurant staff deliver within a selectable area, minimum spend and delivery fee, with an option to request a platform rider. Both are described UAE-wide, not as city-specific, so channel choice is a testable configuration rather than a supported Dubai-versus-Abu Dhabi difference. [1](<https://merchants.deliveroo.com/en-AE/what-we-offer/delivery>) [2](<https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace>)\n- **Fact:** Curated evidence shows delivery-active sandwich/pizza-relevant operators in both cities: Allo Beirut lists a Hessa Street \\(Al Barsha\\) Dubai branch advertising delivery until 4 AM, and Talabat lists Operation Falafel in Madinat Khalifa A, Abu Dhabi with sandwich and shawarma categories. These are listings only; neither establishes order volume, catchment, or delivery saturation. [3](<https://www.allobeirutstreetfood.com/locations>) [4](<https://www.talabat.com/uae/restaurant/704423/operation-falafel-khalifa-city--ad-7?aid=1483>)\n- **Fact:** Gap: no curated or searched evidence establishes Dubai-versus-Abu Dhabi differences in delivery commissions, fees, rider availability, delivery radius, order density, or overnight demand. Treat any city-level delivery difference as unknown until measured; the platform own-rider/minimum-spend levers are the supported dials, not city-level facts. [1](<https://merchants.deliveroo.com/en-AE/what-we-offer/delivery>) [2](<https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace>)\n\n**Proposed Dubai delivery play**\n\n- **Proposal:** Proposal: launch Dubai on platform-rider channels plus pickup \\(both described as Deliveroo UAE options\\), keep own-rider delivery off in month 1-2, and add Marketplace+-style own-rider delivery only for one defined zone once measured order density justifies the shift cost. Selectable delivery area and minimum spend are platform-documented levers, not chosen radii. [1](<https://merchants.deliveroo.com/en-AE/what-we-offer/delivery>) [2](<https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace>)\n- **Proposal:** Proposal: test a late-evening and post-midnight Dubai window in the Hessa Street/Al Barsha operating environment, where a listed operator advertises delivery until 4 AM. Measure orders, prep load and rider wait per hour before extending hours; the advertised 4 AM window does not establish demand. [3](<https://www.allobeirutstreetfood.com/locations>)\n- **Proposal:** Proposal: apply sealed containers, hot/cold separation into insulated secondary units, and 60 C hot / 5 C cold / -18 C frozen holding to Dubai deliveries, per Dubai Municipality guidance. That guidance is version 2 issued 2023-08-31 and flagged needs\\_review, so confirm current amendments and activity-specific applicability before procurement. [5](<https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf>)\n\n**Proposed Abu Dhabi delivery play and shared mechanics**\n\n- **Proposal:** Proposal: run Abu Dhabi first on platform-rider channels plus pickup, mirroring the Dubai launch configuration, in a Khalifa City/Madinat Khalifa-type area where a sandwich and shawarma operator is listed on Talabat. Selectability of delivery area and minimum spend is the documented lever; the correct catchment there is unverified. [1](<https://merchants.deliveroo.com/en-AE/what-we-offer/delivery>) [2](<https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace>) [4](<https://www.talabat.com/uae/restaurant/704423/operation-falafel-khalifa-city--ad-7?aid=1483>)\n- **Proposal:** Proposal: in both cities, keep kebab sandwiches as the fast-moving delivery SKU and structure pizza for insulated transport; run a matched radius test \\(e.g. 3 km vs 5 km, same menu and pricing\\) per city and per channel, recording order frequency, prep-to-pickup time and packaging leakage rather than assuming a radius.\n- **Proposal:** Proposal: use platform order tracking and rider-arrival alerts \\(described as UAE Deliveroo features\\) plus a hot-bag handover check in both cities, and quote all launch channels with the platform before committing to any own-rider zone or commission-dependent expansion. [1](<https://merchants.deliveroo.com/en-AE/what-we-offer/delivery>) [2](<https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace>)\n\n**Assumptions and limitations**\n\n- User profile: Jordanian-origin restaurant \\(assumption\\), core products meaty pizza and kebab sandwiches \\(assumption\\), target cities Dubai and Abu Dhabi \\(assumption\\); startup budget, rent budget, branch format, audience, positioning and opening date are unset.\n- Assumption: one production kitchen per city serving delivery, no existing rider fleet or platform contracts, and the same menu and price list used in both cities.\n\n**Next steps**\n\n- Request written platform quotes for each city and each model \\(platform rider vs own rider / Marketplace+-style\\), listing commission basis, fixed fees, delivery radius, delivery fee and minimum spend before building a numeric delivery model.\n- Run a two-week per-city measurement grid: order counts by 2-hour band, prep time, rider wait, failed/completed deliveries, packaging leaks and repeat rate at two candidate radii.\n- Determine cold-chain and delivery-vehicle requirements for each emirate and confirm the current version of the Dubai Municipality food-transport guidance before specifying bags and vehicles.\n- Once per-order revenue, food, packaging, other variable costs, delivery share, commission rate, monthly fixed costs and operating days are all known or sourced, ask for the delivery unit-economics calculation; do not treat the current plan as a profitability forecast.\n\n**Tool warnings**\n\n- Some returned records need review; inspect their dates and freshness flags.\n\n**Sources**\n\n1. [Deliveroo delivery and pickup for UAE partners](<https://merchants.deliveroo.com/en-AE/what-we-offer/delivery>) — Deliveroo\n   - Deliveroo UAE - platform riders and pickup: checked 2026-10-12 UTC.\n     Location in source: Delivery network; Customer flexibility.\n     - UAE merchant product description; eligibility and availability at a proposed address need confirmation.\n     - No verified contractual commission, fees, delivery radius, service level, or sales uplift.\n   - Deliveroo UAE - order tracking: checked 2026-10-12 UTC.\n     Location in source: End-to-end order tracking.\n     - UAE merchant product description; eligibility and availability at a proposed address need confirmation.\n     - No verified contractual commission, fees, delivery radius, service level, or sales uplift.\n2. [Deliveroo Marketplace+ for UAE partners](<https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace>) — Deliveroo\n   - Deliveroo UAE - Marketplace+ own riders: checked 2026-10-12 UTC.\n     Location in source: Benefits of Marketplace+; Receiving orders; Delivering orders.\n     - UAE merchant product description; eligibility and availability at a proposed address need confirmation.\n     - No verified contractual commission, fees, delivery radius, service level, or sales uplift.\n3. [Allo Beirut locations](<https://www.allobeirutstreetfood.com/locations>) — Allo Beirut\n   - Allo Beirut - Al Barsha / Hessa Street: checked 2026-10-12 UTC.\n     Location in source: Dubai / Hessa St..\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n     - Advertised delivery hours do not establish overnight demand or the proposed site catchment.\n4. [Operation Falafel in Madinat Khalifa - A](<https://www.talabat.com/uae/restaurant/704423/operation-falafel-khalifa-city--ad-7?aid=1483>) — Talabat\n   - Operation Falafel - Madinat Khalifa A: checked 2026-10-12 UTC.\n     Location in source: Restaurant heading and cuisine tags.\n     - Khalifa City, Abu Dhabi; the page title refers to the delivery area Masdar City, not a verified street address.\n     - Only branch heading and cuisine categories were inspected; item prices and delivery catchment were not established.\n5. [Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2](<https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf>) — Dubai Municipality\n   - Dubai Municipality - sealed delivery and separation: checked 2026-10-12 UTC; published 2023-08-31; NEEDS REVIEW.\n     Location in source: PDF page 18, section 1.4.1\\(e\\)-\\(f\\).\n     - Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\n     - Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\n   - Dubai Municipality - transport cold chain: checked 2026-10-12 UTC; published 2023-08-31; NEEDS REVIEW.\n     Location in source: PDF pages 13-14, section 1.2.2 Temperature Control Requirements.\n     - Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\n     - Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\n     - Transport holding requirements, not cooking temperatures or evidence that a supplier or vehicle meets them.",
+  "cited_evidence_ids": [
+    "AUH-COMP-006",
+    "DXB-COMP-004",
+    "DXB-DEL-001",
+    "DXB-DEL-002",
+    "UAE-DEL-002",
+    "UAE-DEL-003",
+    "UAE-DEL-004"
+  ],
+  "retrieved_sources": {
+    "DXB-COMP-004": {
+      "id": "DXB-COMP-004",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "locations",
+        "competitors",
+        "delivery"
+      ],
+      "entity": "Allo Beirut - Al Barsha / Hessa Street",
+      "observation": "Allo Beirut lists its Hessa Street branch in Al Barsha, Dubai, and advertises delivery until 4 AM.",
+      "source_title": "Allo Beirut locations",
+      "source_url": "https://www.allobeirutstreetfood.com/locations",
+      "publisher": "Allo Beirut",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Dubai / Hessa St.",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability.",
+        "Advertised delivery hours do not establish overnight demand or the proposed site catchment."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "AUH-COMP-006": {
+      "id": "AUH-COMP-006",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "competitors",
+        "menu",
+        "delivery"
+      ],
+      "entity": "Operation Falafel - Madinat Khalifa A",
+      "observation": "Talabat lists Operation Falafel in Madinat Khalifa A, with Arabic, Lebanese, sandwich, shawarma, and falafel categories.",
+      "source_title": "Operation Falafel in Madinat Khalifa - A",
+      "source_url": "https://www.talabat.com/uae/restaurant/704423/operation-falafel-khalifa-city--ad-7?aid=1483",
+      "publisher": "Talabat",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Restaurant heading and cuisine tags",
+      "qualifiers": [
+        "Khalifa City, Abu Dhabi; the page title refers to the delivery area Masdar City, not a verified street address.",
+        "Only branch heading and cuisine categories were inspected; item prices and delivery catchment were not established."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-DEL-001": {
+      "id": "DXB-DEL-001",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "delivery",
+        "operations",
+        "suppliers"
+      ],
+      "entity": "Dubai Municipality - transport cold chain",
+      "observation": "Dubai Municipality guidance specifies transportation units capable of holding hot food at 60 C or above, cold food at 5 C or below, and frozen food at -18 C or below.",
+      "source_title": "Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2",
+      "source_url": "https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf",
+      "publisher": "Dubai Municipality",
+      "source_kind": "official",
+      "published_on": "2023-08-31",
+      "checked_on": "2026-10-12",
+      "locator": "PDF pages 13-14, section 1.2.2 Temperature Control Requirements",
+      "qualifiers": [
+        "Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.",
+        "Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.",
+        "Transport holding requirements, not cooking temperatures or evidence that a supplier or vehicle meets them."
+      ],
+      "valid_until": null,
+      "needs_review": true,
+      "expired": false
+    },
+    "UAE-DEL-001": {
+      "id": "UAE-DEL-001",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "delivery",
+        "competitors"
+      ],
+      "entity": "Papa Johns UAE - delivery and takeaway",
+      "observation": "Papa Johns states that UAE branches offer delivery and takeaway and share the same menu and prices.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Store directory introduction",
+      "qualifiers": [
+        "UAE-wide company statement supported by Dubai and Abu Dhabi branch entries.",
+        "Delivery catchments, fees, promotions, and item availability were not verified at checkout."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-DEL-002": {
+      "id": "DXB-DEL-002",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "delivery",
+        "operations"
+      ],
+      "entity": "Dubai Municipality - sealed delivery and separation",
+      "observation": "Dubai Municipality delivery guidance requires sealed food containers and separation of hot and cold items into insulated secondary units during transport.",
+      "source_title": "Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2",
+      "source_url": "https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf",
+      "publisher": "Dubai Municipality",
+      "source_kind": "official",
+      "published_on": "2023-08-31",
+      "checked_on": "2026-10-12",
+      "locator": "PDF page 18, section 1.4.1(e)-(f)",
+      "qualifiers": [
+        "Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.",
+        "Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist."
+      ],
+      "valid_until": null,
+      "needs_review": true,
+      "expired": false
+    },
+    "UAE-DEL-002": {
+      "id": "UAE-DEL-002",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "delivery"
+      ],
+      "entity": "Deliveroo UAE - platform riders and pickup",
+      "observation": "Deliveroo describes a UAE partner service using its rider network for delivery and allowing customers to collect orders from the restaurant.",
+      "source_title": "Deliveroo delivery and pickup for UAE partners",
+      "source_url": "https://merchants.deliveroo.com/en-AE/what-we-offer/delivery",
+      "publisher": "Deliveroo",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Delivery network; Customer flexibility",
+      "qualifiers": [
+        "UAE merchant product description; eligibility and availability at a proposed address need confirmation.",
+        "No verified contractual commission, fees, delivery radius, service level, or sales uplift."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "UAE-DEL-003": {
+      "id": "UAE-DEL-003",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "delivery",
+        "operations"
+      ],
+      "entity": "Deliveroo UAE - order tracking",
+      "observation": "Deliveroo describes order-status monitoring, real-time rider GPS tracking, and rider-arrival alerts for its delivery service.",
+      "source_title": "Deliveroo delivery and pickup for UAE partners",
+      "source_url": "https://merchants.deliveroo.com/en-AE/what-we-offer/delivery",
+      "publisher": "Deliveroo",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "End-to-end order tracking",
+      "qualifiers": [
+        "UAE merchant product description; eligibility and availability at a proposed address need confirmation.",
+        "No verified contractual commission, fees, delivery radius, service level, or sales uplift."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "UAE-DEL-004": {
+      "id": "UAE-DEL-004",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "delivery",
+        "operations"
+      ],
+      "entity": "Deliveroo UAE - Marketplace+ own riders",
+      "observation": "Deliveroo describes Marketplace+ as using restaurant delivery staff, with selectable delivery area, minimum spend, and delivery fees, plus an option to request a platform rider.",
+      "source_title": "Deliveroo Marketplace+ for UAE partners",
+      "source_url": "https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace",
+      "publisher": "Deliveroo",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Benefits of Marketplace+; Receiving orders; Delivering orders",
+      "qualifiers": [
+        "UAE merchant product description; eligibility and availability at a proposed address need confirmation.",
+        "No verified contractual commission, fees, delivery radius, service level, or sales uplift."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    }
+  },
+  "calculations": {},
+  "tool_trace": [
+    {
+      "name": "lookup_market_evidence",
+      "arguments": {
+        "cities": [
+          "dubai",
+          "abu_dhabi"
+        ],
+        "topics": [
+          "delivery"
+        ],
+        "query": "",
+        "limit": 12
+      },
+      "result": "{\"status\":\"ok\",\"data\":{\"records\":[{\"id\":\"DXB-COMP-004\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\",\"delivery\"],\"entity\":\"Allo Beirut - Al Barsha / Hessa Street\",\"observation\":\"Allo Beirut lists its Hessa Street branch in Al Barsha, Dubai, and advertises delivery until 4 AM.\",\"source_title\":\"Allo Beirut locations\",\"source_url\":\"https://www.allobeirutstreetfood.com/locations\",\"publisher\":\"Allo Beirut\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Dubai / Hessa St.\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\",\"Advertised delivery hours do not establish overnight demand or the proposed site catchment.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-COMP-006\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"competitors\",\"menu\",\"delivery\"],\"entity\":\"Operation Falafel - Madinat Khalifa A\",\"observation\":\"Talabat lists Operation Falafel in Madinat Khalifa A, with Arabic, Lebanese, sandwich, shawarma, and falafel categories.\",\"source_title\":\"Operation Falafel in Madinat Khalifa - A\",\"source_url\":\"https://www.talabat.com/uae/restaurant/704423/operation-falafel-khalifa-city--ad-7?aid=1483\",\"publisher\":\"Talabat\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Restaurant heading and cuisine tags\",\"qualifiers\":[\"Khalifa City, Abu Dhabi; the page title refers to the delivery area Masdar City, not a verified street address.\",\"Only branch heading and cuisine categories were inspected; item prices and delivery catchment were not established.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-DEL-001\",\"cities\":[\"dubai\"],\"topics\":[\"delivery\",\"operations\",\"suppliers\"],\"entity\":\"Dubai Municipality - transport cold chain\",\"observation\":\"Dubai Municipality guidance specifies transportation units capable of holding hot food at 60 C or above, cold food at 5 C or below, and frozen food at -18 C or below.\",\"source_title\":\"Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2\",\"source_url\":\"https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf\",\"publisher\":\"Dubai Municipality\",\"source_kind\":\"official\",\"published_on\":\"2023-08-31\",\"checked_on\":\"2026-10-12\",\"locator\":\"PDF pages 13-14, section 1.2.2 Temperature Control Requirements\",\"qualifiers\":[\"Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\",\"Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\",\"Transport holding requirements, not cooking temperatures or evidence that a supplier or vehicle meets them.\"],\"valid_until\":null,\"needs_review\":true,\"expired\":false},{\"id\":\"UAE-DEL-001\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\",\"competitors\"],\"entity\":\"Papa Johns UAE - delivery and takeaway\",\"observation\":\"Papa Johns states that UAE branches offer delivery and takeaway and share the same menu and prices.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Store directory introduction\",\"qualifiers\":[\"UAE-wide company statement supported by Dubai and Abu Dhabi branch entries.\",\"Delivery catchments, fees, promotions, and item availability were not verified at checkout.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-DEL-002\",\"cities\":[\"dubai\"],\"topics\":[\"delivery\",\"operations\"],\"entity\":\"Dubai Municipality - sealed delivery and separation\",\"observation\":\"Dubai Municipality delivery guidance requires sealed food containers and separation of hot and cold items into insulated secondary units during transport.\",\"source_title\":\"Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2\",\"source_url\":\"https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf\",\"publisher\":\"Dubai Municipality\",\"source_kind\":\"official\",\"published_on\":\"2023-08-31\",\"checked_on\":\"2026-10-12\",\"locator\":\"PDF page 18, section 1.4.1(e)-(f)\",\"qualifiers\":[\"Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\",\"Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\"],\"valid_until\":null,\"needs_review\":true,\"expired\":false},{\"id\":\"UAE-DEL-002\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\"],\"entity\":\"Deliveroo UAE - platform riders and pickup\",\"observation\":\"Deliveroo describes a UAE partner service using its rider network for delivery and allowing customers to collect orders from the restaurant.\",\"source_title\":\"Deliveroo delivery and pickup for UAE partners\",\"source_url\":\"https://merchants.deliveroo.com/en-AE/what-we-offer/delivery\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Delivery network; Customer flexibility\",\"qualifiers\":[\"UAE merchant product description; eligibility and availability at a proposed address need confirmation.\",\"No verified contractual commission, fees, delivery radius, service level, or sales uplift.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-DEL-003\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\",\"operations\"],\"entity\":\"Deliveroo UAE - order tracking\",\"observation\":\"Deliveroo describes order-status monitoring, real-time rider GPS tracking, and rider-arrival alerts for its delivery service.\",\"source_title\":\"Deliveroo delivery and pickup for UAE partners\",\"source_url\":\"https://merchants.deliveroo.com/en-AE/what-we-offer/delivery\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"End-to-end order tracking\",\"qualifiers\":[\"UAE merchant product description; eligibility and availability at a proposed address need confirmation.\",\"No verified contractual commission, fees, delivery radius, service level, or sales uplift.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-DEL-004\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\",\"operations\"],\"entity\":\"Deliveroo UAE - Marketplace+ own riders\",\"observation\":\"Deliveroo describes Marketplace+ as using restaurant delivery staff, with selectable delivery area, minimum spend, and delivery fees, plus an option to request a platform rider.\",\"source_title\":\"Deliveroo Marketplace+ for UAE partners\",\"source_url\":\"https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Benefits of Marketplace+; Receiving orders; Delivering orders\",\"qualifiers\":[\"UAE merchant product description; eligibility and availability at a proposed address need confirmation.\",\"No verified contractual commission, fees, delivery radius, service level, or sales uplift.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false}],\"matched_count\":8,\"omitted_count\":0},\"warnings\":[\"Some returned records need review; inspect their dates and freshness flags.\"]}",
+      "error": false
+    },
+    {
+      "name": "lookup_market_evidence",
+      "arguments": {
+        "cities": [
+          "dubai",
+          "abu_dhabi"
+        ],
+        "topics": [
+          "delivery"
+        ],
+        "query": "kebab sandwich pizza delivery",
+        "limit": 10
+      },
+      "result": "{\"status\":\"ok\",\"data\":{\"records\":[{\"id\":\"DXB-COMP-004\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\",\"delivery\"],\"entity\":\"Allo Beirut - Al Barsha / Hessa Street\",\"observation\":\"Allo Beirut lists its Hessa Street branch in Al Barsha, Dubai, and advertises delivery until 4 AM.\",\"source_title\":\"Allo Beirut locations\",\"source_url\":\"https://www.allobeirutstreetfood.com/locations\",\"publisher\":\"Allo Beirut\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Dubai / Hessa St.\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\",\"Advertised delivery hours do not establish overnight demand or the proposed site catchment.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-COMP-006\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"competitors\",\"menu\",\"delivery\"],\"entity\":\"Operation Falafel - Madinat Khalifa A\",\"observation\":\"Talabat lists Operation Falafel in Madinat Khalifa A, with Arabic, Lebanese, sandwich, shawarma, and falafel categories.\",\"source_title\":\"Operation Falafel in Madinat Khalifa - A\",\"source_url\":\"https://www.talabat.com/uae/restaurant/704423/operation-falafel-khalifa-city--ad-7?aid=1483\",\"publisher\":\"Talabat\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Restaurant heading and cuisine tags\",\"qualifiers\":[\"Khalifa City, Abu Dhabi; the page title refers to the delivery area Masdar City, not a verified street address.\",\"Only branch heading and cuisine categories were inspected; item prices and delivery catchment were not established.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-DEL-002\",\"cities\":[\"dubai\"],\"topics\":[\"delivery\",\"operations\"],\"entity\":\"Dubai Municipality - sealed delivery and separation\",\"observation\":\"Dubai Municipality delivery guidance requires sealed food containers and separation of hot and cold items into insulated secondary units during transport.\",\"source_title\":\"Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2\",\"source_url\":\"https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf\",\"publisher\":\"Dubai Municipality\",\"source_kind\":\"official\",\"published_on\":\"2023-08-31\",\"checked_on\":\"2026-10-12\",\"locator\":\"PDF page 18, section 1.4.1(e)-(f)\",\"qualifiers\":[\"Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\",\"Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\"],\"valid_until\":null,\"needs_review\":true,\"expired\":false},{\"id\":\"UAE-DEL-001\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\",\"competitors\"],\"entity\":\"Papa Johns UAE - delivery and takeaway\",\"observation\":\"Papa Johns states that UAE branches offer delivery and takeaway and share the same menu and prices.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Store directory introduction\",\"qualifiers\":[\"UAE-wide company statement supported by Dubai and Abu Dhabi branch entries.\",\"Delivery catchments, fees, promotions, and item availability were not verified at checkout.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-DEL-002\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\"],\"entity\":\"Deliveroo UAE - platform riders and pickup\",\"observation\":\"Deliveroo describes a UAE partner service using its rider network for delivery and allowing customers to collect orders from the restaurant.\",\"source_title\":\"Deliveroo delivery and pickup for UAE partners\",\"source_url\":\"https://merchants.deliveroo.com/en-AE/what-we-offer/delivery\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Delivery network; Customer flexibility\",\"qualifiers\":[\"UAE merchant product description; eligibility and availability at a proposed address need confirmation.\",\"No verified contractual commission, fees, delivery radius, service level, or sales uplift.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-DEL-003\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\",\"operations\"],\"entity\":\"Deliveroo UAE - order tracking\",\"observation\":\"Deliveroo describes order-status monitoring, real-time rider GPS tracking, and rider-arrival alerts for its delivery service.\",\"source_title\":\"Deliveroo delivery and pickup for UAE partners\",\"source_url\":\"https://merchants.deliveroo.com/en-AE/what-we-offer/delivery\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"End-to-end order tracking\",\"qualifiers\":[\"UAE merchant product description; eligibility and availability at a proposed address need confirmation.\",\"No verified contractual commission, fees, delivery radius, service level, or sales uplift.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-DEL-004\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\",\"operations\"],\"entity\":\"Deliveroo UAE - Marketplace+ own riders\",\"observation\":\"Deliveroo describes Marketplace+ as using restaurant delivery staff, with selectable delivery area, minimum spend, and delivery fees, plus an option to request a platform rider.\",\"source_title\":\"Deliveroo Marketplace+ for UAE partners\",\"source_url\":\"https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Benefits of Marketplace+; Receiving orders; Delivering orders\",\"qualifiers\":[\"UAE merchant product description; eligibility and availability at a proposed address need confirmation.\",\"No verified contractual commission, fees, delivery radius, service level, or sales uplift.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false}],\"matched_count\":7,\"omitted_count\":0},\"warnings\":[\"Some returned records need review; inspect their dates and freshness flags.\"]}",
+      "error": false
+    }
+  ],
+  "record": {
+    "model_requests": 2,
+    "input_tokens": 11658,
+    "output_tokens": 1547,
+    "reasoning_tokens": 0,
+    "cached_tokens": 7936,
+    "reported_cost_usd": "0.001413240",
+    "known_reported_cost_usd": "0.001413240",
+    "estimated_cost_usd": null,
+    "estimate_basis": null,
+    "usage_complete": true,
+    "schema_version": 1,
+    "run_id": "1ffd7648-b263-44eb-af21-c7ccde9dc4d4",
+    "session_id": "955df8a1-b936-4d65-90e5-8ed12aed82f6",
+    "timestamp_utc": "2026-10-14T13:26:10.693538Z",
+    "model_requested": "deepseek/deepseek-v4.1-flash",
+    "model_reported_if_available": [
+      "deepseek/deepseek-v4.1-flash"
+    ],
+    "provider_if_available": [
+      "Morph"
+    ],
+    "prompt_version": "11.1",
+    "evidence_dataset_version": "a226a6b54cf292e9b2f6f6e9c51112957bff64195bc8182e0b579dd1f79ca3c5",
+    "question": "How should delivery strategy differ between Dubai and Abu Dhabi?",
+    "outcome": "completed",
+    "error_category": null,
+    "tool_events": [
+      {
+        "name": "lookup_market_evidence",
+        "duration_ms": 0.6693109753541648,
+        "status": "ok",
+        "result_count": 8
+      },
+      {
+        "name": "lookup_market_evidence",
+        "duration_ms": 0.5379350041039288,
+        "status": "ok",
+        "result_count": 7
+      }
+    ],
+    "requests": [
+      {
+        "generation_id": "gen-1791984370-vTPAj5GthXWuhh9LMFrZ",
+        "model_reported": "deepseek/deepseek-v4.1-flash",
+        "provider_reported": "Morph",
+        "duration_ms": 1261.182414018549,
+        "outcome": "completed",
+        "input_tokens": 4032,
+        "output_tokens": 200,
+        "reasoning_tokens": 0,
+        "cached_tokens": 3968,
+        "reported_cost_usd": "0.000197504"
+      },
+      {
+        "generation_id": "gen-1791984371-sX5l4DTvvt9oCbcDs3Pd",
+        "model_reported": "deepseek/deepseek-v4.1-flash",
+        "provider_reported": "Morph",
+        "duration_ms": 13492.126676021144,
+        "outcome": "completed",
+        "input_tokens": 7626,
+        "output_tokens": 1347,
+        "reasoning_tokens": 0,
+        "cached_tokens": 3968,
+        "reported_cost_usd": "0.001215736"
+      }
+    ],
+    "evidence_ids": [
+      "DXB-COMP-004",
+      "AUH-COMP-006",
+      "DXB-DEL-001",
+      "UAE-DEL-001",
+      "DXB-DEL-002",
+      "UAE-DEL-002",
+      "UAE-DEL-003",
+      "UAE-DEL-004"
+    ],
+    "calculation_ids": [],
+    "latency_ms": 14980.104156013113,
+    "tool_output_characters": 13527,
+    "validation_errors": [],
+    "warnings": [
+      "Some returned records need review; inspect their dates and freshness flags."
+    ]
+  },
+  "warnings": [
+    "Some returned records need review; inspect their dates and freshness flags."
+  ],
+  "error_category": null,
+  "error_message": null,
+  "checks": {
+    "reference_integrity": true,
+    "requested_cities_present": true,
+    "durable_profile_unchanged": true,
+    "calculator_exact": null,
+    "claim_support": "requires review"
+  }
+}

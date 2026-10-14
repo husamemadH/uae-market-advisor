@@ -1,0 +1,717 @@
+{
+  "case": {
+    "id": "E04",
+    "question": "Propose a launch menu for both Dubai and Abu Dhabi, with portions and localization.",
+    "cities": [
+      "dubai",
+      "abu_dhabi"
+    ],
+    "topics": [
+      "menu"
+    ],
+    "profile": {},
+    "followup_of": null,
+    "expected": [
+      "Meaty pizza and kebab sandwich identity retained",
+      "Portions and adaptations explained as proposals",
+      "Operational consequences",
+      "No cultural stereotypes"
+    ]
+  },
+  "status": "completed",
+  "session_id": "08eed252-bd60-490f-8dd6-f44bd410e025",
+  "run_id": "22b2ecd5-0612-420e-8720-53b7f8aa0222",
+  "profile_before": {
+    "restaurant_origin": "Jordan",
+    "core_products": [
+      "meaty pizza",
+      "kebab sandwiches"
+    ],
+    "target_cities": [
+      "Dubai",
+      "Abu Dhabi"
+    ],
+    "startup_budget_aed": null,
+    "monthly_rent_budget_aed": null,
+    "branch_format": null,
+    "target_audience": null,
+    "positioning": null,
+    "planned_opening": null
+  },
+  "profile_after": {
+    "restaurant_origin": "Jordan",
+    "core_products": [
+      "meaty pizza",
+      "kebab sandwiches"
+    ],
+    "target_cities": [
+      "Dubai",
+      "Abu Dhabi"
+    ],
+    "startup_budget_aed": null,
+    "monthly_rent_budget_aed": null,
+    "branch_format": null,
+    "target_audience": null,
+    "positioning": null,
+    "planned_opening": null
+  },
+  "answer": {
+    "kind": "advice",
+    "cities": [
+      "dubai",
+      "abu_dhabi"
+    ],
+    "headline": "One shared core menu, with small city-level tweaks: Jordanian meat pizza and kebab sandwiches as hero items, sized for delivery, priced as test bands pending cost validation.",
+    "sections": [
+      {
+        "title": "Menu architecture to launch (shared core, Dubai + Abu Dhabi)",
+        "items": [
+          {
+            "text": "Keep the concept tight: two hero categories only. Suggested launch list - (1) Jordanian meat pizza: spiced minced-beef/lamb 'arayes-style' base with tahini, sumac onions, pine nuts; (2) kebab sandwich: charcoal-grilled kofta or chicken kebab in saj/taboon flatbread with garlic toum, pickles, tomato, parsley. This preserves the core products in the profile rather than spreading into generic Lebanese or fried-chicken ranges.",
+            "basis": "assumption",
+            "evidence_ids": [],
+            "calculation_ids": []
+          },
+          {
+            "text": "Observed comparable portions and size laddering in these cities: a Dubai JBR delivery menu lists a chicken/falafel sandwich range where regular is AED 13 and large AED 18 (falafel), and a Khalifa City (Abu Dhabi) menu lists a shawarma size ladder of small AED 11, regular AED 15.50, large AED 26. Pizza is also sold by inch size: a UAE-wide chain web menu lists one 8in / 10in / 13in ladder at AED 33 / 50 / 69.",
+            "basis": "fact",
+            "evidence_ids": [
+              "DXB-PRICE-002",
+              "AUH-PRICE-001",
+              "UAE-MENU-001"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Proposal: mirror that size logic rather than inventing a new one - kebab sandwich in regular and large, and meat pizza in 8in personal, 10in sharing and 13in family formats. Proposed portions (to be weighed, not asserted): regular sandwich ~220-250g total with ~100-120g cooked kebab; large ~330-380g; pizza 8in ~28-30cm-class dough ball ~180-200g, 13in ~300-330g. These are starting specifications to be set on a scale in your own kitchen, not observed market weights - the cited competitor listings did not publish gram weights or pizza diameters.",
+            "basis": "proposal",
+            "evidence_ids": [
+              "DXB-PRICE-002",
+              "AUH-PRICE-001",
+              "UAE-MENU-001"
+            ],
+            "calculation_ids": []
+          }
+        ]
+      },
+      {
+        "title": "Localisation for each city",
+        "items": [
+          {
+            "text": "Dubai: keep English/Arabic menu naming with transliterated Jordanian terms (arayes, kofta kebab, saj) and a short provenance line ('Jordanian-style'). Dubai evidence shows Levantine street-food operators listing sandwich, shawarma, grill and pizza formats on delivery platforms, including a JBR branch on Al Mamsha Street, so Arabic-language naming plus English descriptions fits the observed delivery-menu style.",
+            "basis": "inference",
+            "evidence_ids": [
+              "DXB-COMP-005",
+              "DXB-PRICE-001"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Abu Dhabi: same core, but plan for a wider family/sharing bias in sizing and a stronger small/large sandwich ladder, following the observed Khalifa City shawarma size ladder and manakish price points (zaatar AED 12, meat manakish AED 22). Consider a manakish or arayes add-on only as a test line - the cited Abu Dhabi listing shows manakish sold there, but it does not show that any Jordanian-style or meat-pizza operator is absent or that customers want this.",
+            "basis": "proposal",
+            "evidence_ids": [
+              "AUH-PRICE-001",
+              "AUH-MENU-001"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Shared localisation items for both cities: halal sourcing and halal labelling stated on the menu; an Arabic-language menu version; a spicy option and a no-pork-by-default kitchen so the same SKU list works in both cities. Do not create separate Dubai and Abu Dhabi recipes at launch - one spec, two price/packaging variants, to keep prep and training simple.",
+            "basis": "proposal",
+            "evidence_ids": [],
+            "calculation_ids": []
+          }
+        ]
+      },
+      {
+        "title": "Test price bands and how to validate",
+        "items": [
+          {
+            "text": "Proposed launch test bands (delivery channel, net of tax and discounts, both cities unless noted): kebab sandwich regular AED 22-28, large AED 30-38; meat pizza 8in AED 32-40, 10in AED 48-58, 13in AED 65-80. Anchors: observed Levantine-style sandwich items at AED 11-26 and pizza items at AED 38-40 (Dubai JBR) and AED 33-69 for one UAE chain's 8/10/13in ladder. Bands are proposals, not observed market ranges or margins.",
+            "basis": "proposal",
+            "evidence_ids": [
+              "AUH-PRICE-001",
+              "DXB-PRICE-001",
+              "UAE-MENU-001",
+              "DXB-PRICE-002"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Validate each band against your own costed recipe before publishing: set the portion weight, then price so that food, packaging and platform commission are covered at the tested price. Observed menu prices are not checkout totals - delivery charges, extras and tax treatment were not verified on the cited listings - so treat every citation as a shelf-price anchor only.",
+            "basis": "inference",
+            "evidence_ids": [
+              "UAE-MENU-001",
+              "DXB-PRICE-001",
+              "AUH-PRICE-001"
+            ],
+            "calculation_ids": []
+          }
+        ]
+      }
+    ],
+    "assumptions": [
+      "Business profile: Jordanian restaurant, core products meaty pizza and kebab sandwiches; both cities are targets. No budget, rent budget, branch format, audience, positioning or opening date are set, so this plan is channel-agnostic and assumes delivery-led launch.",
+      "All portions, size labels and price bands above are proposals requiring your own weighed specifications and costed recipes; the cited competitor listings did not publish gram weights, pizza diameters, or checkout totals."
+    ],
+    "next_steps": [
+      "Weigh and photograph every proposed SKU on a scale, set a written spec sheet (dough ball weight, cooked kebab weight, bread size), and cost each one including packaging before choosing the final prices.",
+      "Run a 4-6 week single-city pilot menu first (one city, delivery platforms plus walk-in) with the core 7 SKUs, and add the 13in/10in pizza only if the pilot shows it sells; measure item mix and repeat rate rather than assuming demand.",
+      "If you want a break-even check on the pilot, send me eight numbers: average order revenue, food cost per order, packaging per order, other variable cost per order, delivery share (fraction), delivery commission rate (fraction), monthly fixed costs, and operating days per month."
+    ],
+    "questions": [
+      "Do you plan a delivery-led launch, a dine-in/small-store format, or both - and roughly what average order value and food-cost percentage are you targeting?"
+    ]
+  },
+  "rendered_answer": "One shared core menu, with small city-level tweaks: Jordanian meat pizza and kebab sandwiches as hero items, sized for delivery, priced as test bands pending cost validation.\n\n**Menu architecture to launch \\(shared core, Dubai + Abu Dhabi\\)**\n\n- **Assumption:** Keep the concept tight: two hero categories only. Suggested launch list - \\(1\\) Jordanian meat pizza: spiced minced-beef/lamb 'arayes-style' base with tahini, sumac onions, pine nuts; \\(2\\) kebab sandwich: charcoal-grilled kofta or chicken kebab in saj/taboon flatbread with garlic toum, pickles, tomato, parsley. This preserves the core products in the profile rather than spreading into generic Lebanese or fried-chicken ranges.\n- **Fact:** Observed comparable portions and size laddering in these cities: a Dubai JBR delivery menu lists a chicken/falafel sandwich range where regular is AED 13 and large AED 18 \\(falafel\\), and a Khalifa City \\(Abu Dhabi\\) menu lists a shawarma size ladder of small AED 11, regular AED 15.50, large AED 26. Pizza is also sold by inch size: a UAE-wide chain web menu lists one 8in / 10in / 13in ladder at AED 33 / 50 / 69. [1](<https://deliveroo.ae/en/menu/dubai/jbr/allo-beirut-jbr>) [2](<https://deliveroo.ae/en/menu/abu-dhabi/khalifa-city/allo-beirut-khalifa-city/>) [3](<https://www.papajohns.ae/menu>)\n- **Proposal:** Proposal: mirror that size logic rather than inventing a new one - kebab sandwich in regular and large, and meat pizza in 8in personal, 10in sharing and 13in family formats. Proposed portions \\(to be weighed, not asserted\\): regular sandwich \\~220-250g total with \\~100-120g cooked kebab; large \\~330-380g; pizza 8in \\~28-30cm-class dough ball \\~180-200g, 13in \\~300-330g. These are starting specifications to be set on a scale in your own kitchen, not observed market weights - the cited competitor listings did not publish gram weights or pizza diameters. [1](<https://deliveroo.ae/en/menu/dubai/jbr/allo-beirut-jbr>) [2](<https://deliveroo.ae/en/menu/abu-dhabi/khalifa-city/allo-beirut-khalifa-city/>) [3](<https://www.papajohns.ae/menu>)\n\n**Localisation for each city**\n\n- **Inference:** Dubai: keep English/Arabic menu naming with transliterated Jordanian terms \\(arayes, kofta kebab, saj\\) and a short provenance line \\('Jordanian-style'\\). Dubai evidence shows Levantine street-food operators listing sandwich, shawarma, grill and pizza formats on delivery platforms, including a JBR branch on Al Mamsha Street, so Arabic-language naming plus English descriptions fits the observed delivery-menu style. [4](<https://www.allobeirutstreetfood.com/locations>) [1](<https://deliveroo.ae/en/menu/dubai/jbr/allo-beirut-jbr>)\n- **Proposal:** Abu Dhabi: same core, but plan for a wider family/sharing bias in sizing and a stronger small/large sandwich ladder, following the observed Khalifa City shawarma size ladder and manakish price points \\(zaatar AED 12, meat manakish AED 22\\). Consider a manakish or arayes add-on only as a test line - the cited Abu Dhabi listing shows manakish sold there, but it does not show that any Jordanian-style or meat-pizza operator is absent or that customers want this. [2](<https://deliveroo.ae/en/menu/abu-dhabi/khalifa-city/allo-beirut-khalifa-city/>)\n- **Proposal:** Shared localisation items for both cities: halal sourcing and halal labelling stated on the menu; an Arabic-language menu version; a spicy option and a no-pork-by-default kitchen so the same SKU list works in both cities. Do not create separate Dubai and Abu Dhabi recipes at launch - one spec, two price/packaging variants, to keep prep and training simple.\n\n**Test price bands and how to validate**\n\n- **Proposal:** Proposed launch test bands \\(delivery channel, net of tax and discounts, both cities unless noted\\): kebab sandwich regular AED 22-28, large AED 30-38; meat pizza 8in AED 32-40, 10in AED 48-58, 13in AED 65-80. Anchors: observed Levantine-style sandwich items at AED 11-26 and pizza items at AED 38-40 \\(Dubai JBR\\) and AED 33-69 for one UAE chain's 8/10/13in ladder. Bands are proposals, not observed market ranges or margins. [2](<https://deliveroo.ae/en/menu/abu-dhabi/khalifa-city/allo-beirut-khalifa-city/>) [1](<https://deliveroo.ae/en/menu/dubai/jbr/allo-beirut-jbr>) [3](<https://www.papajohns.ae/menu>)\n- **Inference:** Validate each band against your own costed recipe before publishing: set the portion weight, then price so that food, packaging and platform commission are covered at the tested price. Observed menu prices are not checkout totals - delivery charges, extras and tax treatment were not verified on the cited listings - so treat every citation as a shelf-price anchor only. [3](<https://www.papajohns.ae/menu>) [1](<https://deliveroo.ae/en/menu/dubai/jbr/allo-beirut-jbr>) [2](<https://deliveroo.ae/en/menu/abu-dhabi/khalifa-city/allo-beirut-khalifa-city/>)\n\n**Assumptions and limitations**\n\n- Business profile: Jordanian restaurant, core products meaty pizza and kebab sandwiches; both cities are targets. No budget, rent budget, branch format, audience, positioning or opening date are set, so this plan is channel-agnostic and assumes delivery-led launch.\n- All portions, size labels and price bands above are proposals requiring your own weighed specifications and costed recipes; the cited competitor listings did not publish gram weights, pizza diameters, or checkout totals.\n\n**Next steps**\n\n- Weigh and photograph every proposed SKU on a scale, set a written spec sheet \\(dough ball weight, cooked kebab weight, bread size\\), and cost each one including packaging before choosing the final prices.\n- Run a 4-6 week single-city pilot menu first \\(one city, delivery platforms plus walk-in\\) with the core 7 SKUs, and add the 13in/10in pizza only if the pilot shows it sells; measure item mix and repeat rate rather than assuming demand.\n- If you want a break-even check on the pilot, send me eight numbers: average order revenue, food cost per order, packaging per order, other variable cost per order, delivery share \\(fraction\\), delivery commission rate \\(fraction\\), monthly fixed costs, and operating days per month.\n\n**Questions**\n\n- Do you plan a delivery-led launch, a dine-in/small-store format, or both - and roughly what average order value and food-cost percentage are you targeting?\n\n**Tool warnings**\n\n- Some matching records were omitted to respect result or payload limits.\n\n**Sources**\n\n1. [Allo Beirut - JBR delivery menu](<https://deliveroo.ae/en/menu/dubai/jbr/allo-beirut-jbr>) — Deliveroo\n   - Allo Beirut JBR - falafel sandwich sizes: checked 2026-10-12 UTC.\n     Location in source: Falafel / Falafel Sandwich Regular; Large; Saj.\n     - JBR, Dubai branch, anonymous Deliveroo listing with no delivery address selected; menu visibility can vary.\n     - Size labels and bread differ; gram weights were not specified. Observed item prices are not a completed checkout total; delivery charges, extras, and tax treatment were not verified.\n     - No publication date shown; recheck menu, price, and availability before a decision.\n   - Allo Beirut JBR - pizza: checked 2026-10-12 UTC.\n     Location in source: Pizza / Pizza Pepperoni; Pizza Margherita.\n     - JBR, Dubai branch, anonymous Deliveroo listing with no delivery address selected; menu visibility can vary.\n     - Pizza diameter and weight were not specified. Observed item prices are not a completed checkout total; delivery charges, extras, and tax treatment were not verified.\n     - No publication date shown; recheck menu, price, and availability before a decision.\n2. [Allo Beirut - Khalifa City delivery menu](<https://deliveroo.ae/en/menu/abu-dhabi/khalifa-city/allo-beirut-khalifa-city/>) — Deliveroo\n   - Allo Beirut Khalifa City - chicken shawarma sizes: checked 2026-10-12 UTC.\n     Location in source: Shawarma / Chicken Shawarma Sandwich Small; Regular; Large.\n     - Khalifa City, Abu Dhabi branch, anonymous Deliveroo listing with no delivery address selected; menu visibility can vary.\n     - Small, regular, and large are menu labels; weights were not specified. Observed item prices are not a completed checkout total; delivery charges, extras, and tax treatment were not verified.\n     - No publication date shown; recheck menu, price, and availability before a decision.\n   - Allo Beirut Khalifa City - manakish: checked 2026-10-12 UTC.\n     Location in source: Manakish & Kaak / Zaatar; Akkawi; Lahm b Ajine.\n     - Khalifa City, Abu Dhabi branch, anonymous Deliveroo listing with no delivery address selected; menu visibility can vary.\n     - Individual menu items; diameter and weight were not specified, so they are not equivalent to a sized pizza. Observed item prices are not a completed checkout total; delivery charges, extras, and tax treatment were not verified.\n     - No publication date shown; recheck menu, price, and availability before a decision.\n3. [Papa Johns UAE Menu & Prices \\(AED\\)](<https://www.papajohns.ae/menu>) — Papa Johns UAE\n   - Papa Johns - Butter Chicken pizza: checked 2026-10-12 UTC.\n     Location in source: Pizzas / Butter Chicken.\n     - Public UAE website menu; the store directory states shared menus and prices across branches in both cities.\n     - No branch checkout selected; crust options, extras, fees, tax treatment, and availability need confirmation.\n     - An observed competitor flavor variant does not establish local customer preferences.\n4. [Allo Beirut locations](<https://www.allobeirutstreetfood.com/locations>) — Allo Beirut\n   - Allo Beirut - JBR: checked 2026-10-12 UTC.\n     Location in source: Dubai / JBR; footer / menu categories.\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.",
+  "cited_evidence_ids": [
+    "AUH-MENU-001",
+    "AUH-PRICE-001",
+    "DXB-COMP-005",
+    "DXB-PRICE-001",
+    "DXB-PRICE-002",
+    "UAE-MENU-001"
+  ],
+  "retrieved_sources": {
+    "DXB-MENU-001": {
+      "id": "DXB-MENU-001",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "menu",
+        "pricing"
+      ],
+      "entity": "Allo Beirut JBR - vegetarian halloumi wrap",
+      "observation": "The JBR Deliveroo menu lists a vegetarian halloumi wrap with avocado sauce and rocca at AED 35.",
+      "source_title": "Allo Beirut - JBR delivery menu",
+      "source_url": "https://deliveroo.ae/en/menu/dubai/jbr/allo-beirut-jbr",
+      "publisher": "Deliveroo",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Healthy Vegetarian Halloumi Wrap",
+      "qualifiers": [
+        "JBR, Dubai branch, anonymous Deliveroo listing with no delivery address selected; menu visibility can vary.",
+        "Portion weight was not specified; category label is the menu description, not nutritional or allergen verification. Observed item prices are not a completed checkout total; delivery charges, extras, and tax treatment were not verified.",
+        "No publication date shown; recheck menu, price, and availability before a decision."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "AUH-COMP-006": {
+      "id": "AUH-COMP-006",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "competitors",
+        "menu",
+        "delivery"
+      ],
+      "entity": "Operation Falafel - Madinat Khalifa A",
+      "observation": "Talabat lists Operation Falafel in Madinat Khalifa A, with Arabic, Lebanese, sandwich, shawarma, and falafel categories.",
+      "source_title": "Operation Falafel in Madinat Khalifa - A",
+      "source_url": "https://www.talabat.com/uae/restaurant/704423/operation-falafel-khalifa-city--ad-7?aid=1483",
+      "publisher": "Talabat",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Restaurant heading and cuisine tags",
+      "qualifiers": [
+        "Khalifa City, Abu Dhabi; the page title refers to the delivery area Masdar City, not a verified street address.",
+        "Only branch heading and cuisine categories were inspected; item prices and delivery catchment were not established."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-PRICE-001": {
+      "id": "DXB-PRICE-001",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "menu",
+        "pricing",
+        "competitors"
+      ],
+      "entity": "Allo Beirut JBR - pizza",
+      "observation": "The JBR Deliveroo menu lists Pepperoni pizza at AED 40 and Margherita pizza at AED 38.",
+      "source_title": "Allo Beirut - JBR delivery menu",
+      "source_url": "https://deliveroo.ae/en/menu/dubai/jbr/allo-beirut-jbr",
+      "publisher": "Deliveroo",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Pizza / Pizza Pepperoni; Pizza Margherita",
+      "qualifiers": [
+        "JBR, Dubai branch, anonymous Deliveroo listing with no delivery address selected; menu visibility can vary.",
+        "Pizza diameter and weight were not specified. Observed item prices are not a completed checkout total; delivery charges, extras, and tax treatment were not verified.",
+        "No publication date shown; recheck menu, price, and availability before a decision."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "AUH-COMP-007": {
+      "id": "AUH-COMP-007",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "competitors",
+        "menu",
+        "operations"
+      ],
+      "entity": "Operation Falafel - Zayed International Airport",
+      "observation": "The airport lists Operation Falafel in Terminal A departures, airside Food Park Mezzanine Level 5, open 24 hours, serving shawarma, hummus, falafel, and salad bowls.",
+      "source_title": "Operation Falafel at Zayed International Airport",
+      "source_url": "https://www.zayedinternationalairport.ae/en/shop-dine-and-experience/dining/restaurants/operation-falafel",
+      "publisher": "Abu Dhabi Airports / Zayed International Airport",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Description; Highlights; Open; Location",
+      "qualifiers": [
+        "Airside airport concession serving departing passengers; not a comparable street-site catchment or pricing benchmark.",
+        "Airport hours and access do not apply to other branches; confirm current concession operation."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-PRICE-002": {
+      "id": "DXB-PRICE-002",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "menu",
+        "pricing"
+      ],
+      "entity": "Allo Beirut JBR - falafel sandwich sizes",
+      "observation": "The JBR Deliveroo menu lists regular falafel sandwich at AED 13, large at AED 18, and saj bread version at AED 19.",
+      "source_title": "Allo Beirut - JBR delivery menu",
+      "source_url": "https://deliveroo.ae/en/menu/dubai/jbr/allo-beirut-jbr",
+      "publisher": "Deliveroo",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Falafel / Falafel Sandwich Regular; Large; Saj",
+      "qualifiers": [
+        "JBR, Dubai branch, anonymous Deliveroo listing with no delivery address selected; menu visibility can vary.",
+        "Size labels and bread differ; gram weights were not specified. Observed item prices are not a completed checkout total; delivery charges, extras, and tax treatment were not verified.",
+        "No publication date shown; recheck menu, price, and availability before a decision."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "AUH-MENU-001": {
+      "id": "AUH-MENU-001",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "menu",
+        "pricing"
+      ],
+      "entity": "Allo Beirut Khalifa City - manakish",
+      "observation": "The Khalifa City Deliveroo menu lists zaatar manakish at AED 12, Akkawi cheese at AED 22, and Lahm b Ajine meat manakish at AED 22.",
+      "source_title": "Allo Beirut - Khalifa City delivery menu",
+      "source_url": "https://deliveroo.ae/en/menu/abu-dhabi/khalifa-city/allo-beirut-khalifa-city/",
+      "publisher": "Deliveroo",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Manakish & Kaak / Zaatar; Akkawi; Lahm b Ajine",
+      "qualifiers": [
+        "Khalifa City, Abu Dhabi branch, anonymous Deliveroo listing with no delivery address selected; menu visibility can vary.",
+        "Individual menu items; diameter and weight were not specified, so they are not equivalent to a sized pizza. Observed item prices are not a completed checkout total; delivery charges, extras, and tax treatment were not verified.",
+        "No publication date shown; recheck menu, price, and availability before a decision."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "UAE-MENU-001": {
+      "id": "UAE-MENU-001",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "menu",
+        "pricing"
+      ],
+      "entity": "Papa Johns - Butter Chicken pizza",
+      "observation": "The UAE web menu lists Butter Chicken pizza with Makhani sauce and chicken at AED 33 for 8 inches, AED 50 for 10 inches, and AED 69 for 13 inches.",
+      "source_title": "Papa Johns UAE Menu & Prices (AED)",
+      "source_url": "https://www.papajohns.ae/menu",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Pizzas / Butter Chicken",
+      "qualifiers": [
+        "Public UAE website menu; the store directory states shared menus and prices across branches in both cities.",
+        "No branch checkout selected; crust options, extras, fees, tax treatment, and availability need confirmation.",
+        "An observed competitor flavor variant does not establish local customer preferences."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "AUH-PRICE-001": {
+      "id": "AUH-PRICE-001",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "menu",
+        "pricing",
+        "competitors"
+      ],
+      "entity": "Allo Beirut Khalifa City - chicken shawarma sizes",
+      "observation": "The Khalifa City Deliveroo menu lists small chicken shawarma sandwich at AED 11, regular at AED 15.50, and large at AED 26.",
+      "source_title": "Allo Beirut - Khalifa City delivery menu",
+      "source_url": "https://deliveroo.ae/en/menu/abu-dhabi/khalifa-city/allo-beirut-khalifa-city/",
+      "publisher": "Deliveroo",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Shawarma / Chicken Shawarma Sandwich Small; Regular; Large",
+      "qualifiers": [
+        "Khalifa City, Abu Dhabi branch, anonymous Deliveroo listing with no delivery address selected; menu visibility can vary.",
+        "Small, regular, and large are menu labels; weights were not specified. Observed item prices are not a completed checkout total; delivery charges, extras, and tax treatment were not verified.",
+        "No publication date shown; recheck menu, price, and availability before a decision."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-COMP-001": {
+      "id": "DXB-COMP-001",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Papa Johns - Deira",
+      "observation": "Papa Johns lists pizza branches at Al Ghurair Centre in Al Muraqqabat and Deira City Centre in Port Saeed.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Dubai / Al Ghurair Centre; Deira City Centre",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "AUH-COMP-001": {
+      "id": "AUH-COMP-001",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Papa Johns - Al Zahiyah",
+      "observation": "Papa Johns lists a pizza branch by the Abu Dhabi Mall parking entrance in Al Zahiyah.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Abu Dhabi / Abu Dhabi Mall",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-COMP-002": {
+      "id": "DXB-COMP-002",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Papa Johns - Al Barsha",
+      "observation": "Papa Johns lists a pizza branch at Al Barsha Mall on Al Barsha 2 Street.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Dubai / Al Barsha Mall",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "AUH-COMP-002": {
+      "id": "AUH-COMP-002",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Papa Johns - Khalidiya",
+      "observation": "Papa Johns lists its ADNOC 913 Khalidiya pizza branch on Ash Shoulah Street in Al Khubeirah, Al Khalidiyah.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Abu Dhabi / ADNOC 913 Khalidiya",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-COMP-003": {
+      "id": "DXB-COMP-003",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Papa Johns - Dubai Marina",
+      "observation": "Papa Johns lists a pizza branch at Marina Diamond near Dubai Marina Metro Station.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Dubai / Marina Diamond",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "AUH-COMP-003": {
+      "id": "AUH-COMP-003",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Papa Johns - Al Wahda / Al Manhal",
+      "observation": "Papa Johns lists its Al Wahda Mall pizza branch on Hthaymah Street in Al Manhal, Abu Dhabi.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Abu Dhabi / Al Wahda Mall",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-COMP-005": {
+      "id": "DXB-COMP-005",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Allo Beirut - JBR",
+      "observation": "Allo Beirut lists a Dubai branch on Al Mamsha Street in Jumeirah Beach Residence; its site includes shawarma, grills, and sandwiches.",
+      "source_title": "Allo Beirut locations",
+      "source_url": "https://www.allobeirutstreetfood.com/locations",
+      "publisher": "Allo Beirut",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Dubai / JBR; footer / menu categories",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    }
+  },
+  "calculations": {},
+  "tool_trace": [
+    {
+      "name": "lookup_market_evidence",
+      "arguments": {
+        "cities": [
+          "dubai",
+          "abu_dhabi"
+        ],
+        "topics": [
+          "menu"
+        ],
+        "query": "",
+        "limit": 12
+      },
+      "result": "{\"status\":\"ok\",\"data\":{\"records\":[{\"id\":\"DXB-MENU-001\",\"cities\":[\"dubai\"],\"topics\":[\"menu\",\"pricing\"],\"entity\":\"Allo Beirut JBR - vegetarian halloumi wrap\",\"observation\":\"The JBR Deliveroo menu lists a vegetarian halloumi wrap with avocado sauce and rocca at AED 35.\",\"source_title\":\"Allo Beirut - JBR delivery menu\",\"source_url\":\"https://deliveroo.ae/en/menu/dubai/jbr/allo-beirut-jbr\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Healthy Vegetarian Halloumi Wrap\",\"qualifiers\":[\"JBR, Dubai branch, anonymous Deliveroo listing with no delivery address selected; menu visibility can vary.\",\"Portion weight was not specified; category label is the menu description, not nutritional or allergen verification. Observed item prices are not a completed checkout total; delivery charges, extras, and tax treatment were not verified.\",\"No publication date shown; recheck menu, price, and availability before a decision.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-COMP-006\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"competitors\",\"menu\",\"delivery\"],\"entity\":\"Operation Falafel - Madinat Khalifa A\",\"observation\":\"Talabat lists Operation Falafel in Madinat Khalifa A, with Arabic, Lebanese, sandwich, shawarma, and falafel categories.\",\"source_title\":\"Operation Falafel in Madinat Khalifa - A\",\"source_url\":\"https://www.talabat.com/uae/restaurant/704423/operation-falafel-khalifa-city--ad-7?aid=1483\",\"publisher\":\"Talabat\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Restaurant heading and cuisine tags\",\"qualifiers\":[\"Khalifa City, Abu Dhabi; the page title refers to the delivery area Masdar City, not a verified street address.\",\"Only branch heading and cuisine categories were inspected; item prices and delivery catchment were not established.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-PRICE-001\",\"cities\":[\"dubai\"],\"topics\":[\"menu\",\"pricing\",\"competitors\"],\"entity\":\"Allo Beirut JBR - pizza\",\"observation\":\"The JBR Deliveroo menu lists Pepperoni pizza at AED 40 and Margherita pizza at AED 38.\",\"source_title\":\"Allo Beirut - JBR delivery menu\",\"source_url\":\"https://deliveroo.ae/en/menu/dubai/jbr/allo-beirut-jbr\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Pizza / Pizza Pepperoni; Pizza Margherita\",\"qualifiers\":[\"JBR, Dubai branch, anonymous Deliveroo listing with no delivery address selected; menu visibility can vary.\",\"Pizza diameter and weight were not specified. Observed item prices are not a completed checkout total; delivery charges, extras, and tax treatment were not verified.\",\"No publication date shown; recheck menu, price, and availability before a decision.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-COMP-007\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"competitors\",\"menu\",\"operations\"],\"entity\":\"Operation Falafel - Zayed International Airport\",\"observation\":\"The airport lists Operation Falafel in Terminal A departures, airside Food Park Mezzanine Level 5, open 24 hours, serving shawarma, hummus, falafel, and salad bowls.\",\"source_title\":\"Operation Falafel at Zayed International Airport\",\"source_url\":\"https://www.zayedinternationalairport.ae/en/shop-dine-and-experience/dining/restaurants/operation-falafel\",\"publisher\":\"Abu Dhabi Airports / Zayed International Airport\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Description; Highlights; Open; Location\",\"qualifiers\":[\"Airside airport concession serving departing passengers; not a comparable street-site catchment or pricing benchmark.\",\"Airport hours and access do not apply to other branches; confirm current concession operation.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-PRICE-002\",\"cities\":[\"dubai\"],\"topics\":[\"menu\",\"pricing\"],\"entity\":\"Allo Beirut JBR - falafel sandwich sizes\",\"observation\":\"The JBR Deliveroo menu lists regular falafel sandwich at AED 13, large at AED 18, and saj bread version at AED 19.\",\"source_title\":\"Allo Beirut - JBR delivery menu\",\"source_url\":\"https://deliveroo.ae/en/menu/dubai/jbr/allo-beirut-jbr\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Falafel / Falafel Sandwich Regular; Large; Saj\",\"qualifiers\":[\"JBR, Dubai branch, anonymous Deliveroo listing with no delivery address selected; menu visibility can vary.\",\"Size labels and bread differ; gram weights were not specified. Observed item prices are not a completed checkout total; delivery charges, extras, and tax treatment were not verified.\",\"No publication date shown; recheck menu, price, and availability before a decision.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-MENU-001\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"menu\",\"pricing\"],\"entity\":\"Allo Beirut Khalifa City - manakish\",\"observation\":\"The Khalifa City Deliveroo menu lists zaatar manakish at AED 12, Akkawi cheese at AED 22, and Lahm b Ajine meat manakish at AED 22.\",\"source_title\":\"Allo Beirut - Khalifa City delivery menu\",\"source_url\":\"https://deliveroo.ae/en/menu/abu-dhabi/khalifa-city/allo-beirut-khalifa-city/\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Manakish & Kaak / Zaatar; Akkawi; Lahm b Ajine\",\"qualifiers\":[\"Khalifa City, Abu Dhabi branch, anonymous Deliveroo listing with no delivery address selected; menu visibility can vary.\",\"Individual menu items; diameter and weight were not specified, so they are not equivalent to a sized pizza. Observed item prices are not a completed checkout total; delivery charges, extras, and tax treatment were not verified.\",\"No publication date shown; recheck menu, price, and availability before a decision.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-MENU-001\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"menu\",\"pricing\"],\"entity\":\"Papa Johns - Butter Chicken pizza\",\"observation\":\"The UAE web menu lists Butter Chicken pizza with Makhani sauce and chicken at AED 33 for 8 inches, AED 50 for 10 inches, and AED 69 for 13 inches.\",\"source_title\":\"Papa Johns UAE Menu & Prices (AED)\",\"source_url\":\"https://www.papajohns.ae/menu\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Pizzas / Butter Chicken\",\"qualifiers\":[\"Public UAE website menu; the store directory states shared menus and prices across branches in both cities.\",\"No branch checkout selected; crust options, extras, fees, tax treatment, and availability need confirmation.\",\"An observed competitor flavor variant does not establish local customer preferences.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-PRICE-001\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"menu\",\"pricing\",\"competitors\"],\"entity\":\"Allo Beirut Khalifa City - chicken shawarma sizes\",\"observation\":\"The Khalifa City Deliveroo menu lists small chicken shawarma sandwich at AED 11, regular at AED 15.50, and large at AED 26.\",\"source_title\":\"Allo Beirut - Khalifa City delivery menu\",\"source_url\":\"https://deliveroo.ae/en/menu/abu-dhabi/khalifa-city/allo-beirut-khalifa-city/\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Shawarma / Chicken Shawarma Sandwich Small; Regular; Large\",\"qualifiers\":[\"Khalifa City, Abu Dhabi branch, anonymous Deliveroo listing with no delivery address selected; menu visibility can vary.\",\"Small, regular, and large are menu labels; weights were not specified. Observed item prices are not a completed checkout total; delivery charges, extras, and tax treatment were not verified.\",\"No publication date shown; recheck menu, price, and availability before a decision.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false}],\"matched_count\":13,\"omitted_count\":5},\"warnings\":[\"Some matching records were omitted to respect result or payload limits.\"]}",
+      "error": false
+    },
+    {
+      "name": "lookup_market_evidence",
+      "arguments": {
+        "cities": [
+          "dubai",
+          "abu_dhabi"
+        ],
+        "topics": [
+          "competitors"
+        ],
+        "query": "kebab shawarma pizza",
+        "limit": 12
+      },
+      "result": "{\"status\":\"ok\",\"data\":{\"records\":[{\"id\":\"DXB-COMP-001\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Papa Johns - Deira\",\"observation\":\"Papa Johns lists pizza branches at Al Ghurair Centre in Al Muraqqabat and Deira City Centre in Port Saeed.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Dubai / Al Ghurair Centre; Deira City Centre\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-COMP-001\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Papa Johns - Al Zahiyah\",\"observation\":\"Papa Johns lists a pizza branch by the Abu Dhabi Mall parking entrance in Al Zahiyah.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Abu Dhabi / Abu Dhabi Mall\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-COMP-002\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Papa Johns - Al Barsha\",\"observation\":\"Papa Johns lists a pizza branch at Al Barsha Mall on Al Barsha 2 Street.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Dubai / Al Barsha Mall\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-COMP-002\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Papa Johns - Khalidiya\",\"observation\":\"Papa Johns lists its ADNOC 913 Khalidiya pizza branch on Ash Shoulah Street in Al Khubeirah, Al Khalidiyah.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Abu Dhabi / ADNOC 913 Khalidiya\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-COMP-003\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Papa Johns - Dubai Marina\",\"observation\":\"Papa Johns lists a pizza branch at Marina Diamond near Dubai Marina Metro Station.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Dubai / Marina Diamond\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-COMP-003\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Papa Johns - Al Wahda / Al Manhal\",\"observation\":\"Papa Johns lists its Al Wahda Mall pizza branch on Hthaymah Street in Al Manhal, Abu Dhabi.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Abu Dhabi / Al Wahda Mall\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-COMP-005\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Allo Beirut - JBR\",\"observation\":\"Allo Beirut lists a Dubai branch on Al Mamsha Street in Jumeirah Beach Residence; its site includes shawarma, grills, and sandwiches.\",\"source_title\":\"Allo Beirut locations\",\"source_url\":\"https://www.allobeirutstreetfood.com/locations\",\"publisher\":\"Allo Beirut\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Dubai / JBR; footer / menu categories\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-COMP-006\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"competitors\",\"menu\",\"delivery\"],\"entity\":\"Operation Falafel - Madinat Khalifa A\",\"observation\":\"Talabat lists Operation Falafel in Madinat Khalifa A, with Arabic, Lebanese, sandwich, shawarma, and falafel categories.\",\"source_title\":\"Operation Falafel in Madinat Khalifa - A\",\"source_url\":\"https://www.talabat.com/uae/restaurant/704423/operation-falafel-khalifa-city--ad-7?aid=1483\",\"publisher\":\"Talabat\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Restaurant heading and cuisine tags\",\"qualifiers\":[\"Khalifa City, Abu Dhabi; the page title refers to the delivery area Masdar City, not a verified street address.\",\"Only branch heading and cuisine categories were inspected; item prices and delivery catchment were not established.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-PRICE-001\",\"cities\":[\"dubai\"],\"topics\":[\"menu\",\"pricing\",\"competitors\"],\"entity\":\"Allo Beirut JBR - pizza\",\"observation\":\"The JBR Deliveroo menu lists Pepperoni pizza at AED 40 and Margherita pizza at AED 38.\",\"source_title\":\"Allo Beirut - JBR delivery menu\",\"source_url\":\"https://deliveroo.ae/en/menu/dubai/jbr/allo-beirut-jbr\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Pizza / Pizza Pepperoni; Pizza Margherita\",\"qualifiers\":[\"JBR, Dubai branch, anonymous Deliveroo listing with no delivery address selected; menu visibility can vary.\",\"Pizza diameter and weight were not specified. Observed item prices are not a completed checkout total; delivery charges, extras, and tax treatment were not verified.\",\"No publication date shown; recheck menu, price, and availability before a decision.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-COMP-007\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"competitors\",\"menu\",\"operations\"],\"entity\":\"Operation Falafel - Zayed International Airport\",\"observation\":\"The airport lists Operation Falafel in Terminal A departures, airside Food Park Mezzanine Level 5, open 24 hours, serving shawarma, hummus, falafel, and salad bowls.\",\"source_title\":\"Operation Falafel at Zayed International Airport\",\"source_url\":\"https://www.zayedinternationalairport.ae/en/shop-dine-and-experience/dining/restaurants/operation-falafel\",\"publisher\":\"Abu Dhabi Airports / Zayed International Airport\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Description; Highlights; Open; Location\",\"qualifiers\":[\"Airside airport concession serving departing passengers; not a comparable street-site catchment or pricing benchmark.\",\"Airport hours and access do not apply to other branches; confirm current concession operation.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false}],\"matched_count\":12,\"omitted_count\":2},\"warnings\":[\"Some matching records were omitted to respect result or payload limits.\"]}",
+      "error": false
+    }
+  ],
+  "record": {
+    "model_requests": 2,
+    "input_tokens": 12411,
+    "output_tokens": 1883,
+    "reasoning_tokens": 0,
+    "cached_tokens": 7936,
+    "reported_cost_usd": "0.001703124",
+    "known_reported_cost_usd": "0.001703124",
+    "estimated_cost_usd": null,
+    "estimate_basis": null,
+    "usage_complete": true,
+    "schema_version": 1,
+    "run_id": "22b2ecd5-0612-420e-8720-53b7f8aa0222",
+    "session_id": "08eed252-bd60-490f-8dd6-f44bd410e025",
+    "timestamp_utc": "2026-10-14T13:24:56.772354Z",
+    "model_requested": "deepseek/deepseek-v4.1-flash",
+    "model_reported_if_available": [
+      "deepseek/deepseek-v4.1-flash"
+    ],
+    "provider_if_available": [
+      "Morph"
+    ],
+    "prompt_version": "11.1",
+    "evidence_dataset_version": "a226a6b54cf292e9b2f6f6e9c51112957bff64195bc8182e0b579dd1f79ca3c5",
+    "question": "Propose a launch menu for both Dubai and Abu Dhabi, with portions and localization.",
+    "outcome": "completed",
+    "error_category": null,
+    "tool_events": [
+      {
+        "name": "lookup_market_evidence",
+        "duration_ms": 0.857871025800705,
+        "status": "ok",
+        "result_count": 8
+      },
+      {
+        "name": "lookup_market_evidence",
+        "duration_ms": 0.9133520070463419,
+        "status": "ok",
+        "result_count": 10
+      }
+    ],
+    "requests": [
+      {
+        "generation_id": "gen-1791984296-pEeBiJe1QDwbxqJYNObe",
+        "model_reported": "deepseek/deepseek-v4.1-flash",
+        "provider_reported": "Morph",
+        "duration_ms": 4864.3108870019205,
+        "outcome": "completed",
+        "input_tokens": 4038,
+        "output_tokens": 200,
+        "reasoning_tokens": 0,
+        "cached_tokens": 3968,
+        "reported_cost_usd": "0.000197672"
+      },
+      {
+        "generation_id": "gen-1791984301-v20xioBYODm0ascH7jZt",
+        "model_reported": "deepseek/deepseek-v4.1-flash",
+        "provider_reported": "Morph",
+        "duration_ms": 33392.43161003105,
+        "outcome": "completed",
+        "input_tokens": 8373,
+        "output_tokens": 1683,
+        "reasoning_tokens": 0,
+        "cached_tokens": 3968,
+        "reported_cost_usd": "0.001505452"
+      }
+    ],
+    "evidence_ids": [
+      "DXB-MENU-001",
+      "AUH-COMP-006",
+      "DXB-PRICE-001",
+      "AUH-COMP-007",
+      "DXB-PRICE-002",
+      "AUH-MENU-001",
+      "UAE-MENU-001",
+      "AUH-PRICE-001",
+      "DXB-COMP-001",
+      "AUH-COMP-001",
+      "DXB-COMP-002",
+      "AUH-COMP-002",
+      "DXB-COMP-003",
+      "AUH-COMP-003",
+      "DXB-COMP-005"
+    ],
+    "calculation_ids": [],
+    "latency_ms": 38279.217514034826,
+    "tool_output_characters": 15832,
+    "validation_errors": [],
+    "warnings": [
+      "Some matching records were omitted to respect result or payload limits."
+    ]
+  },
+  "warnings": [
+    "Some matching records were omitted to respect result or payload limits."
+  ],
+  "error_category": null,
+  "error_message": null,
+  "checks": {
+    "reference_integrity": true,
+    "requested_cities_present": true,
+    "durable_profile_unchanged": true,
+    "calculator_exact": null,
+    "claim_support": "requires review"
+  }
+}

@@ -1,0 +1,20 @@
+Executive evaluation — live
+Fixture runs check plumbing only. Assistant scores are provisional, not human acceptance.
+Case  Outcome     Score  Reviewer
+E01   completed   5      assistant_provisional
+E02   completed   5      assistant_provisional
+E03   completed   4      assistant_provisional
+E04   completed   5      assistant_provisional
+E05   completed   4      assistant_provisional
+E06   completed   4      assistant_provisional
+E07   completed   6      assistant_provisional
+E08   completed   7      assistant_provisional
+E09   completed   7      assistant_provisional
+E10   completed   9      assistant_provisional
+E11   error       0      assistant_provisional
+E12   completed   9      assistant_provisional
+Qualifying reviewed cases: 2/12; human: 0/12
+Executive release gate passed: False; human review pending
+Reference integrity does not establish factual support.
+Hard failures: ["E01: Unsupported neighborhood/customer characterization inside an inference.", "E02: Unsupported traffic, residential composition and relative-rent premises.", "E03: Unsupported catchment and district characterization.", "E07: Recommends unsupported /set fields for all eight calculator inputs.", "E08: Assumes shared equipment and staffing feasibility without a supplied layout or volume.", "E11: Unretrieved historical evidence IDs; answer blocked by validation."]
+Usage: {"model_requests": 27, "input_tokens": 163870, "output_tokens": 24829, "reasoning_tokens": 0, "cached_tokens": 112896, "reported_cost_usd": "0.022306536", "known_reported_cost_usd": "0.022306536", "estimated_cost_usd": null, "estimate_basis": null, "usage_complete": true}

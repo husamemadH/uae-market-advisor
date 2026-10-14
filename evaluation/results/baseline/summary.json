@@ -1,0 +1,162 @@
+{
+  "mode": "live",
+  "cases": [
+    {
+      "case": "E01",
+      "status": "completed",
+      "score": 5,
+      "reviewer_type": "assistant_provisional",
+      "qualifies": false,
+      "failures": [
+        "Unsupported neighborhood/customer characterization inside an inference."
+      ]
+    },
+    {
+      "case": "E02",
+      "status": "completed",
+      "score": 5,
+      "reviewer_type": "assistant_provisional",
+      "qualifies": false,
+      "failures": [
+        "Unsupported traffic, residential composition and relative-rent premises."
+      ]
+    },
+    {
+      "case": "E03",
+      "status": "completed",
+      "score": 4,
+      "reviewer_type": "assistant_provisional",
+      "qualifies": false,
+      "failures": [
+        "Unsupported catchment and district characterization."
+      ]
+    },
+    {
+      "case": "E04",
+      "status": "completed",
+      "score": 5,
+      "reviewer_type": "assistant_provisional",
+      "qualifies": false,
+      "failures": []
+    },
+    {
+      "case": "E05",
+      "status": "completed",
+      "score": 4,
+      "reviewer_type": "assistant_provisional",
+      "qualifies": false,
+      "failures": []
+    },
+    {
+      "case": "E06",
+      "status": "completed",
+      "score": 4,
+      "reviewer_type": "assistant_provisional",
+      "qualifies": false,
+      "failures": []
+    },
+    {
+      "case": "E07",
+      "status": "completed",
+      "score": 6,
+      "reviewer_type": "assistant_provisional",
+      "qualifies": false,
+      "failures": [
+        "Recommends unsupported /set fields for all eight calculator inputs."
+      ]
+    },
+    {
+      "case": "E08",
+      "status": "completed",
+      "score": 7,
+      "reviewer_type": "assistant_provisional",
+      "qualifies": false,
+      "failures": [
+        "Assumes shared equipment and staffing feasibility without a supplied layout or volume."
+      ]
+    },
+    {
+      "case": "E09",
+      "status": "completed",
+      "score": 7,
+      "reviewer_type": "assistant_provisional",
+      "qualifies": false,
+      "failures": []
+    },
+    {
+      "case": "E10",
+      "status": "completed",
+      "score": 9,
+      "reviewer_type": "assistant_provisional",
+      "qualifies": true,
+      "failures": []
+    },
+    {
+      "case": "E11",
+      "status": "error",
+      "score": 0,
+      "reviewer_type": "assistant_provisional",
+      "qualifies": false,
+      "failures": [
+        "Unretrieved historical evidence IDs; answer blocked by validation."
+      ]
+    },
+    {
+      "case": "E12",
+      "status": "completed",
+      "score": 9,
+      "reviewer_type": "assistant_provisional",
+      "qualifies": true,
+      "failures": []
+    }
+  ],
+  "executed": 12,
+  "coverage_by_requested_topic_and_answer_city": {
+    "dubai": [
+      "competitors",
+      "delivery",
+      "locations",
+      "marketing",
+      "menu",
+      "operations",
+      "pricing",
+      "suppliers"
+    ],
+    "abu_dhabi": [
+      "competitors",
+      "delivery",
+      "locations",
+      "marketing",
+      "menu",
+      "operations",
+      "pricing",
+      "suppliers"
+    ]
+  },
+  "coverage_note": "Tags and city presence only; substantive topic coverage requires review.",
+  "session_sequence_valid": true,
+  "qualifying_reviews": 2,
+  "qualifying_human_reviews": 0,
+  "hard_failures": [
+    "E01: Unsupported neighborhood/customer characterization inside an inference.",
+    "E02: Unsupported traffic, residential composition and relative-rent premises.",
+    "E03: Unsupported catchment and district characterization.",
+    "E07: Recommends unsupported /set fields for all eight calculator inputs.",
+    "E08: Assumes shared equipment and staffing feasibility without a supplied layout or volume.",
+    "E11: Unretrieved historical evidence IDs; answer blocked by validation."
+  ],
+  "executive_release_gate_passed": false,
+  "review_status": "human review pending",
+  "usage": {
+    "model_requests": 27,
+    "input_tokens": 163870,
+    "output_tokens": 24829,
+    "reasoning_tokens": 0,
+    "cached_tokens": 112896,
+    "reported_cost_usd": "0.022306536",
+    "known_reported_cost_usd": "0.022306536",
+    "estimated_cost_usd": null,
+    "estimate_basis": null,
+    "usage_complete": true
+  }
+}

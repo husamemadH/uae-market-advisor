@@ -1,0 +1,694 @@
+{
+  "case": {
+    "id": "E09",
+    "question": "How should we source ingredients and choose suppliers for branches in Dubai and Abu Dhabi?",
+    "cities": [
+      "dubai",
+      "abu_dhabi"
+    ],
+    "topics": [
+      "suppliers"
+    ],
+    "profile": {},
+    "followup_of": null,
+    "expected": [
+      "Ingredient specifications and receiving checks",
+      "Backup supply and quote process",
+      "Named examples supported or omitted",
+      "Both cities addressed"
+    ]
+  },
+  "status": "completed",
+  "session_id": "b795df65-5da4-4594-ad34-179253cf2065",
+  "run_id": "80d9781d-3ec3-46e3-9275-cf10c5c14547",
+  "profile_before": {
+    "restaurant_origin": "Jordan",
+    "core_products": [
+      "meaty pizza",
+      "kebab sandwiches"
+    ],
+    "target_cities": [
+      "Dubai",
+      "Abu Dhabi"
+    ],
+    "startup_budget_aed": null,
+    "monthly_rent_budget_aed": null,
+    "branch_format": null,
+    "target_audience": null,
+    "positioning": null,
+    "planned_opening": null
+  },
+  "profile_after": {
+    "restaurant_origin": "Jordan",
+    "core_products": [
+      "meaty pizza",
+      "kebab sandwiches"
+    ],
+    "target_cities": [
+      "Dubai",
+      "Abu Dhabi"
+    ],
+    "startup_budget_aed": null,
+    "monthly_rent_budget_aed": null,
+    "branch_format": null,
+    "target_audience": null,
+    "positioning": null,
+    "planned_opening": null
+  },
+  "answer": {
+    "kind": "advice",
+    "cities": [
+      "dubai",
+      "abu_dhabi"
+    ],
+    "headline": "Two-emirate meat and dairy core: qualify one broadline distributor plus specialist butchers/bakeries, with split Dubai and Abu Dhabi receiving plans and documented cold chain.",
+    "sections": [
+      {
+        "title": "Distributor-led backbone for your core inputs",
+        "items": [
+          {
+            "text": "Bidfood UAE lists an Abu Dhabi distribution centre in Mussafah (ICAD 2, M-41 Industrial Area) and a Dubai distribution centre in Dubai Investment Park 2, plot 597-974, which gives you candidate receiving/pickup points to test in each emirate.",
+            "basis": "fact",
+            "evidence_ids": [
+              "AUH-SUP-001",
+              "DXB-SUP-001"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Bidfood UAE lists 2026-2027 catalogues in a beef protein category and premium cheeses, plus a stated service that its UAE distribution centres deliver to all emirates daily with an online ordering portal.",
+            "basis": "fact",
+            "evidence_ids": [
+              "UAE-SUP-001",
+              "UAE-SUP-002"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Treat the catalogue and delivery statements as supplier claims, not verified terms: no stock, price, halal documentation, allergen data, minimum order, lead time, credit terms, or capacity for your beef and pizza-cheese specs was established, so request samples, specification sheets and a written quotation before signing a supply agreement.",
+            "basis": "inference",
+            "evidence_ids": [
+              "UAE-SUP-001",
+              "UAE-SUP-002"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Proposal: run a two-supplier structure for the highest-risk items - one broadline distributor for dry goods, packaging, oils, frozen and dairy lines, and one or two specialist suppliers for beef/shawarma cuts and pizza cheese - so a single failure does not stop the menu.",
+            "basis": "proposal",
+            "evidence_ids": [
+              "UAE-SUP-001",
+              "UAE-SUP-002"
+            ],
+            "calculation_ids": []
+          }
+        ]
+      },
+      {
+        "title": "Specification and cold-chain requirements",
+        "items": [
+          {
+            "text": "Dubai Municipality guidance for food transport specifies units able to hold hot food at 60 C or above, cold food at 5 C or below and frozen food at -18 C or below; version 2 is dated 2023-08-31 and is flagged as needing review for amendments and activity-specific applicability.",
+            "basis": "fact",
+            "evidence_ids": [
+              "DXB-DEL-001"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "The same guidance requires sealed food containers and separation of hot and cold items into insulated secondary units in transport.",
+            "basis": "fact",
+            "evidence_ids": [
+              "DXB-DEL-002"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Proposal: write temperature windows into purchase orders for chilled beef, dairy pizza cheese and frozen items, and ask each supplier for their own vehicle/insulation records rather than assuming compliance from the public guidance.",
+            "basis": "proposal",
+            "evidence_ids": [
+              "DXB-DEL-001",
+              "DXB-DEL-002"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Proposal: add a goods-receiving check sheet per delivery - temperature probe readings, seal integrity, weight/count, batch or expiry date, allergen and origin labels - with a rejection rule so out-of-spec deliveries are returned, not accepted with an adjustment.",
+            "basis": "proposal",
+            "evidence_ids": [
+              "DXB-DEL-001",
+              "DXB-DEL-002"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Research gap: no curated evidence was returned on Jordanian/Syrian specialty ingredient importers, spice, olive oil, sumac, or halal certification bodies in either emirate, so that sourcing route still needs primary enquiries or a targeted search.",
+            "basis": "inference",
+            "evidence_ids": [],
+            "calculation_ids": []
+          }
+        ]
+      },
+      {
+        "title": "Abu Dhabi receiving and staff handling",
+        "items": [
+          {
+            "text": "ADAFSA runs an Essential Food Safety Training programme for food handlers in Abu Dhabi covering cross-contamination, cooking or processing, cleaning, chilling, and food safety management, and describes periodic operator self-inspections against an approved checklist with records of findings and corrective actions.",
+            "basis": "fact",
+            "evidence_ids": [
+              "AUH-OPS-001",
+              "AUH-OPS-002"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Proposal: for the Abu Dhabi branch, keep one file with supplier approvals, delivery temperature logs, EFST certificates for handlers and completed self-inspection records, since that authority's record-keeping expectation applies to delivered ingredients as much as to in-kitchen handling.",
+            "basis": "proposal",
+            "evidence_ids": [
+              "AUH-OPS-001",
+              "AUH-OPS-002"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Inference: because the two candidate distribution centres sit in different emirates, each branch likely needs its own receiving window, dry/chilled/frozen storage split and backup pickup point; confirm whether a single distributor can serve both sites on schedules that match your service hours before assuming one contract covers both.",
+            "basis": "inference",
+            "evidence_ids": [
+              "AUH-SUP-001",
+              "DXB-SUP-001",
+              "UAE-SUP-002"
+            ],
+            "calculation_ids": []
+          }
+        ]
+      },
+      {
+        "title": "Qualification and commercial test plan",
+        "items": [
+          {
+            "text": "Proposal: score each candidate supplier on: spec match for beef cuts and pizza cheese, sample tasting panel, cold-chain documentation, halal and allergen documentation, fill rate, minimum order, lead time, price per kg, packaging format, delivery window reliability and capacity for a second branch.",
+            "basis": "proposal",
+            "evidence_ids": [
+              "UAE-SUP-001"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Proposal: start with a 4-6 week trial covering both brands of your core items (meaty pizza and kebab sandwich), comparing landed cost per portion, waste, and out-of-stock incidents, then decide on a primary and a pre-qualified backup before opening the second branch.",
+            "basis": "proposal",
+            "evidence_ids": [
+              "UAE-SUP-001",
+              "UAE-SUP-002"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Assumption from your profile, not a researched fact: the concept is Jordanian meaty pizza and kebab sandwiches, targeting Dubai and Abu Dhabi; branch format, monthly rent budget, startup budget, audience and positioning are still unset, so storage capacity and order volumes used in supplier negotiations cannot yet be sized.",
+            "basis": "assumption",
+            "evidence_ids": [],
+            "calculation_ids": []
+          }
+        ]
+      }
+    ],
+    "assumptions": [
+      "Assumption from the saved profile: Jordanian-origin concept selling meaty pizza and kebab sandwiches, targeting Dubai and Abu Dhabi; branch format is unspecified, so implications for storage capacity and multi-branch logistics are not yet sized.",
+      "Assumption: the business will be an operator-buyer (not a distributor) purchasing on its own account, which is implicit in the supplier and receiving recommendations.",
+      "Assumption: the 2023 Dubai Municipality transport guidance is still the relevant reference; the source is flagged needs_review, so verify any amendments or activity-specific requirements before relying on it."
+    ],
+    "next_steps": [
+      "Request written quotes and specification sheets from at least two broadline distributors per emirate and from specialist beef and pizza-cheese suppliers, covering both branch addresses.",
+      "Run a cold-chain and receiving audit as a trial before contract signature, including a night/delivery-window test to match your intended service hours.",
+      "Consider using /set to record your startup budget, monthly rent budget, branch format and target audience so supplier volumes, storage and order schedules can be properly sized in follow-up advice.",
+      "Ask about specific suppliers to pursue if you want names beyond the ones already identified: dairy and pizza-cheese specialists, beef/shawarma processors, specialty Jordanian/Levantine ingredient importers, and packaging vendors."
+    ],
+    "questions": [
+      "What monthly order volume and storage capacity per branch should the supplier plan be sized against, and do you need a single distributor for both emirates or one contract per branch?",
+      "Do you already have a preference for a broadline distributor model versus direct meat and dairy suppliers, and is a dedicated deliveries-only cold chain vehicle part of your plan?"
+    ]
+  },
+  "rendered_answer": "Two-emirate meat and dairy core: qualify one broadline distributor plus specialist butchers/bakeries, with split Dubai and Abu Dhabi receiving plans and documented cold chain.\n\n**Distributor-led backbone for your core inputs**\n\n- **Fact:** Bidfood UAE lists an Abu Dhabi distribution centre in Mussafah \\(ICAD 2, M-41 Industrial Area\\) and a Dubai distribution centre in Dubai Investment Park 2, plot 597-974, which gives you candidate receiving/pickup points to test in each emirate. [1](<https://www.bidfoodme.com/get-in-touch/uae>)\n- **Fact:** Bidfood UAE lists 2026-2027 catalogues in a beef protein category and premium cheeses, plus a stated service that its UAE distribution centres deliver to all emirates daily with an online ordering portal. [2](<https://www.bidfoodme.com/presence/uae>)\n- **Inference:** Treat the catalogue and delivery statements as supplier claims, not verified terms: no stock, price, halal documentation, allergen data, minimum order, lead time, credit terms, or capacity for your beef and pizza-cheese specs was established, so request samples, specification sheets and a written quotation before signing a supply agreement. [2](<https://www.bidfoodme.com/presence/uae>)\n- **Proposal:** Proposal: run a two-supplier structure for the highest-risk items - one broadline distributor for dry goods, packaging, oils, frozen and dairy lines, and one or two specialist suppliers for beef/shawarma cuts and pizza cheese - so a single failure does not stop the menu. [2](<https://www.bidfoodme.com/presence/uae>)\n\n**Specification and cold-chain requirements**\n\n- **Fact:** Dubai Municipality guidance for food transport specifies units able to hold hot food at 60 C or above, cold food at 5 C or below and frozen food at -18 C or below; version 2 is dated 2023-08-31 and is flagged as needing review for amendments and activity-specific applicability. [3](<https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf>)\n- **Fact:** The same guidance requires sealed food containers and separation of hot and cold items into insulated secondary units in transport. [3](<https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf>)\n- **Proposal:** Proposal: write temperature windows into purchase orders for chilled beef, dairy pizza cheese and frozen items, and ask each supplier for their own vehicle/insulation records rather than assuming compliance from the public guidance. [3](<https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf>)\n- **Proposal:** Proposal: add a goods-receiving check sheet per delivery - temperature probe readings, seal integrity, weight/count, batch or expiry date, allergen and origin labels - with a rejection rule so out-of-spec deliveries are returned, not accepted with an adjustment. [3](<https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf>)\n- **Inference:** Research gap: no curated evidence was returned on Jordanian/Syrian specialty ingredient importers, spice, olive oil, sumac, or halal certification bodies in either emirate, so that sourcing route still needs primary enquiries or a targeted search.\n\n**Abu Dhabi receiving and staff handling**\n\n- **Fact:** ADAFSA runs an Essential Food Safety Training programme for food handlers in Abu Dhabi covering cross-contamination, cooking or processing, cleaning, chilling, and food safety management, and describes periodic operator self-inspections against an approved checklist with records of findings and corrective actions. [4](<https://prod.adafsa.gov.ae/en/work/food-safety/Pages/default.aspx>)\n- **Proposal:** Proposal: for the Abu Dhabi branch, keep one file with supplier approvals, delivery temperature logs, EFST certificates for handlers and completed self-inspection records, since that authority's record-keeping expectation applies to delivered ingredients as much as to in-kitchen handling. [4](<https://prod.adafsa.gov.ae/en/work/food-safety/Pages/default.aspx>)\n- **Inference:** Inference: because the two candidate distribution centres sit in different emirates, each branch likely needs its own receiving window, dry/chilled/frozen storage split and backup pickup point; confirm whether a single distributor can serve both sites on schedules that match your service hours before assuming one contract covers both. [1](<https://www.bidfoodme.com/get-in-touch/uae>) [2](<https://www.bidfoodme.com/presence/uae>)\n\n**Qualification and commercial test plan**\n\n- **Proposal:** Proposal: score each candidate supplier on: spec match for beef cuts and pizza cheese, sample tasting panel, cold-chain documentation, halal and allergen documentation, fill rate, minimum order, lead time, price per kg, packaging format, delivery window reliability and capacity for a second branch. [2](<https://www.bidfoodme.com/presence/uae>)\n- **Proposal:** Proposal: start with a 4-6 week trial covering both brands of your core items \\(meaty pizza and kebab sandwich\\), comparing landed cost per portion, waste, and out-of-stock incidents, then decide on a primary and a pre-qualified backup before opening the second branch. [2](<https://www.bidfoodme.com/presence/uae>)\n- **Assumption:** Assumption from your profile, not a researched fact: the concept is Jordanian meaty pizza and kebab sandwiches, targeting Dubai and Abu Dhabi; branch format, monthly rent budget, startup budget, audience and positioning are still unset, so storage capacity and order volumes used in supplier negotiations cannot yet be sized.\n\n**Assumptions and limitations**\n\n- Assumption from the saved profile: Jordanian-origin concept selling meaty pizza and kebab sandwiches, targeting Dubai and Abu Dhabi; branch format is unspecified, so implications for storage capacity and multi-branch logistics are not yet sized.\n- Assumption: the business will be an operator-buyer \\(not a distributor\\) purchasing on its own account, which is implicit in the supplier and receiving recommendations.\n- Assumption: the 2023 Dubai Municipality transport guidance is still the relevant reference; the source is flagged needs\\_review, so verify any amendments or activity-specific requirements before relying on it.\n\n**Next steps**\n\n- Request written quotes and specification sheets from at least two broadline distributors per emirate and from specialist beef and pizza-cheese suppliers, covering both branch addresses.\n- Run a cold-chain and receiving audit as a trial before contract signature, including a night/delivery-window test to match your intended service hours.\n- Consider using /set to record your startup budget, monthly rent budget, branch format and target audience so supplier volumes, storage and order schedules can be properly sized in follow-up advice.\n- Ask about specific suppliers to pursue if you want names beyond the ones already identified: dairy and pizza-cheese specialists, beef/shawarma processors, specialty Jordanian/Levantine ingredient importers, and packaging vendors.\n\n**Questions**\n\n- What monthly order volume and storage capacity per branch should the supplier plan be sized against, and do you need a single distributor for both emirates or one contract per branch?\n- Do you already have a preference for a broadline distributor model versus direct meat and dairy suppliers, and is a dedicated deliveries-only cold chain vehicle part of your plan?\n\n**Tool warnings**\n\n- Some returned records need review; inspect their dates and freshness flags.\n- Some matching records were omitted to respect result or payload limits.\n\n**Sources**\n\n1. [Bidfood UAE contact and distribution centres](<https://www.bidfoodme.com/get-in-touch/uae>) — Bidfood Middle East\n   - Bidfood - Abu Dhabi distribution centre: checked 2026-10-12 UTC.\n     Location in source: Abu Dhabi / HORECA Trade L.L.C Abu Dhabi Distribution Center.\n     - Public supplier contact location; not proof of branch-specific delivery coverage, product certification, prices, or capacity.\n   - Bidfood - Dubai distribution centre: checked 2026-10-12 UTC.\n     Location in source: Dubai / HORECA Trade L.L.C Dubai Distribution Center.\n     - Public supplier contact location; not proof of branch-specific delivery coverage, product certification, prices, or capacity.\n2. [Bidfood UAE presence and catalogues](<https://www.bidfoodme.com/presence/uae>) — Bidfood Middle East\n   - Bidfood UAE - beef and cheese catalogue categories: checked 2026-10-12 UTC.\n     Location in source: Our Catalogues / Center of The Plate 2026-2027; Premium Cheeses 2026-2027 \\(embedded catalogue metadata\\).\n     - Supplier-owned catalogue categories only; specific beef cuts and pizza cheese suitability require samples and specifications.\n     - No verified stock, prices, halal documentation, allergen documentation, minimum order, credit terms, or capacity.\n   - Bidfood UAE - distribution service statement: checked 2026-10-12 UTC.\n     Location in source: UAE overview; Distribution centers delivering to all Emirates daily.\n     - Supplier service claim, not an independently verified delivery commitment to a proposed Dubai or Abu Dhabi site.\n     - Delivery schedule, minimum order, lead times, substitutions, stock continuity, and cold chain need written confirmation.\n3. [Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2](<https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf>) — Dubai Municipality\n   - Dubai Municipality - transport cold chain: checked 2026-10-12 UTC; published 2023-08-31; NEEDS REVIEW.\n     Location in source: PDF pages 13-14, section 1.2.2 Temperature Control Requirements.\n     - Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\n     - Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\n     - Transport holding requirements, not cooking temperatures or evidence that a supplier or vehicle meets them.\n   - Dubai Municipality - sealed delivery and separation: checked 2026-10-12 UTC; published 2023-08-31; NEEDS REVIEW.\n     Location in source: PDF page 18, section 1.4.1\\(e\\)-\\(f\\).\n     - Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\n     - Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\n4. [ADAFSA food safety programmes](<https://prod.adafsa.gov.ae/en/work/food-safety/Pages/default.aspx>) — Abu Dhabi Agriculture and Food Safety Authority\n   - ADAFSA - Essential Food Safety Training: checked 2026-10-12 UTC.\n     Location in source: Essential Food Safety Training Program \\(EFST\\).\n     - Emirate of Abu Dhabi programme; cooking/processing and food safety management modules apply where relevant.\n     - Programme summary does not establish training prices, staff wages, staffing ratios, or all premises requirements.\n   - ADAFSA - documented self-inspection: checked 2026-10-12 UTC.\n     Location in source: Self-Inspection; Self-Inspection Objectives.\n     - Abu Dhabi authority summary; the checklist depends on establishment type and applicable rules.\n     - No staffing level, inspection frequency in days, or compliance guarantee was established.",
+  "cited_evidence_ids": [
+    "AUH-OPS-001",
+    "AUH-OPS-002",
+    "AUH-SUP-001",
+    "DXB-DEL-001",
+    "DXB-DEL-002",
+    "DXB-SUP-001",
+    "UAE-SUP-001",
+    "UAE-SUP-002"
+  ],
+  "retrieved_sources": {
+    "DXB-DEL-001": {
+      "id": "DXB-DEL-001",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "delivery",
+        "operations",
+        "suppliers"
+      ],
+      "entity": "Dubai Municipality - transport cold chain",
+      "observation": "Dubai Municipality guidance specifies transportation units capable of holding hot food at 60 C or above, cold food at 5 C or below, and frozen food at -18 C or below.",
+      "source_title": "Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2",
+      "source_url": "https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf",
+      "publisher": "Dubai Municipality",
+      "source_kind": "official",
+      "published_on": "2023-08-31",
+      "checked_on": "2026-10-12",
+      "locator": "PDF pages 13-14, section 1.2.2 Temperature Control Requirements",
+      "qualifiers": [
+        "Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.",
+        "Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.",
+        "Transport holding requirements, not cooking temperatures or evidence that a supplier or vehicle meets them."
+      ],
+      "valid_until": null,
+      "needs_review": true,
+      "expired": false
+    },
+    "AUH-SUP-001": {
+      "id": "AUH-SUP-001",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "suppliers"
+      ],
+      "entity": "Bidfood - Abu Dhabi distribution centre",
+      "observation": "Bidfood lists an Abu Dhabi distribution centre in Mussafah, ICAD 2, M-41 Industrial Area.",
+      "source_title": "Bidfood UAE contact and distribution centres",
+      "source_url": "https://www.bidfoodme.com/get-in-touch/uae",
+      "publisher": "Bidfood Middle East",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Abu Dhabi / HORECA Trade L.L.C Abu Dhabi Distribution Center",
+      "qualifiers": [
+        "Public supplier contact location; not proof of branch-specific delivery coverage, product certification, prices, or capacity."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-SUP-001": {
+      "id": "DXB-SUP-001",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "suppliers"
+      ],
+      "entity": "Bidfood - Dubai distribution centre",
+      "observation": "Bidfood lists a Dubai distribution centre in Dubai Investment Park 2, plot 597-974.",
+      "source_title": "Bidfood UAE contact and distribution centres",
+      "source_url": "https://www.bidfoodme.com/get-in-touch/uae",
+      "publisher": "Bidfood Middle East",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Dubai / HORECA Trade L.L.C Dubai Distribution Center",
+      "qualifiers": [
+        "Public supplier contact location; not proof of branch-specific delivery coverage, product certification, prices, or capacity."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "UAE-SUP-001": {
+      "id": "UAE-SUP-001",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "suppliers"
+      ],
+      "entity": "Bidfood UAE - beef and cheese catalogue categories",
+      "observation": "Bidfood UAE lists 2026-2027 catalogues for a beef protein category and premium cheeses.",
+      "source_title": "Bidfood UAE presence and catalogues",
+      "source_url": "https://www.bidfoodme.com/presence/uae",
+      "publisher": "Bidfood Middle East",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Our Catalogues / Center of The Plate 2026-2027; Premium Cheeses 2026-2027 (embedded catalogue metadata)",
+      "qualifiers": [
+        "Supplier-owned catalogue categories only; specific beef cuts and pizza cheese suitability require samples and specifications.",
+        "No verified stock, prices, halal documentation, allergen documentation, minimum order, credit terms, or capacity."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "UAE-SUP-002": {
+      "id": "UAE-SUP-002",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "suppliers"
+      ],
+      "entity": "Bidfood UAE - distribution service statement",
+      "observation": "Bidfood states that its UAE distribution centres deliver to all emirates daily and provides myBidfood for online ordering.",
+      "source_title": "Bidfood UAE presence and catalogues",
+      "source_url": "https://www.bidfoodme.com/presence/uae",
+      "publisher": "Bidfood Middle East",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "UAE overview; Distribution centers delivering to all Emirates daily",
+      "qualifiers": [
+        "Supplier service claim, not an independently verified delivery commitment to a proposed Dubai or Abu Dhabi site.",
+        "Delivery schedule, minimum order, lead times, substitutions, stock continuity, and cold chain need written confirmation."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-COMP-006": {
+      "id": "DXB-COMP-006",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "locations",
+        "competitors",
+        "operations"
+      ],
+      "entity": "Zaroob - Dubai Marina",
+      "observation": "Zaroob lists its Dubai Marina restaurant at Radisson Blu Residence with advertised hours of 7 AM to 5 AM.",
+      "source_title": "Zaroob hours and locations",
+      "source_url": "https://www.zaroob.com/",
+      "publisher": "Zaroob",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Hours & Locations / Zaroob Marina",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability.",
+        "Hours are branch-specific observations, not evidence that late-night staffing would be profitable."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "AUH-COMP-007": {
+      "id": "AUH-COMP-007",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "competitors",
+        "menu",
+        "operations"
+      ],
+      "entity": "Operation Falafel - Zayed International Airport",
+      "observation": "The airport lists Operation Falafel in Terminal A departures, airside Food Park Mezzanine Level 5, open 24 hours, serving shawarma, hummus, falafel, and salad bowls.",
+      "source_title": "Operation Falafel at Zayed International Airport",
+      "source_url": "https://www.zayedinternationalairport.ae/en/shop-dine-and-experience/dining/restaurants/operation-falafel",
+      "publisher": "Abu Dhabi Airports / Zayed International Airport",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Description; Highlights; Open; Location",
+      "qualifiers": [
+        "Airside airport concession serving departing passengers; not a comparable street-site catchment or pricing benchmark.",
+        "Airport hours and access do not apply to other branches; confirm current concession operation."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "AUH-OPS-001": {
+      "id": "AUH-OPS-001",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "operations"
+      ],
+      "entity": "ADAFSA - Essential Food Safety Training",
+      "observation": "ADAFSA describes Essential Food Safety Training for food handlers in Abu Dhabi, covering cross-contamination, cooking or processing, cleaning, chilling, and food safety management.",
+      "source_title": "ADAFSA food safety programmes",
+      "source_url": "https://prod.adafsa.gov.ae/en/work/food-safety/Pages/default.aspx",
+      "publisher": "Abu Dhabi Agriculture and Food Safety Authority",
+      "source_kind": "official",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Essential Food Safety Training Program (EFST)",
+      "qualifiers": [
+        "Emirate of Abu Dhabi programme; cooking/processing and food safety management modules apply where relevant.",
+        "Programme summary does not establish training prices, staff wages, staffing ratios, or all premises requirements."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-DEL-002": {
+      "id": "DXB-DEL-002",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "delivery",
+        "operations"
+      ],
+      "entity": "Dubai Municipality - sealed delivery and separation",
+      "observation": "Dubai Municipality delivery guidance requires sealed food containers and separation of hot and cold items into insulated secondary units during transport.",
+      "source_title": "Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2",
+      "source_url": "https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf",
+      "publisher": "Dubai Municipality",
+      "source_kind": "official",
+      "published_on": "2023-08-31",
+      "checked_on": "2026-10-12",
+      "locator": "PDF page 18, section 1.4.1(e)-(f)",
+      "qualifiers": [
+        "Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.",
+        "Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist."
+      ],
+      "valid_until": null,
+      "needs_review": true,
+      "expired": false
+    },
+    "AUH-OPS-002": {
+      "id": "AUH-OPS-002",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "operations"
+      ],
+      "entity": "ADAFSA - documented self-inspection",
+      "observation": "ADAFSA describes periodic operator self-inspections using its approved checklist, with records of findings, corrective actions, and follow-up available to inspectors.",
+      "source_title": "ADAFSA food safety programmes",
+      "source_url": "https://prod.adafsa.gov.ae/en/work/food-safety/Pages/default.aspx",
+      "publisher": "Abu Dhabi Agriculture and Food Safety Authority",
+      "source_kind": "official",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Self-Inspection; Self-Inspection Objectives",
+      "qualifiers": [
+        "Abu Dhabi authority summary; the checklist depends on establishment type and applicable rules.",
+        "No staffing level, inspection frequency in days, or compliance guarantee was established."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-OPS-001": {
+      "id": "DXB-OPS-001",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "competitors",
+        "operations"
+      ],
+      "entity": "Zaroob - Sheikh Zayed Road and Motor City",
+      "observation": "Zaroob advertises 24-hour restaurants at Jumeirah Tower on Sheikh Zayed Road and First Avenue Mall in Motor City.",
+      "source_title": "Zaroob hours and locations",
+      "source_url": "https://www.zaroob.com/",
+      "publisher": "Zaroob",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Hours & Locations / Zaroob SZR; Zaroob Motor City",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability.",
+        "Extended hours do not establish order volume, labor cost, or a required operating schedule."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "UAE-DEL-003": {
+      "id": "UAE-DEL-003",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "delivery",
+        "operations"
+      ],
+      "entity": "Deliveroo UAE - order tracking",
+      "observation": "Deliveroo describes order-status monitoring, real-time rider GPS tracking, and rider-arrival alerts for its delivery service.",
+      "source_title": "Deliveroo delivery and pickup for UAE partners",
+      "source_url": "https://merchants.deliveroo.com/en-AE/what-we-offer/delivery",
+      "publisher": "Deliveroo",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "End-to-end order tracking",
+      "qualifiers": [
+        "UAE merchant product description; eligibility and availability at a proposed address need confirmation.",
+        "No verified contractual commission, fees, delivery radius, service level, or sales uplift."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    }
+  },
+  "calculations": {},
+  "tool_trace": [
+    {
+      "name": "lookup_market_evidence",
+      "arguments": {
+        "cities": [
+          "dubai",
+          "abu_dhabi"
+        ],
+        "topics": [
+          "suppliers"
+        ],
+        "query": "",
+        "limit": 12
+      },
+      "result": "{\"status\":\"ok\",\"data\":{\"records\":[{\"id\":\"DXB-DEL-001\",\"cities\":[\"dubai\"],\"topics\":[\"delivery\",\"operations\",\"suppliers\"],\"entity\":\"Dubai Municipality - transport cold chain\",\"observation\":\"Dubai Municipality guidance specifies transportation units capable of holding hot food at 60 C or above, cold food at 5 C or below, and frozen food at -18 C or below.\",\"source_title\":\"Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2\",\"source_url\":\"https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf\",\"publisher\":\"Dubai Municipality\",\"source_kind\":\"official\",\"published_on\":\"2023-08-31\",\"checked_on\":\"2026-10-12\",\"locator\":\"PDF pages 13-14, section 1.2.2 Temperature Control Requirements\",\"qualifiers\":[\"Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\",\"Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\",\"Transport holding requirements, not cooking temperatures or evidence that a supplier or vehicle meets them.\"],\"valid_until\":null,\"needs_review\":true,\"expired\":false},{\"id\":\"AUH-SUP-001\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"suppliers\"],\"entity\":\"Bidfood - Abu Dhabi distribution centre\",\"observation\":\"Bidfood lists an Abu Dhabi distribution centre in Mussafah, ICAD 2, M-41 Industrial Area.\",\"source_title\":\"Bidfood UAE contact and distribution centres\",\"source_url\":\"https://www.bidfoodme.com/get-in-touch/uae\",\"publisher\":\"Bidfood Middle East\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Abu Dhabi / HORECA Trade L.L.C Abu Dhabi Distribution Center\",\"qualifiers\":[\"Public supplier contact location; not proof of branch-specific delivery coverage, product certification, prices, or capacity.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-SUP-001\",\"cities\":[\"dubai\"],\"topics\":[\"suppliers\"],\"entity\":\"Bidfood - Dubai distribution centre\",\"observation\":\"Bidfood lists a Dubai distribution centre in Dubai Investment Park 2, plot 597-974.\",\"source_title\":\"Bidfood UAE contact and distribution centres\",\"source_url\":\"https://www.bidfoodme.com/get-in-touch/uae\",\"publisher\":\"Bidfood Middle East\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Dubai / HORECA Trade L.L.C Dubai Distribution Center\",\"qualifiers\":[\"Public supplier contact location; not proof of branch-specific delivery coverage, product certification, prices, or capacity.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-SUP-001\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"suppliers\"],\"entity\":\"Bidfood UAE - beef and cheese catalogue categories\",\"observation\":\"Bidfood UAE lists 2026-2027 catalogues for a beef protein category and premium cheeses.\",\"source_title\":\"Bidfood UAE presence and catalogues\",\"source_url\":\"https://www.bidfoodme.com/presence/uae\",\"publisher\":\"Bidfood Middle East\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Our Catalogues / Center of The Plate 2026-2027; Premium Cheeses 2026-2027 (embedded catalogue metadata)\",\"qualifiers\":[\"Supplier-owned catalogue categories only; specific beef cuts and pizza cheese suitability require samples and specifications.\",\"No verified stock, prices, halal documentation, allergen documentation, minimum order, credit terms, or capacity.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-SUP-002\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"suppliers\"],\"entity\":\"Bidfood UAE - distribution service statement\",\"observation\":\"Bidfood states that its UAE distribution centres deliver to all emirates daily and provides myBidfood for online ordering.\",\"source_title\":\"Bidfood UAE presence and catalogues\",\"source_url\":\"https://www.bidfoodme.com/presence/uae\",\"publisher\":\"Bidfood Middle East\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"UAE overview; Distribution centers delivering to all Emirates daily\",\"qualifiers\":[\"Supplier service claim, not an independently verified delivery commitment to a proposed Dubai or Abu Dhabi site.\",\"Delivery schedule, minimum order, lead times, substitutions, stock continuity, and cold chain need written confirmation.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false}],\"matched_count\":5,\"omitted_count\":0},\"warnings\":[\"Some returned records need review; inspect their dates and freshness flags.\"]}",
+      "error": false
+    },
+    {
+      "name": "lookup_market_evidence",
+      "arguments": {
+        "cities": [
+          "dubai",
+          "abu_dhabi"
+        ],
+        "topics": [
+          "operations"
+        ],
+        "query": "",
+        "limit": 12
+      },
+      "result": "{\"status\":\"ok\",\"data\":{\"records\":[{\"id\":\"DXB-COMP-006\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\",\"operations\"],\"entity\":\"Zaroob - Dubai Marina\",\"observation\":\"Zaroob lists its Dubai Marina restaurant at Radisson Blu Residence with advertised hours of 7 AM to 5 AM.\",\"source_title\":\"Zaroob hours and locations\",\"source_url\":\"https://www.zaroob.com/\",\"publisher\":\"Zaroob\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Hours & Locations / Zaroob Marina\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\",\"Hours are branch-specific observations, not evidence that late-night staffing would be profitable.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-COMP-007\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"competitors\",\"menu\",\"operations\"],\"entity\":\"Operation Falafel - Zayed International Airport\",\"observation\":\"The airport lists Operation Falafel in Terminal A departures, airside Food Park Mezzanine Level 5, open 24 hours, serving shawarma, hummus, falafel, and salad bowls.\",\"source_title\":\"Operation Falafel at Zayed International Airport\",\"source_url\":\"https://www.zayedinternationalairport.ae/en/shop-dine-and-experience/dining/restaurants/operation-falafel\",\"publisher\":\"Abu Dhabi Airports / Zayed International Airport\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Description; Highlights; Open; Location\",\"qualifiers\":[\"Airside airport concession serving departing passengers; not a comparable street-site catchment or pricing benchmark.\",\"Airport hours and access do not apply to other branches; confirm current concession operation.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-DEL-001\",\"cities\":[\"dubai\"],\"topics\":[\"delivery\",\"operations\",\"suppliers\"],\"entity\":\"Dubai Municipality - transport cold chain\",\"observation\":\"Dubai Municipality guidance specifies transportation units capable of holding hot food at 60 C or above, cold food at 5 C or below, and frozen food at -18 C or below.\",\"source_title\":\"Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2\",\"source_url\":\"https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf\",\"publisher\":\"Dubai Municipality\",\"source_kind\":\"official\",\"published_on\":\"2023-08-31\",\"checked_on\":\"2026-10-12\",\"locator\":\"PDF pages 13-14, section 1.2.2 Temperature Control Requirements\",\"qualifiers\":[\"Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\",\"Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\",\"Transport holding requirements, not cooking temperatures or evidence that a supplier or vehicle meets them.\"],\"valid_until\":null,\"needs_review\":true,\"expired\":false},{\"id\":\"AUH-OPS-001\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"operations\"],\"entity\":\"ADAFSA - Essential Food Safety Training\",\"observation\":\"ADAFSA describes Essential Food Safety Training for food handlers in Abu Dhabi, covering cross-contamination, cooking or processing, cleaning, chilling, and food safety management.\",\"source_title\":\"ADAFSA food safety programmes\",\"source_url\":\"https://prod.adafsa.gov.ae/en/work/food-safety/Pages/default.aspx\",\"publisher\":\"Abu Dhabi Agriculture and Food Safety Authority\",\"source_kind\":\"official\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Essential Food Safety Training Program (EFST)\",\"qualifiers\":[\"Emirate of Abu Dhabi programme; cooking/processing and food safety management modules apply where relevant.\",\"Programme summary does not establish training prices, staff wages, staffing ratios, or all premises requirements.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-DEL-002\",\"cities\":[\"dubai\"],\"topics\":[\"delivery\",\"operations\"],\"entity\":\"Dubai Municipality - sealed delivery and separation\",\"observation\":\"Dubai Municipality delivery guidance requires sealed food containers and separation of hot and cold items into insulated secondary units during transport.\",\"source_title\":\"Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2\",\"source_url\":\"https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf\",\"publisher\":\"Dubai Municipality\",\"source_kind\":\"official\",\"published_on\":\"2023-08-31\",\"checked_on\":\"2026-10-12\",\"locator\":\"PDF page 18, section 1.4.1(e)-(f)\",\"qualifiers\":[\"Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\",\"Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\"],\"valid_until\":null,\"needs_review\":true,\"expired\":false},{\"id\":\"AUH-OPS-002\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"operations\"],\"entity\":\"ADAFSA - documented self-inspection\",\"observation\":\"ADAFSA describes periodic operator self-inspections using its approved checklist, with records of findings, corrective actions, and follow-up available to inspectors.\",\"source_title\":\"ADAFSA food safety programmes\",\"source_url\":\"https://prod.adafsa.gov.ae/en/work/food-safety/Pages/default.aspx\",\"publisher\":\"Abu Dhabi Agriculture and Food Safety Authority\",\"source_kind\":\"official\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Self-Inspection; Self-Inspection Objectives\",\"qualifiers\":[\"Abu Dhabi authority summary; the checklist depends on establishment type and applicable rules.\",\"No staffing level, inspection frequency in days, or compliance guarantee was established.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-OPS-001\",\"cities\":[\"dubai\"],\"topics\":[\"competitors\",\"operations\"],\"entity\":\"Zaroob - Sheikh Zayed Road and Motor City\",\"observation\":\"Zaroob advertises 24-hour restaurants at Jumeirah Tower on Sheikh Zayed Road and First Avenue Mall in Motor City.\",\"source_title\":\"Zaroob hours and locations\",\"source_url\":\"https://www.zaroob.com/\",\"publisher\":\"Zaroob\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Hours & Locations / Zaroob SZR; Zaroob Motor City\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\",\"Extended hours do not establish order volume, labor cost, or a required operating schedule.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-DEL-003\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\",\"operations\"],\"entity\":\"Deliveroo UAE - order tracking\",\"observation\":\"Deliveroo describes order-status monitoring, real-time rider GPS tracking, and rider-arrival alerts for its delivery service.\",\"source_title\":\"Deliveroo delivery and pickup for UAE partners\",\"source_url\":\"https://merchants.deliveroo.com/en-AE/what-we-offer/delivery\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"End-to-end order tracking\",\"qualifiers\":[\"UAE merchant product description; eligibility and availability at a proposed address need confirmation.\",\"No verified contractual commission, fees, delivery radius, service level, or sales uplift.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false}],\"matched_count\":11,\"omitted_count\":3},\"warnings\":[\"Some matching records were omitted to respect result or payload limits.\",\"Some returned records need review; inspect their dates and freshness flags.\"]}",
+      "error": false
+    }
+  ],
+  "record": {
+    "model_requests": 2,
+    "input_tokens": 10259,
+    "output_tokens": 1989,
+    "reasoning_tokens": 0,
+    "cached_tokens": 6912,
+    "reported_cost_usd": "0.001747124",
+    "known_reported_cost_usd": "0.001747124",
+    "estimated_cost_usd": null,
+    "estimate_basis": null,
+    "usage_complete": true,
+    "schema_version": 1,
+    "run_id": "80d9781d-3ec3-46e3-9275-cf10c5c14547",
+    "session_id": "b795df65-5da4-4594-ad34-179253cf2065",
+    "timestamp_utc": "2026-10-14T13:21:18.299411Z",
+    "model_requested": "deepseek/deepseek-v4.1-flash",
+    "model_reported_if_available": [
+      "deepseek/deepseek-v4.1-flash"
+    ],
+    "provider_if_available": [
+      "Morph"
+    ],
+    "prompt_version": "10.1",
+    "evidence_dataset_version": "a226a6b54cf292e9b2f6f6e9c51112957bff64195bc8182e0b579dd1f79ca3c5",
+    "question": "How should we source ingredients and choose suppliers for branches in Dubai and Abu Dhabi?",
+    "outcome": "completed",
+    "error_category": null,
+    "tool_events": [
+      {
+        "name": "lookup_market_evidence",
+        "duration_ms": 0.46522897901013494,
+        "status": "ok",
+        "result_count": 5
+      },
+      {
+        "name": "lookup_market_evidence",
+        "duration_ms": 0.7627070299349725,
+        "status": "ok",
+        "result_count": 8
+      }
+    ],
+    "requests": [
+      {
+        "generation_id": "gen-1791984078-1U78i5oyP4PxFJJWmaEW",
+        "model_reported": "deepseek/deepseek-v4.1-flash",
+        "provider_reported": "Morph",
+        "duration_ms": 1686.5610249806195,
+        "outcome": "completed",
+        "input_tokens": 3517,
+        "output_tokens": 193,
+        "reasoning_tokens": 0,
+        "cached_tokens": 3456,
+        "reported_cost_usd": "0.000187212"
+      },
+      {
+        "generation_id": "gen-1791984079-vh9UDl8HTBNdXMAnNtYC",
+        "model_reported": "deepseek/deepseek-v4.1-flash",
+        "provider_reported": "Morph",
+        "duration_ms": 34715.33424599329,
+        "outcome": "completed",
+        "input_tokens": 6742,
+        "output_tokens": 1796,
+        "reasoning_tokens": 0,
+        "cached_tokens": 3456,
+        "reported_cost_usd": "0.001559912"
+      }
+    ],
+    "evidence_ids": [
+      "DXB-DEL-001",
+      "AUH-SUP-001",
+      "DXB-SUP-001",
+      "UAE-SUP-001",
+      "UAE-SUP-002",
+      "DXB-COMP-006",
+      "AUH-COMP-007",
+      "AUH-OPS-001",
+      "DXB-DEL-002",
+      "AUH-OPS-002",
+      "DXB-OPS-001",
+      "UAE-DEL-003"
+    ],
+    "calculation_ids": [],
+    "latency_ms": 36425.76127301436,
+    "tool_output_characters": 12208,
+    "validation_errors": [],
+    "warnings": [
+      "Some returned records need review; inspect their dates and freshness flags.",
+      "Some matching records were omitted to respect result or payload limits."
+    ]
+  },
+  "warnings": [
+    "Some returned records need review; inspect their dates and freshness flags.",
+    "Some matching records were omitted to respect result or payload limits."
+  ],
+  "error_category": null,
+  "error_message": null,
+  "checks": {
+    "reference_integrity": true,
+    "requested_cities_present": true,
+    "durable_profile_unchanged": true,
+    "calculator_exact": null,
+    "claim_support": "requires review"
+  }
+}

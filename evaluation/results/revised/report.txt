@@ -1,0 +1,20 @@
+Executive evaluation — live
+Fixture runs check plumbing only. Assistant scores are provisional, not human acceptance.
+Case  Outcome     Score  Reviewer
+E01   completed   6      assistant_provisional
+E02   completed   7      assistant_provisional
+E03   completed   9      assistant_provisional
+E04   completed   4      assistant_provisional
+E05   completed   6      assistant_provisional
+E06   completed   5      assistant_provisional
+E07   completed   8      assistant_provisional
+E08   error       0      assistant_provisional
+E09   completed   7      assistant_provisional
+E10   completed   9      assistant_provisional
+E11   error       0      assistant_provisional
+E12   completed   8      assistant_provisional
+Qualifying reviewed cases: 4/12; human: 0/12
+Executive release gate passed: False; human review pending
+Reference integrity does not establish factual support.
+Hard failures: ["E01: Unsupported customer mix, competition ranking and rent positioning.", "E04: Contradictory portion dimensions and false claim that retrieved pizza diameters were absent.", "E05: Contradictory numerical price proposals between headline and sections.", "E08: Fact statement has no evidence IDs; answer blocked by validation.", "E11: Historical IDs cited without current-turn retrieval; answer blocked."]
+Usage: {"model_requests": 26, "input_tokens": 162532, "output_tokens": 19643, "reasoning_tokens": 0, "cached_tokens": 114560, "reported_cost_usd": "0.018088656", "known_reported_cost_usd": "0.018088656", "estimated_cost_usd": null, "estimate_basis": null, "usage_complete": true}

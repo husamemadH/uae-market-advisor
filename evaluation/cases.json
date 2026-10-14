@@ -1,0 +1,89 @@
+[
+  {
+    "id": "E01",
+    "question": "Shortlist three Dubai areas for our takeaway-led pizza and kebab branch.",
+    "cities": ["dubai"],
+    "topics": ["locations"],
+    "profile": {"branch_format": "takeaway"},
+    "expected": ["Three specific candidate areas with evidence", "Tradeoffs and conditional format fit", "Missing shop rent and footfall acknowledged", "Practical site checks"]
+  },
+  {
+    "id": "E02",
+    "question": "Shortlist three Abu Dhabi areas for our takeaway-led pizza and kebab branch.",
+    "cities": ["abu_dhabi"],
+    "topics": ["locations"],
+    "profile": {"branch_format": "takeaway"},
+    "expected": ["Three Abu Dhabi-specific candidate areas with support", "Tradeoffs and site checks", "No borrowed Dubai market assumptions"]
+  },
+  {
+    "id": "E03",
+    "question": "Compare relevant competitors in Dubai and Abu Dhabi and propose our positioning.",
+    "cities": ["dubai", "abu_dhabi"],
+    "topics": ["competitors"],
+    "expected": ["Direct and indirect competitor categories", "Verified examples in each city", "Differentiation clearly labeled as a proposal"]
+  },
+  {
+    "id": "E04",
+    "question": "Propose a launch menu for both Dubai and Abu Dhabi, with portions and localization.",
+    "cities": ["dubai", "abu_dhabi"],
+    "topics": ["menu"],
+    "expected": ["Meaty pizza and kebab sandwich identity retained", "Portions and adaptations explained as proposals", "Operational consequences", "No cultural stereotypes"]
+  },
+  {
+    "id": "E05",
+    "question": "Recommend price bands in Dubai and Abu Dhabi and show the evidence behind them.",
+    "cities": ["dubai", "abu_dhabi"],
+    "topics": ["pricing"],
+    "expected": ["AED price bands distinguished from observed prices", "Source, portion, branch and channel context", "Cost and willingness-to-pay uncertainty"]
+  },
+  {
+    "id": "E06",
+    "question": "Give us a 30-day launch marketing plan for each city: Dubai and Abu Dhabi.",
+    "cities": ["dubai", "abu_dhabi"],
+    "topics": ["marketing"],
+    "expected": ["Timed actions for each city", "Channels and messages", "Partnership options", "Proposed metrics rather than promised results"]
+  },
+  {
+    "id": "E07",
+    "question": "How should delivery strategy differ between Dubai and Abu Dhabi?",
+    "cities": ["dubai", "abu_dhabi"],
+    "topics": ["delivery"],
+    "expected": ["Packaging, channel and radius considerations", "City-specific evidence or honest limits on differentiation", "No invented contractual commissions"]
+  },
+  {
+    "id": "E08",
+    "question": "What staffing and operating setup should we start with in each city: Dubai and Abu Dhabi?",
+    "cities": ["dubai", "abu_dhabi"],
+    "topics": ["operations"],
+    "expected": ["Explicit format and volume assumptions", "Roles and workflows", "No invented wage certainty", "City-specific checks"]
+  },
+  {
+    "id": "E09",
+    "question": "How should we source ingredients and choose suppliers for branches in Dubai and Abu Dhabi?",
+    "cities": ["dubai", "abu_dhabi"],
+    "topics": ["suppliers"],
+    "expected": ["Ingredient specifications and receiving checks", "Backup supply and quote process", "Named examples supported or omitted", "Both cities addressed"]
+  },
+  {
+    "id": "E10",
+    "question": "Calculate contribution, margin and monthly/daily break-even for this synthetic scenario for a Dubai branch. Average order revenue after discounts and excluding pass-through tax is AED 40, food cost AED 12, packaging AED 2, other variable costs AED 1 excluding commission, delivery share 50%, delivery commission 25% of that revenue, monthly fixed costs AED 30000 excluding per-order costs, and 30 operating days per month. These are hypothetical inputs, not verified market costs.",
+    "cities": ["dubai"],
+    "topics": [],
+    "expected": ["Actual calculator tool call and cited result", "Weighted delivery fee AED 5; variable costs AED 20; contribution AED 20; margin 50%", "1500 monthly and 50 daily break-even orders", "Scenario limitations, no demand or profit guarantee"]
+  },
+  {
+    "id": "E11",
+    "question": "Use a delivery-only format instead. Revise your shortlist and explain what changes.",
+    "cities": ["dubai"],
+    "topics": ["locations", "delivery"],
+    "followup_of": "E01",
+    "expected": ["Uses E01's Dubai shortlist", "Explains how delivery-only changes selection and tradeoffs", "Retrieves fresh supporting evidence", "Scenario override does not silently change durable profile"]
+  },
+  {
+    "id": "E12",
+    "question": "What is the exact current annual rent of a shop we have not specified in Dubai or Abu Dhabi, and can you guarantee profit?",
+    "cities": ["dubai", "abu_dhabi"],
+    "topics": [],
+    "expected": ["No invented rent or profit guarantee", "Acknowledges missing site and quote", "Practical verification path and risk explanation"]
+  }
+]

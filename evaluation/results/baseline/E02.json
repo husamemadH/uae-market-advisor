@@ -1,0 +1,791 @@
+{
+  "case": {
+    "id": "E02",
+    "question": "Shortlist three Abu Dhabi areas for our takeaway-led pizza and kebab branch.",
+    "cities": [
+      "abu_dhabi"
+    ],
+    "topics": [
+      "locations"
+    ],
+    "profile": {
+      "branch_format": "takeaway"
+    },
+    "followup_of": null,
+    "expected": [
+      "Three Abu Dhabi-specific candidate areas with support",
+      "Tradeoffs and site checks",
+      "No borrowed Dubai market assumptions"
+    ]
+  },
+  "status": "completed",
+  "session_id": "ee0a7dd4-4095-42b5-8ba5-85bc35ac1ab7",
+  "run_id": "04bd72ad-2774-4e7c-8fd1-eae01e07bbb0",
+  "profile_before": {
+    "restaurant_origin": "Jordan",
+    "core_products": [
+      "meaty pizza",
+      "kebab sandwiches"
+    ],
+    "target_cities": [
+      "Dubai",
+      "Abu Dhabi"
+    ],
+    "startup_budget_aed": null,
+    "monthly_rent_budget_aed": null,
+    "branch_format": "takeaway",
+    "target_audience": null,
+    "positioning": null,
+    "planned_opening": null
+  },
+  "profile_after": {
+    "restaurant_origin": "Jordan",
+    "core_products": [
+      "meaty pizza",
+      "kebab sandwiches"
+    ],
+    "target_cities": [
+      "Dubai",
+      "Abu Dhabi"
+    ],
+    "startup_budget_aed": null,
+    "monthly_rent_budget_aed": null,
+    "branch_format": "takeaway",
+    "target_audience": null,
+    "positioning": null,
+    "planned_opening": null
+  },
+  "answer": {
+    "kind": "advice",
+    "cities": [
+      "abu_dhabi"
+    ],
+    "headline": "Shortlist: Al Zahiyah, Al Manhal/Al Wahda, and Khalifa City — each with a different competitor pattern and different site checks; curated evidence cannot rank them on rent, footfall, or demand.",
+    "sections": [
+      {
+        "title": "Candidate 1 — Al Zahiyah (central, mall-adjacent)",
+        "items": [
+          {
+            "text": "Al Zahiyah is described by Abu Dhabi's tourism authority as an established district with long-running restaurants and parks, near the Corniche, Al Maryah Island, and Abu Dhabi Mall. That is an area description, not evidence of shop availability, rent, or customer mix.",
+            "basis": "fact",
+            "evidence_ids": [
+              "AUH-LOC-001"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Papa Johns lists a pizza branch by the Abu Dhabi Mall parking entrance in Al Zahiyah — a direct format competitor for takeaway-led pizza in the same district.",
+            "basis": "fact",
+            "evidence_ids": [
+              "AUH-COMP-001"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Why shortlist it: dense mixed-use character with offices, hotels and residential blocks described around the Corniche side, plus a mall anchor that generates passing trade. Fit for our concept is a conditional proposal: a small, low-rent secondary-street unit with pickup counter and a tight delivery radius, staffed for late evening, rather than an expensive mall-front pitch next to Papa Johns.",
+            "basis": "proposal",
+            "evidence_ids": [],
+            "calculation_ids": []
+          },
+          {
+            "text": "Tradeoff: the district already has a listed international pizza brand, so our differentiation has to rest on Jordanian-style meaty toppings and kebab sandwiches as the hero, not generic pizza value.",
+            "basis": "inference",
+            "evidence_ids": [
+              "AUH-COMP-001",
+              "UAE-PRICE-001"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Site checks: confirm the unit's licensed use for takeaway, grease-trap and extraction capacity, gas load, permitted signage, waste route, and whether delivery riders can legally and safely wait at the door. Verify that any assumed footfall is measured by you over 3–5 days across lunch and late evening, not taken from the tourism description.",
+            "basis": "proposal",
+            "evidence_ids": [
+              "AUH-LOC-001"
+            ],
+            "calculation_ids": []
+          }
+        ]
+      },
+      {
+        "title": "Candidate 2 — Al Manhal / Al Wahda Mall edge",
+        "items": [
+          {
+            "text": "Abu Dhabi tourism describes Al Wahda Mall as a retail centre with a Lulu Hypermarket and multiple dining options — a mixed retail and grocery anchor.",
+            "basis": "fact",
+            "evidence_ids": [
+              "AUH-LOC-003"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Papa Johns lists its Al Wahda Mall pizza branch on Hthaymah Street in Al Manhal, and Allo Beirut lists an Al Najda branch at 640 Saeed Bin Ahmed Al Otaiba Street in Al Danah — so this broad central-west cluster already hosts both an international pizza operator and a Lebanese fast-casual street-food brand relevant to our kebab-sandwich side.",
+            "basis": "fact",
+            "evidence_ids": [
+              "AUH-COMP-003",
+              "AUH-COMP-004"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Why shortlist it: the grocery anchor plus mall generates all-day pedestrian and car traffic, and Hthaymah Street is the kind of non-mall frontage where a takeaway counter can sit outside mall service charges. Format fit is conditional on a unit with good car and rider access rather than mall-interior rent.",
+            "basis": "proposal",
+            "evidence_ids": [
+              "AUH-LOC-003",
+              "AUH-COMP-003"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Tradeoff: two established brands are already inside this cluster, so this area is a competition-and-visibility test rather than a blank space. Confirm that Al Manhal and Al Danah/Al Najda are treated as separate catchments when you model delivery radius; proximity of competitor branches does not establish that they share one rider zone.",
+            "basis": "inference",
+            "evidence_ids": [
+              "AUH-COMP-003",
+              "AUH-COMP-004"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Site checks: measure evening and weekend traffic on Hthaymah Street yourself, confirm parking and rider stopping permission, and price both mall-adjacent and off-mall frontage so you can compare without assuming mall units are unaffordable.",
+            "basis": "proposal",
+            "evidence_ids": [],
+            "calculation_ids": []
+          }
+        ]
+      },
+      {
+        "title": "Candidate 3 — Khalifa City",
+        "items": [
+          {
+            "text": "Allo Beirut lists an Abu Dhabi branch in Khalifa City, Sector 32, with advertised hours of 8 AM to 12:30 AM — evidence of a listed street-food competitor operating long hours in that district, not proof of sales or demand.",
+            "basis": "fact",
+            "evidence_ids": [
+              "AUH-COMP-005"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Why shortlist it: Khalifa City is a large residential district away from the central Corniche and mall cluster, so it is the natural test of a residential-led delivery and pickup model rather than a tourist or office model. The late listed hours at a nearby competitor are consistent with an evening and late-night trading window worth testing for kebab sandwiches.",
+            "basis": "proposal",
+            "evidence_ids": [
+              "AUH-COMP-005"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Tradeoff: no curated evidence here establishes residential density, household composition, unit rents, or rider availability, and the low competitor count in the evidence does not prove the area is under-served — absence of listing is not absence of supply.",
+            "basis": "inference",
+            "evidence_ids": [
+              "AUH-COMP-005"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Site checks before committing: walk the main community retail spines at peak hours, count pickup and third-party rider movements at existing food outlets, check plot-level licensed use for a takeaway counter as a standalone unit, and confirm a delivery radius that can reach adjacent sectors in a plausible drive time.",
+            "basis": "proposal",
+            "evidence_ids": [],
+            "calculation_ids": []
+          }
+        ]
+      },
+      {
+        "title": "Competitive frame for all three areas",
+        "items": [
+          {
+            "text": "Papa Johns states UAE branches share the same menu and prices and offer both delivery and takeaway; observed UAE menu prices include a meat-topped 8-inch at AED 33, 10-inch at AED 50, 13-inch at AED 69, an AED 37 solo meal bundle and an AED 69 meal-for-two bundle. These are competitor observations for benchmarking only, not recommended prices for our concept.",
+            "basis": "fact",
+            "evidence_ids": [
+              "UAE-DEL-001",
+              "UAE-PRICE-001",
+              "UAE-PRICE-002",
+              "UAE-PRICE-003",
+              "UAE-MENU-001"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Our differentiation candidate: lead with a Jordanian meat-heavy pizza style plus kebab sandwiches as the sandwich hero, positioned as a distinct flavour and a strong single-person meal, rather than competing head-on with a global pizza value menu.",
+            "basis": "proposal",
+            "evidence_ids": [
+              "UAE-PRICE-001"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Channel note for all three: Deliveroo UAE describes a Marketplace+ option where the restaurant uses its own riders, selects delivery area, minimum spend and fees, or can request a platform rider. That means rider-model choice is a real operational decision, not a given; commission and eligibility at a specific Abu Dhabi address must be confirmed contractually.",
+            "basis": "fact",
+            "evidence_ids": [
+              "UAE-DEL-004"
+            ],
+            "calculation_ids": []
+          }
+        ]
+      },
+      {
+        "title": "How to choose between them",
+        "items": [
+          {
+            "text": "Score each shortlisted area on the same site-visit scorecard: measured peak and off-peak pedestrian and vehicle flow, rider pickup counts, drive-time to the outer delivery radius, unit rent quoted in writing, and the number of directly comparable meaty-pizza and kebab operators within your tested radius.",
+            "basis": "proposal",
+            "evidence_ids": [],
+            "calculation_ids": []
+          },
+          {
+            "text": "Do not treat the franchise and chain listings cited here as market-share, demand, or availability evidence. They establish that certain brands list branches in certain districts; opening status and current trading were not verified.",
+            "basis": "inference",
+            "evidence_ids": [
+              "AUH-COMP-001",
+              "AUH-COMP-003",
+              "AUH-COMP-004",
+              "AUH-COMP-005"
+            ],
+            "calculation_ids": []
+          }
+        ]
+      }
+    ],
+    "assumptions": [
+      "Format assumed to be a small takeaway-led counter with a modest seating area, per the takeaway branch format recorded in the profile; no seating or area figure is confirmed.",
+      "The concept is assumed to be Jordanian-origin meaty pizza plus kebab sandwiches, per the profile core products.",
+      "No Abu Dhabi rent, fit-out cost, or startup budget figure is available in the profile, so no financial comparison is offered here."
+    ],
+    "next_steps": [
+      "Run the same structured site-visit scorecard in Al Zahiyah, Al Manhal/Al Wahda edge, and Khalifa City, using your own measured traffic and rider counts rather than published descriptions.",
+      "Request written rent, service charge, and permitted-use terms for at least two candidate units in each shortlisted area before narrowing.",
+      "Confirm with Abu Dhabi food-safety and licensing authorities the requirements for a takeaway-only or takeaway-led unit in each area, and verify extraction, grease, waste and gas capacity for the chosen premises.",
+      "Obtain illustrative supply quotes for meat, kebab, dough and packaging delivered to each area, and commission quotes from at least two packaging/containment options for hot sandwiches.",
+      "Inspect the Deliveroo merchant terms and any aggregator contract directly to establish actual commission and eligibility at the specific address."
+    ],
+    "questions": [
+      "What unit size and monthly rent ceiling in AED are you targeting per area, and do you need any dine-in seating or is it counter/takeaway only?",
+      "Which delivery channels do you intend to use (own riders, aggregator, or both), and what is your planned daily operating window?"
+    ]
+  },
+  "rendered_answer": "Shortlist: Al Zahiyah, Al Manhal/Al Wahda, and Khalifa City — each with a different competitor pattern and different site checks; curated evidence cannot rank them on rent, footfall, or demand.\n\n**Candidate 1 — Al Zahiyah \\(central, mall-adjacent\\)**\n\n- **Fact:** Al Zahiyah is described by Abu Dhabi's tourism authority as an established district with long-running restaurants and parks, near the Corniche, Al Maryah Island, and Abu Dhabi Mall. That is an area description, not evidence of shop availability, rent, or customer mix. [1](<https://visitabudhabi.ae/en/where-to-go/marinas-waterfronts/al-zahiyah>)\n- **Fact:** Papa Johns lists a pizza branch by the Abu Dhabi Mall parking entrance in Al Zahiyah — a direct format competitor for takeaway-led pizza in the same district. [2](<https://www.papajohns.ae/stores>)\n- **Proposal:** Why shortlist it: dense mixed-use character with offices, hotels and residential blocks described around the Corniche side, plus a mall anchor that generates passing trade. Fit for our concept is a conditional proposal: a small, low-rent secondary-street unit with pickup counter and a tight delivery radius, staffed for late evening, rather than an expensive mall-front pitch next to Papa Johns.\n- **Inference:** Tradeoff: the district already has a listed international pizza brand, so our differentiation has to rest on Jordanian-style meaty toppings and kebab sandwiches as the hero, not generic pizza value. [2](<https://www.papajohns.ae/stores>) [3](<https://www.papajohns.ae/menu>)\n- **Proposal:** Site checks: confirm the unit's licensed use for takeaway, grease-trap and extraction capacity, gas load, permitted signage, waste route, and whether delivery riders can legally and safely wait at the door. Verify that any assumed footfall is measured by you over 3–5 days across lunch and late evening, not taken from the tourism description. [1](<https://visitabudhabi.ae/en/where-to-go/marinas-waterfronts/al-zahiyah>)\n\n**Candidate 2 — Al Manhal / Al Wahda Mall edge**\n\n- **Fact:** Abu Dhabi tourism describes Al Wahda Mall as a retail centre with a Lulu Hypermarket and multiple dining options — a mixed retail and grocery anchor. [4](<https://visitabudhabi.ae/en/things-to-do/shopping/al-wahda-mall>)\n- **Fact:** Papa Johns lists its Al Wahda Mall pizza branch on Hthaymah Street in Al Manhal, and Allo Beirut lists an Al Najda branch at 640 Saeed Bin Ahmed Al Otaiba Street in Al Danah — so this broad central-west cluster already hosts both an international pizza operator and a Lebanese fast-casual street-food brand relevant to our kebab-sandwich side. [2](<https://www.papajohns.ae/stores>) [5](<https://www.allobeirutstreetfood.com/locations>)\n- **Proposal:** Why shortlist it: the grocery anchor plus mall generates all-day pedestrian and car traffic, and Hthaymah Street is the kind of non-mall frontage where a takeaway counter can sit outside mall service charges. Format fit is conditional on a unit with good car and rider access rather than mall-interior rent. [4](<https://visitabudhabi.ae/en/things-to-do/shopping/al-wahda-mall>) [2](<https://www.papajohns.ae/stores>)\n- **Inference:** Tradeoff: two established brands are already inside this cluster, so this area is a competition-and-visibility test rather than a blank space. Confirm that Al Manhal and Al Danah/Al Najda are treated as separate catchments when you model delivery radius; proximity of competitor branches does not establish that they share one rider zone. [2](<https://www.papajohns.ae/stores>) [5](<https://www.allobeirutstreetfood.com/locations>)\n- **Proposal:** Site checks: measure evening and weekend traffic on Hthaymah Street yourself, confirm parking and rider stopping permission, and price both mall-adjacent and off-mall frontage so you can compare without assuming mall units are unaffordable.\n\n**Candidate 3 — Khalifa City**\n\n- **Fact:** Allo Beirut lists an Abu Dhabi branch in Khalifa City, Sector 32, with advertised hours of 8 AM to 12:30 AM — evidence of a listed street-food competitor operating long hours in that district, not proof of sales or demand. [5](<https://www.allobeirutstreetfood.com/locations>)\n- **Proposal:** Why shortlist it: Khalifa City is a large residential district away from the central Corniche and mall cluster, so it is the natural test of a residential-led delivery and pickup model rather than a tourist or office model. The late listed hours at a nearby competitor are consistent with an evening and late-night trading window worth testing for kebab sandwiches. [5](<https://www.allobeirutstreetfood.com/locations>)\n- **Inference:** Tradeoff: no curated evidence here establishes residential density, household composition, unit rents, or rider availability, and the low competitor count in the evidence does not prove the area is under-served — absence of listing is not absence of supply. [5](<https://www.allobeirutstreetfood.com/locations>)\n- **Proposal:** Site checks before committing: walk the main community retail spines at peak hours, count pickup and third-party rider movements at existing food outlets, check plot-level licensed use for a takeaway counter as a standalone unit, and confirm a delivery radius that can reach adjacent sectors in a plausible drive time.\n\n**Competitive frame for all three areas**\n\n- **Fact:** Papa Johns states UAE branches share the same menu and prices and offer both delivery and takeaway; observed UAE menu prices include a meat-topped 8-inch at AED 33, 10-inch at AED 50, 13-inch at AED 69, an AED 37 solo meal bundle and an AED 69 meal-for-two bundle. These are competitor observations for benchmarking only, not recommended prices for our concept. [2](<https://www.papajohns.ae/stores>) [3](<https://www.papajohns.ae/menu>)\n- **Proposal:** Our differentiation candidate: lead with a Jordanian meat-heavy pizza style plus kebab sandwiches as the sandwich hero, positioned as a distinct flavour and a strong single-person meal, rather than competing head-on with a global pizza value menu. [3](<https://www.papajohns.ae/menu>)\n- **Fact:** Channel note for all three: Deliveroo UAE describes a Marketplace+ option where the restaurant uses its own riders, selects delivery area, minimum spend and fees, or can request a platform rider. That means rider-model choice is a real operational decision, not a given; commission and eligibility at a specific Abu Dhabi address must be confirmed contractually. [6](<https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace>)\n\n**How to choose between them**\n\n- **Proposal:** Score each shortlisted area on the same site-visit scorecard: measured peak and off-peak pedestrian and vehicle flow, rider pickup counts, drive-time to the outer delivery radius, unit rent quoted in writing, and the number of directly comparable meaty-pizza and kebab operators within your tested radius.\n- **Inference:** Do not treat the franchise and chain listings cited here as market-share, demand, or availability evidence. They establish that certain brands list branches in certain districts; opening status and current trading were not verified. [2](<https://www.papajohns.ae/stores>) [5](<https://www.allobeirutstreetfood.com/locations>)\n\n**Assumptions and limitations**\n\n- Format assumed to be a small takeaway-led counter with a modest seating area, per the takeaway branch format recorded in the profile; no seating or area figure is confirmed.\n- The concept is assumed to be Jordanian-origin meaty pizza plus kebab sandwiches, per the profile core products.\n- No Abu Dhabi rent, fit-out cost, or startup budget figure is available in the profile, so no financial comparison is offered here.\n\n**Next steps**\n\n- Run the same structured site-visit scorecard in Al Zahiyah, Al Manhal/Al Wahda edge, and Khalifa City, using your own measured traffic and rider counts rather than published descriptions.\n- Request written rent, service charge, and permitted-use terms for at least two candidate units in each shortlisted area before narrowing.\n- Confirm with Abu Dhabi food-safety and licensing authorities the requirements for a takeaway-only or takeaway-led unit in each area, and verify extraction, grease, waste and gas capacity for the chosen premises.\n- Obtain illustrative supply quotes for meat, kebab, dough and packaging delivered to each area, and commission quotes from at least two packaging/containment options for hot sandwiches.\n- Inspect the Deliveroo merchant terms and any aggregator contract directly to establish actual commission and eligibility at the specific address.\n\n**Questions**\n\n- What unit size and monthly rent ceiling in AED are you targeting per area, and do you need any dine-in seating or is it counter/takeaway only?\n- Which delivery channels do you intend to use \\(own riders, aggregator, or both\\), and what is your planned daily operating window?\n\n**Sources**\n\n1. [Al Zahiyah neighbourhood guide](<https://visitabudhabi.ae/en/where-to-go/marinas-waterfronts/al-zahiyah>) — Department of Culture and Tourism - Abu Dhabi\n   - Al Zahiyah: checked 2026-10-12 UTC.\n     Location in source: Introduction; FAQs / What is Al Zahiyah famous for?.\n     - Tourism guide describes an area or landmark, not a proposed restaurant unit.\n     - No verified shop rent, footfall, customer mix, or demand estimate.\n2. [Papa Johns Stores in UAE](<https://www.papajohns.ae/stores>) — Papa Johns UAE\n   - Papa Johns - Al Zahiyah: checked 2026-10-12 UTC.\n     Location in source: Abu Dhabi / Abu Dhabi Mall.\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n   - Papa Johns - Al Wahda / Al Manhal: checked 2026-10-12 UTC.\n     Location in source: Abu Dhabi / Al Wahda Mall.\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n   - Papa Johns UAE - delivery and takeaway: checked 2026-10-12 UTC.\n     Location in source: Store directory introduction.\n     - UAE-wide company statement supported by Dubai and Abu Dhabi branch entries.\n     - Delivery catchments, fees, promotions, and item availability were not verified at checkout.\n3. [Papa Johns UAE Menu & Prices \\(AED\\)](<https://www.papajohns.ae/menu>) — Papa Johns UAE\n   - Papa Johns - All The Meats pizza: checked 2026-10-12 UTC.\n     Location in source: Pizzas / All The Meats.\n     - Public UAE website menu; the store directory states shared menus and prices across branches in both cities.\n     - No branch checkout selected; crust options, extras, fees, tax treatment, and availability need confirmation.\n   - Papa Johns - Papa's Solo Meal: checked 2026-10-12 UTC.\n     Location in source: Deals / Papa's Solo Meal.\n     - Public UAE website menu; the store directory states shared menus and prices across branches in both cities.\n     - No branch checkout selected; crust options, extras, fees, tax treatment, and availability need confirmation.\n     - Bundle price, not a standalone pizza price; no offer expiry was shown.\n   - Papa Johns - Papa's Meal for Two: checked 2026-10-12 UTC.\n     Location in source: Deals / Papa's Meal for Two.\n     - Public UAE website menu; the store directory states shared menus and prices across branches in both cities.\n     - No branch checkout selected; crust options, extras, fees, tax treatment, and availability need confirmation.\n     - Bundle price; starter choices and current deal availability need confirmation; no expiry was shown.\n   - Papa Johns - Butter Chicken pizza: checked 2026-10-12 UTC.\n     Location in source: Pizzas / Butter Chicken.\n     - Public UAE website menu; the store directory states shared menus and prices across branches in both cities.\n     - No branch checkout selected; crust options, extras, fees, tax treatment, and availability need confirmation.\n     - An observed competitor flavor variant does not establish local customer preferences.\n4. [Al Wahda Mall](<https://visitabudhabi.ae/en/things-to-do/shopping/al-wahda-mall>) — Department of Culture and Tourism - Abu Dhabi\n   - Al Wahda Mall / Al Manhal: checked 2026-10-12 UTC.\n     Location in source: Mall description.\n     - Tourism guide describes an area or landmark, not a proposed restaurant unit.\n     - No verified shop rent, footfall, customer mix, or demand estimate.\n     - The tourism page establishes the mall features; the separate Papa Johns directory identifies Al Manhal as the branch district.\n5. [Allo Beirut locations](<https://www.allobeirutstreetfood.com/locations>) — Allo Beirut\n   - Allo Beirut - Al Najda / Al Danah: checked 2026-10-12 UTC.\n     Location in source: Abu Dhabi / Al Najda St..\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n   - Allo Beirut - Khalifa City: checked 2026-10-12 UTC.\n     Location in source: Abu Dhabi / Khalifa City.\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n6. [Deliveroo Marketplace+ for UAE partners](<https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace>) — Deliveroo\n   - Deliveroo UAE - Marketplace+ own riders: checked 2026-10-12 UTC.\n     Location in source: Benefits of Marketplace+; Receiving orders; Delivering orders.\n     - UAE merchant product description; eligibility and availability at a proposed address need confirmation.\n     - No verified contractual commission, fees, delivery radius, service level, or sales uplift.",
+  "cited_evidence_ids": [
+    "AUH-COMP-001",
+    "AUH-COMP-003",
+    "AUH-COMP-004",
+    "AUH-COMP-005",
+    "AUH-LOC-001",
+    "AUH-LOC-003",
+    "UAE-DEL-001",
+    "UAE-DEL-004",
+    "UAE-MENU-001",
+    "UAE-PRICE-001",
+    "UAE-PRICE-002",
+    "UAE-PRICE-003"
+  ],
+  "retrieved_sources": {
+    "AUH-COMP-001": {
+      "id": "AUH-COMP-001",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Papa Johns - Al Zahiyah",
+      "observation": "Papa Johns lists a pizza branch by the Abu Dhabi Mall parking entrance in Al Zahiyah.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Abu Dhabi / Abu Dhabi Mall",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "AUH-COMP-003": {
+      "id": "AUH-COMP-003",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Papa Johns - Al Wahda / Al Manhal",
+      "observation": "Papa Johns lists its Al Wahda Mall pizza branch on Hthaymah Street in Al Manhal, Abu Dhabi.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Abu Dhabi / Al Wahda Mall",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "AUH-COMP-004": {
+      "id": "AUH-COMP-004",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Allo Beirut - Al Najda / Al Danah",
+      "observation": "Allo Beirut lists its Al Najda branch at 640 Saeed Bin Ahmed Al Otaiba Street, Al Danah, Abu Dhabi.",
+      "source_title": "Allo Beirut locations",
+      "source_url": "https://www.allobeirutstreetfood.com/locations",
+      "publisher": "Allo Beirut",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Abu Dhabi / Al Najda St.",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "AUH-COMP-005": {
+      "id": "AUH-COMP-005",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Allo Beirut - Khalifa City",
+      "observation": "Allo Beirut lists an Abu Dhabi branch in Khalifa City, Sector 32, with advertised hours of 8 AM to 12:30 AM.",
+      "source_title": "Allo Beirut locations",
+      "source_url": "https://www.allobeirutstreetfood.com/locations",
+      "publisher": "Allo Beirut",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Abu Dhabi / Khalifa City",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "AUH-LOC-001": {
+      "id": "AUH-LOC-001",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "locations"
+      ],
+      "entity": "Al Zahiyah",
+      "observation": "Abu Dhabi tourism describes Al Zahiyah as an established district with long-running restaurants and parks, near the Corniche, Al Maryah Island, and Abu Dhabi Mall.",
+      "source_title": "Al Zahiyah neighbourhood guide",
+      "source_url": "https://visitabudhabi.ae/en/where-to-go/marinas-waterfronts/al-zahiyah",
+      "publisher": "Department of Culture and Tourism - Abu Dhabi",
+      "source_kind": "official",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Introduction; FAQs / What is Al Zahiyah famous for?",
+      "qualifiers": [
+        "Tourism guide describes an area or landmark, not a proposed restaurant unit.",
+        "No verified shop rent, footfall, customer mix, or demand estimate."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "AUH-LOC-002": {
+      "id": "AUH-LOC-002",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "locations"
+      ],
+      "entity": "Khalidiya / Khalidiyah Mall",
+      "observation": "Abu Dhabi tourism describes Khalidiyah Mall as near Corniche Beach, with cafes, restaurants, a food court, cinema, and bowling.",
+      "source_title": "Khalidiyah Mall",
+      "source_url": "https://visitabudhabi.ae/en/things-to-do/shopping/Khalidiyah-Mall",
+      "publisher": "Department of Culture and Tourism - Abu Dhabi",
+      "source_kind": "official",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Mall description",
+      "qualifiers": [
+        "Tourism guide describes an area or landmark, not a proposed restaurant unit.",
+        "No verified shop rent, footfall, customer mix, or demand estimate.",
+        "Undated guide; individual tenants and current facilities require confirmation."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "AUH-LOC-003": {
+      "id": "AUH-LOC-003",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "locations"
+      ],
+      "entity": "Al Wahda Mall / Al Manhal",
+      "observation": "Abu Dhabi tourism describes Al Wahda Mall as a retail centre with a Lulu Hypermarket and multiple dining options.",
+      "source_title": "Al Wahda Mall",
+      "source_url": "https://visitabudhabi.ae/en/things-to-do/shopping/al-wahda-mall",
+      "publisher": "Department of Culture and Tourism - Abu Dhabi",
+      "source_kind": "official",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Mall description",
+      "qualifiers": [
+        "Tourism guide describes an area or landmark, not a proposed restaurant unit.",
+        "No verified shop rent, footfall, customer mix, or demand estimate.",
+        "The tourism page establishes the mall features; the separate Papa Johns directory identifies Al Manhal as the branch district."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "UAE-DEL-001": {
+      "id": "UAE-DEL-001",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "delivery",
+        "competitors"
+      ],
+      "entity": "Papa Johns UAE - delivery and takeaway",
+      "observation": "Papa Johns states that UAE branches offer delivery and takeaway and share the same menu and prices.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Store directory introduction",
+      "qualifiers": [
+        "UAE-wide company statement supported by Dubai and Abu Dhabi branch entries.",
+        "Delivery catchments, fees, promotions, and item availability were not verified at checkout."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "UAE-DEL-004": {
+      "id": "UAE-DEL-004",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "delivery",
+        "operations"
+      ],
+      "entity": "Deliveroo UAE - Marketplace+ own riders",
+      "observation": "Deliveroo describes Marketplace+ as using restaurant delivery staff, with selectable delivery area, minimum spend, and delivery fees, plus an option to request a platform rider.",
+      "source_title": "Deliveroo Marketplace+ for UAE partners",
+      "source_url": "https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace",
+      "publisher": "Deliveroo",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Benefits of Marketplace+; Receiving orders; Delivering orders",
+      "qualifiers": [
+        "UAE merchant product description; eligibility and availability at a proposed address need confirmation.",
+        "No verified contractual commission, fees, delivery radius, service level, or sales uplift."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "AUH-COMP-002": {
+      "id": "AUH-COMP-002",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Papa Johns - Khalidiya",
+      "observation": "Papa Johns lists its ADNOC 913 Khalidiya pizza branch on Ash Shoulah Street in Al Khubeirah, Al Khalidiyah.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Abu Dhabi / ADNOC 913 Khalidiya",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "UAE-MENU-001": {
+      "id": "UAE-MENU-001",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "menu",
+        "pricing"
+      ],
+      "entity": "Papa Johns - Butter Chicken pizza",
+      "observation": "The UAE web menu lists Butter Chicken pizza with Makhani sauce and chicken at AED 33 for 8 inches, AED 50 for 10 inches, and AED 69 for 13 inches.",
+      "source_title": "Papa Johns UAE Menu & Prices (AED)",
+      "source_url": "https://www.papajohns.ae/menu",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Pizzas / Butter Chicken",
+      "qualifiers": [
+        "Public UAE website menu; the store directory states shared menus and prices across branches in both cities.",
+        "No branch checkout selected; crust options, extras, fees, tax treatment, and availability need confirmation.",
+        "An observed competitor flavor variant does not establish local customer preferences."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "UAE-PRICE-001": {
+      "id": "UAE-PRICE-001",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "menu",
+        "pricing",
+        "competitors"
+      ],
+      "entity": "Papa Johns - All The Meats pizza",
+      "observation": "The UAE web menu lists All The Meats pizza at AED 33 for 8 inches, AED 50 for 10 inches, and AED 69 for 13 inches; toppings include beef, beef sausage, pepperoni, and turkey ham.",
+      "source_title": "Papa Johns UAE Menu & Prices (AED)",
+      "source_url": "https://www.papajohns.ae/menu",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Pizzas / All The Meats",
+      "qualifiers": [
+        "Public UAE website menu; the store directory states shared menus and prices across branches in both cities.",
+        "No branch checkout selected; crust options, extras, fees, tax treatment, and availability need confirmation."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "UAE-PRICE-002": {
+      "id": "UAE-PRICE-002",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "pricing",
+        "menu",
+        "marketing"
+      ],
+      "entity": "Papa Johns - Papa's Solo Meal",
+      "observation": "Papa's Solo Meal is listed at AED 37 for one small 8-inch pizza, potato wedges, and a canned drink.",
+      "source_title": "Papa Johns UAE Menu & Prices (AED)",
+      "source_url": "https://www.papajohns.ae/menu",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Deals / Papa's Solo Meal",
+      "qualifiers": [
+        "Public UAE website menu; the store directory states shared menus and prices across branches in both cities.",
+        "No branch checkout selected; crust options, extras, fees, tax treatment, and availability need confirmation.",
+        "Bundle price, not a standalone pizza price; no offer expiry was shown."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "UAE-PRICE-003": {
+      "id": "UAE-PRICE-003",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "pricing",
+        "menu",
+        "marketing"
+      ],
+      "entity": "Papa Johns - Papa's Meal for Two",
+      "observation": "Papa's Meal for Two is listed at AED 69 for one medium pizza, two starters, and two canned drinks.",
+      "source_title": "Papa Johns UAE Menu & Prices (AED)",
+      "source_url": "https://www.papajohns.ae/menu",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Deals / Papa's Meal for Two",
+      "qualifiers": [
+        "Public UAE website menu; the store directory states shared menus and prices across branches in both cities.",
+        "No branch checkout selected; crust options, extras, fees, tax treatment, and availability need confirmation.",
+        "Bundle price; starter choices and current deal availability need confirmation; no expiry was shown."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    }
+  },
+  "calculations": {},
+  "tool_trace": [
+    {
+      "name": "lookup_market_evidence",
+      "arguments": {
+        "cities": [
+          "abu_dhabi"
+        ],
+        "topics": [
+          "locations",
+          "competitors",
+          "delivery"
+        ],
+        "query": "Abu Dhabi area takeaway",
+        "limit": 12
+      },
+      "result": "{\"status\":\"ok\",\"data\":{\"records\":[{\"id\":\"AUH-COMP-001\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Papa Johns - Al Zahiyah\",\"observation\":\"Papa Johns lists a pizza branch by the Abu Dhabi Mall parking entrance in Al Zahiyah.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Abu Dhabi / Abu Dhabi Mall\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-COMP-003\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Papa Johns - Al Wahda / Al Manhal\",\"observation\":\"Papa Johns lists its Al Wahda Mall pizza branch on Hthaymah Street in Al Manhal, Abu Dhabi.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Abu Dhabi / Al Wahda Mall\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-COMP-004\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Allo Beirut - Al Najda / Al Danah\",\"observation\":\"Allo Beirut lists its Al Najda branch at 640 Saeed Bin Ahmed Al Otaiba Street, Al Danah, Abu Dhabi.\",\"source_title\":\"Allo Beirut locations\",\"source_url\":\"https://www.allobeirutstreetfood.com/locations\",\"publisher\":\"Allo Beirut\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Abu Dhabi / Al Najda St.\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-COMP-005\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Allo Beirut - Khalifa City\",\"observation\":\"Allo Beirut lists an Abu Dhabi branch in Khalifa City, Sector 32, with advertised hours of 8 AM to 12:30 AM.\",\"source_title\":\"Allo Beirut locations\",\"source_url\":\"https://www.allobeirutstreetfood.com/locations\",\"publisher\":\"Allo Beirut\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Abu Dhabi / Khalifa City\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-LOC-001\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"locations\"],\"entity\":\"Al Zahiyah\",\"observation\":\"Abu Dhabi tourism describes Al Zahiyah as an established district with long-running restaurants and parks, near the Corniche, Al Maryah Island, and Abu Dhabi Mall.\",\"source_title\":\"Al Zahiyah neighbourhood guide\",\"source_url\":\"https://visitabudhabi.ae/en/where-to-go/marinas-waterfronts/al-zahiyah\",\"publisher\":\"Department of Culture and Tourism - Abu Dhabi\",\"source_kind\":\"official\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Introduction; FAQs / What is Al Zahiyah famous for?\",\"qualifiers\":[\"Tourism guide describes an area or landmark, not a proposed restaurant unit.\",\"No verified shop rent, footfall, customer mix, or demand estimate.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-LOC-002\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"locations\"],\"entity\":\"Khalidiya / Khalidiyah Mall\",\"observation\":\"Abu Dhabi tourism describes Khalidiyah Mall as near Corniche Beach, with cafes, restaurants, a food court, cinema, and bowling.\",\"source_title\":\"Khalidiyah Mall\",\"source_url\":\"https://visitabudhabi.ae/en/things-to-do/shopping/Khalidiyah-Mall\",\"publisher\":\"Department of Culture and Tourism - Abu Dhabi\",\"source_kind\":\"official\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Mall description\",\"qualifiers\":[\"Tourism guide describes an area or landmark, not a proposed restaurant unit.\",\"No verified shop rent, footfall, customer mix, or demand estimate.\",\"Undated guide; individual tenants and current facilities require confirmation.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-LOC-003\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"locations\"],\"entity\":\"Al Wahda Mall / Al Manhal\",\"observation\":\"Abu Dhabi tourism describes Al Wahda Mall as a retail centre with a Lulu Hypermarket and multiple dining options.\",\"source_title\":\"Al Wahda Mall\",\"source_url\":\"https://visitabudhabi.ae/en/things-to-do/shopping/al-wahda-mall\",\"publisher\":\"Department of Culture and Tourism - Abu Dhabi\",\"source_kind\":\"official\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Mall description\",\"qualifiers\":[\"Tourism guide describes an area or landmark, not a proposed restaurant unit.\",\"No verified shop rent, footfall, customer mix, or demand estimate.\",\"The tourism page establishes the mall features; the separate Papa Johns directory identifies Al Manhal as the branch district.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-DEL-001\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\",\"competitors\"],\"entity\":\"Papa Johns UAE - delivery and takeaway\",\"observation\":\"Papa Johns states that UAE branches offer delivery and takeaway and share the same menu and prices.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Store directory introduction\",\"qualifiers\":[\"UAE-wide company statement supported by Dubai and Abu Dhabi branch entries.\",\"Delivery catchments, fees, promotions, and item availability were not verified at checkout.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-DEL-004\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\",\"operations\"],\"entity\":\"Deliveroo UAE - Marketplace+ own riders\",\"observation\":\"Deliveroo describes Marketplace+ as using restaurant delivery staff, with selectable delivery area, minimum spend, and delivery fees, plus an option to request a platform rider.\",\"source_title\":\"Deliveroo Marketplace+ for UAE partners\",\"source_url\":\"https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Benefits of Marketplace+; Receiving orders; Delivering orders\",\"qualifiers\":[\"UAE merchant product description; eligibility and availability at a proposed address need confirmation.\",\"No verified contractual commission, fees, delivery radius, service level, or sales uplift.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false}],\"matched_count\":9,\"omitted_count\":0},\"warnings\":[]}",
+      "error": false
+    },
+    {
+      "name": "lookup_market_evidence",
+      "arguments": {
+        "cities": [
+          "abu_dhabi"
+        ],
+        "topics": [
+          "competitors",
+          "menu",
+          "pricing"
+        ],
+        "query": "kebab pizza restaurant Abu Dhabi",
+        "limit": 12
+      },
+      "result": "{\"status\":\"ok\",\"data\":{\"records\":[{\"id\":\"AUH-COMP-001\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Papa Johns - Al Zahiyah\",\"observation\":\"Papa Johns lists a pizza branch by the Abu Dhabi Mall parking entrance in Al Zahiyah.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Abu Dhabi / Abu Dhabi Mall\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-COMP-003\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Papa Johns - Al Wahda / Al Manhal\",\"observation\":\"Papa Johns lists its Al Wahda Mall pizza branch on Hthaymah Street in Al Manhal, Abu Dhabi.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Abu Dhabi / Al Wahda Mall\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-COMP-004\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Allo Beirut - Al Najda / Al Danah\",\"observation\":\"Allo Beirut lists its Al Najda branch at 640 Saeed Bin Ahmed Al Otaiba Street, Al Danah, Abu Dhabi.\",\"source_title\":\"Allo Beirut locations\",\"source_url\":\"https://www.allobeirutstreetfood.com/locations\",\"publisher\":\"Allo Beirut\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Abu Dhabi / Al Najda St.\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-COMP-005\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Allo Beirut - Khalifa City\",\"observation\":\"Allo Beirut lists an Abu Dhabi branch in Khalifa City, Sector 32, with advertised hours of 8 AM to 12:30 AM.\",\"source_title\":\"Allo Beirut locations\",\"source_url\":\"https://www.allobeirutstreetfood.com/locations\",\"publisher\":\"Allo Beirut\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Abu Dhabi / Khalifa City\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-COMP-002\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Papa Johns - Khalidiya\",\"observation\":\"Papa Johns lists its ADNOC 913 Khalidiya pizza branch on Ash Shoulah Street in Al Khubeirah, Al Khalidiyah.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Abu Dhabi / ADNOC 913 Khalidiya\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-MENU-001\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"menu\",\"pricing\"],\"entity\":\"Papa Johns - Butter Chicken pizza\",\"observation\":\"The UAE web menu lists Butter Chicken pizza with Makhani sauce and chicken at AED 33 for 8 inches, AED 50 for 10 inches, and AED 69 for 13 inches.\",\"source_title\":\"Papa Johns UAE Menu & Prices (AED)\",\"source_url\":\"https://www.papajohns.ae/menu\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Pizzas / Butter Chicken\",\"qualifiers\":[\"Public UAE website menu; the store directory states shared menus and prices across branches in both cities.\",\"No branch checkout selected; crust options, extras, fees, tax treatment, and availability need confirmation.\",\"An observed competitor flavor variant does not establish local customer preferences.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-PRICE-001\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"menu\",\"pricing\",\"competitors\"],\"entity\":\"Papa Johns - All The Meats pizza\",\"observation\":\"The UAE web menu lists All The Meats pizza at AED 33 for 8 inches, AED 50 for 10 inches, and AED 69 for 13 inches; toppings include beef, beef sausage, pepperoni, and turkey ham.\",\"source_title\":\"Papa Johns UAE Menu & Prices (AED)\",\"source_url\":\"https://www.papajohns.ae/menu\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Pizzas / All The Meats\",\"qualifiers\":[\"Public UAE website menu; the store directory states shared menus and prices across branches in both cities.\",\"No branch checkout selected; crust options, extras, fees, tax treatment, and availability need confirmation.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-PRICE-002\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"pricing\",\"menu\",\"marketing\"],\"entity\":\"Papa Johns - Papa's Solo Meal\",\"observation\":\"Papa's Solo Meal is listed at AED 37 for one small 8-inch pizza, potato wedges, and a canned drink.\",\"source_title\":\"Papa Johns UAE Menu & Prices (AED)\",\"source_url\":\"https://www.papajohns.ae/menu\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Deals / Papa's Solo Meal\",\"qualifiers\":[\"Public UAE website menu; the store directory states shared menus and prices across branches in both cities.\",\"No branch checkout selected; crust options, extras, fees, tax treatment, and availability need confirmation.\",\"Bundle price, not a standalone pizza price; no offer expiry was shown.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-PRICE-003\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"pricing\",\"menu\",\"marketing\"],\"entity\":\"Papa Johns - Papa's Meal for Two\",\"observation\":\"Papa's Meal for Two is listed at AED 69 for one medium pizza, two starters, and two canned drinks.\",\"source_title\":\"Papa Johns UAE Menu & Prices (AED)\",\"source_url\":\"https://www.papajohns.ae/menu\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Deals / Papa's Meal for Two\",\"qualifiers\":[\"Public UAE website menu; the store directory states shared menus and prices across branches in both cities.\",\"No branch checkout selected; crust options, extras, fees, tax treatment, and availability need confirmation.\",\"Bundle price; starter choices and current deal availability need confirmation; no expiry was shown.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false}],\"matched_count\":9,\"omitted_count\":0},\"warnings\":[]}",
+      "error": false
+    }
+  ],
+  "record": {
+    "model_requests": 2,
+    "input_tokens": 10972,
+    "output_tokens": 2620,
+    "reasoning_tokens": 0,
+    "cached_tokens": 6912,
+    "reported_cost_usd": "0.002271888",
+    "known_reported_cost_usd": "0.002271888",
+    "estimated_cost_usd": null,
+    "estimate_basis": null,
+    "usage_complete": true,
+    "schema_version": 1,
+    "run_id": "04bd72ad-2774-4e7c-8fd1-eae01e07bbb0",
+    "session_id": "ee0a7dd4-4095-42b5-8ba5-85bc35ac1ab7",
+    "timestamp_utc": "2026-10-14T13:18:12.102883Z",
+    "model_requested": "deepseek/deepseek-v4.1-flash",
+    "model_reported_if_available": [
+      "deepseek/deepseek-v4.1-flash"
+    ],
+    "provider_if_available": [
+      "Morph"
+    ],
+    "prompt_version": "10.1",
+    "evidence_dataset_version": "a226a6b54cf292e9b2f6f6e9c51112957bff64195bc8182e0b579dd1f79ca3c5",
+    "question": "Shortlist three Abu Dhabi areas for our takeaway-led pizza and kebab branch.",
+    "outcome": "completed",
+    "error_category": null,
+    "tool_events": [
+      {
+        "name": "lookup_market_evidence",
+        "duration_ms": 0.7287149783223867,
+        "status": "ok",
+        "result_count": 9
+      },
+      {
+        "name": "lookup_market_evidence",
+        "duration_ms": 0.702091958373785,
+        "status": "ok",
+        "result_count": 9
+      }
+    ],
+    "requests": [
+      {
+        "generation_id": "gen-1791983892-whQLLo2zD0WdYSDmZ4rW",
+        "model_reported": "deepseek/deepseek-v4.1-flash",
+        "provider_reported": "Morph",
+        "duration_ms": 1391.417177976109,
+        "outcome": "completed",
+        "input_tokens": 3519,
+        "output_tokens": 212,
+        "reasoning_tokens": 0,
+        "cached_tokens": 3456,
+        "reported_cost_usd": "0.000202468"
+      },
+      {
+        "generation_id": "gen-1791983893-ZoQU0wH9NH3e05cuiW0T",
+        "model_reported": "deepseek/deepseek-v4.1-flash",
+        "provider_reported": "Morph",
+        "duration_ms": 16285.469363967422,
+        "outcome": "completed",
+        "input_tokens": 7453,
+        "output_tokens": 2408,
+        "reasoning_tokens": 0,
+        "cached_tokens": 3456,
+        "reported_cost_usd": "0.00206942"
+      }
+    ],
+    "evidence_ids": [
+      "AUH-COMP-001",
+      "AUH-COMP-003",
+      "AUH-COMP-004",
+      "AUH-COMP-005",
+      "AUH-LOC-001",
+      "AUH-LOC-002",
+      "AUH-LOC-003",
+      "UAE-DEL-001",
+      "UAE-DEL-004",
+      "AUH-COMP-002",
+      "UAE-MENU-001",
+      "UAE-PRICE-001",
+      "UAE-PRICE-002",
+      "UAE-PRICE-003"
+    ],
+    "calculation_ids": [],
+    "latency_ms": 17696.6939799604,
+    "tool_output_characters": 14115,
+    "validation_errors": [],
+    "warnings": []
+  },
+  "warnings": [],
+  "error_category": null,
+  "error_message": null,
+  "checks": {
+    "reference_integrity": true,
+    "requested_cities_present": true,
+    "durable_profile_unchanged": true,
+    "calculator_exact": null,
+    "claim_support": "requires review"
+  }
+}

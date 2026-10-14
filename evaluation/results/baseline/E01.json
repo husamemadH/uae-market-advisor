@@ -1,0 +1,918 @@
+{
+  "case": {
+    "id": "E01",
+    "question": "Shortlist three Dubai areas for our takeaway-led pizza and kebab branch.",
+    "cities": [
+      "dubai"
+    ],
+    "topics": [
+      "locations"
+    ],
+    "profile": {
+      "branch_format": "takeaway"
+    },
+    "followup_of": null,
+    "expected": [
+      "Three specific candidate areas with evidence",
+      "Tradeoffs and conditional format fit",
+      "Missing shop rent and footfall acknowledged",
+      "Practical site checks"
+    ]
+  },
+  "status": "completed",
+  "session_id": "29472e57-f6d1-42c1-894c-31aeccf9dc74",
+  "run_id": "017752ff-db3b-4c1f-94a6-392d1e98f329",
+  "profile_before": {
+    "restaurant_origin": "Jordan",
+    "core_products": [
+      "meaty pizza",
+      "kebab sandwiches"
+    ],
+    "target_cities": [
+      "Dubai",
+      "Abu Dhabi"
+    ],
+    "startup_budget_aed": null,
+    "monthly_rent_budget_aed": null,
+    "branch_format": "takeaway",
+    "target_audience": null,
+    "positioning": null,
+    "planned_opening": null
+  },
+  "profile_after": {
+    "restaurant_origin": "Jordan",
+    "core_products": [
+      "meaty pizza",
+      "kebab sandwiches"
+    ],
+    "target_cities": [
+      "Dubai",
+      "Abu Dhabi"
+    ],
+    "startup_budget_aed": null,
+    "monthly_rent_budget_aed": null,
+    "branch_format": "takeaway",
+    "target_audience": null,
+    "positioning": null,
+    "planned_opening": null
+  },
+  "answer": {
+    "kind": "advice",
+    "cities": [
+      "dubai"
+    ],
+    "headline": "Provisional three-area shortlist for a Dubai takeaway-led pizza and kebab branch: Al Barsha/Hessa Street, Deira (Al Muraqqabat–Port Saeed core), and Dubai Marina/JBR — each ranked on competitor overlap and format fit, pending site-level checks.",
+    "sections": [
+      {
+        "title": "Shortlist and why each area is on it",
+        "items": [
+          {
+            "text": "Al Barsha / Hessa Street — first candidate. Papa Johns operates a pizza branch at Al Barsha Mall and Allo Beirut runs a Hessa Street branch advertising delivery until 4 AM, so the corridor already shows both a pizza-chain and a late-night Levantine delivery format; that is competitive pressure plus format precedent, not proof of demand or available units. Proximity between these listings does not establish a shared delivery catchment for our site.",
+            "basis": "fact",
+            "evidence_ids": [
+              "DXB-COMP-002",
+              "DXB-COMP-004"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Deira (Al Muraqqabat / Port Saeed / City Centre core) — second candidate. Papa Johns lists branches at Al Ghurair Centre in Al Muraqqabat and Deira City Centre in Port Saeed, and the official Dubai neighbourhood guide describes Deira as a heritage district with traditional souks. This suggests a dense, mixed residential/trade district where lean takeaway formats fit conditionally, but the sources do not verify shop rents, footfall, or customer mix. Keep Al Muraqqabat and Port Saeed as separate site searches; proximity does not mean one catchment.",
+            "basis": "inference",
+            "evidence_ids": [
+              "DXB-COMP-001",
+              "DXB-LOC-001"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Dubai Marina / JBR — third candidate, only with a differentiation plan. Papa Johns lists a branch at Marina Diamond near Dubai Marina Metro Station; Allo Beirut lists a JBR branch on Al Mamsha Street carrying shawarma, grills and sandwiches; Zaroob lists a Marina restaurant at Radisson Blu Residence advertising 7 AM–5 AM hours. That is three branded operators in overlapping categories, so entry here is contrast-driven (Jordanian-specific meaty pizza and kebab) rather than general pizza/kebab supply.",
+            "basis": "inference",
+            "evidence_ids": [
+              "DXB-COMP-003",
+              "DXB-COMP-005",
+              "DXB-COMP-006"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Competitor presence in these listings is not a demand or market-share measurement, and a branch listing shows a business lists that address, not that we verified it is currently trading. Treat all three areas as candidate search zones until you physically inspect specific units and their surroundings.",
+            "basis": "inference",
+            "evidence_ids": [
+              "DXB-COMP-001",
+              "DXB-COMP-002",
+              "DXB-COMP-003",
+              "DXB-COMP-004",
+              "DXB-COMP-005"
+            ],
+            "calculation_ids": []
+          }
+        ]
+      },
+      {
+        "title": "Pricing signal to build your menu against",
+        "items": [
+          {
+            "text": "Published Dubai menu references: Allo Beirut's JBR Deliveroo menu lists Pepperoni pizza at AED 40 and Margherita at AED 38; Papa Johns UAE web menu lists All The Meats pizza at AED 33 (8 inch), AED 50 (10 inch) and AED 69 (13 inch). Pizza diameter/weight was not specified for the Allo Beirut items, and these are observed item prices, not checkout totals — delivery charges, extras and tax treatment were not verified. Use them as comparison anchors only, not as a recommended price band.",
+            "basis": "fact",
+            "evidence_ids": [
+              "DXB-PRICE-001",
+              "UAE-PRICE-001"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Proposal: set your own prices after costing your recipes, then price the meaty pizza and kebab sandwich so the two bundles land where customers can compare them against the observed chain and independent anchors above. Test 2–3 price points per item in a limited period before locking a menu; we cannot predict what will sell at which price from these observations.",
+            "basis": "proposal",
+            "evidence_ids": [
+              "DXB-PRICE-001",
+              "UAE-PRICE-001"
+            ],
+            "calculation_ids": []
+          }
+        ]
+      },
+      {
+        "title": "Delivery and operations fit (format checks)",
+        "items": [
+          {
+            "text": "Delivery channels exist in all three areas: Papa Johns states UAE branches offer delivery and takeaway with a shared menu and prices; Deliveroo describes a UAE partner service using its rider network plus customer pickup, order tracking, and a Marketplace+ option where the restaurant uses its own delivery staff with a selectable delivery area, minimum spend and fees. No commission, fee, radius or service level was verified — get written quotes per area.",
+            "basis": "fact",
+            "evidence_ids": [
+              "UAE-DEL-001",
+              "UAE-DEL-002",
+              "UAE-DEL-003",
+              "UAE-DEL-004"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "If you deliver hot kebab sandwiches and pizza, plan packaging and vehicle checks against Dubai Municipality transport guidance: hot food held at 60 C or above, cold at 5 C or below, frozen at -18 C or below, with sealed containers and hot/cold items separated into insulated secondary units. That guidance is version 2 dated 2023-08-31 and flagged needs_review, so re-check for amendments.",
+            "basis": "fact",
+            "evidence_ids": [
+              "DXB-DEL-001",
+              "DXB-DEL-002"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Dubai Municipality guidance requires food handling staff, supervisors and managers to receive formal food safety training appropriate to their activity; also dated 2023-08-31 and flagged needs_review, so confirm the current requirement before hiring. Headcount is a staffing decision you set, not a researched requirement.",
+            "basis": "fact",
+            "evidence_ids": [
+              "DXB-OPS-002"
+            ],
+            "calculation_ids": []
+          }
+        ]
+      },
+      {
+        "title": "Research leads: Al Barsha unit supply and kebab competition",
+        "items": [
+          {
+            "text": "A Dubizzle classified snippet advertises an Italian takeaway pizzeria shop in Al Barsha with annual rent stated at AED 75,000 and a trade licence and Ejari stated valid to May 2026 — the listing is dated January 2026 and is now likely stale or unavailable. This is an uninspected research lead, not a verified rent benchmark; inspect the original page and any current comparable before using any number.",
+            "basis": "research_lead",
+            "evidence_ids": [
+              "SEARCH-0d9ccc35c4404abb93e62e903cda9f65"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Directory-style snippets suggest kebab and takeout restaurant listings exist in Al Barsha (magicpin, Zomato). These are lead-generation pages, not verified competitor sets; open the original pages to see which operators are actually active.",
+            "basis": "research_lead",
+            "evidence_ids": [
+              "SEARCH-ae966ea84e384395b2d77fd48440f81d",
+              "SEARCH-d4b6d52e939d4f1e9b7811c1770c7c66",
+              "SEARCH-33bfa8719c3c4ab5afc6929f79937351"
+            ],
+            "calculation_ids": []
+          }
+        ]
+      }
+    ],
+    "assumptions": [
+      "Format is takeaway-led with no dine-in, per the stated branch format.",
+      "Core products are meaty pizza and kebab sandwiches positioned on a Jordanian origin.",
+      "Target cities are Dubai and Abu Dhabi; this answer covers only the Dubai shortlist you asked for.",
+      "Startup budget, monthly rent budget, target audience, positioning and opening date are unset, so no financial test was run."
+    ],
+    "next_steps": [
+      "Pick 3–5 specific units in each shortlist area and check: licence category permitted, gas/exhaust capacity, loading and rider access, and whether the unit suits a takeaway format.",
+      "Map actual competitor delivery coverage for each candidate unit rather than assuming catchments from these listings.",
+      "Get written delivery-partner terms (commission basis, fees, radius) for at least two candidates per area.",
+      "Collect pest-control, supplier and utility cost quotes per area; keep them separate from the business profile's rent budget field.",
+      "If you want a contribution and break-even test, give me average order revenue, food cost per order, packaging per order, other variable cost per order, delivery share of orders, delivery commission rate, monthly fixed costs, and operating days per month — say which are measured and which are estimates."
+    ],
+    "questions": [
+      "Which of the three areas do you want me to develop first — Al Barsha/Hessa Street, Deira, or Dubai Marina/JBR?",
+      "Do you have a monthly rent budget and startup budget you want applied, or should I keep them unset until you have site quotes?"
+    ]
+  },
+  "rendered_answer": "Provisional three-area shortlist for a Dubai takeaway-led pizza and kebab branch: Al Barsha/Hessa Street, Deira \\(Al Muraqqabat–Port Saeed core\\), and Dubai Marina/JBR — each ranked on competitor overlap and format fit, pending site-level checks.\n\n**Shortlist and why each area is on it**\n\n- **Fact:** Al Barsha / Hessa Street — first candidate. Papa Johns operates a pizza branch at Al Barsha Mall and Allo Beirut runs a Hessa Street branch advertising delivery until 4 AM, so the corridor already shows both a pizza-chain and a late-night Levantine delivery format; that is competitive pressure plus format precedent, not proof of demand or available units. Proximity between these listings does not establish a shared delivery catchment for our site. [1](<https://www.papajohns.ae/stores>) [2](<https://www.allobeirutstreetfood.com/locations>)\n- **Inference:** Deira \\(Al Muraqqabat / Port Saeed / City Centre core\\) — second candidate. Papa Johns lists branches at Al Ghurair Centre in Al Muraqqabat and Deira City Centre in Port Saeed, and the official Dubai neighbourhood guide describes Deira as a heritage district with traditional souks. This suggests a dense, mixed residential/trade district where lean takeaway formats fit conditionally, but the sources do not verify shop rents, footfall, or customer mix. Keep Al Muraqqabat and Port Saeed as separate site searches; proximity does not mean one catchment. [1](<https://www.papajohns.ae/stores>) [3](<https://www.visitdubai.com/en/explore-dubai/dubai-neighbourhoods/deira>)\n- **Inference:** Dubai Marina / JBR — third candidate, only with a differentiation plan. Papa Johns lists a branch at Marina Diamond near Dubai Marina Metro Station; Allo Beirut lists a JBR branch on Al Mamsha Street carrying shawarma, grills and sandwiches; Zaroob lists a Marina restaurant at Radisson Blu Residence advertising 7 AM–5 AM hours. That is three branded operators in overlapping categories, so entry here is contrast-driven \\(Jordanian-specific meaty pizza and kebab\\) rather than general pizza/kebab supply. [1](<https://www.papajohns.ae/stores>) [2](<https://www.allobeirutstreetfood.com/locations>) [4](<https://www.zaroob.com/>)\n- **Inference:** Competitor presence in these listings is not a demand or market-share measurement, and a branch listing shows a business lists that address, not that we verified it is currently trading. Treat all three areas as candidate search zones until you physically inspect specific units and their surroundings. [1](<https://www.papajohns.ae/stores>) [2](<https://www.allobeirutstreetfood.com/locations>)\n\n**Pricing signal to build your menu against**\n\n- **Fact:** Published Dubai menu references: Allo Beirut's JBR Deliveroo menu lists Pepperoni pizza at AED 40 and Margherita at AED 38; Papa Johns UAE web menu lists All The Meats pizza at AED 33 \\(8 inch\\), AED 50 \\(10 inch\\) and AED 69 \\(13 inch\\). Pizza diameter/weight was not specified for the Allo Beirut items, and these are observed item prices, not checkout totals — delivery charges, extras and tax treatment were not verified. Use them as comparison anchors only, not as a recommended price band. [5](<https://deliveroo.ae/en/menu/dubai/jbr/allo-beirut-jbr>) [6](<https://www.papajohns.ae/menu>)\n- **Proposal:** Proposal: set your own prices after costing your recipes, then price the meaty pizza and kebab sandwich so the two bundles land where customers can compare them against the observed chain and independent anchors above. Test 2–3 price points per item in a limited period before locking a menu; we cannot predict what will sell at which price from these observations. [5](<https://deliveroo.ae/en/menu/dubai/jbr/allo-beirut-jbr>) [6](<https://www.papajohns.ae/menu>)\n\n**Delivery and operations fit \\(format checks\\)**\n\n- **Fact:** Delivery channels exist in all three areas: Papa Johns states UAE branches offer delivery and takeaway with a shared menu and prices; Deliveroo describes a UAE partner service using its rider network plus customer pickup, order tracking, and a Marketplace+ option where the restaurant uses its own delivery staff with a selectable delivery area, minimum spend and fees. No commission, fee, radius or service level was verified — get written quotes per area. [1](<https://www.papajohns.ae/stores>) [7](<https://merchants.deliveroo.com/en-AE/what-we-offer/delivery>) [8](<https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace>)\n- **Fact:** If you deliver hot kebab sandwiches and pizza, plan packaging and vehicle checks against Dubai Municipality transport guidance: hot food held at 60 C or above, cold at 5 C or below, frozen at -18 C or below, with sealed containers and hot/cold items separated into insulated secondary units. That guidance is version 2 dated 2023-08-31 and flagged needs\\_review, so re-check for amendments. [9](<https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf>)\n- **Fact:** Dubai Municipality guidance requires food handling staff, supervisors and managers to receive formal food safety training appropriate to their activity; also dated 2023-08-31 and flagged needs\\_review, so confirm the current requirement before hiring. Headcount is a staffing decision you set, not a researched requirement. [10](<https://dmpmedia.dm.gov.ae/uploads/2024/02/3.-DM-FSD-GU64-Requirements-for-Integrated-Training-Management-System-for-Food-Establishments-2.pdf>)\n\n**Research leads: Al Barsha unit supply and kebab competition**\n\n- **Research lead:** A Dubizzle classified snippet advertises an Italian takeaway pizzeria shop in Al Barsha with annual rent stated at AED 75,000 and a trade licence and Ejari stated valid to May 2026 — the listing is dated January 2026 and is now likely stale or unavailable. This is an uninspected research lead, not a verified rent benchmark; inspect the original page and any current comparable before using any number. [11](<https://dubai.dubizzle.com/ar/classified/business-industrial/businesses-for-sale/service-business/2026/1/5/italian-takeaway-pizzeria-shop-al-barsha-d-2-883---dfedfbcaa1bb468ab1332d8288039199/>)\n- **Research lead:** Directory-style snippets suggest kebab and takeout restaurant listings exist in Al Barsha \\(magicpin, Zomato\\). These are lead-generation pages, not verified competitor sets; open the original pages to see which operators are actually active. [12](<https://magicpin.com/uae/Dubai/Al-Barsha/Restaurant/Kebab/>) [13](<https://magicpin.com/uae/Dubai/Al-Barsha/Restaurant/Takeout-Restaurant/>) [14](<https://www.zomato.com/dubai/al-barsha-restaurants/kebab>)\n\n**Assumptions and limitations**\n\n- Format is takeaway-led with no dine-in, per the stated branch format.\n- Core products are meaty pizza and kebab sandwiches positioned on a Jordanian origin.\n- Target cities are Dubai and Abu Dhabi; this answer covers only the Dubai shortlist you asked for.\n- Startup budget, monthly rent budget, target audience, positioning and opening date are unset, so no financial test was run.\n\n**Next steps**\n\n- Pick 3–5 specific units in each shortlist area and check: licence category permitted, gas/exhaust capacity, loading and rider access, and whether the unit suits a takeaway format.\n- Map actual competitor delivery coverage for each candidate unit rather than assuming catchments from these listings.\n- Get written delivery-partner terms \\(commission basis, fees, radius\\) for at least two candidates per area.\n- Collect pest-control, supplier and utility cost quotes per area; keep them separate from the business profile's rent budget field.\n- If you want a contribution and break-even test, give me average order revenue, food cost per order, packaging per order, other variable cost per order, delivery share of orders, delivery commission rate, monthly fixed costs, and operating days per month — say which are measured and which are estimates.\n\n**Questions**\n\n- Which of the three areas do you want me to develop first — Al Barsha/Hessa Street, Deira, or Dubai Marina/JBR?\n- Do you have a monthly rent budget and startup budget you want applied, or should I keep them unset until you have site quotes?\n\n**Tool warnings**\n\n- Some returned records need review; inspect their dates and freshness flags.\n- Search snippets are untrusted research leads, not inspected pages or verified market facts.\n- Some matching records were omitted to respect result or payload limits.\n\n**Sources**\n\n1. [Papa Johns Stores in UAE](<https://www.papajohns.ae/stores>) — Papa Johns UAE\n   - Papa Johns - Al Barsha: checked 2026-10-12 UTC.\n     Location in source: Dubai / Al Barsha Mall.\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n   - Papa Johns - Deira: checked 2026-10-12 UTC.\n     Location in source: Dubai / Al Ghurair Centre; Deira City Centre.\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n   - Papa Johns - Dubai Marina: checked 2026-10-12 UTC.\n     Location in source: Dubai / Marina Diamond.\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n   - Papa Johns UAE - delivery and takeaway: checked 2026-10-12 UTC.\n     Location in source: Store directory introduction.\n     - UAE-wide company statement supported by Dubai and Abu Dhabi branch entries.\n     - Delivery catchments, fees, promotions, and item availability were not verified at checkout.\n2. [Allo Beirut locations](<https://www.allobeirutstreetfood.com/locations>) — Allo Beirut\n   - Allo Beirut - Al Barsha / Hessa Street: checked 2026-10-12 UTC.\n     Location in source: Dubai / Hessa St..\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n     - Advertised delivery hours do not establish overnight demand or the proposed site catchment.\n   - Allo Beirut - JBR: checked 2026-10-12 UTC.\n     Location in source: Dubai / JBR; footer / menu categories.\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n3. [Deira neighbourhood guide](<https://www.visitdubai.com/en/explore-dubai/dubai-neighbourhoods/deira>) — Dubai Department of Economy and Tourism\n   - Deira: checked 2026-10-12 UTC.\n     Location in source: Deira heading and introductory description.\n     - Tourism guide describes an area or landmark, not a proposed restaurant unit.\n     - No verified shop rent, footfall, customer mix, or demand estimate.\n4. [Zaroob hours and locations](<https://www.zaroob.com/>) — Zaroob\n   - Zaroob - Dubai Marina: checked 2026-10-12 UTC.\n     Location in source: Hours & Locations / Zaroob Marina.\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n     - Hours are branch-specific observations, not evidence that late-night staffing would be profitable.\n5. [Allo Beirut - JBR delivery menu](<https://deliveroo.ae/en/menu/dubai/jbr/allo-beirut-jbr>) — Deliveroo\n   - Allo Beirut JBR - pizza: checked 2026-10-12 UTC.\n     Location in source: Pizza / Pizza Pepperoni; Pizza Margherita.\n     - JBR, Dubai branch, anonymous Deliveroo listing with no delivery address selected; menu visibility can vary.\n     - Pizza diameter and weight were not specified. Observed item prices are not a completed checkout total; delivery charges, extras, and tax treatment were not verified.\n     - No publication date shown; recheck menu, price, and availability before a decision.\n6. [Papa Johns UAE Menu & Prices \\(AED\\)](<https://www.papajohns.ae/menu>) — Papa Johns UAE\n   - Papa Johns - All The Meats pizza: checked 2026-10-12 UTC.\n     Location in source: Pizzas / All The Meats.\n     - Public UAE website menu; the store directory states shared menus and prices across branches in both cities.\n     - No branch checkout selected; crust options, extras, fees, tax treatment, and availability need confirmation.\n7. [Deliveroo delivery and pickup for UAE partners](<https://merchants.deliveroo.com/en-AE/what-we-offer/delivery>) — Deliveroo\n   - Deliveroo UAE - platform riders and pickup: checked 2026-10-12 UTC.\n     Location in source: Delivery network; Customer flexibility.\n     - UAE merchant product description; eligibility and availability at a proposed address need confirmation.\n     - No verified contractual commission, fees, delivery radius, service level, or sales uplift.\n   - Deliveroo UAE - order tracking: checked 2026-10-12 UTC.\n     Location in source: End-to-end order tracking.\n     - UAE merchant product description; eligibility and availability at a proposed address need confirmation.\n     - No verified contractual commission, fees, delivery radius, service level, or sales uplift.\n8. [Deliveroo Marketplace+ for UAE partners](<https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace>) — Deliveroo\n   - Deliveroo UAE - Marketplace+ own riders: checked 2026-10-12 UTC.\n     Location in source: Benefits of Marketplace+; Receiving orders; Delivering orders.\n     - UAE merchant product description; eligibility and availability at a proposed address need confirmation.\n     - No verified contractual commission, fees, delivery radius, service level, or sales uplift.\n9. [Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2](<https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf>) — Dubai Municipality\n   - Dubai Municipality - transport cold chain: checked 2026-10-12 UTC; published 2023-08-31; NEEDS REVIEW.\n     Location in source: PDF pages 13-14, section 1.2.2 Temperature Control Requirements.\n     - Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\n     - Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\n     - Transport holding requirements, not cooking temperatures or evidence that a supplier or vehicle meets them.\n   - Dubai Municipality - sealed delivery and separation: checked 2026-10-12 UTC; published 2023-08-31; NEEDS REVIEW.\n     Location in source: PDF page 18, section 1.4.1\\(e\\)-\\(f\\).\n     - Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\n     - Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\n10. [Requirements for Integrated Training Management System for Food Establishments, DM-FSD-GU64, version 2](<https://dmpmedia.dm.gov.ae/uploads/2024/02/3.-DM-FSD-GU64-Requirements-for-Integrated-Training-Management-System-for-Food-Establishments-2.pdf>) — Dubai Municipality\n   - Dubai Municipality - food handler training: checked 2026-10-12 UTC; published 2023-08-31; NEEDS REVIEW.\n     Location in source: PDF page 4, Introduction; page 7, Regulatory Approach.\n     - Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\n     - Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\n11. [Italian Takeaway Pizzeria Shop - Al Barsha Dubai \\| دوبيزل دبي](<https://dubai.dubizzle.com/ar/classified/business-industrial/businesses-for-sale/service-business/2026/1/5/italian-takeaway-pizzeria-shop-al-barsha-d-2-883---dfedfbcaa1bb468ab1332d8288039199/>)\n   - **Research lead — search snippet; page not inspected.** Fetched 2026-10-14T13:17:32.259355+00:00 (UTC).\n     Search query: Dubai takeaway restaurant areas pizza kebab Al Barsha Deira JLT rents Dubai UAE.\n     Snippet (untrusted source text): The annual rent is attractively priced at 75,000 AED, making it suitable for a lean, high-margin takeaway model. Both the trade license and Ejari are valid till May 2026.\n12. [Best Kebab Restaurants Near You in Al Barsha, Dubai](<https://magicpin.com/uae/Dubai/Al-Barsha/Restaurant/Kebab/>)\n   - **Research lead — search snippet; page not inspected.** Fetched 2026-10-14T13:17:32.259355+00:00 (UTC).\n     Search query: Dubai takeaway restaurant areas pizza kebab Al Barsha Deira JLT rents Dubai UAE.\n     Snippet (untrusted source text): Find the best Kebab restaurants near you in Al Barsha, Dubai. Verified ratings, real photos and exclusive cashback offers on magicpin.\n13. [Best Takeout Restaurant Restaurants Near You in Al Barsha ...](<https://magicpin.com/uae/Dubai/Al-Barsha/Restaurant/Takeout-Restaurant/>)\n   - **Research lead — search snippet; page not inspected.** Fetched 2026-10-14T13:17:32.259355+00:00 (UTC).\n     Search query: Dubai takeaway restaurant areas pizza kebab Al Barsha Deira JLT rents Dubai UAE.\n     Snippet (untrusted source text): Find the best Takeout Restaurant restaurants near you in Al Barsha, Dubai. Verified ratings, real photos and exclusive cashback offers on magicpin.\n14. [Al Barsha Restaurants, Dubai, Restaurants in Al Barsha - Zomato](<https://www.zomato.com/dubai/al-barsha-restaurants/kebab>)\n   - **Research lead — search snippet; page not inspected.** Fetched 2026-10-14T13:17:32.259355+00:00 (UTC).\n     Search query: Dubai takeaway restaurant areas pizza kebab Al Barsha Deira JLT rents Dubai UAE.\n     Snippet (untrusted source text): Restaurants in Al Barsha; Al Barsha Restaurants - Menus, Reviews, Photos for Restaurants, Pubs, Lounges, and Bars in Al Barsha",
+  "cited_evidence_ids": [
+    "DXB-COMP-001",
+    "DXB-COMP-002",
+    "DXB-COMP-003",
+    "DXB-COMP-004",
+    "DXB-COMP-005",
+    "DXB-COMP-006",
+    "DXB-DEL-001",
+    "DXB-DEL-002",
+    "DXB-LOC-001",
+    "DXB-OPS-002",
+    "DXB-PRICE-001",
+    "SEARCH-0d9ccc35c4404abb93e62e903cda9f65",
+    "SEARCH-33bfa8719c3c4ab5afc6929f79937351",
+    "SEARCH-ae966ea84e384395b2d77fd48440f81d",
+    "SEARCH-d4b6d52e939d4f1e9b7811c1770c7c66",
+    "UAE-DEL-001",
+    "UAE-DEL-002",
+    "UAE-DEL-003",
+    "UAE-DEL-004",
+    "UAE-PRICE-001"
+  ],
+  "retrieved_sources": {
+    "DXB-COMP-001": {
+      "id": "DXB-COMP-001",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Papa Johns - Deira",
+      "observation": "Papa Johns lists pizza branches at Al Ghurair Centre in Al Muraqqabat and Deira City Centre in Port Saeed.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Dubai / Al Ghurair Centre; Deira City Centre",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-COMP-002": {
+      "id": "DXB-COMP-002",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Papa Johns - Al Barsha",
+      "observation": "Papa Johns lists a pizza branch at Al Barsha Mall on Al Barsha 2 Street.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Dubai / Al Barsha Mall",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-COMP-003": {
+      "id": "DXB-COMP-003",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Papa Johns - Dubai Marina",
+      "observation": "Papa Johns lists a pizza branch at Marina Diamond near Dubai Marina Metro Station.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Dubai / Marina Diamond",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-PRICE-001": {
+      "id": "DXB-PRICE-001",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "menu",
+        "pricing",
+        "competitors"
+      ],
+      "entity": "Allo Beirut JBR - pizza",
+      "observation": "The JBR Deliveroo menu lists Pepperoni pizza at AED 40 and Margherita pizza at AED 38.",
+      "source_title": "Allo Beirut - JBR delivery menu",
+      "source_url": "https://deliveroo.ae/en/menu/dubai/jbr/allo-beirut-jbr",
+      "publisher": "Deliveroo",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Pizza / Pizza Pepperoni; Pizza Margherita",
+      "qualifiers": [
+        "JBR, Dubai branch, anonymous Deliveroo listing with no delivery address selected; menu visibility can vary.",
+        "Pizza diameter and weight were not specified. Observed item prices are not a completed checkout total; delivery charges, extras, and tax treatment were not verified.",
+        "No publication date shown; recheck menu, price, and availability before a decision."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "UAE-PRICE-001": {
+      "id": "UAE-PRICE-001",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "menu",
+        "pricing",
+        "competitors"
+      ],
+      "entity": "Papa Johns - All The Meats pizza",
+      "observation": "The UAE web menu lists All The Meats pizza at AED 33 for 8 inches, AED 50 for 10 inches, and AED 69 for 13 inches; toppings include beef, beef sausage, pepperoni, and turkey ham.",
+      "source_title": "Papa Johns UAE Menu & Prices (AED)",
+      "source_url": "https://www.papajohns.ae/menu",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Pizzas / All The Meats",
+      "qualifiers": [
+        "Public UAE website menu; the store directory states shared menus and prices across branches in both cities.",
+        "No branch checkout selected; crust options, extras, fees, tax treatment, and availability need confirmation."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-COMP-004": {
+      "id": "DXB-COMP-004",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "locations",
+        "competitors",
+        "delivery"
+      ],
+      "entity": "Allo Beirut - Al Barsha / Hessa Street",
+      "observation": "Allo Beirut lists its Hessa Street branch in Al Barsha, Dubai, and advertises delivery until 4 AM.",
+      "source_title": "Allo Beirut locations",
+      "source_url": "https://www.allobeirutstreetfood.com/locations",
+      "publisher": "Allo Beirut",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Dubai / Hessa St.",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability.",
+        "Advertised delivery hours do not establish overnight demand or the proposed site catchment."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-DEL-001": {
+      "id": "DXB-DEL-001",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "delivery",
+        "operations",
+        "suppliers"
+      ],
+      "entity": "Dubai Municipality - transport cold chain",
+      "observation": "Dubai Municipality guidance specifies transportation units capable of holding hot food at 60 C or above, cold food at 5 C or below, and frozen food at -18 C or below.",
+      "source_title": "Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2",
+      "source_url": "https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf",
+      "publisher": "Dubai Municipality",
+      "source_kind": "official",
+      "published_on": "2023-08-31",
+      "checked_on": "2026-10-12",
+      "locator": "PDF pages 13-14, section 1.2.2 Temperature Control Requirements",
+      "qualifiers": [
+        "Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.",
+        "Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.",
+        "Transport holding requirements, not cooking temperatures or evidence that a supplier or vehicle meets them."
+      ],
+      "valid_until": null,
+      "needs_review": true,
+      "expired": false
+    },
+    "DXB-DEL-002": {
+      "id": "DXB-DEL-002",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "delivery",
+        "operations"
+      ],
+      "entity": "Dubai Municipality - sealed delivery and separation",
+      "observation": "Dubai Municipality delivery guidance requires sealed food containers and separation of hot and cold items into insulated secondary units during transport.",
+      "source_title": "Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2",
+      "source_url": "https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf",
+      "publisher": "Dubai Municipality",
+      "source_kind": "official",
+      "published_on": "2023-08-31",
+      "checked_on": "2026-10-12",
+      "locator": "PDF page 18, section 1.4.1(e)-(f)",
+      "qualifiers": [
+        "Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.",
+        "Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist."
+      ],
+      "valid_until": null,
+      "needs_review": true,
+      "expired": false
+    },
+    "UAE-DEL-001": {
+      "id": "UAE-DEL-001",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "delivery",
+        "competitors"
+      ],
+      "entity": "Papa Johns UAE - delivery and takeaway",
+      "observation": "Papa Johns states that UAE branches offer delivery and takeaway and share the same menu and prices.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Store directory introduction",
+      "qualifiers": [
+        "UAE-wide company statement supported by Dubai and Abu Dhabi branch entries.",
+        "Delivery catchments, fees, promotions, and item availability were not verified at checkout."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "UAE-DEL-002": {
+      "id": "UAE-DEL-002",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "delivery"
+      ],
+      "entity": "Deliveroo UAE - platform riders and pickup",
+      "observation": "Deliveroo describes a UAE partner service using its rider network for delivery and allowing customers to collect orders from the restaurant.",
+      "source_title": "Deliveroo delivery and pickup for UAE partners",
+      "source_url": "https://merchants.deliveroo.com/en-AE/what-we-offer/delivery",
+      "publisher": "Deliveroo",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Delivery network; Customer flexibility",
+      "qualifiers": [
+        "UAE merchant product description; eligibility and availability at a proposed address need confirmation.",
+        "No verified contractual commission, fees, delivery radius, service level, or sales uplift."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "UAE-DEL-003": {
+      "id": "UAE-DEL-003",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "delivery",
+        "operations"
+      ],
+      "entity": "Deliveroo UAE - order tracking",
+      "observation": "Deliveroo describes order-status monitoring, real-time rider GPS tracking, and rider-arrival alerts for its delivery service.",
+      "source_title": "Deliveroo delivery and pickup for UAE partners",
+      "source_url": "https://merchants.deliveroo.com/en-AE/what-we-offer/delivery",
+      "publisher": "Deliveroo",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "End-to-end order tracking",
+      "qualifiers": [
+        "UAE merchant product description; eligibility and availability at a proposed address need confirmation.",
+        "No verified contractual commission, fees, delivery radius, service level, or sales uplift."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "UAE-DEL-004": {
+      "id": "UAE-DEL-004",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "delivery",
+        "operations"
+      ],
+      "entity": "Deliveroo UAE - Marketplace+ own riders",
+      "observation": "Deliveroo describes Marketplace+ as using restaurant delivery staff, with selectable delivery area, minimum spend, and delivery fees, plus an option to request a platform rider.",
+      "source_title": "Deliveroo Marketplace+ for UAE partners",
+      "source_url": "https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace",
+      "publisher": "Deliveroo",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Benefits of Marketplace+; Receiving orders; Delivering orders",
+      "qualifiers": [
+        "UAE merchant product description; eligibility and availability at a proposed address need confirmation.",
+        "No verified contractual commission, fees, delivery radius, service level, or sales uplift."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "SEARCH-0d9ccc35c4404abb93e62e903cda9f65": {
+      "id": "SEARCH-0d9ccc35c4404abb93e62e903cda9f65",
+      "source_kind": "search_snippet",
+      "source_title": "Italian Takeaway Pizzeria Shop - Al Barsha Dubai | دوبيزل دبي",
+      "source_url": "https://dubai.dubizzle.com/ar/classified/business-industrial/businesses-for-sale/service-business/2026/1/5/italian-takeaway-pizzeria-shop-al-barsha-d-2-883---dfedfbcaa1bb468ab1332d8288039199/",
+      "snippet": "The annual rent is attractively priced at 75,000 AED, making it suitable for a lean, high-margin takeaway model. Both the trade license and Ejari are valid till May 2026.",
+      "query": "Dubai takeaway restaurant areas pizza kebab Al Barsha Deira JLT rents Dubai UAE",
+      "city": "dubai",
+      "fetched_at": "2026-10-14T13:17:32.259355Z"
+    },
+    "SEARCH-ae966ea84e384395b2d77fd48440f81d": {
+      "id": "SEARCH-ae966ea84e384395b2d77fd48440f81d",
+      "source_kind": "search_snippet",
+      "source_title": "Best Kebab Restaurants Near You in Al Barsha, Dubai",
+      "source_url": "https://magicpin.com/uae/Dubai/Al-Barsha/Restaurant/Kebab/",
+      "snippet": "Find the best Kebab restaurants near you in Al Barsha, Dubai. Verified ratings, real photos and exclusive cashback offers on magicpin.",
+      "query": "Dubai takeaway restaurant areas pizza kebab Al Barsha Deira JLT rents Dubai UAE",
+      "city": "dubai",
+      "fetched_at": "2026-10-14T13:17:32.259355Z"
+    },
+    "SEARCH-d4b6d52e939d4f1e9b7811c1770c7c66": {
+      "id": "SEARCH-d4b6d52e939d4f1e9b7811c1770c7c66",
+      "source_kind": "search_snippet",
+      "source_title": "Best Takeout Restaurant Restaurants Near You in Al Barsha ...",
+      "source_url": "https://magicpin.com/uae/Dubai/Al-Barsha/Restaurant/Takeout-Restaurant/",
+      "snippet": "Find the best Takeout Restaurant restaurants near you in Al Barsha, Dubai. Verified ratings, real photos and exclusive cashback offers on magicpin.",
+      "query": "Dubai takeaway restaurant areas pizza kebab Al Barsha Deira JLT rents Dubai UAE",
+      "city": "dubai",
+      "fetched_at": "2026-10-14T13:17:32.259355Z"
+    },
+    "SEARCH-33bfa8719c3c4ab5afc6929f79937351": {
+      "id": "SEARCH-33bfa8719c3c4ab5afc6929f79937351",
+      "source_kind": "search_snippet",
+      "source_title": "Al Barsha Restaurants, Dubai, Restaurants in Al Barsha - Zomato",
+      "source_url": "https://www.zomato.com/dubai/al-barsha-restaurants/kebab",
+      "snippet": "Restaurants in Al Barsha; Al Barsha Restaurants - Menus, Reviews, Photos for Restaurants, Pubs, Lounges, and Bars in Al Barsha",
+      "query": "Dubai takeaway restaurant areas pizza kebab Al Barsha Deira JLT rents Dubai UAE",
+      "city": "dubai",
+      "fetched_at": "2026-10-14T13:17:32.259355Z"
+    },
+    "DXB-COMP-005": {
+      "id": "DXB-COMP-005",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Allo Beirut - JBR",
+      "observation": "Allo Beirut lists a Dubai branch on Al Mamsha Street in Jumeirah Beach Residence; its site includes shawarma, grills, and sandwiches.",
+      "source_title": "Allo Beirut locations",
+      "source_url": "https://www.allobeirutstreetfood.com/locations",
+      "publisher": "Allo Beirut",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Dubai / JBR; footer / menu categories",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-COMP-006": {
+      "id": "DXB-COMP-006",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "locations",
+        "competitors",
+        "operations"
+      ],
+      "entity": "Zaroob - Dubai Marina",
+      "observation": "Zaroob lists its Dubai Marina restaurant at Radisson Blu Residence with advertised hours of 7 AM to 5 AM.",
+      "source_title": "Zaroob hours and locations",
+      "source_url": "https://www.zaroob.com/",
+      "publisher": "Zaroob",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Hours & Locations / Zaroob Marina",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability.",
+        "Hours are branch-specific observations, not evidence that late-night staffing would be profitable."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-LOC-001": {
+      "id": "DXB-LOC-001",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "locations"
+      ],
+      "entity": "Deira",
+      "observation": "The official Dubai neighbourhood guide describes Deira as a heritage district with traditional souks.",
+      "source_title": "Deira neighbourhood guide",
+      "source_url": "https://www.visitdubai.com/en/explore-dubai/dubai-neighbourhoods/deira",
+      "publisher": "Dubai Department of Economy and Tourism",
+      "source_kind": "official",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Deira heading and introductory description",
+      "qualifiers": [
+        "Tourism guide describes an area or landmark, not a proposed restaurant unit.",
+        "No verified shop rent, footfall, customer mix, or demand estimate."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-OPS-002": {
+      "id": "DXB-OPS-002",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "operations"
+      ],
+      "entity": "Dubai Municipality - food handler training",
+      "observation": "Dubai Municipality guidance requires food handling staff, supervisors, and managers to receive formal food safety training appropriate to their work activity.",
+      "source_title": "Requirements for Integrated Training Management System for Food Establishments, DM-FSD-GU64, version 2",
+      "source_url": "https://dmpmedia.dm.gov.ae/uploads/2024/02/3.-DM-FSD-GU64-Requirements-for-Integrated-Training-Management-System-for-Food-Establishments-2.pdf",
+      "publisher": "Dubai Municipality",
+      "source_kind": "official",
+      "published_on": "2023-08-31",
+      "checked_on": "2026-10-12",
+      "locator": "PDF page 4, Introduction; page 7, Regulatory Approach",
+      "qualifiers": [
+        "Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.",
+        "Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist."
+      ],
+      "valid_until": null,
+      "needs_review": true,
+      "expired": false
+    }
+  },
+  "calculations": {},
+  "tool_trace": [
+    {
+      "name": "lookup_market_evidence",
+      "arguments": {
+        "cities": [
+          "dubai"
+        ],
+        "topics": [
+          "locations"
+        ],
+        "query": "takeaway areas",
+        "limit": 12
+      },
+      "result": "{\"status\":\"no_results\",\"data\":{\"records\":[],\"matched_count\":0,\"omitted_count\":0},\"warnings\":[]}",
+      "error": false
+    },
+    {
+      "name": "lookup_market_evidence",
+      "arguments": {
+        "cities": [
+          "dubai"
+        ],
+        "topics": [
+          "competitors"
+        ],
+        "query": "kebab pizza",
+        "limit": 12
+      },
+      "result": "{\"status\":\"ok\",\"data\":{\"records\":[{\"id\":\"DXB-COMP-001\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Papa Johns - Deira\",\"observation\":\"Papa Johns lists pizza branches at Al Ghurair Centre in Al Muraqqabat and Deira City Centre in Port Saeed.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Dubai / Al Ghurair Centre; Deira City Centre\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-COMP-002\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Papa Johns - Al Barsha\",\"observation\":\"Papa Johns lists a pizza branch at Al Barsha Mall on Al Barsha 2 Street.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Dubai / Al Barsha Mall\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-COMP-003\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Papa Johns - Dubai Marina\",\"observation\":\"Papa Johns lists a pizza branch at Marina Diamond near Dubai Marina Metro Station.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Dubai / Marina Diamond\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-PRICE-001\",\"cities\":[\"dubai\"],\"topics\":[\"menu\",\"pricing\",\"competitors\"],\"entity\":\"Allo Beirut JBR - pizza\",\"observation\":\"The JBR Deliveroo menu lists Pepperoni pizza at AED 40 and Margherita pizza at AED 38.\",\"source_title\":\"Allo Beirut - JBR delivery menu\",\"source_url\":\"https://deliveroo.ae/en/menu/dubai/jbr/allo-beirut-jbr\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Pizza / Pizza Pepperoni; Pizza Margherita\",\"qualifiers\":[\"JBR, Dubai branch, anonymous Deliveroo listing with no delivery address selected; menu visibility can vary.\",\"Pizza diameter and weight were not specified. Observed item prices are not a completed checkout total; delivery charges, extras, and tax treatment were not verified.\",\"No publication date shown; recheck menu, price, and availability before a decision.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-PRICE-001\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"menu\",\"pricing\",\"competitors\"],\"entity\":\"Papa Johns - All The Meats pizza\",\"observation\":\"The UAE web menu lists All The Meats pizza at AED 33 for 8 inches, AED 50 for 10 inches, and AED 69 for 13 inches; toppings include beef, beef sausage, pepperoni, and turkey ham.\",\"source_title\":\"Papa Johns UAE Menu & Prices (AED)\",\"source_url\":\"https://www.papajohns.ae/menu\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Pizzas / All The Meats\",\"qualifiers\":[\"Public UAE website menu; the store directory states shared menus and prices across branches in both cities.\",\"No branch checkout selected; crust options, extras, fees, tax treatment, and availability need confirmation.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false}],\"matched_count\":5,\"omitted_count\":0},\"warnings\":[]}",
+      "error": false
+    },
+    {
+      "name": "lookup_market_evidence",
+      "arguments": {
+        "cities": [
+          "dubai"
+        ],
+        "topics": [
+          "delivery"
+        ],
+        "query": "",
+        "limit": 12
+      },
+      "result": "{\"status\":\"ok\",\"data\":{\"records\":[{\"id\":\"DXB-COMP-004\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\",\"delivery\"],\"entity\":\"Allo Beirut - Al Barsha / Hessa Street\",\"observation\":\"Allo Beirut lists its Hessa Street branch in Al Barsha, Dubai, and advertises delivery until 4 AM.\",\"source_title\":\"Allo Beirut locations\",\"source_url\":\"https://www.allobeirutstreetfood.com/locations\",\"publisher\":\"Allo Beirut\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Dubai / Hessa St.\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\",\"Advertised delivery hours do not establish overnight demand or the proposed site catchment.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-DEL-001\",\"cities\":[\"dubai\"],\"topics\":[\"delivery\",\"operations\",\"suppliers\"],\"entity\":\"Dubai Municipality - transport cold chain\",\"observation\":\"Dubai Municipality guidance specifies transportation units capable of holding hot food at 60 C or above, cold food at 5 C or below, and frozen food at -18 C or below.\",\"source_title\":\"Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2\",\"source_url\":\"https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf\",\"publisher\":\"Dubai Municipality\",\"source_kind\":\"official\",\"published_on\":\"2023-08-31\",\"checked_on\":\"2026-10-12\",\"locator\":\"PDF pages 13-14, section 1.2.2 Temperature Control Requirements\",\"qualifiers\":[\"Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\",\"Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\",\"Transport holding requirements, not cooking temperatures or evidence that a supplier or vehicle meets them.\"],\"valid_until\":null,\"needs_review\":true,\"expired\":false},{\"id\":\"DXB-DEL-002\",\"cities\":[\"dubai\"],\"topics\":[\"delivery\",\"operations\"],\"entity\":\"Dubai Municipality - sealed delivery and separation\",\"observation\":\"Dubai Municipality delivery guidance requires sealed food containers and separation of hot and cold items into insulated secondary units during transport.\",\"source_title\":\"Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2\",\"source_url\":\"https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf\",\"publisher\":\"Dubai Municipality\",\"source_kind\":\"official\",\"published_on\":\"2023-08-31\",\"checked_on\":\"2026-10-12\",\"locator\":\"PDF page 18, section 1.4.1(e)-(f)\",\"qualifiers\":[\"Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\",\"Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\"],\"valid_until\":null,\"needs_review\":true,\"expired\":false},{\"id\":\"UAE-DEL-001\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\",\"competitors\"],\"entity\":\"Papa Johns UAE - delivery and takeaway\",\"observation\":\"Papa Johns states that UAE branches offer delivery and takeaway and share the same menu and prices.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Store directory introduction\",\"qualifiers\":[\"UAE-wide company statement supported by Dubai and Abu Dhabi branch entries.\",\"Delivery catchments, fees, promotions, and item availability were not verified at checkout.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-DEL-002\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\"],\"entity\":\"Deliveroo UAE - platform riders and pickup\",\"observation\":\"Deliveroo describes a UAE partner service using its rider network for delivery and allowing customers to collect orders from the restaurant.\",\"source_title\":\"Deliveroo delivery and pickup for UAE partners\",\"source_url\":\"https://merchants.deliveroo.com/en-AE/what-we-offer/delivery\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Delivery network; Customer flexibility\",\"qualifiers\":[\"UAE merchant product description; eligibility and availability at a proposed address need confirmation.\",\"No verified contractual commission, fees, delivery radius, service level, or sales uplift.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-DEL-003\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\",\"operations\"],\"entity\":\"Deliveroo UAE - order tracking\",\"observation\":\"Deliveroo describes order-status monitoring, real-time rider GPS tracking, and rider-arrival alerts for its delivery service.\",\"source_title\":\"Deliveroo delivery and pickup for UAE partners\",\"source_url\":\"https://merchants.deliveroo.com/en-AE/what-we-offer/delivery\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"End-to-end order tracking\",\"qualifiers\":[\"UAE merchant product description; eligibility and availability at a proposed address need confirmation.\",\"No verified contractual commission, fees, delivery radius, service level, or sales uplift.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-DEL-004\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\",\"operations\"],\"entity\":\"Deliveroo UAE - Marketplace+ own riders\",\"observation\":\"Deliveroo describes Marketplace+ as using restaurant delivery staff, with selectable delivery area, minimum spend, and delivery fees, plus an option to request a platform rider.\",\"source_title\":\"Deliveroo Marketplace+ for UAE partners\",\"source_url\":\"https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Benefits of Marketplace+; Receiving orders; Delivering orders\",\"qualifiers\":[\"UAE merchant product description; eligibility and availability at a proposed address need confirmation.\",\"No verified contractual commission, fees, delivery radius, service level, or sales uplift.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false}],\"matched_count\":7,\"omitted_count\":0},\"warnings\":[\"Some returned records need review; inspect their dates and freshness flags.\"]}",
+      "error": false
+    },
+    {
+      "name": "search_market_web",
+      "arguments": {
+        "query": "Dubai takeaway restaurant areas pizza kebab Al Barsha Deira JLT rents",
+        "city": "dubai"
+      },
+      "result": "{\"status\":\"ok\",\"data\":{\"records\":[{\"id\":\"SEARCH-0d9ccc35c4404abb93e62e903cda9f65\",\"source_kind\":\"search_snippet\",\"source_title\":\"Italian Takeaway Pizzeria Shop - Al Barsha Dubai | دوبيزل دبي\",\"source_url\":\"https://dubai.dubizzle.com/ar/classified/business-industrial/businesses-for-sale/service-business/2026/1/5/italian-takeaway-pizzeria-shop-al-barsha-d-2-883---dfedfbcaa1bb468ab1332d8288039199/\",\"snippet\":\"The annual rent is attractively priced at 75,000 AED, making it suitable for a lean, high-margin takeaway model. Both the trade license and Ejari are valid till May 2026.\",\"query\":\"Dubai takeaway restaurant areas pizza kebab Al Barsha Deira JLT rents Dubai UAE\",\"city\":\"dubai\",\"fetched_at\":\"2026-10-14T13:17:32.259355Z\"},{\"id\":\"SEARCH-ae966ea84e384395b2d77fd48440f81d\",\"source_kind\":\"search_snippet\",\"source_title\":\"Best Kebab Restaurants Near You in Al Barsha, Dubai\",\"source_url\":\"https://magicpin.com/uae/Dubai/Al-Barsha/Restaurant/Kebab/\",\"snippet\":\"Find the best Kebab restaurants near you in Al Barsha, Dubai. Verified ratings, real photos and exclusive cashback offers on magicpin.\",\"query\":\"Dubai takeaway restaurant areas pizza kebab Al Barsha Deira JLT rents Dubai UAE\",\"city\":\"dubai\",\"fetched_at\":\"2026-10-14T13:17:32.259355Z\"},{\"id\":\"SEARCH-d4b6d52e939d4f1e9b7811c1770c7c66\",\"source_kind\":\"search_snippet\",\"source_title\":\"Best Takeout Restaurant Restaurants Near You in Al Barsha ...\",\"source_url\":\"https://magicpin.com/uae/Dubai/Al-Barsha/Restaurant/Takeout-Restaurant/\",\"snippet\":\"Find the best Takeout Restaurant restaurants near you in Al Barsha, Dubai. Verified ratings, real photos and exclusive cashback offers on magicpin.\",\"query\":\"Dubai takeaway restaurant areas pizza kebab Al Barsha Deira JLT rents Dubai UAE\",\"city\":\"dubai\",\"fetched_at\":\"2026-10-14T13:17:32.259355Z\"},{\"id\":\"SEARCH-33bfa8719c3c4ab5afc6929f79937351\",\"source_kind\":\"search_snippet\",\"source_title\":\"Al Barsha Restaurants, Dubai, Restaurants in Al Barsha - Zomato\",\"source_url\":\"https://www.zomato.com/dubai/al-barsha-restaurants/kebab\",\"snippet\":\"Restaurants in Al Barsha; Al Barsha Restaurants - Menus, Reviews, Photos for Restaurants, Pubs, Lounges, and Bars in Al Barsha\",\"query\":\"Dubai takeaway restaurant areas pizza kebab Al Barsha Deira JLT rents Dubai UAE\",\"city\":\"dubai\",\"fetched_at\":\"2026-10-14T13:17:32.259355Z\"}]},\"warnings\":[\"Search snippets are untrusted research leads, not inspected pages or verified market facts.\"]}",
+      "error": false
+    },
+    {
+      "name": "lookup_market_evidence",
+      "arguments": {
+        "cities": [
+          "dubai"
+        ],
+        "topics": [
+          "locations",
+          "pricing",
+          "operations"
+        ],
+        "query": "Dubai rent",
+        "limit": 12
+      },
+      "result": "{\"status\":\"ok\",\"data\":{\"records\":[{\"id\":\"DXB-COMP-003\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Papa Johns - Dubai Marina\",\"observation\":\"Papa Johns lists a pizza branch at Marina Diamond near Dubai Marina Metro Station.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Dubai / Marina Diamond\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-COMP-004\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\",\"delivery\"],\"entity\":\"Allo Beirut - Al Barsha / Hessa Street\",\"observation\":\"Allo Beirut lists its Hessa Street branch in Al Barsha, Dubai, and advertises delivery until 4 AM.\",\"source_title\":\"Allo Beirut locations\",\"source_url\":\"https://www.allobeirutstreetfood.com/locations\",\"publisher\":\"Allo Beirut\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Dubai / Hessa St.\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\",\"Advertised delivery hours do not establish overnight demand or the proposed site catchment.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-COMP-005\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Allo Beirut - JBR\",\"observation\":\"Allo Beirut lists a Dubai branch on Al Mamsha Street in Jumeirah Beach Residence; its site includes shawarma, grills, and sandwiches.\",\"source_title\":\"Allo Beirut locations\",\"source_url\":\"https://www.allobeirutstreetfood.com/locations\",\"publisher\":\"Allo Beirut\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Dubai / JBR; footer / menu categories\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-COMP-006\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\",\"operations\"],\"entity\":\"Zaroob - Dubai Marina\",\"observation\":\"Zaroob lists its Dubai Marina restaurant at Radisson Blu Residence with advertised hours of 7 AM to 5 AM.\",\"source_title\":\"Zaroob hours and locations\",\"source_url\":\"https://www.zaroob.com/\",\"publisher\":\"Zaroob\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Hours & Locations / Zaroob Marina\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\",\"Hours are branch-specific observations, not evidence that late-night staffing would be profitable.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-DEL-001\",\"cities\":[\"dubai\"],\"topics\":[\"delivery\",\"operations\",\"suppliers\"],\"entity\":\"Dubai Municipality - transport cold chain\",\"observation\":\"Dubai Municipality guidance specifies transportation units capable of holding hot food at 60 C or above, cold food at 5 C or below, and frozen food at -18 C or below.\",\"source_title\":\"Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2\",\"source_url\":\"https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf\",\"publisher\":\"Dubai Municipality\",\"source_kind\":\"official\",\"published_on\":\"2023-08-31\",\"checked_on\":\"2026-10-12\",\"locator\":\"PDF pages 13-14, section 1.2.2 Temperature Control Requirements\",\"qualifiers\":[\"Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\",\"Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\",\"Transport holding requirements, not cooking temperatures or evidence that a supplier or vehicle meets them.\"],\"valid_until\":null,\"needs_review\":true,\"expired\":false},{\"id\":\"DXB-DEL-002\",\"cities\":[\"dubai\"],\"topics\":[\"delivery\",\"operations\"],\"entity\":\"Dubai Municipality - sealed delivery and separation\",\"observation\":\"Dubai Municipality delivery guidance requires sealed food containers and separation of hot and cold items into insulated secondary units during transport.\",\"source_title\":\"Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2\",\"source_url\":\"https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf\",\"publisher\":\"Dubai Municipality\",\"source_kind\":\"official\",\"published_on\":\"2023-08-31\",\"checked_on\":\"2026-10-12\",\"locator\":\"PDF page 18, section 1.4.1(e)-(f)\",\"qualifiers\":[\"Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\",\"Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\"],\"valid_until\":null,\"needs_review\":true,\"expired\":false},{\"id\":\"DXB-LOC-001\",\"cities\":[\"dubai\"],\"topics\":[\"locations\"],\"entity\":\"Deira\",\"observation\":\"The official Dubai neighbourhood guide describes Deira as a heritage district with traditional souks.\",\"source_title\":\"Deira neighbourhood guide\",\"source_url\":\"https://www.visitdubai.com/en/explore-dubai/dubai-neighbourhoods/deira\",\"publisher\":\"Dubai Department of Economy and Tourism\",\"source_kind\":\"official\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Deira heading and introductory description\",\"qualifiers\":[\"Tourism guide describes an area or landmark, not a proposed restaurant unit.\",\"No verified shop rent, footfall, customer mix, or demand estimate.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-OPS-002\",\"cities\":[\"dubai\"],\"topics\":[\"operations\"],\"entity\":\"Dubai Municipality - food handler training\",\"observation\":\"Dubai Municipality guidance requires food handling staff, supervisors, and managers to receive formal food safety training appropriate to their work activity.\",\"source_title\":\"Requirements for Integrated Training Management System for Food Establishments, DM-FSD-GU64, version 2\",\"source_url\":\"https://dmpmedia.dm.gov.ae/uploads/2024/02/3.-DM-FSD-GU64-Requirements-for-Integrated-Training-Management-System-for-Food-Establishments-2.pdf\",\"publisher\":\"Dubai Municipality\",\"source_kind\":\"official\",\"published_on\":\"2023-08-31\",\"checked_on\":\"2026-10-12\",\"locator\":\"PDF page 4, Introduction; page 7, Regulatory Approach\",\"qualifiers\":[\"Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\",\"Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\"],\"valid_until\":null,\"needs_review\":true,\"expired\":false}],\"matched_count\":9,\"omitted_count\":1},\"warnings\":[\"Some matching records were omitted to respect result or payload limits.\",\"Some returned records need review; inspect their dates and freshness flags.\"]}",
+      "error": false
+    }
+  ],
+  "record": {
+    "model_requests": 3,
+    "input_tokens": 19291,
+    "output_tokens": 2304,
+    "reasoning_tokens": 0,
+    "cached_tokens": 11392,
+    "reported_cost_usd": "0.002166900",
+    "known_reported_cost_usd": "0.002166900",
+    "estimated_cost_usd": null,
+    "estimate_basis": null,
+    "usage_complete": true,
+    "schema_version": 1,
+    "run_id": "017752ff-db3b-4c1f-94a6-392d1e98f329",
+    "session_id": "29472e57-f6d1-42c1-894c-31aeccf9dc74",
+    "timestamp_utc": "2026-10-14T13:17:18.069136Z",
+    "model_requested": "deepseek/deepseek-v4.1-flash",
+    "model_reported_if_available": [
+      "deepseek/deepseek-v4.1-flash"
+    ],
+    "provider_if_available": [
+      "Morph"
+    ],
+    "prompt_version": "10.1",
+    "evidence_dataset_version": "a226a6b54cf292e9b2f6f6e9c51112957bff64195bc8182e0b579dd1f79ca3c5",
+    "question": "Shortlist three Dubai areas for our takeaway-led pizza and kebab branch.",
+    "outcome": "completed",
+    "error_category": null,
+    "tool_events": [
+      {
+        "name": "lookup_market_evidence",
+        "duration_ms": 0.1937469933182001,
+        "status": "no_results",
+        "result_count": 0
+      },
+      {
+        "name": "lookup_market_evidence",
+        "duration_ms": 0.4684180021286011,
+        "status": "ok",
+        "result_count": 5
+      },
+      {
+        "name": "lookup_market_evidence",
+        "duration_ms": 0.5568009801208973,
+        "status": "ok",
+        "result_count": 7
+      },
+      {
+        "name": "search_market_web",
+        "duration_ms": 2513.3251050137915,
+        "status": "ok",
+        "result_count": 4
+      },
+      {
+        "name": "lookup_market_evidence",
+        "duration_ms": 0.7916580070741475,
+        "status": "ok",
+        "result_count": 8
+      }
+    ],
+    "requests": [
+      {
+        "generation_id": "gen-1791983838-sdESY4tQe1W9jHkQ3qRL",
+        "model_reported": "deepseek/deepseek-v4.1-flash",
+        "provider_reported": "Morph",
+        "duration_ms": 9948.800863989163,
+        "outcome": "completed",
+        "input_tokens": 3518,
+        "output_tokens": 278,
+        "reasoning_tokens": 0,
+        "cached_tokens": 1536,
+        "reported_cost_usd": "0.00029172"
+      },
+      {
+        "generation_id": "gen-1791983848-7odX3kvUkYPV82CgtUEF",
+        "model_reported": "deepseek/deepseek-v4.1-flash",
+        "provider_reported": "Morph",
+        "duration_ms": 1696.679431013763,
+        "outcome": "completed",
+        "input_tokens": 6507,
+        "output_tokens": 172,
+        "reasoning_tokens": 0,
+        "cached_tokens": 3456,
+        "reported_cost_usd": "0.000254132"
+      },
+      {
+        "generation_id": "gen-1791983852-V5tu3xjEVO1MsVfhK14z",
+        "model_reported": "deepseek/deepseek-v4.1-flash",
+        "provider_reported": "Morph",
+        "duration_ms": 17769.95305897435,
+        "outcome": "completed",
+        "input_tokens": 9266,
+        "output_tokens": 1854,
+        "reasoning_tokens": 0,
+        "cached_tokens": 6400,
+        "reported_cost_usd": "0.001621048"
+      }
+    ],
+    "evidence_ids": [
+      "DXB-COMP-001",
+      "DXB-COMP-002",
+      "DXB-COMP-003",
+      "DXB-PRICE-001",
+      "UAE-PRICE-001",
+      "DXB-COMP-004",
+      "DXB-DEL-001",
+      "DXB-DEL-002",
+      "UAE-DEL-001",
+      "UAE-DEL-002",
+      "UAE-DEL-003",
+      "UAE-DEL-004",
+      "SEARCH-0d9ccc35c4404abb93e62e903cda9f65",
+      "SEARCH-ae966ea84e384395b2d77fd48440f81d",
+      "SEARCH-d4b6d52e939d4f1e9b7811c1770c7c66",
+      "SEARCH-33bfa8719c3c4ab5afc6929f79937351",
+      "DXB-COMP-005",
+      "DXB-COMP-006",
+      "DXB-LOC-001",
+      "DXB-OPS-002"
+    ],
+    "calculation_ids": [],
+    "latency_ms": 32048.27007703716,
+    "tool_output_characters": 20166,
+    "validation_errors": [],
+    "warnings": [
+      "Some returned records need review; inspect their dates and freshness flags.",
+      "Search snippets are untrusted research leads, not inspected pages or verified market facts.",
+      "Some matching records were omitted to respect result or payload limits."
+    ]
+  },
+  "warnings": [
+    "Some returned records need review; inspect their dates and freshness flags.",
+    "Search snippets are untrusted research leads, not inspected pages or verified market facts.",
+    "Some matching records were omitted to respect result or payload limits."
+  ],
+  "error_category": null,
+  "error_message": null,
+  "checks": {
+    "reference_integrity": true,
+    "requested_cities_present": true,
+    "durable_profile_unchanged": true,
+    "calculator_exact": null,
+    "claim_support": "requires review"
+  }
+}

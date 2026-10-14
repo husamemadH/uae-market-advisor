@@ -1,0 +1,911 @@
+{
+  "case": {
+    "id": "E08",
+    "question": "What staffing and operating setup should we start with in each city: Dubai and Abu Dhabi?",
+    "cities": [
+      "dubai",
+      "abu_dhabi"
+    ],
+    "topics": [
+      "operations"
+    ],
+    "profile": {},
+    "followup_of": null,
+    "expected": [
+      "Explicit format and volume assumptions",
+      "Roles and workflows",
+      "No invented wage certainty",
+      "City-specific checks"
+    ]
+  },
+  "status": "completed",
+  "session_id": "2ed505cc-96fd-4d6a-9e04-a9b1c249e848",
+  "run_id": "02709666-9666-4632-becb-76e0c101a596",
+  "profile_before": {
+    "restaurant_origin": "Jordan",
+    "core_products": [
+      "meaty pizza",
+      "kebab sandwiches"
+    ],
+    "target_cities": [
+      "Dubai",
+      "Abu Dhabi"
+    ],
+    "startup_budget_aed": null,
+    "monthly_rent_budget_aed": null,
+    "branch_format": null,
+    "target_audience": null,
+    "positioning": null,
+    "planned_opening": null
+  },
+  "profile_after": {
+    "restaurant_origin": "Jordan",
+    "core_products": [
+      "meaty pizza",
+      "kebab sandwiches"
+    ],
+    "target_cities": [
+      "Dubai",
+      "Abu Dhabi"
+    ],
+    "startup_budget_aed": null,
+    "monthly_rent_budget_aed": null,
+    "branch_format": null,
+    "target_audience": null,
+    "positioning": null,
+    "planned_opening": null
+  },
+  "answer": {
+    "kind": "advice",
+    "cities": [
+      "dubai",
+      "abu_dhabi"
+    ],
+    "headline": "Start with a small cross-trained kitchen + counter team in each city, led by one trained food-safety supervisor per site; align roles to mandatory food-handler training in both emirates and to the delivery channel you choose.",
+    "sections": [
+      {
+        "title": "Operating format to staff around",
+        "items": [
+          {
+            "text": "Proposal: launch each city as one compact production kitchen plus counter/pickup point sized for pizza-and-kebab prep, with delivery as a major channel from day one. Curated evidence shows a platform option where the platform supplies riders (Deliveroo Marketplace+) alongside your own delivery staff, with a selectable area and minimum spend; this affects whether you staff in-house riders.",
+            "basis": "proposal",
+            "evidence_ids": [
+              "UAE-DEL-004"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Inference: pizza and kebab lines share ovens, flat-tops, and cold prep, so a single prep/cook team can cover both instead of separate pizza and grill brigades at launch; verify against your actual equipment layout and expected order mix.",
+            "basis": "inference",
+            "evidence_ids": [
+              "UAE-PRICE-001"
+            ],
+            "calculation_ids": []
+          }
+        ]
+      },
+      {
+        "title": "Staffing scenario per site (not a verified requirement)",
+        "items": [
+          {
+            "text": "Assumption: no branch format, audience, or budget was set in the profile, so the following counts are illustrative scenarios only, not verified requirements. Scenario for one compact site: 1 site manager/supervisor (also the trained food-safety lead), 2-3 kitchen staff cross-trained across dough/pizza and kebab/sandwich lines, 1-2 counter/cashier and packing staff per shift, 1 dishwasher/cleaner, plus 1 part-time in-house rider if you self-deliver rather than using platform riders.",
+            "basis": "assumption",
+            "evidence_ids": [],
+            "calculation_ids": []
+          },
+          {
+            "text": "Proposal: stagger shifts so a small core covers prep before opening, peak evening delivery, and a shorter late window; do not extend hours purely to match observed late-night competitors, since advertised competitor hours are branch-specific observations and not evidence that late-night staffing would be profitable.",
+            "basis": "proposal",
+            "evidence_ids": [
+              "DXB-COMP-006",
+              "DXB-COMP-004",
+              "DXB-COMP-004"
+            ],
+            "calculation_ids": []
+          }
+        ]
+      },
+      {
+        "title": "City-specific compliance and setup",
+        "items": [
+          {
+            "text": "Dubai: Dubai Municipality guidance requires food handling staff, supervisors, and managers to receive formal food safety training appropriate to their work activity, so budget training time for every kitchen and supervisor role before opening; the source is a 2023 version still linked as of 2026-10-12 and flagged for review, so confirm activity-specific applicability with the municipality.",
+            "basis": "fact",
+            "evidence_ids": [
+              "DXB-OPS-002"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Abu Dhabi: ADAFSA describes an Essential Food Safety Training programme for food handlers covering cross-contamination, cooking/processing, cleaning, chilling, and food safety management; the summary does not establish prices, wages, or staffing ratios, so treat all training-cost and headcount numbers as quotes to be obtained.",
+            "basis": "fact",
+            "evidence_ids": [
+              "AUH-OPS-001"
+            ],
+            "calculation_ids": []
+          }
+        ]
+      },
+      {
+        "title": "Delivery-related operating duties",
+        "items": [
+          {
+            "text": "Dubai (and a proposal for Abu Dhabi pending local confirmation): Dubai Municipality transport guidance specifies hot food held at 60 C or above, cold at 5 C or below, frozen at -18 C or below, and requires sealed containers plus separation of hot and cold items into insulated secondary units. Build these checks into packing-station SOPs and staff training.",
+            "basis": "fact",
+            "evidence_ids": [
+              "DXB-DEL-001",
+              "DXB-DEL-002"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Proposal: if you run in-house delivery, add a rider-dispatcher or supervisor duty per shift for bag temperature checks, handover logging, and radius management; test a limited radius first and expand only after observing packing times and complaint rates. Neither the platform product page nor anecdotal competitor listings establish demand, so treat radius as a test variable.",
+            "basis": "proposal",
+            "evidence_ids": [
+              "UAE-DEL-004"
+            ],
+            "calculation_ids": []
+          }
+        ]
+      },
+      {
+        "title": "Kitchen roles, training and quality checks",
+        "items": [
+          {
+            "text": "Proposal: define four role cards at launch - dough/pizza, grill/kebab and sandwich assembly, packing and dispatch, and counter/order handling - each with a daily opening and closing check, a portion standard for the meaty pizza and kebab items, and a 60 C / 5 C / -18 C temperature log where applicable. Two pressured competitors in Dubai and Abu Dhabi list multiple pizza branches and Middle Eastern street-food formats, so consistent output is the differentiation lever.",
+            "basis": "proposal",
+            "evidence_ids": [
+              "DXB-COMP-001",
+              "DXB-COMP-002",
+              "DXB-COMP-003",
+              "AUH-COMP-001",
+              "AUH-COMP-002",
+              "AUH-COMP-003"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Inference: with a Jordanian meaty-pizza and kebab-sandwich concept, retaining one Jordan-trained lead cook per site for the first months reduces recipe drift while local hires are trained; this is a reasoned interpretation, not a verified labour-market claim.",
+            "basis": "inference",
+            "evidence_ids": [],
+            "calculation_ids": []
+          }
+        ]
+      },
+      {
+        "title": "Research gaps",
+        "items": [
+          {
+            "text": "Curated evidence for this question returned no records on UAE staff wages, staff-to-volume ratios, licensing timelines, or supplier terms, and one operations source is flagged needs_review. Any headcount or cost schedule below should therefore be treated as a planning assumption until quotes and official confirmations are obtained.",
+            "basis": "fact",
+            "evidence_ids": [
+              "DXB-OPS-002"
+            ],
+            "calculation_ids": []
+          }
+        ]
+      }
+    ],
+    "assumptions": [
+      "Business profile: Jordanian origin, core products meaty pizza and kebab sandwiches, target cities Dubai and Abu Dhabi. Branch format, startup budget, monthly rent budget, target audience, and positioning are unset, so all site-scale assumptions are placeholders.",
+      "All headcount numbers per site are illustrative scenarios, not verified staffing requirements.",
+      "No UAE wage, rent, or commission figures were supplied or verified, so no cost model is presented."
+    ],
+    "next_steps": [
+      "Inspect the Dubai Municipality training guidance and delivery-vehicle guidance pages directly to confirm which roles and temperature rules apply to your setup, then build training and temperature-log SOPs.",
+      "Confirm ADAFSA Essential Food Safety Training deadlines and any premises-specific requirements for an Abu Dhabi site before finalising the Abu Dhabi roster.",
+      "Draft a one-page role card for each launch position and run a 30-day roster test in one city before replicating it in the second.",
+      "If you want a break-even view, collect these eight inputs: average order revenue, food cost per order, packaging cost per order, other variable cost per order, delivery share of orders, delivery commission rate, monthly fixed costs, and operating days per month."
+    ],
+    "questions": [
+      "What site size and channel mix do you plan for each city (for example dine-in/counter plus delivery, or delivery-only kitchen), and how many covers or orders per day are you designing for?",
+      "If you want me to calculate contribution and break-even, what are your average order revenue, food cost per order, packaging cost per order, other variable cost per order, delivery share, commission rate, monthly fixed costs, and operating days per month?"
+    ]
+  },
+  "rendered_answer": "Start with a small cross-trained kitchen + counter team in each city, led by one trained food-safety supervisor per site; align roles to mandatory food-handler training in both emirates and to the delivery channel you choose.\n\n**Operating format to staff around**\n\n- **Proposal:** Proposal: launch each city as one compact production kitchen plus counter/pickup point sized for pizza-and-kebab prep, with delivery as a major channel from day one. Curated evidence shows a platform option where the platform supplies riders \\(Deliveroo Marketplace+\\) alongside your own delivery staff, with a selectable area and minimum spend; this affects whether you staff in-house riders. [1](<https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace>)\n- **Inference:** Inference: pizza and kebab lines share ovens, flat-tops, and cold prep, so a single prep/cook team can cover both instead of separate pizza and grill brigades at launch; verify against your actual equipment layout and expected order mix. [2](<https://www.papajohns.ae/menu>)\n\n**Staffing scenario per site \\(not a verified requirement\\)**\n\n- **Assumption:** Assumption: no branch format, audience, or budget was set in the profile, so the following counts are illustrative scenarios only, not verified requirements. Scenario for one compact site: 1 site manager/supervisor \\(also the trained food-safety lead\\), 2-3 kitchen staff cross-trained across dough/pizza and kebab/sandwich lines, 1-2 counter/cashier and packing staff per shift, 1 dishwasher/cleaner, plus 1 part-time in-house rider if you self-deliver rather than using platform riders.\n- **Proposal:** Proposal: stagger shifts so a small core covers prep before opening, peak evening delivery, and a shorter late window; do not extend hours purely to match observed late-night competitors, since advertised competitor hours are branch-specific observations and not evidence that late-night staffing would be profitable. [3](<https://www.zaroob.com/>) [4](<https://www.allobeirutstreetfood.com/locations>)\n\n**City-specific compliance and setup**\n\n- **Fact:** Dubai: Dubai Municipality guidance requires food handling staff, supervisors, and managers to receive formal food safety training appropriate to their work activity, so budget training time for every kitchen and supervisor role before opening; the source is a 2023 version still linked as of 2026-10-12 and flagged for review, so confirm activity-specific applicability with the municipality. [5](<https://dmpmedia.dm.gov.ae/uploads/2024/02/3.-DM-FSD-GU64-Requirements-for-Integrated-Training-Management-System-for-Food-Establishments-2.pdf>)\n- **Fact:** Abu Dhabi: ADAFSA describes an Essential Food Safety Training programme for food handlers covering cross-contamination, cooking/processing, cleaning, chilling, and food safety management; the summary does not establish prices, wages, or staffing ratios, so treat all training-cost and headcount numbers as quotes to be obtained. [6](<https://prod.adafsa.gov.ae/en/work/food-safety/Pages/default.aspx>)\n\n**Delivery-related operating duties**\n\n- **Fact:** Dubai \\(and a proposal for Abu Dhabi pending local confirmation\\): Dubai Municipality transport guidance specifies hot food held at 60 C or above, cold at 5 C or below, frozen at -18 C or below, and requires sealed containers plus separation of hot and cold items into insulated secondary units. Build these checks into packing-station SOPs and staff training. [7](<https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf>)\n- **Proposal:** Proposal: if you run in-house delivery, add a rider-dispatcher or supervisor duty per shift for bag temperature checks, handover logging, and radius management; test a limited radius first and expand only after observing packing times and complaint rates. Neither the platform product page nor anecdotal competitor listings establish demand, so treat radius as a test variable. [1](<https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace>)\n\n**Kitchen roles, training and quality checks**\n\n- **Proposal:** Proposal: define four role cards at launch - dough/pizza, grill/kebab and sandwich assembly, packing and dispatch, and counter/order handling - each with a daily opening and closing check, a portion standard for the meaty pizza and kebab items, and a 60 C / 5 C / -18 C temperature log where applicable. Two pressured competitors in Dubai and Abu Dhabi list multiple pizza branches and Middle Eastern street-food formats, so consistent output is the differentiation lever. [8](<https://www.papajohns.ae/stores>)\n- **Inference:** Inference: with a Jordanian meaty-pizza and kebab-sandwich concept, retaining one Jordan-trained lead cook per site for the first months reduces recipe drift while local hires are trained; this is a reasoned interpretation, not a verified labour-market claim.\n\n**Research gaps**\n\n- **Fact:** Curated evidence for this question returned no records on UAE staff wages, staff-to-volume ratios, licensing timelines, or supplier terms, and one operations source is flagged needs\\_review. Any headcount or cost schedule below should therefore be treated as a planning assumption until quotes and official confirmations are obtained. [5](<https://dmpmedia.dm.gov.ae/uploads/2024/02/3.-DM-FSD-GU64-Requirements-for-Integrated-Training-Management-System-for-Food-Establishments-2.pdf>)\n\n**Assumptions and limitations**\n\n- Business profile: Jordanian origin, core products meaty pizza and kebab sandwiches, target cities Dubai and Abu Dhabi. Branch format, startup budget, monthly rent budget, target audience, and positioning are unset, so all site-scale assumptions are placeholders.\n- All headcount numbers per site are illustrative scenarios, not verified staffing requirements.\n- No UAE wage, rent, or commission figures were supplied or verified, so no cost model is presented.\n\n**Next steps**\n\n- Inspect the Dubai Municipality training guidance and delivery-vehicle guidance pages directly to confirm which roles and temperature rules apply to your setup, then build training and temperature-log SOPs.\n- Confirm ADAFSA Essential Food Safety Training deadlines and any premises-specific requirements for an Abu Dhabi site before finalising the Abu Dhabi roster.\n- Draft a one-page role card for each launch position and run a 30-day roster test in one city before replicating it in the second.\n- If you want a break-even view, collect these eight inputs: average order revenue, food cost per order, packaging cost per order, other variable cost per order, delivery share of orders, delivery commission rate, monthly fixed costs, and operating days per month.\n\n**Questions**\n\n- What site size and channel mix do you plan for each city \\(for example dine-in/counter plus delivery, or delivery-only kitchen\\), and how many covers or orders per day are you designing for?\n- If you want me to calculate contribution and break-even, what are your average order revenue, food cost per order, packaging cost per order, other variable cost per order, delivery share, commission rate, monthly fixed costs, and operating days per month?\n\n**Tool warnings**\n\n- Some returned records need review; inspect their dates and freshness flags.\n- Some matching records were omitted to respect result or payload limits.\n\n**Sources**\n\n1. [Deliveroo Marketplace+ for UAE partners](<https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace>) — Deliveroo\n   - Deliveroo UAE - Marketplace+ own riders: checked 2026-10-12 UTC.\n     Location in source: Benefits of Marketplace+; Receiving orders; Delivering orders.\n     - UAE merchant product description; eligibility and availability at a proposed address need confirmation.\n     - No verified contractual commission, fees, delivery radius, service level, or sales uplift.\n2. [Papa Johns UAE Menu & Prices \\(AED\\)](<https://www.papajohns.ae/menu>) — Papa Johns UAE\n   - Papa Johns - All The Meats pizza: checked 2026-10-12 UTC.\n     Location in source: Pizzas / All The Meats.\n     - Public UAE website menu; the store directory states shared menus and prices across branches in both cities.\n     - No branch checkout selected; crust options, extras, fees, tax treatment, and availability need confirmation.\n3. [Zaroob hours and locations](<https://www.zaroob.com/>) — Zaroob\n   - Zaroob - Dubai Marina: checked 2026-10-12 UTC.\n     Location in source: Hours & Locations / Zaroob Marina.\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n     - Hours are branch-specific observations, not evidence that late-night staffing would be profitable.\n4. [Allo Beirut locations](<https://www.allobeirutstreetfood.com/locations>) — Allo Beirut\n   - Allo Beirut - Al Barsha / Hessa Street: checked 2026-10-12 UTC.\n     Location in source: Dubai / Hessa St..\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n     - Advertised delivery hours do not establish overnight demand or the proposed site catchment.\n5. [Requirements for Integrated Training Management System for Food Establishments, DM-FSD-GU64, version 2](<https://dmpmedia.dm.gov.ae/uploads/2024/02/3.-DM-FSD-GU64-Requirements-for-Integrated-Training-Management-System-for-Food-Establishments-2.pdf>) — Dubai Municipality\n   - Dubai Municipality - food handler training: checked 2026-10-12 UTC; published 2023-08-31; NEEDS REVIEW.\n     Location in source: PDF page 4, Introduction; page 7, Regulatory Approach.\n     - Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\n     - Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\n6. [ADAFSA food safety programmes](<https://prod.adafsa.gov.ae/en/work/food-safety/Pages/default.aspx>) — Abu Dhabi Agriculture and Food Safety Authority\n   - ADAFSA - Essential Food Safety Training: checked 2026-10-12 UTC.\n     Location in source: Essential Food Safety Training Program \\(EFST\\).\n     - Emirate of Abu Dhabi programme; cooking/processing and food safety management modules apply where relevant.\n     - Programme summary does not establish training prices, staff wages, staffing ratios, or all premises requirements.\n7. [Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2](<https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf>) — Dubai Municipality\n   - Dubai Municipality - transport cold chain: checked 2026-10-12 UTC; published 2023-08-31; NEEDS REVIEW.\n     Location in source: PDF pages 13-14, section 1.2.2 Temperature Control Requirements.\n     - Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\n     - Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\n     - Transport holding requirements, not cooking temperatures or evidence that a supplier or vehicle meets them.\n   - Dubai Municipality - sealed delivery and separation: checked 2026-10-12 UTC; published 2023-08-31; NEEDS REVIEW.\n     Location in source: PDF page 18, section 1.4.1\\(e\\)-\\(f\\).\n     - Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\n     - Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\n8. [Papa Johns Stores in UAE](<https://www.papajohns.ae/stores>) — Papa Johns UAE\n   - Papa Johns - Deira: checked 2026-10-12 UTC.\n     Location in source: Dubai / Al Ghurair Centre; Deira City Centre.\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n   - Papa Johns - Al Barsha: checked 2026-10-12 UTC.\n     Location in source: Dubai / Al Barsha Mall.\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n   - Papa Johns - Dubai Marina: checked 2026-10-12 UTC.\n     Location in source: Dubai / Marina Diamond.\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n   - Papa Johns - Al Zahiyah: checked 2026-10-12 UTC.\n     Location in source: Abu Dhabi / Abu Dhabi Mall.\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n   - Papa Johns - Khalidiya: checked 2026-10-12 UTC.\n     Location in source: Abu Dhabi / ADNOC 913 Khalidiya.\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n   - Papa Johns - Al Wahda / Al Manhal: checked 2026-10-12 UTC.\n     Location in source: Abu Dhabi / Al Wahda Mall.\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.",
+  "cited_evidence_ids": [
+    "AUH-COMP-001",
+    "AUH-COMP-002",
+    "AUH-COMP-003",
+    "AUH-OPS-001",
+    "DXB-COMP-001",
+    "DXB-COMP-002",
+    "DXB-COMP-003",
+    "DXB-COMP-004",
+    "DXB-COMP-006",
+    "DXB-DEL-001",
+    "DXB-DEL-002",
+    "DXB-OPS-002",
+    "UAE-DEL-004",
+    "UAE-PRICE-001"
+  ],
+  "retrieved_sources": {
+    "DXB-OPS-002": {
+      "id": "DXB-OPS-002",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "operations"
+      ],
+      "entity": "Dubai Municipality - food handler training",
+      "observation": "Dubai Municipality guidance requires food handling staff, supervisors, and managers to receive formal food safety training appropriate to their work activity.",
+      "source_title": "Requirements for Integrated Training Management System for Food Establishments, DM-FSD-GU64, version 2",
+      "source_url": "https://dmpmedia.dm.gov.ae/uploads/2024/02/3.-DM-FSD-GU64-Requirements-for-Integrated-Training-Management-System-for-Food-Establishments-2.pdf",
+      "publisher": "Dubai Municipality",
+      "source_kind": "official",
+      "published_on": "2023-08-31",
+      "checked_on": "2026-10-12",
+      "locator": "PDF page 4, Introduction; page 7, Regulatory Approach",
+      "qualifiers": [
+        "Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.",
+        "Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist."
+      ],
+      "valid_until": null,
+      "needs_review": true,
+      "expired": false
+    },
+    "UAE-DEL-004": {
+      "id": "UAE-DEL-004",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "delivery",
+        "operations"
+      ],
+      "entity": "Deliveroo UAE - Marketplace+ own riders",
+      "observation": "Deliveroo describes Marketplace+ as using restaurant delivery staff, with selectable delivery area, minimum spend, and delivery fees, plus an option to request a platform rider.",
+      "source_title": "Deliveroo Marketplace+ for UAE partners",
+      "source_url": "https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace",
+      "publisher": "Deliveroo",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Benefits of Marketplace+; Receiving orders; Delivering orders",
+      "qualifiers": [
+        "UAE merchant product description; eligibility and availability at a proposed address need confirmation.",
+        "No verified contractual commission, fees, delivery radius, service level, or sales uplift."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-COMP-001": {
+      "id": "DXB-COMP-001",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Papa Johns - Deira",
+      "observation": "Papa Johns lists pizza branches at Al Ghurair Centre in Al Muraqqabat and Deira City Centre in Port Saeed.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Dubai / Al Ghurair Centre; Deira City Centre",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "AUH-COMP-001": {
+      "id": "AUH-COMP-001",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Papa Johns - Al Zahiyah",
+      "observation": "Papa Johns lists a pizza branch by the Abu Dhabi Mall parking entrance in Al Zahiyah.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Abu Dhabi / Abu Dhabi Mall",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-COMP-002": {
+      "id": "DXB-COMP-002",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Papa Johns - Al Barsha",
+      "observation": "Papa Johns lists a pizza branch at Al Barsha Mall on Al Barsha 2 Street.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Dubai / Al Barsha Mall",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "AUH-COMP-002": {
+      "id": "AUH-COMP-002",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Papa Johns - Khalidiya",
+      "observation": "Papa Johns lists its ADNOC 913 Khalidiya pizza branch on Ash Shoulah Street in Al Khubeirah, Al Khalidiyah.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Abu Dhabi / ADNOC 913 Khalidiya",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-COMP-003": {
+      "id": "DXB-COMP-003",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Papa Johns - Dubai Marina",
+      "observation": "Papa Johns lists a pizza branch at Marina Diamond near Dubai Marina Metro Station.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Dubai / Marina Diamond",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "AUH-COMP-003": {
+      "id": "AUH-COMP-003",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Papa Johns - Al Wahda / Al Manhal",
+      "observation": "Papa Johns lists its Al Wahda Mall pizza branch on Hthaymah Street in Al Manhal, Abu Dhabi.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Abu Dhabi / Al Wahda Mall",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-COMP-006": {
+      "id": "DXB-COMP-006",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "locations",
+        "competitors",
+        "operations"
+      ],
+      "entity": "Zaroob - Dubai Marina",
+      "observation": "Zaroob lists its Dubai Marina restaurant at Radisson Blu Residence with advertised hours of 7 AM to 5 AM.",
+      "source_title": "Zaroob hours and locations",
+      "source_url": "https://www.zaroob.com/",
+      "publisher": "Zaroob",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Hours & Locations / Zaroob Marina",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability.",
+        "Hours are branch-specific observations, not evidence that late-night staffing would be profitable."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "UAE-PRICE-001": {
+      "id": "UAE-PRICE-001",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "menu",
+        "pricing",
+        "competitors"
+      ],
+      "entity": "Papa Johns - All The Meats pizza",
+      "observation": "The UAE web menu lists All The Meats pizza at AED 33 for 8 inches, AED 50 for 10 inches, and AED 69 for 13 inches; toppings include beef, beef sausage, pepperoni, and turkey ham.",
+      "source_title": "Papa Johns UAE Menu & Prices (AED)",
+      "source_url": "https://www.papajohns.ae/menu",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Pizzas / All The Meats",
+      "qualifiers": [
+        "Public UAE website menu; the store directory states shared menus and prices across branches in both cities.",
+        "No branch checkout selected; crust options, extras, fees, tax treatment, and availability need confirmation."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-COMP-007": {
+      "id": "DXB-COMP-007",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "locations",
+        "competitors"
+      ],
+      "entity": "Operation Falafel - The Beach JBR",
+      "observation": "The Beach JBR lists Operation Falafel as a restaurant serving Middle Eastern street food at the venue.",
+      "source_title": "Operation Falafel at The Beach JBR",
+      "source_url": "https://www.thebeach.ae/en/outlets/operation-falafel",
+      "publisher": "The Beach JBR / Merex Investment Group",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Operation Falafel description; venue address",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-PRICE-001": {
+      "id": "DXB-PRICE-001",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "menu",
+        "pricing",
+        "competitors"
+      ],
+      "entity": "Allo Beirut JBR - pizza",
+      "observation": "The JBR Deliveroo menu lists Pepperoni pizza at AED 40 and Margherita pizza at AED 38.",
+      "source_title": "Allo Beirut - JBR delivery menu",
+      "source_url": "https://deliveroo.ae/en/menu/dubai/jbr/allo-beirut-jbr",
+      "publisher": "Deliveroo",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Pizza / Pizza Pepperoni; Pizza Margherita",
+      "qualifiers": [
+        "JBR, Dubai branch, anonymous Deliveroo listing with no delivery address selected; menu visibility can vary.",
+        "Pizza diameter and weight were not specified. Observed item prices are not a completed checkout total; delivery charges, extras, and tax treatment were not verified.",
+        "No publication date shown; recheck menu, price, and availability before a decision."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-COMP-004": {
+      "id": "DXB-COMP-004",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "locations",
+        "competitors",
+        "delivery"
+      ],
+      "entity": "Allo Beirut - Al Barsha / Hessa Street",
+      "observation": "Allo Beirut lists its Hessa Street branch in Al Barsha, Dubai, and advertises delivery until 4 AM.",
+      "source_title": "Allo Beirut locations",
+      "source_url": "https://www.allobeirutstreetfood.com/locations",
+      "publisher": "Allo Beirut",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Dubai / Hessa St.",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability.",
+        "Advertised delivery hours do not establish overnight demand or the proposed site catchment."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "AUH-COMP-006": {
+      "id": "AUH-COMP-006",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "competitors",
+        "menu",
+        "delivery"
+      ],
+      "entity": "Operation Falafel - Madinat Khalifa A",
+      "observation": "Talabat lists Operation Falafel in Madinat Khalifa A, with Arabic, Lebanese, sandwich, shawarma, and falafel categories.",
+      "source_title": "Operation Falafel in Madinat Khalifa - A",
+      "source_url": "https://www.talabat.com/uae/restaurant/704423/operation-falafel-khalifa-city--ad-7?aid=1483",
+      "publisher": "Talabat",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Restaurant heading and cuisine tags",
+      "qualifiers": [
+        "Khalifa City, Abu Dhabi; the page title refers to the delivery area Masdar City, not a verified street address.",
+        "Only branch heading and cuisine categories were inspected; item prices and delivery catchment were not established."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "AUH-COMP-007": {
+      "id": "AUH-COMP-007",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "competitors",
+        "menu",
+        "operations"
+      ],
+      "entity": "Operation Falafel - Zayed International Airport",
+      "observation": "The airport lists Operation Falafel in Terminal A departures, airside Food Park Mezzanine Level 5, open 24 hours, serving shawarma, hummus, falafel, and salad bowls.",
+      "source_title": "Operation Falafel at Zayed International Airport",
+      "source_url": "https://www.zayedinternationalairport.ae/en/shop-dine-and-experience/dining/restaurants/operation-falafel",
+      "publisher": "Abu Dhabi Airports / Zayed International Airport",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Description; Highlights; Open; Location",
+      "qualifiers": [
+        "Airside airport concession serving departing passengers; not a comparable street-site catchment or pricing benchmark.",
+        "Airport hours and access do not apply to other branches; confirm current concession operation."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-DEL-001": {
+      "id": "DXB-DEL-001",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "delivery",
+        "operations",
+        "suppliers"
+      ],
+      "entity": "Dubai Municipality - transport cold chain",
+      "observation": "Dubai Municipality guidance specifies transportation units capable of holding hot food at 60 C or above, cold food at 5 C or below, and frozen food at -18 C or below.",
+      "source_title": "Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2",
+      "source_url": "https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf",
+      "publisher": "Dubai Municipality",
+      "source_kind": "official",
+      "published_on": "2023-08-31",
+      "checked_on": "2026-10-12",
+      "locator": "PDF pages 13-14, section 1.2.2 Temperature Control Requirements",
+      "qualifiers": [
+        "Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.",
+        "Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.",
+        "Transport holding requirements, not cooking temperatures or evidence that a supplier or vehicle meets them."
+      ],
+      "valid_until": null,
+      "needs_review": true,
+      "expired": false
+    },
+    "AUH-MKT-001": {
+      "id": "AUH-MKT-001",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "marketing"
+      ],
+      "entity": "Abu Dhabi - 2025 culture and leisure events",
+      "observation": "Abu Dhabi Media Office reports that DCT delivered 252 culture and leisure events in 2025 with more than 4.2 million attendees; festival coverage included Abu Dhabi, Al Ain, and Al Dhafra.",
+      "source_title": "Abu Dhabi culture and tourism performance in 2025",
+      "source_url": "https://www.mediaoffice.abudhabi/en/tourism/abu-dhabis-culture-and-tourism-sectors-delivered-strong-growth-in-2025-with-26m-visitors/",
+      "publisher": "Abu Dhabi Media Office",
+      "source_kind": "official",
+      "published_on": "2026-04-06",
+      "checked_on": "2026-10-12",
+      "locator": "2025 culture, leisure and MICE events paragraphs",
+      "qualifiers": [
+        "Historical 2025 emirate-level reporting, published 2026-04-06; includes regions beyond Abu Dhabi city.",
+        "Event attendance is not a count of unique restaurant customers, current event dates, or shop-level demand."
+      ],
+      "valid_until": null,
+      "needs_review": true,
+      "expired": false
+    },
+    "DXB-DEL-002": {
+      "id": "DXB-DEL-002",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "delivery",
+        "operations"
+      ],
+      "entity": "Dubai Municipality - sealed delivery and separation",
+      "observation": "Dubai Municipality delivery guidance requires sealed food containers and separation of hot and cold items into insulated secondary units during transport.",
+      "source_title": "Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2",
+      "source_url": "https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf",
+      "publisher": "Dubai Municipality",
+      "source_kind": "official",
+      "published_on": "2023-08-31",
+      "checked_on": "2026-10-12",
+      "locator": "PDF page 18, section 1.4.1(e)-(f)",
+      "qualifiers": [
+        "Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.",
+        "Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist."
+      ],
+      "valid_until": null,
+      "needs_review": true,
+      "expired": false
+    },
+    "AUH-OPS-001": {
+      "id": "AUH-OPS-001",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "operations"
+      ],
+      "entity": "ADAFSA - Essential Food Safety Training",
+      "observation": "ADAFSA describes Essential Food Safety Training for food handlers in Abu Dhabi, covering cross-contamination, cooking or processing, cleaning, chilling, and food safety management.",
+      "source_title": "ADAFSA food safety programmes",
+      "source_url": "https://prod.adafsa.gov.ae/en/work/food-safety/Pages/default.aspx",
+      "publisher": "Abu Dhabi Agriculture and Food Safety Authority",
+      "source_kind": "official",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Essential Food Safety Training Program (EFST)",
+      "qualifiers": [
+        "Emirate of Abu Dhabi programme; cooking/processing and food safety management modules apply where relevant.",
+        "Programme summary does not establish training prices, staff wages, staffing ratios, or all premises requirements."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    }
+  },
+  "calculations": {},
+  "tool_trace": [
+    {
+      "name": "lookup_market_evidence",
+      "arguments": {
+        "cities": [
+          "dubai",
+          "abu_dhabi"
+        ],
+        "topics": [
+          "operations"
+        ],
+        "query": "staffing kitchen staff requirements",
+        "limit": 12
+      },
+      "result": "{\"status\":\"ok\",\"data\":{\"records\":[{\"id\":\"DXB-OPS-002\",\"cities\":[\"dubai\"],\"topics\":[\"operations\"],\"entity\":\"Dubai Municipality - food handler training\",\"observation\":\"Dubai Municipality guidance requires food handling staff, supervisors, and managers to receive formal food safety training appropriate to their work activity.\",\"source_title\":\"Requirements for Integrated Training Management System for Food Establishments, DM-FSD-GU64, version 2\",\"source_url\":\"https://dmpmedia.dm.gov.ae/uploads/2024/02/3.-DM-FSD-GU64-Requirements-for-Integrated-Training-Management-System-for-Food-Establishments-2.pdf\",\"publisher\":\"Dubai Municipality\",\"source_kind\":\"official\",\"published_on\":\"2023-08-31\",\"checked_on\":\"2026-10-12\",\"locator\":\"PDF page 4, Introduction; page 7, Regulatory Approach\",\"qualifiers\":[\"Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\",\"Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\"],\"valid_until\":null,\"needs_review\":true,\"expired\":false},{\"id\":\"UAE-DEL-004\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\",\"operations\"],\"entity\":\"Deliveroo UAE - Marketplace+ own riders\",\"observation\":\"Deliveroo describes Marketplace+ as using restaurant delivery staff, with selectable delivery area, minimum spend, and delivery fees, plus an option to request a platform rider.\",\"source_title\":\"Deliveroo Marketplace+ for UAE partners\",\"source_url\":\"https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Benefits of Marketplace+; Receiving orders; Delivering orders\",\"qualifiers\":[\"UAE merchant product description; eligibility and availability at a proposed address need confirmation.\",\"No verified contractual commission, fees, delivery radius, service level, or sales uplift.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false}],\"matched_count\":2,\"omitted_count\":0},\"warnings\":[\"Some returned records need review; inspect their dates and freshness flags.\"]}",
+      "error": false
+    },
+    {
+      "name": "lookup_market_evidence",
+      "arguments": {
+        "cities": [
+          "dubai",
+          "abu_dhabi"
+        ],
+        "topics": [
+          "locations",
+          "competitors"
+        ],
+        "query": "kebab pizza restaurant",
+        "limit": 12
+      },
+      "result": "{\"status\":\"ok\",\"data\":{\"records\":[{\"id\":\"DXB-COMP-001\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Papa Johns - Deira\",\"observation\":\"Papa Johns lists pizza branches at Al Ghurair Centre in Al Muraqqabat and Deira City Centre in Port Saeed.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Dubai / Al Ghurair Centre; Deira City Centre\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-COMP-001\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Papa Johns - Al Zahiyah\",\"observation\":\"Papa Johns lists a pizza branch by the Abu Dhabi Mall parking entrance in Al Zahiyah.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Abu Dhabi / Abu Dhabi Mall\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-COMP-002\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Papa Johns - Al Barsha\",\"observation\":\"Papa Johns lists a pizza branch at Al Barsha Mall on Al Barsha 2 Street.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Dubai / Al Barsha Mall\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-COMP-002\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Papa Johns - Khalidiya\",\"observation\":\"Papa Johns lists its ADNOC 913 Khalidiya pizza branch on Ash Shoulah Street in Al Khubeirah, Al Khalidiyah.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Abu Dhabi / ADNOC 913 Khalidiya\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-COMP-003\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Papa Johns - Dubai Marina\",\"observation\":\"Papa Johns lists a pizza branch at Marina Diamond near Dubai Marina Metro Station.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Dubai / Marina Diamond\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-COMP-003\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Papa Johns - Al Wahda / Al Manhal\",\"observation\":\"Papa Johns lists its Al Wahda Mall pizza branch on Hthaymah Street in Al Manhal, Abu Dhabi.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Abu Dhabi / Al Wahda Mall\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-COMP-006\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\",\"operations\"],\"entity\":\"Zaroob - Dubai Marina\",\"observation\":\"Zaroob lists its Dubai Marina restaurant at Radisson Blu Residence with advertised hours of 7 AM to 5 AM.\",\"source_title\":\"Zaroob hours and locations\",\"source_url\":\"https://www.zaroob.com/\",\"publisher\":\"Zaroob\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Hours & Locations / Zaroob Marina\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\",\"Hours are branch-specific observations, not evidence that late-night staffing would be profitable.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-PRICE-001\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"menu\",\"pricing\",\"competitors\"],\"entity\":\"Papa Johns - All The Meats pizza\",\"observation\":\"The UAE web menu lists All The Meats pizza at AED 33 for 8 inches, AED 50 for 10 inches, and AED 69 for 13 inches; toppings include beef, beef sausage, pepperoni, and turkey ham.\",\"source_title\":\"Papa Johns UAE Menu & Prices (AED)\",\"source_url\":\"https://www.papajohns.ae/menu\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Pizzas / All The Meats\",\"qualifiers\":[\"Public UAE website menu; the store directory states shared menus and prices across branches in both cities.\",\"No branch checkout selected; crust options, extras, fees, tax treatment, and availability need confirmation.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-COMP-007\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\"],\"entity\":\"Operation Falafel - The Beach JBR\",\"observation\":\"The Beach JBR lists Operation Falafel as a restaurant serving Middle Eastern street food at the venue.\",\"source_title\":\"Operation Falafel at The Beach JBR\",\"source_url\":\"https://www.thebeach.ae/en/outlets/operation-falafel\",\"publisher\":\"The Beach JBR / Merex Investment Group\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Operation Falafel description; venue address\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-PRICE-001\",\"cities\":[\"dubai\"],\"topics\":[\"menu\",\"pricing\",\"competitors\"],\"entity\":\"Allo Beirut JBR - pizza\",\"observation\":\"The JBR Deliveroo menu lists Pepperoni pizza at AED 40 and Margherita pizza at AED 38.\",\"source_title\":\"Allo Beirut - JBR delivery menu\",\"source_url\":\"https://deliveroo.ae/en/menu/dubai/jbr/allo-beirut-jbr\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Pizza / Pizza Pepperoni; Pizza Margherita\",\"qualifiers\":[\"JBR, Dubai branch, anonymous Deliveroo listing with no delivery address selected; menu visibility can vary.\",\"Pizza diameter and weight were not specified. Observed item prices are not a completed checkout total; delivery charges, extras, and tax treatment were not verified.\",\"No publication date shown; recheck menu, price, and availability before a decision.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false}],\"matched_count\":10,\"omitted_count\":0},\"warnings\":[]}",
+      "error": false
+    },
+    {
+      "name": "lookup_market_evidence",
+      "arguments": {
+        "cities": [
+          "dubai",
+          "abu_dhabi"
+        ],
+        "topics": [
+          "delivery",
+          "operations",
+          "marketing",
+          "suppliers"
+        ],
+        "query": "",
+        "limit": 12
+      },
+      "result": "{\"status\":\"ok\",\"data\":{\"records\":[{\"id\":\"DXB-COMP-004\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\",\"delivery\"],\"entity\":\"Allo Beirut - Al Barsha / Hessa Street\",\"observation\":\"Allo Beirut lists its Hessa Street branch in Al Barsha, Dubai, and advertises delivery until 4 AM.\",\"source_title\":\"Allo Beirut locations\",\"source_url\":\"https://www.allobeirutstreetfood.com/locations\",\"publisher\":\"Allo Beirut\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Dubai / Hessa St.\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\",\"Advertised delivery hours do not establish overnight demand or the proposed site catchment.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-COMP-006\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"competitors\",\"menu\",\"delivery\"],\"entity\":\"Operation Falafel - Madinat Khalifa A\",\"observation\":\"Talabat lists Operation Falafel in Madinat Khalifa A, with Arabic, Lebanese, sandwich, shawarma, and falafel categories.\",\"source_title\":\"Operation Falafel in Madinat Khalifa - A\",\"source_url\":\"https://www.talabat.com/uae/restaurant/704423/operation-falafel-khalifa-city--ad-7?aid=1483\",\"publisher\":\"Talabat\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Restaurant heading and cuisine tags\",\"qualifiers\":[\"Khalifa City, Abu Dhabi; the page title refers to the delivery area Masdar City, not a verified street address.\",\"Only branch heading and cuisine categories were inspected; item prices and delivery catchment were not established.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-COMP-006\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\",\"operations\"],\"entity\":\"Zaroob - Dubai Marina\",\"observation\":\"Zaroob lists its Dubai Marina restaurant at Radisson Blu Residence with advertised hours of 7 AM to 5 AM.\",\"source_title\":\"Zaroob hours and locations\",\"source_url\":\"https://www.zaroob.com/\",\"publisher\":\"Zaroob\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Hours & Locations / Zaroob Marina\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\",\"Hours are branch-specific observations, not evidence that late-night staffing would be profitable.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-COMP-007\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"competitors\",\"menu\",\"operations\"],\"entity\":\"Operation Falafel - Zayed International Airport\",\"observation\":\"The airport lists Operation Falafel in Terminal A departures, airside Food Park Mezzanine Level 5, open 24 hours, serving shawarma, hummus, falafel, and salad bowls.\",\"source_title\":\"Operation Falafel at Zayed International Airport\",\"source_url\":\"https://www.zayedinternationalairport.ae/en/shop-dine-and-experience/dining/restaurants/operation-falafel\",\"publisher\":\"Abu Dhabi Airports / Zayed International Airport\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Description; Highlights; Open; Location\",\"qualifiers\":[\"Airside airport concession serving departing passengers; not a comparable street-site catchment or pricing benchmark.\",\"Airport hours and access do not apply to other branches; confirm current concession operation.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-DEL-001\",\"cities\":[\"dubai\"],\"topics\":[\"delivery\",\"operations\",\"suppliers\"],\"entity\":\"Dubai Municipality - transport cold chain\",\"observation\":\"Dubai Municipality guidance specifies transportation units capable of holding hot food at 60 C or above, cold food at 5 C or below, and frozen food at -18 C or below.\",\"source_title\":\"Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2\",\"source_url\":\"https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf\",\"publisher\":\"Dubai Municipality\",\"source_kind\":\"official\",\"published_on\":\"2023-08-31\",\"checked_on\":\"2026-10-12\",\"locator\":\"PDF pages 13-14, section 1.2.2 Temperature Control Requirements\",\"qualifiers\":[\"Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\",\"Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\",\"Transport holding requirements, not cooking temperatures or evidence that a supplier or vehicle meets them.\"],\"valid_until\":null,\"needs_review\":true,\"expired\":false},{\"id\":\"AUH-MKT-001\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"marketing\"],\"entity\":\"Abu Dhabi - 2025 culture and leisure events\",\"observation\":\"Abu Dhabi Media Office reports that DCT delivered 252 culture and leisure events in 2025 with more than 4.2 million attendees; festival coverage included Abu Dhabi, Al Ain, and Al Dhafra.\",\"source_title\":\"Abu Dhabi culture and tourism performance in 2025\",\"source_url\":\"https://www.mediaoffice.abudhabi/en/tourism/abu-dhabis-culture-and-tourism-sectors-delivered-strong-growth-in-2025-with-26m-visitors/\",\"publisher\":\"Abu Dhabi Media Office\",\"source_kind\":\"official\",\"published_on\":\"2026-04-06\",\"checked_on\":\"2026-10-12\",\"locator\":\"2025 culture, leisure and MICE events paragraphs\",\"qualifiers\":[\"Historical 2025 emirate-level reporting, published 2026-04-06; includes regions beyond Abu Dhabi city.\",\"Event attendance is not a count of unique restaurant customers, current event dates, or shop-level demand.\"],\"valid_until\":null,\"needs_review\":true,\"expired\":false},{\"id\":\"DXB-DEL-002\",\"cities\":[\"dubai\"],\"topics\":[\"delivery\",\"operations\"],\"entity\":\"Dubai Municipality - sealed delivery and separation\",\"observation\":\"Dubai Municipality delivery guidance requires sealed food containers and separation of hot and cold items into insulated secondary units during transport.\",\"source_title\":\"Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2\",\"source_url\":\"https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf\",\"publisher\":\"Dubai Municipality\",\"source_kind\":\"official\",\"published_on\":\"2023-08-31\",\"checked_on\":\"2026-10-12\",\"locator\":\"PDF page 18, section 1.4.1(e)-(f)\",\"qualifiers\":[\"Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\",\"Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\"],\"valid_until\":null,\"needs_review\":true,\"expired\":false},{\"id\":\"AUH-OPS-001\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"operations\"],\"entity\":\"ADAFSA - Essential Food Safety Training\",\"observation\":\"ADAFSA describes Essential Food Safety Training for food handlers in Abu Dhabi, covering cross-contamination, cooking or processing, cleaning, chilling, and food safety management.\",\"source_title\":\"ADAFSA food safety programmes\",\"source_url\":\"https://prod.adafsa.gov.ae/en/work/food-safety/Pages/default.aspx\",\"publisher\":\"Abu Dhabi Agriculture and Food Safety Authority\",\"source_kind\":\"official\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Essential Food Safety Training Program (EFST)\",\"qualifiers\":[\"Emirate of Abu Dhabi programme; cooking/processing and food safety management modules apply where relevant.\",\"Programme summary does not establish training prices, staff wages, staffing ratios, or all premises requirements.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false}],\"matched_count\":25,\"omitted_count\":17},\"warnings\":[\"Some matching records were omitted to respect result or payload limits.\",\"Some returned records need review; inspect their dates and freshness flags.\"]}",
+      "error": false
+    }
+  ],
+  "record": {
+    "model_requests": 3,
+    "input_tokens": 18152,
+    "output_tokens": 1914,
+    "reasoning_tokens": 0,
+    "cached_tokens": 13184,
+    "reported_cost_usd": "0.001788960",
+    "known_reported_cost_usd": "0.001788960",
+    "estimated_cost_usd": null,
+    "estimate_basis": null,
+    "usage_complete": true,
+    "schema_version": 1,
+    "run_id": "02709666-9666-4632-becb-76e0c101a596",
+    "session_id": "2ed505cc-96fd-4d6a-9e04-a9b1c249e848",
+    "timestamp_utc": "2026-10-14T13:20:40.826631Z",
+    "model_requested": "deepseek/deepseek-v4.1-flash",
+    "model_reported_if_available": [
+      "deepseek/deepseek-v4.1-flash"
+    ],
+    "provider_if_available": [
+      "Morph"
+    ],
+    "prompt_version": "10.1",
+    "evidence_dataset_version": "a226a6b54cf292e9b2f6f6e9c51112957bff64195bc8182e0b579dd1f79ca3c5",
+    "question": "What staffing and operating setup should we start with in each city: Dubai and Abu Dhabi?",
+    "outcome": "completed",
+    "error_category": null,
+    "tool_events": [
+      {
+        "name": "lookup_market_evidence",
+        "duration_ms": 0.3402120200917125,
+        "status": "ok",
+        "result_count": 2
+      },
+      {
+        "name": "lookup_market_evidence",
+        "duration_ms": 0.7610690081492066,
+        "status": "ok",
+        "result_count": 10
+      },
+      {
+        "name": "lookup_market_evidence",
+        "duration_ms": 1.3773260288871825,
+        "status": "ok",
+        "result_count": 8
+      }
+    ],
+    "requests": [
+      {
+        "generation_id": "gen-1791984040-LROcCVTy9UQtBIXI1Dqu",
+        "model_reported": "deepseek/deepseek-v4.1-flash",
+        "provider_reported": "Morph",
+        "duration_ms": 2622.9674590285867,
+        "outcome": "completed",
+        "input_tokens": 3519,
+        "output_tokens": 207,
+        "reasoning_tokens": 0,
+        "cached_tokens": 3456,
+        "reported_cost_usd": "0.000198468"
+      },
+      {
+        "generation_id": "gen-1791984043-mtqgC6DQy1c3w3sTVlPQ",
+        "model_reported": "deepseek/deepseek-v4.1-flash",
+        "provider_reported": "Morph",
+        "duration_ms": 2183.8646930409595,
+        "outcome": "completed",
+        "input_tokens": 6274,
+        "output_tokens": 113,
+        "reasoning_tokens": 0,
+        "cached_tokens": 3456,
+        "reported_cost_usd": "0.000200408"
+      },
+      {
+        "generation_id": "gen-1791984045-KKn6687wfoI5fFYnlWoa",
+        "model_reported": "deepseek/deepseek-v4.1-flash",
+        "provider_reported": "Morph",
+        "duration_ms": 32579.397038032766,
+        "outcome": "completed",
+        "input_tokens": 8359,
+        "output_tokens": 1594,
+        "reasoning_tokens": 0,
+        "cached_tokens": 6272,
+        "reported_cost_usd": "0.001390084"
+      }
+    ],
+    "evidence_ids": [
+      "DXB-OPS-002",
+      "UAE-DEL-004",
+      "DXB-COMP-001",
+      "AUH-COMP-001",
+      "DXB-COMP-002",
+      "AUH-COMP-002",
+      "DXB-COMP-003",
+      "AUH-COMP-003",
+      "DXB-COMP-006",
+      "UAE-PRICE-001",
+      "DXB-COMP-007",
+      "DXB-PRICE-001",
+      "DXB-COMP-004",
+      "AUH-COMP-006",
+      "AUH-COMP-007",
+      "DXB-DEL-001",
+      "AUH-MKT-001",
+      "DXB-DEL-002",
+      "AUH-OPS-001"
+    ],
+    "calculation_ids": [],
+    "latency_ms": 37462.397897965275,
+    "tool_output_characters": 17580,
+    "validation_errors": [],
+    "warnings": [
+      "Some returned records need review; inspect their dates and freshness flags.",
+      "Some matching records were omitted to respect result or payload limits."
+    ]
+  },
+  "warnings": [
+    "Some returned records need review; inspect their dates and freshness flags.",
+    "Some matching records were omitted to respect result or payload limits."
+  ],
+  "error_category": null,
+  "error_message": null,
+  "checks": {
+    "reference_integrity": true,
+    "requested_cities_present": true,
+    "durable_profile_unchanged": true,
+    "calculator_exact": null,
+    "claim_support": "requires review"
+  }
+}

@@ -1,0 +1,109 @@
+Executive evaluation — milestone 11
+Executed 2026-10-14 UTC. Status: release target NOT MET; human review pending.
+
+All twelve cases ran twice through answer_question using the selected
+deepseek/deepseek-v4.1-flash model on OpenRouter. Both runs reported provider Morph.
+These are actual outputs, not scripted fixtures. The implementation assistant
+reviewed each answer against the retrieved observations and qualifiers, then
+recorded provisional rubric scores. A human has not reviewed or accepted them.
+No extra model was called as a judge. Original web pages were not re-inspected
+for this evaluation; claim checks assess support within the saved research.
+
+                         Baseline (10.1)      Revised prompt (11.1)
+Execution window UTC     13:17:17–13:22:39    13:23:36–13:28:10
+Executed cases          12/12                12/12
+Validated answers       11/12                10/12
+Provisional >=8/10       2/12                 4/12
+Human-reviewed cases    0/12                 0/12
+Median turn latency     26.74 seconds        21.26 seconds
+Latency range           16.98–37.46 seconds  12.87–38.28 seconds
+Model requests          27                   26
+Tool executions         30                   26
+Search executions       2                    0
+Input tokens            163870               162532
+Output tokens           24829                19643
+Cached input tokens     112896               114560
+Reasoning tokens        0                    0
+Reported cost USD       0.022306536           0.018088656
+
+Total provider-reported cost: USD 0.040395192 for 24 cases / 53 requests.
+All observed requests supplied input/output/cost fields; no cost estimate was
+substituted. Counts include failed answers. This evaluation did not independently
+reconcile charges against an account invoice. Search was enabled in both passes;
+the revised model chose not to call it. Cache and reasoning counts are subsets.
+Thresholds were USD 0.10 for baseline and USD 0.07 for revised, checked between
+turns. Neither is a hard billing cap and neither threshold was reached.
+
+Case  Baseline  Revised  Latest outcome / review finding
+E01      5        6     Unsupported customer mix, competition ranking and rent positioning.
+E02      5        7     Specific Abu Dhabi candidates, but suitability is overstated.
+E03      4        9     Broader sourced competitor comparison; still lengthy.
+E04      5        4     Concrete menu added, but inconsistent pizza dimensions.
+E05      4        6     Price anchors/bands added; headline and body bands conflict.
+E06      4        5     Marketing retrieval improved; incomplete per-city timelines.
+E07      6        8     Useful channel/packaging/radius trials; some assumptions need care.
+E08      7        0     Blocked: research-gap statement labeled fact without evidence.
+E09      7        7     Useful sourcing process; regulatory/profile overstatements.
+E10      9        9     Actual calculator returns exact synthetic scenario results.
+E11      0        0     Blocked in both passes: historical IDs not retrieved this turn.
+E12      9        8     No invented exact rent or guaranteed profit; practical next steps.
+
+These scores are provisional judgments of individual observed outputs, not a
+benchmark, statistical comparison, or a claim that prompt 11.1 is generally better.
+Full criterion-by-criterion notes, hard failures, improvement suggestions, run IDs,
+answers, sources and tool traces are in results/baseline and results/revised.
+Original failures are retained; successful cases were not cherry-picked into a
+combined passing suite. Rejected structured answers are diagnostic artifacts,
+never validated executive answers.
+
+Changes tested
+  Baseline review found broad retrieval missing relevant price/competitor records,
+  unsupported facts inside proposal/inference statements, old citation reuse,
+  excessive unrelated detail, and invented calculator-related /set commands.
+  Prompt 11.1 prioritizes narrow topic retrieval, current-turn references, checking
+  every factual clause, concrete requested deliverables, concise output, and the
+  actual supported profile fields. Commit: 50ee707.
+  Because these are shared instructions, the complete twelve-case suite was rerun.
+  Evidence, model, limits, retry policy and validators were unchanged. The dataset
+  SHA256 is a226a6b54cf292e9b2f6f6e9c51112957bff64195bc8182e0b579dd1f79ca3c5.
+  Retrieval improved for E03/E05/E06 and unsupported /set guidance disappeared in
+  E07. E11 persisted and E08 regressed. Stronger prompting did not solve semantic
+  support or internal consistency. The validation failures remain visible.
+
+Deterministic and harness findings
+  All 317 offline tests pass; Ruff lint and formatting checks pass. These results
+  validate deterministic behavior and the harness, not the live advisory target.
+  Offline fixture mode exercised all twelve cases through actual Agno tools and
+  SQLite without network access. It established eleven independent sessions,
+  E01/E11 sharing a session, prior context in the follow-up only, unchanged saved
+  profiles, fresh evidence registries, exact arithmetic and unknown fixture usage.
+  The revised live E10 calculation cites the actual tool result: weighted delivery
+  fee AED 5, variable costs AED 20, contribution AED 20, contribution margin 0.5,
+  break-even 1500 orders/month and 50/day. All eight supplied inputs match exactly.
+  Live sessions were isolated, and E11's scenario did not mutate the saved profile.
+  Both cities and eight topics were requested. The revised completed-answer matrix
+  covers only seven topics per city because the staffing answer was blocked.
+  Automatic citation checks establish ID integrity, not claim support. E01 passed
+  ID validation while its factual premises failed review. E11 was safely blocked.
+
+Remaining release blockers / next improvements
+  1. Resolve follow-up grounding without admitting old IDs into the fresh registry.
+     Investigate separation of historical citations and a bounded correction path;
+     preserve tool/request budgets and failed attempts if a repair is introduced.
+  2. Prevent the model from labeling an evidence-gap statement as an unsupported
+     fact. Keep the fact validator strict; rerun the staffing case and affected
+     cases after a general fix.
+  3. Address material unsupported site claims and inconsistent numerical proposals,
+     including headline/body prices and inch/cm portion descriptions. Better
+     citation validity alone will not catch these semantic failures.
+  4. Complete useful per-city marketing plans and improve concise presentation.
+  5. Have the user review actual claims and scores, then rerun changed behavior.
+     The target remains >=10/12 at >=8/10 with no hard failures, full topic coverage
+     in both cities and human review. It has not been achieved.
+
+Further behavioral probes for out-of-country requests, pressure to invent facts,
+and adversarial/conflicting sources are not claimed as passed. Robustness fixtures
+cover validation, provenance, arithmetic, session separation and external failures;
+they cannot establish model immunity to bad instructions. See README.txt for exact
+commands, the rubric and test coverage. Optional UI work should wait for the core
+quality gate; final setup/demo/submission documentation remains milestone 13.

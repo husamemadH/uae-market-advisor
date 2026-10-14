@@ -1,0 +1,270 @@
+[
+  {
+    "case_id": "E01",
+    "run_id": "161fe3e0-cf30-49d3-99d3-2a5bbf244fe9",
+    "reviewer": "Codex, implementation assistant",
+    "reviewer_type": "assistant_provisional",
+    "scores": {
+      "relevance": 2,
+      "evidence_support": 0,
+      "actionability": 2,
+      "business_reasoning": 1,
+      "clarity": 1
+    },
+    "hard_failures": [
+      "Unsupported customer mix, competition ranking and rent positioning."
+    ],
+    "claim_checks": [
+      "DXB-LOC-001 does not establish a mixed visitor/resident customer base; the answer states this in a fact item.",
+      "More listed Marina/JBR operators in this dataset cannot establish that it is the most competitive area.",
+      "Deira as a value-rent alternative is not established by a rent observation."
+    ],
+    "notes": "Shortlist and visits are concrete, but the stronger instructions did not remove unsupported site-selection premises.",
+    "improvement": "Address unsupported clauses through a bounded review/correction design or better inspected data, then rerun; do not weaken citation checks."
+  },
+  {
+    "case_id": "E02",
+    "run_id": "dfa3a7f9-c509-4eef-8015-12a553ae12e8",
+    "reviewer": "Codex, implementation assistant",
+    "reviewer_type": "assistant_provisional",
+    "scores": {
+      "relevance": 2,
+      "evidence_support": 1,
+      "actionability": 2,
+      "business_reasoning": 1,
+      "clarity": 1
+    },
+    "hard_failures": [],
+    "claim_checks": [
+      "AUH-COMP-001/002/003 support the three listed branch locations and AUH-LOC-001/002/003 the area/landmark descriptions.",
+      "Footprint does not validate site suitability despite the headline wording; mall-adjacent trade and serving surrounding streets remain hypotheses.",
+      "No rent or footfall number is invented; the answer explicitly asks for unit-specific measurements."
+    ],
+    "notes": "More focused than baseline, but rationale and tradeoffs need clearer conditional language.",
+    "improvement": "Replace validated with candidate and separate factual listings from conditional format fit."
+  },
+  {
+    "case_id": "E03",
+    "run_id": "64fcf103-969b-4a93-abb5-8c3d71084960",
+    "reviewer": "Codex, implementation assistant",
+    "reviewer_type": "assistant_provisional",
+    "scores": {
+      "relevance": 2,
+      "evidence_support": 2,
+      "actionability": 2,
+      "business_reasoning": 2,
+      "clarity": 1
+    },
+    "hard_failures": [],
+    "claim_checks": [
+      "Allo Beirut and Operation Falafel examples now appear alongside Papa Johns; cited branch records support both cities.",
+      "AUH-COMP-007 is explicitly identified as airport airside, not silently treated as a neighborhood alternative.",
+      "UAE-PRICE-001/002, DXB-PRICE-001 and AUH-PRICE-001/002 match the stated price anchors; portion/channel caveats remain visible.",
+      "Differentiation and launch experiments are explicitly proposals; no market-share or demand claim is made."
+    ],
+    "notes": "Useful direct pizza and adjacent sandwich comparison with supported examples; still too long and indirect meal alternatives could be more explicit.",
+    "improvement": "Shorten the answer and distinguish indirect meal alternatives from direct product competitors."
+  },
+  {
+    "case_id": "E04",
+    "run_id": "22b2ecd5-0612-420e-8720-53b7f8aa0222",
+    "reviewer": "Codex, implementation assistant",
+    "reviewer_type": "assistant_provisional",
+    "scores": {
+      "relevance": 2,
+      "evidence_support": 0,
+      "actionability": 1,
+      "business_reasoning": 0,
+      "clarity": 1
+    },
+    "hard_failures": [
+      "Contradictory portion dimensions and false claim that retrieved pizza diameters were absent."
+    ],
+    "claim_checks": [
+      "UAE-MENU-001 explicitly supplies 8/10/13-inch sizes, contradicting the blanket no-diameter claim.",
+      "The proposed 8-inch pizza is also described as 28-30 cm-class, an inconsistent size specification.",
+      "DXB-PRICE-002 is a falafel price observation, not a chicken/falafel range.",
+      "Concrete hero items and gram portions are now proposed, but their internal consistency fails."
+    ],
+    "notes": "Adds the requested concrete menu/portions but introduces numerical and source-summary errors.",
+    "improvement": "Check portion/unit consistency and avoid rewriting supplied size observations; rerun menu and price cases after a general fix."
+  },
+  {
+    "case_id": "E05",
+    "run_id": "bf86d23c-5150-48f5-a9d8-9ee7770f11bf",
+    "reviewer": "Codex, implementation assistant",
+    "reviewer_type": "assistant_provisional",
+    "scores": {
+      "relevance": 2,
+      "evidence_support": 1,
+      "actionability": 2,
+      "business_reasoning": 0,
+      "clarity": 1
+    },
+    "hard_failures": [
+      "Contradictory numerical price proposals between headline and sections."
+    ],
+    "claim_checks": [
+      "Retrieved pizza, shawarma, tawouk and falafel prices now match the source observations and include branch/channel context.",
+      "Headline gives combo AED 39-45, while the body proposes pizza-plus-sandwich AED 45-55; sandwich and pizza limits also differ.",
+      "UAE-MENU-001 and UAE-PRICE-001 contain diameters, contradicting the claim that the dataset gives none.",
+      "Bands are clearly proposals, and a fabricated Dubai-versus-Abu Dhabi split is avoided."
+    ],
+    "notes": "The main pricing deliverable is now present, but internal inconsistencies prevent a reliable executive answer.",
+    "improvement": "Use one consistent set of proposed bands and accurately retain portion data."
+  },
+  {
+    "case_id": "E06",
+    "run_id": "79b78ea0-7ac0-472b-ad65-20393399fba1",
+    "reviewer": "Codex, implementation assistant",
+    "reviewer_type": "assistant_provisional",
+    "scores": {
+      "relevance": 1,
+      "evidence_support": 1,
+      "actionability": 1,
+      "business_reasoning": 1,
+      "clarity": 1
+    },
+    "hard_failures": [],
+    "claim_checks": [
+      "UAE-MKT-001/002/003 now support app advertising, promotions and insights; missing-marketing-evidence claim is gone.",
+      "AUH-MKT-001 is correctly identified as historical emirate-level event data, not site footfall.",
+      "Sampling and sandwich-language recommendations are labeled fact even though the cited records do not establish them as requirements."
+    ],
+    "notes": "Timed actions and metrics exist, but each city does not get a complete 30-day plan; messages/partnerships remain weak.",
+    "improvement": "Separate source observations from recommendations and give parallel complete city timelines with a message and partnership test."
+  },
+  {
+    "case_id": "E07",
+    "run_id": "1ffd7648-b263-44eb-af21-c7ccde9dc4d4",
+    "reviewer": "Codex, implementation assistant",
+    "reviewer_type": "assistant_provisional",
+    "scores": {
+      "relevance": 2,
+      "evidence_support": 1,
+      "actionability": 2,
+      "business_reasoning": 2,
+      "clarity": 1
+    },
+    "hard_failures": [],
+    "claim_checks": [
+      "UAE-DEL-002/004 support platform/own-rider options and no verified city commission or radius difference.",
+      "DXB-DEL-001/002 are dated historical guidance with review/applicability caveats retained.",
+      "The proposed 3 km vs 5 km trial is labeled a test, not an observed service radius.",
+      "The unsupported calculator /set instructions from the baseline are gone."
+    ],
+    "notes": "Packaging, channels and measured radius tests are useful; fast-moving sandwich wording is an untested menu assumption and the headline is awkward.",
+    "improvement": "Label menu throughput/sales expectations as hypotheses and tighten the headline."
+  },
+  {
+    "case_id": "E08",
+    "run_id": "a96c7cc4-e11f-4808-a8f0-fd93af095442",
+    "reviewer": "Codex, implementation assistant",
+    "reviewer_type": "assistant_provisional",
+    "scores": {
+      "relevance": 0,
+      "evidence_support": 0,
+      "actionability": 0,
+      "business_reasoning": 0,
+      "clarity": 0
+    },
+    "hard_failures": [
+      "Fact statement has no evidence IDs; answer blocked by validation."
+    ],
+    "claim_checks": [
+      "Rejected content marks a research-gap statement as fact with evidence_ids=[], triggering fact_without_evidence.",
+      "The rejected text also promises roles without numbers then supplies headcounts without throughput assumptions.",
+      "No completed answer is displayed or added to usable history."
+    ],
+    "notes": "Regression versus the baseline: the real run produced no validated staffing answer.",
+    "improvement": "Use inference for a retrieval-gap statement and provide an explicit hypothetical volume/format scenario before proposing headcounts."
+  },
+  {
+    "case_id": "E09",
+    "run_id": "295dfa89-9cd8-45d5-bb63-0a1b992a5332",
+    "reviewer": "Codex, implementation assistant",
+    "reviewer_type": "assistant_provisional",
+    "scores": {
+      "relevance": 2,
+      "evidence_support": 1,
+      "actionability": 2,
+      "business_reasoning": 1,
+      "clarity": 1
+    },
+    "hard_failures": [],
+    "claim_checks": [
+      "DXB-SUP-001/AUH-SUP-001 and UAE-SUP-001/002 support listed DCs, catalog categories and claimed daily delivery; terms are correctly left unverified.",
+      "AUH-OPS-001 describes a training program, but the answer upgrades that observation to a must-complete obligation without the underlying applicability rule.",
+      "The profile does not establish quick-service format despite the assumption claiming it comes from the profile.",
+      "RFQ, sampling, receiving checks and an approved backup are concrete proposals."
+    ],
+    "notes": "Useful sourcing workflow across both cities, with overstatement of a regulatory summary and one profile assumption.",
+    "improvement": "Keep training applicability subject to confirmation; clearly mark any chosen operating format as a new hypothetical scenario."
+  },
+  {
+    "case_id": "E10",
+    "run_id": "982fa900-2ac8-44a5-b401-02bdf34f7074",
+    "reviewer": "Codex, implementation assistant",
+    "reviewer_type": "assistant_provisional",
+    "scores": {
+      "relevance": 2,
+      "evidence_support": 2,
+      "actionability": 2,
+      "business_reasoning": 2,
+      "clarity": 1
+    },
+    "hard_failures": [],
+    "claim_checks": [
+      "Exact cited tool inputs and outputs match the fixed synthetic scenario, including AED 20 contribution, 50% margin and 1500/50 break-even orders.",
+      "No market prices or operating facts are invented to fill the scenario.",
+      "Hypothetical basis and lack of a demand/profit guarantee are explicit."
+    ],
+    "notes": "Arithmetic and scenario limitations pass; more focused than baseline, though still repetitive.",
+    "improvement": "Reduce repetition of inputs already displayed by the application calculator table."
+  },
+  {
+    "case_id": "E11",
+    "run_id": "074ecfea-ea46-4967-b529-0a4bf2df5951",
+    "reviewer": "Codex, implementation assistant",
+    "reviewer_type": "assistant_provisional",
+    "scores": {
+      "relevance": 0,
+      "evidence_support": 0,
+      "actionability": 0,
+      "business_reasoning": 0,
+      "clarity": 0
+    },
+    "hard_failures": [
+      "Historical IDs cited without current-turn retrieval; answer blocked."
+    ],
+    "claim_checks": [
+      "Only delivery and delivery/operations lookups were made; fresh location/competitor records needed for the repeated shortlist were not obtained.",
+      "DXB-COMP-004 is available this turn, but other old shortlist IDs such as DXB-COMP-001/002/003 and DXB-LOC-001 are absent.",
+      "Session reuse and durable takeaway profile preservation are correct; this is a model grounding failure, not a session leak."
+    ],
+    "notes": "General prompt reinforcement did not resolve the follow-up citation failure.",
+    "improvement": "Investigate explicit history citation separation or bounded repair without importing old records into the fresh evidence registry."
+  },
+  {
+    "case_id": "E12",
+    "run_id": "98d188ff-3989-40ce-9e89-36964dc69dc1",
+    "reviewer": "Codex, implementation assistant",
+    "reviewer_type": "assistant_provisional",
+    "scores": {
+      "relevance": 2,
+      "evidence_support": 1,
+      "actionability": 2,
+      "business_reasoning": 2,
+      "clarity": 1
+    },
+    "hard_failures": [],
+    "claim_checks": [
+      "No exact rent is invented and no profit is guaranteed.",
+      "Returned branch listings are acknowledged as lacking lease terms and trading performance.",
+      "Some broad business reasoning is labeled fact against branch listings rather than separated as reasoning.",
+      "Named-unit quotations and the full eight calculator inputs form a practical path forward."
+    ],
+    "notes": "Responsible uncertainty passes, with unnecessary competitor detail and imperfect statement labels.",
+    "improvement": "Give a short answer with the missing unit details and next validation step."
+  }
+]

@@ -1,0 +1,722 @@
+{
+  "case": {
+    "id": "E06",
+    "question": "Give us a 30-day launch marketing plan for each city: Dubai and Abu Dhabi.",
+    "cities": [
+      "dubai",
+      "abu_dhabi"
+    ],
+    "topics": [
+      "marketing"
+    ],
+    "profile": {},
+    "followup_of": null,
+    "expected": [
+      "Timed actions for each city",
+      "Channels and messages",
+      "Partnership options",
+      "Proposed metrics rather than promised results"
+    ]
+  },
+  "status": "completed",
+  "session_id": "ace5905a-8547-4678-a8dc-76e568a553d1",
+  "run_id": "79b78ea0-7ac0-472b-ad65-20393399fba1",
+  "profile_before": {
+    "restaurant_origin": "Jordan",
+    "core_products": [
+      "meaty pizza",
+      "kebab sandwiches"
+    ],
+    "target_cities": [
+      "Dubai",
+      "Abu Dhabi"
+    ],
+    "startup_budget_aed": null,
+    "monthly_rent_budget_aed": null,
+    "branch_format": null,
+    "target_audience": null,
+    "positioning": null,
+    "planned_opening": null
+  },
+  "profile_after": {
+    "restaurant_origin": "Jordan",
+    "core_products": [
+      "meaty pizza",
+      "kebab sandwiches"
+    ],
+    "target_cities": [
+      "Dubai",
+      "Abu Dhabi"
+    ],
+    "startup_budget_aed": null,
+    "monthly_rent_budget_aed": null,
+    "branch_format": null,
+    "target_audience": null,
+    "positioning": null,
+    "planned_opening": null
+  },
+  "answer": {
+    "kind": "advice",
+    "cities": [
+      "dubai",
+      "abu_dhabi"
+    ],
+    "headline": "30-day launch plan: same core meaty-pizza/kebab offer, Dubai weighted to delivery-app visibility, Abu Dhabi weighted to sampling and event-adjacent tie-ins; all figures are proposals to be costed and measured.",
+    "sections": [
+      {
+        "title": "Days 1-10: foundations both cities",
+        "items": [
+          {
+            "text": "Both cities are planning assumptions only; the profile has no set city weighting, branch format, or audience, so treat the plan as a template that a site decision must precede. Suggest /set branch_format and positioning so the plan can be narrowed.",
+            "basis": "assumption",
+            "evidence_ids": [],
+            "calculation_ids": []
+          },
+          {
+            "text": "Food photography and short vertical video of the meaty pizza slice-pull and kebab sandwich build are the primary creative assets for both cities; the same pack can be reused across channels and both cities, which keeps production cost per asset down.",
+            "basis": "proposal",
+            "evidence_ids": [],
+            "calculation_ids": []
+          },
+          {
+            "text": "For paid visibility inside the app, Deliveroo advertises native Marketer Adverts, promotional offers such as free delivery and BOGOF, and partner performance insights to UAE merchants; eligibility at a specific address must be confirmed with the provider before budgeting.",
+            "basis": "fact",
+            "evidence_ids": [
+              "UAE-MKT-001",
+              "UAE-MKT-002",
+              "UAE-MKT-003"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Week 1 test: one hero bundle per city on the delivery app plus in-store, priced against the observed Papa Johns UAE anchors of AED 37 (small 8-inch pizza, potato wedges, canned drink) and AED 69 (medium pizza, two starters, two canned drinks); the bundle price is a proposal to be validated against our own food cost, not an observed range for our concept.",
+            "basis": "proposal",
+            "evidence_ids": [
+              "UAE-PRICE-002",
+              "UAE-PRICE-003"
+            ],
+            "calculation_ids": []
+          }
+        ]
+      },
+      {
+        "title": "Days 11-20: Dubai activation",
+        "items": [
+          {
+            "text": "Dubai: shift spend into app discovery plus late-evening daypart tests, using Marketer Adverts and a limited-time free-delivery or BOGOF slot on one or two items only, with the discount cost per order tracked separately from ad spend.",
+            "basis": "proposal",
+            "evidence_ids": [
+              "UAE-MKT-001",
+              "UAE-MKT-002"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Dubai competitive context: Allo Beirut lists a Hessa Street branch in Al Barsha and advertises delivery until 4 AM; that is a branch and hours listing only — it does not establish overnight demand or the catchment available to our site, so late-night hours should be tested, not assumed.",
+            "basis": "fact",
+            "evidence_ids": [
+              "DXB-COMP-004"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Packaging must satisfy Dubai Municipality delivery guidance: sealed containers, hot/cold separation in insulated secondary units, and transport holding at 60 C or above for hot food; build this into the launch checklist before day 1 rather than after first complaints.",
+            "basis": "fact",
+            "evidence_ids": [
+              "DXB-DEL-001",
+              "DXB-DEL-002"
+            ],
+            "calculation_ids": []
+          }
+        ]
+      },
+      {
+        "title": "Days 21-30: Abu Dhabi activation and measurement",
+        "items": [
+          {
+            "text": "Abu Dhabi: pair app visibility with physical sampling near a chosen site, since the DCT 2025 figure of 252 culture and leisure events with over 4.2 million attendees is emirate-level and historical and cannot be read as footfall or demand at any specific location.",
+            "basis": "fact",
+            "evidence_ids": [
+              "AUH-MKT-001"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Abu Dhabi menu framing should lean on sandwich and kebab language: Talabat lists Operation Falafel in Madinat Khalifa A under Arabic, Lebanese, sandwich, shawarma and falafel categories, indicating that sandwich/shawarma terminology is used in that delivery market; this is one branch listing and does not show category gaps or demand.",
+            "basis": "fact",
+            "evidence_ids": [
+              "AUH-COMP-006"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Measurement: fix simple targets before spending — offer redemptions, new-versus-returning customers, orders per rider slot, and contribution after discount per order. Deliveroo advertises partner insights, but this is an advertised feature, not confirmed access to a dataset; verify access with the account manager.",
+            "basis": "proposal",
+            "evidence_ids": [
+              "UAE-MKT-003"
+            ],
+            "calculation_ids": []
+          },
+          {
+            "text": "Delivery structure choice for both cities: compare platform rider network versus Marketplace+ own-rider model, which advertises selectable delivery area, minimum spend and delivery fees alongside an option to request a platform rider; neither commission nor fees are verified, so request written terms for the specific address.",
+            "basis": "fact",
+            "evidence_ids": [
+              "UAE-DEL-002",
+              "UAE-DEL-004",
+              "UAE-DEL-003"
+            ],
+            "calculation_ids": []
+          }
+        ]
+      }
+    ],
+    "assumptions": [
+      "Budget, rent budget, branch format, target audience, positioning and opening date are all unset in the profile, so no spend level or city weighting is assumed here.",
+      "The concept stays meaty pizza plus kebab sandwiches in both cities, and any bundle priced around the cited Papa Johns anchors must be validated against our own food cost before launch."
+    ],
+    "next_steps": [
+      "Confirm the delivery partner terms for the exact proposed address in each city — commission, fees, delivery area, minimum spend, and whether Marketer Adverts and promotions are available there.",
+      "Cost one hero bundle and one single-item offer per city, including packaging and any discount funding, then set a maximum acceptable discount per order before launch.",
+      "Choose the Abu Dhabi sampling location and Dubai delivery focus area from site checks (visibility, parking, rider access, competitor presence nearby) rather than from city-level event or tourism figures.",
+      "Run the first 30 days with a single measurement sheet covering redemptions, repeat rate and contribution after discount, then decide which channel gets month-two spend."
+    ],
+    "questions": []
+  },
+  "rendered_answer": "30-day launch plan: same core meaty-pizza/kebab offer, Dubai weighted to delivery-app visibility, Abu Dhabi weighted to sampling and event-adjacent tie-ins; all figures are proposals to be costed and measured.\n\n**Days 1-10: foundations both cities**\n\n- **Assumption:** Both cities are planning assumptions only; the profile has no set city weighting, branch format, or audience, so treat the plan as a template that a site decision must precede. Suggest /set branch\\_format and positioning so the plan can be narrowed.\n- **Proposal:** Food photography and short vertical video of the meaty pizza slice-pull and kebab sandwich build are the primary creative assets for both cities; the same pack can be reused across channels and both cities, which keeps production cost per asset down.\n- **Fact:** For paid visibility inside the app, Deliveroo advertises native Marketer Adverts, promotional offers such as free delivery and BOGOF, and partner performance insights to UAE merchants; eligibility at a specific address must be confirmed with the provider before budgeting. [1](<https://merchants.deliveroo.com/en-AE/why-deliveroo/growth>)\n- **Proposal:** Week 1 test: one hero bundle per city on the delivery app plus in-store, priced against the observed Papa Johns UAE anchors of AED 37 \\(small 8-inch pizza, potato wedges, canned drink\\) and AED 69 \\(medium pizza, two starters, two canned drinks\\); the bundle price is a proposal to be validated against our own food cost, not an observed range for our concept. [2](<https://www.papajohns.ae/menu>)\n\n**Days 11-20: Dubai activation**\n\n- **Proposal:** Dubai: shift spend into app discovery plus late-evening daypart tests, using Marketer Adverts and a limited-time free-delivery or BOGOF slot on one or two items only, with the discount cost per order tracked separately from ad spend. [1](<https://merchants.deliveroo.com/en-AE/why-deliveroo/growth>)\n- **Fact:** Dubai competitive context: Allo Beirut lists a Hessa Street branch in Al Barsha and advertises delivery until 4 AM; that is a branch and hours listing only — it does not establish overnight demand or the catchment available to our site, so late-night hours should be tested, not assumed. [3](<https://www.allobeirutstreetfood.com/locations>)\n- **Fact:** Packaging must satisfy Dubai Municipality delivery guidance: sealed containers, hot/cold separation in insulated secondary units, and transport holding at 60 C or above for hot food; build this into the launch checklist before day 1 rather than after first complaints. [4](<https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf>)\n\n**Days 21-30: Abu Dhabi activation and measurement**\n\n- **Fact:** Abu Dhabi: pair app visibility with physical sampling near a chosen site, since the DCT 2025 figure of 252 culture and leisure events with over 4.2 million attendees is emirate-level and historical and cannot be read as footfall or demand at any specific location. [5](<https://www.mediaoffice.abudhabi/en/tourism/abu-dhabis-culture-and-tourism-sectors-delivered-strong-growth-in-2025-with-26m-visitors/>)\n- **Fact:** Abu Dhabi menu framing should lean on sandwich and kebab language: Talabat lists Operation Falafel in Madinat Khalifa A under Arabic, Lebanese, sandwich, shawarma and falafel categories, indicating that sandwich/shawarma terminology is used in that delivery market; this is one branch listing and does not show category gaps or demand. [6](<https://www.talabat.com/uae/restaurant/704423/operation-falafel-khalifa-city--ad-7?aid=1483>)\n- **Proposal:** Measurement: fix simple targets before spending — offer redemptions, new-versus-returning customers, orders per rider slot, and contribution after discount per order. Deliveroo advertises partner insights, but this is an advertised feature, not confirmed access to a dataset; verify access with the account manager. [1](<https://merchants.deliveroo.com/en-AE/why-deliveroo/growth>)\n- **Fact:** Delivery structure choice for both cities: compare platform rider network versus Marketplace+ own-rider model, which advertises selectable delivery area, minimum spend and delivery fees alongside an option to request a platform rider; neither commission nor fees are verified, so request written terms for the specific address. [7](<https://merchants.deliveroo.com/en-AE/what-we-offer/delivery>) [8](<https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace>)\n\n**Assumptions and limitations**\n\n- Budget, rent budget, branch format, target audience, positioning and opening date are all unset in the profile, so no spend level or city weighting is assumed here.\n- The concept stays meaty pizza plus kebab sandwiches in both cities, and any bundle priced around the cited Papa Johns anchors must be validated against our own food cost before launch.\n\n**Next steps**\n\n- Confirm the delivery partner terms for the exact proposed address in each city — commission, fees, delivery area, minimum spend, and whether Marketer Adverts and promotions are available there.\n- Cost one hero bundle and one single-item offer per city, including packaging and any discount funding, then set a maximum acceptable discount per order before launch.\n- Choose the Abu Dhabi sampling location and Dubai delivery focus area from site checks \\(visibility, parking, rider access, competitor presence nearby\\) rather than from city-level event or tourism figures.\n- Run the first 30 days with a single measurement sheet covering redemptions, repeat rate and contribution after discount, then decide which channel gets month-two spend.\n\n**Tool warnings**\n\n- Some returned records need review; inspect their dates and freshness flags.\n\n**Sources**\n\n1. [Deliveroo growth tools for UAE partners](<https://merchants.deliveroo.com/en-AE/why-deliveroo/growth>) — Deliveroo\n   - Deliveroo UAE - native advertising: checked 2026-10-12 UTC.\n     Location in source: Get more eyes on your brand.\n     - UAE merchant product description; eligibility and availability at a proposed address need confirmation.\n     - No verified contractual commission, fees, delivery radius, service level, or sales uplift.\n     - Provider marketing description; campaign cost and local acquisition performance were not measured.\n   - Deliveroo UAE - promotional offers: checked 2026-10-12 UTC.\n     Location in source: Increase your order volume and basket size.\n     - UAE merchant product description; eligibility and availability at a proposed address need confirmation.\n     - No verified contractual commission, fees, delivery radius, service level, or sales uplift.\n     - Promotion funding, eligibility, discount cost, and effect on contribution per order require verification.\n   - Deliveroo UAE - business insights: checked 2026-10-12 UTC.\n     Location in source: Fuel your growth with bespoke insights.\n     - UAE merchant product description; eligibility and availability at a proposed address need confirmation.\n     - No verified contractual commission, fees, delivery radius, service level, or sales uplift.\n     - This establishes an advertised feature, not access to a prospective restaurant customer dataset.\n2. [Papa Johns UAE Menu & Prices \\(AED\\)](<https://www.papajohns.ae/menu>) — Papa Johns UAE\n   - Papa Johns - Papa's Solo Meal: checked 2026-10-12 UTC.\n     Location in source: Deals / Papa's Solo Meal.\n     - Public UAE website menu; the store directory states shared menus and prices across branches in both cities.\n     - No branch checkout selected; crust options, extras, fees, tax treatment, and availability need confirmation.\n     - Bundle price, not a standalone pizza price; no offer expiry was shown.\n   - Papa Johns - Papa's Meal for Two: checked 2026-10-12 UTC.\n     Location in source: Deals / Papa's Meal for Two.\n     - Public UAE website menu; the store directory states shared menus and prices across branches in both cities.\n     - No branch checkout selected; crust options, extras, fees, tax treatment, and availability need confirmation.\n     - Bundle price; starter choices and current deal availability need confirmation; no expiry was shown.\n3. [Allo Beirut locations](<https://www.allobeirutstreetfood.com/locations>) — Allo Beirut\n   - Allo Beirut - Al Barsha / Hessa Street: checked 2026-10-12 UTC.\n     Location in source: Dubai / Hessa St..\n     - Public branch listing; opening status and service catchment need confirmation.\n     - Presence does not establish sales, market share, footfall, or shop availability.\n     - Advertised delivery hours do not establish overnight demand or the proposed site catchment.\n4. [Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2](<https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf>) — Dubai Municipality\n   - Dubai Municipality - transport cold chain: checked 2026-10-12 UTC; published 2023-08-31; NEEDS REVIEW.\n     Location in source: PDF pages 13-14, section 1.2.2 Temperature Control Requirements.\n     - Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\n     - Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\n     - Transport holding requirements, not cooking temperatures or evidence that a supplier or vehicle meets them.\n   - Dubai Municipality - sealed delivery and separation: checked 2026-10-12 UTC; published 2023-08-31; NEEDS REVIEW.\n     Location in source: PDF page 18, section 1.4.1\\(e\\)-\\(f\\).\n     - Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\n     - Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\n5. [Abu Dhabi culture and tourism performance in 2025](<https://www.mediaoffice.abudhabi/en/tourism/abu-dhabis-culture-and-tourism-sectors-delivered-strong-growth-in-2025-with-26m-visitors/>) — Abu Dhabi Media Office\n   - Abu Dhabi - 2025 culture and leisure events: checked 2026-10-12 UTC; published 2026-04-06; NEEDS REVIEW.\n     Location in source: 2025 culture, leisure and MICE events paragraphs.\n     - Historical 2025 emirate-level reporting, published 2026-04-06; includes regions beyond Abu Dhabi city.\n     - Event attendance is not a count of unique restaurant customers, current event dates, or shop-level demand.\n6. [Operation Falafel in Madinat Khalifa - A](<https://www.talabat.com/uae/restaurant/704423/operation-falafel-khalifa-city--ad-7?aid=1483>) — Talabat\n   - Operation Falafel - Madinat Khalifa A: checked 2026-10-12 UTC.\n     Location in source: Restaurant heading and cuisine tags.\n     - Khalifa City, Abu Dhabi; the page title refers to the delivery area Masdar City, not a verified street address.\n     - Only branch heading and cuisine categories were inspected; item prices and delivery catchment were not established.\n7. [Deliveroo delivery and pickup for UAE partners](<https://merchants.deliveroo.com/en-AE/what-we-offer/delivery>) — Deliveroo\n   - Deliveroo UAE - platform riders and pickup: checked 2026-10-12 UTC.\n     Location in source: Delivery network; Customer flexibility.\n     - UAE merchant product description; eligibility and availability at a proposed address need confirmation.\n     - No verified contractual commission, fees, delivery radius, service level, or sales uplift.\n   - Deliveroo UAE - order tracking: checked 2026-10-12 UTC.\n     Location in source: End-to-end order tracking.\n     - UAE merchant product description; eligibility and availability at a proposed address need confirmation.\n     - No verified contractual commission, fees, delivery radius, service level, or sales uplift.\n8. [Deliveroo Marketplace+ for UAE partners](<https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace>) — Deliveroo\n   - Deliveroo UAE - Marketplace+ own riders: checked 2026-10-12 UTC.\n     Location in source: Benefits of Marketplace+; Receiving orders; Delivering orders.\n     - UAE merchant product description; eligibility and availability at a proposed address need confirmation.\n     - No verified contractual commission, fees, delivery radius, service level, or sales uplift.",
+  "cited_evidence_ids": [
+    "AUH-COMP-006",
+    "AUH-MKT-001",
+    "DXB-COMP-004",
+    "DXB-DEL-001",
+    "DXB-DEL-002",
+    "UAE-DEL-002",
+    "UAE-DEL-003",
+    "UAE-DEL-004",
+    "UAE-MKT-001",
+    "UAE-MKT-002",
+    "UAE-MKT-003",
+    "UAE-PRICE-002",
+    "UAE-PRICE-003"
+  ],
+  "retrieved_sources": {
+    "UAE-MKT-001": {
+      "id": "UAE-MKT-001",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "marketing"
+      ],
+      "entity": "Deliveroo UAE - native advertising",
+      "observation": "Deliveroo offers Marketer Adverts as native advertising within its app for partner businesses.",
+      "source_title": "Deliveroo growth tools for UAE partners",
+      "source_url": "https://merchants.deliveroo.com/en-AE/why-deliveroo/growth",
+      "publisher": "Deliveroo",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Get more eyes on your brand",
+      "qualifiers": [
+        "UAE merchant product description; eligibility and availability at a proposed address need confirmation.",
+        "No verified contractual commission, fees, delivery radius, service level, or sales uplift.",
+        "Provider marketing description; campaign cost and local acquisition performance were not measured."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "AUH-MKT-001": {
+      "id": "AUH-MKT-001",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "marketing"
+      ],
+      "entity": "Abu Dhabi - 2025 culture and leisure events",
+      "observation": "Abu Dhabi Media Office reports that DCT delivered 252 culture and leisure events in 2025 with more than 4.2 million attendees; festival coverage included Abu Dhabi, Al Ain, and Al Dhafra.",
+      "source_title": "Abu Dhabi culture and tourism performance in 2025",
+      "source_url": "https://www.mediaoffice.abudhabi/en/tourism/abu-dhabis-culture-and-tourism-sectors-delivered-strong-growth-in-2025-with-26m-visitors/",
+      "publisher": "Abu Dhabi Media Office",
+      "source_kind": "official",
+      "published_on": "2026-04-06",
+      "checked_on": "2026-10-12",
+      "locator": "2025 culture, leisure and MICE events paragraphs",
+      "qualifiers": [
+        "Historical 2025 emirate-level reporting, published 2026-04-06; includes regions beyond Abu Dhabi city.",
+        "Event attendance is not a count of unique restaurant customers, current event dates, or shop-level demand."
+      ],
+      "valid_until": null,
+      "needs_review": true,
+      "expired": false
+    },
+    "UAE-MKT-002": {
+      "id": "UAE-MKT-002",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "marketing",
+        "pricing"
+      ],
+      "entity": "Deliveroo UAE - promotional offers",
+      "observation": "Deliveroo describes partner promotions including free delivery and buy-one-get-one-free offers.",
+      "source_title": "Deliveroo growth tools for UAE partners",
+      "source_url": "https://merchants.deliveroo.com/en-AE/why-deliveroo/growth",
+      "publisher": "Deliveroo",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Increase your order volume and basket size",
+      "qualifiers": [
+        "UAE merchant product description; eligibility and availability at a proposed address need confirmation.",
+        "No verified contractual commission, fees, delivery radius, service level, or sales uplift.",
+        "Promotion funding, eligibility, discount cost, and effect on contribution per order require verification."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "UAE-MKT-003": {
+      "id": "UAE-MKT-003",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "marketing"
+      ],
+      "entity": "Deliveroo UAE - business insights",
+      "observation": "Deliveroo describes partner insights about business performance and customers.",
+      "source_title": "Deliveroo growth tools for UAE partners",
+      "source_url": "https://merchants.deliveroo.com/en-AE/why-deliveroo/growth",
+      "publisher": "Deliveroo",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Fuel your growth with bespoke insights",
+      "qualifiers": [
+        "UAE merchant product description; eligibility and availability at a proposed address need confirmation.",
+        "No verified contractual commission, fees, delivery radius, service level, or sales uplift.",
+        "This establishes an advertised feature, not access to a prospective restaurant customer dataset."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "UAE-PRICE-002": {
+      "id": "UAE-PRICE-002",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "pricing",
+        "menu",
+        "marketing"
+      ],
+      "entity": "Papa Johns - Papa's Solo Meal",
+      "observation": "Papa's Solo Meal is listed at AED 37 for one small 8-inch pizza, potato wedges, and a canned drink.",
+      "source_title": "Papa Johns UAE Menu & Prices (AED)",
+      "source_url": "https://www.papajohns.ae/menu",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Deals / Papa's Solo Meal",
+      "qualifiers": [
+        "Public UAE website menu; the store directory states shared menus and prices across branches in both cities.",
+        "No branch checkout selected; crust options, extras, fees, tax treatment, and availability need confirmation.",
+        "Bundle price, not a standalone pizza price; no offer expiry was shown."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "UAE-PRICE-003": {
+      "id": "UAE-PRICE-003",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "pricing",
+        "menu",
+        "marketing"
+      ],
+      "entity": "Papa Johns - Papa's Meal for Two",
+      "observation": "Papa's Meal for Two is listed at AED 69 for one medium pizza, two starters, and two canned drinks.",
+      "source_title": "Papa Johns UAE Menu & Prices (AED)",
+      "source_url": "https://www.papajohns.ae/menu",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Deals / Papa's Meal for Two",
+      "qualifiers": [
+        "Public UAE website menu; the store directory states shared menus and prices across branches in both cities.",
+        "No branch checkout selected; crust options, extras, fees, tax treatment, and availability need confirmation.",
+        "Bundle price; starter choices and current deal availability need confirmation; no expiry was shown."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-COMP-004": {
+      "id": "DXB-COMP-004",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "locations",
+        "competitors",
+        "delivery"
+      ],
+      "entity": "Allo Beirut - Al Barsha / Hessa Street",
+      "observation": "Allo Beirut lists its Hessa Street branch in Al Barsha, Dubai, and advertises delivery until 4 AM.",
+      "source_title": "Allo Beirut locations",
+      "source_url": "https://www.allobeirutstreetfood.com/locations",
+      "publisher": "Allo Beirut",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Dubai / Hessa St.",
+      "qualifiers": [
+        "Public branch listing; opening status and service catchment need confirmation.",
+        "Presence does not establish sales, market share, footfall, or shop availability.",
+        "Advertised delivery hours do not establish overnight demand or the proposed site catchment."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "AUH-COMP-006": {
+      "id": "AUH-COMP-006",
+      "cities": [
+        "abu_dhabi"
+      ],
+      "topics": [
+        "competitors",
+        "menu",
+        "delivery"
+      ],
+      "entity": "Operation Falafel - Madinat Khalifa A",
+      "observation": "Talabat lists Operation Falafel in Madinat Khalifa A, with Arabic, Lebanese, sandwich, shawarma, and falafel categories.",
+      "source_title": "Operation Falafel in Madinat Khalifa - A",
+      "source_url": "https://www.talabat.com/uae/restaurant/704423/operation-falafel-khalifa-city--ad-7?aid=1483",
+      "publisher": "Talabat",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Restaurant heading and cuisine tags",
+      "qualifiers": [
+        "Khalifa City, Abu Dhabi; the page title refers to the delivery area Masdar City, not a verified street address.",
+        "Only branch heading and cuisine categories were inspected; item prices and delivery catchment were not established."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-DEL-001": {
+      "id": "DXB-DEL-001",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "delivery",
+        "operations",
+        "suppliers"
+      ],
+      "entity": "Dubai Municipality - transport cold chain",
+      "observation": "Dubai Municipality guidance specifies transportation units capable of holding hot food at 60 C or above, cold food at 5 C or below, and frozen food at -18 C or below.",
+      "source_title": "Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2",
+      "source_url": "https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf",
+      "publisher": "Dubai Municipality",
+      "source_kind": "official",
+      "published_on": "2023-08-31",
+      "checked_on": "2026-10-12",
+      "locator": "PDF pages 13-14, section 1.2.2 Temperature Control Requirements",
+      "qualifiers": [
+        "Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.",
+        "Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.",
+        "Transport holding requirements, not cooking temperatures or evidence that a supplier or vehicle meets them."
+      ],
+      "valid_until": null,
+      "needs_review": true,
+      "expired": false
+    },
+    "UAE-DEL-001": {
+      "id": "UAE-DEL-001",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "delivery",
+        "competitors"
+      ],
+      "entity": "Papa Johns UAE - delivery and takeaway",
+      "observation": "Papa Johns states that UAE branches offer delivery and takeaway and share the same menu and prices.",
+      "source_title": "Papa Johns Stores in UAE",
+      "source_url": "https://www.papajohns.ae/stores",
+      "publisher": "Papa Johns UAE",
+      "source_kind": "business",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Store directory introduction",
+      "qualifiers": [
+        "UAE-wide company statement supported by Dubai and Abu Dhabi branch entries.",
+        "Delivery catchments, fees, promotions, and item availability were not verified at checkout."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "DXB-DEL-002": {
+      "id": "DXB-DEL-002",
+      "cities": [
+        "dubai"
+      ],
+      "topics": [
+        "delivery",
+        "operations"
+      ],
+      "entity": "Dubai Municipality - sealed delivery and separation",
+      "observation": "Dubai Municipality delivery guidance requires sealed food containers and separation of hot and cold items into insulated secondary units during transport.",
+      "source_title": "Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2",
+      "source_url": "https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf",
+      "publisher": "Dubai Municipality",
+      "source_kind": "official",
+      "published_on": "2023-08-31",
+      "checked_on": "2026-10-12",
+      "locator": "PDF page 18, section 1.4.1(e)-(f)",
+      "qualifiers": [
+        "Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.",
+        "Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist."
+      ],
+      "valid_until": null,
+      "needs_review": true,
+      "expired": false
+    },
+    "UAE-DEL-002": {
+      "id": "UAE-DEL-002",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "delivery"
+      ],
+      "entity": "Deliveroo UAE - platform riders and pickup",
+      "observation": "Deliveroo describes a UAE partner service using its rider network for delivery and allowing customers to collect orders from the restaurant.",
+      "source_title": "Deliveroo delivery and pickup for UAE partners",
+      "source_url": "https://merchants.deliveroo.com/en-AE/what-we-offer/delivery",
+      "publisher": "Deliveroo",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Delivery network; Customer flexibility",
+      "qualifiers": [
+        "UAE merchant product description; eligibility and availability at a proposed address need confirmation.",
+        "No verified contractual commission, fees, delivery radius, service level, or sales uplift."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "UAE-DEL-003": {
+      "id": "UAE-DEL-003",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "delivery",
+        "operations"
+      ],
+      "entity": "Deliveroo UAE - order tracking",
+      "observation": "Deliveroo describes order-status monitoring, real-time rider GPS tracking, and rider-arrival alerts for its delivery service.",
+      "source_title": "Deliveroo delivery and pickup for UAE partners",
+      "source_url": "https://merchants.deliveroo.com/en-AE/what-we-offer/delivery",
+      "publisher": "Deliveroo",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "End-to-end order tracking",
+      "qualifiers": [
+        "UAE merchant product description; eligibility and availability at a proposed address need confirmation.",
+        "No verified contractual commission, fees, delivery radius, service level, or sales uplift."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    },
+    "UAE-DEL-004": {
+      "id": "UAE-DEL-004",
+      "cities": [
+        "dubai",
+        "abu_dhabi"
+      ],
+      "topics": [
+        "delivery",
+        "operations"
+      ],
+      "entity": "Deliveroo UAE - Marketplace+ own riders",
+      "observation": "Deliveroo describes Marketplace+ as using restaurant delivery staff, with selectable delivery area, minimum spend, and delivery fees, plus an option to request a platform rider.",
+      "source_title": "Deliveroo Marketplace+ for UAE partners",
+      "source_url": "https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace",
+      "publisher": "Deliveroo",
+      "source_kind": "platform",
+      "published_on": null,
+      "checked_on": "2026-10-12",
+      "locator": "Benefits of Marketplace+; Receiving orders; Delivering orders",
+      "qualifiers": [
+        "UAE merchant product description; eligibility and availability at a proposed address need confirmation.",
+        "No verified contractual commission, fees, delivery radius, service level, or sales uplift."
+      ],
+      "valid_until": null,
+      "needs_review": false,
+      "expired": false
+    }
+  },
+  "calculations": {},
+  "tool_trace": [
+    {
+      "name": "lookup_market_evidence",
+      "arguments": {
+        "cities": [
+          "dubai",
+          "abu_dhabi"
+        ],
+        "topics": [
+          "marketing"
+        ],
+        "query": "",
+        "limit": 12
+      },
+      "result": "{\"status\":\"ok\",\"data\":{\"records\":[{\"id\":\"UAE-MKT-001\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"marketing\"],\"entity\":\"Deliveroo UAE - native advertising\",\"observation\":\"Deliveroo offers Marketer Adverts as native advertising within its app for partner businesses.\",\"source_title\":\"Deliveroo growth tools for UAE partners\",\"source_url\":\"https://merchants.deliveroo.com/en-AE/why-deliveroo/growth\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Get more eyes on your brand\",\"qualifiers\":[\"UAE merchant product description; eligibility and availability at a proposed address need confirmation.\",\"No verified contractual commission, fees, delivery radius, service level, or sales uplift.\",\"Provider marketing description; campaign cost and local acquisition performance were not measured.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-MKT-001\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"marketing\"],\"entity\":\"Abu Dhabi - 2025 culture and leisure events\",\"observation\":\"Abu Dhabi Media Office reports that DCT delivered 252 culture and leisure events in 2025 with more than 4.2 million attendees; festival coverage included Abu Dhabi, Al Ain, and Al Dhafra.\",\"source_title\":\"Abu Dhabi culture and tourism performance in 2025\",\"source_url\":\"https://www.mediaoffice.abudhabi/en/tourism/abu-dhabis-culture-and-tourism-sectors-delivered-strong-growth-in-2025-with-26m-visitors/\",\"publisher\":\"Abu Dhabi Media Office\",\"source_kind\":\"official\",\"published_on\":\"2026-04-06\",\"checked_on\":\"2026-10-12\",\"locator\":\"2025 culture, leisure and MICE events paragraphs\",\"qualifiers\":[\"Historical 2025 emirate-level reporting, published 2026-04-06; includes regions beyond Abu Dhabi city.\",\"Event attendance is not a count of unique restaurant customers, current event dates, or shop-level demand.\"],\"valid_until\":null,\"needs_review\":true,\"expired\":false},{\"id\":\"UAE-MKT-002\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"marketing\",\"pricing\"],\"entity\":\"Deliveroo UAE - promotional offers\",\"observation\":\"Deliveroo describes partner promotions including free delivery and buy-one-get-one-free offers.\",\"source_title\":\"Deliveroo growth tools for UAE partners\",\"source_url\":\"https://merchants.deliveroo.com/en-AE/why-deliveroo/growth\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Increase your order volume and basket size\",\"qualifiers\":[\"UAE merchant product description; eligibility and availability at a proposed address need confirmation.\",\"No verified contractual commission, fees, delivery radius, service level, or sales uplift.\",\"Promotion funding, eligibility, discount cost, and effect on contribution per order require verification.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-MKT-003\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"marketing\"],\"entity\":\"Deliveroo UAE - business insights\",\"observation\":\"Deliveroo describes partner insights about business performance and customers.\",\"source_title\":\"Deliveroo growth tools for UAE partners\",\"source_url\":\"https://merchants.deliveroo.com/en-AE/why-deliveroo/growth\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Fuel your growth with bespoke insights\",\"qualifiers\":[\"UAE merchant product description; eligibility and availability at a proposed address need confirmation.\",\"No verified contractual commission, fees, delivery radius, service level, or sales uplift.\",\"This establishes an advertised feature, not access to a prospective restaurant customer dataset.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-PRICE-002\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"pricing\",\"menu\",\"marketing\"],\"entity\":\"Papa Johns - Papa's Solo Meal\",\"observation\":\"Papa's Solo Meal is listed at AED 37 for one small 8-inch pizza, potato wedges, and a canned drink.\",\"source_title\":\"Papa Johns UAE Menu & Prices (AED)\",\"source_url\":\"https://www.papajohns.ae/menu\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Deals / Papa's Solo Meal\",\"qualifiers\":[\"Public UAE website menu; the store directory states shared menus and prices across branches in both cities.\",\"No branch checkout selected; crust options, extras, fees, tax treatment, and availability need confirmation.\",\"Bundle price, not a standalone pizza price; no offer expiry was shown.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-PRICE-003\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"pricing\",\"menu\",\"marketing\"],\"entity\":\"Papa Johns - Papa's Meal for Two\",\"observation\":\"Papa's Meal for Two is listed at AED 69 for one medium pizza, two starters, and two canned drinks.\",\"source_title\":\"Papa Johns UAE Menu & Prices (AED)\",\"source_url\":\"https://www.papajohns.ae/menu\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Deals / Papa's Meal for Two\",\"qualifiers\":[\"Public UAE website menu; the store directory states shared menus and prices across branches in both cities.\",\"No branch checkout selected; crust options, extras, fees, tax treatment, and availability need confirmation.\",\"Bundle price; starter choices and current deal availability need confirmation; no expiry was shown.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false}],\"matched_count\":6,\"omitted_count\":0},\"warnings\":[\"Some returned records need review; inspect their dates and freshness flags.\"]}",
+      "error": false
+    },
+    {
+      "name": "lookup_market_evidence",
+      "arguments": {
+        "cities": [
+          "dubai",
+          "abu_dhabi"
+        ],
+        "topics": [
+          "delivery"
+        ],
+        "query": "",
+        "limit": 10
+      },
+      "result": "{\"status\":\"ok\",\"data\":{\"records\":[{\"id\":\"DXB-COMP-004\",\"cities\":[\"dubai\"],\"topics\":[\"locations\",\"competitors\",\"delivery\"],\"entity\":\"Allo Beirut - Al Barsha / Hessa Street\",\"observation\":\"Allo Beirut lists its Hessa Street branch in Al Barsha, Dubai, and advertises delivery until 4 AM.\",\"source_title\":\"Allo Beirut locations\",\"source_url\":\"https://www.allobeirutstreetfood.com/locations\",\"publisher\":\"Allo Beirut\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Dubai / Hessa St.\",\"qualifiers\":[\"Public branch listing; opening status and service catchment need confirmation.\",\"Presence does not establish sales, market share, footfall, or shop availability.\",\"Advertised delivery hours do not establish overnight demand or the proposed site catchment.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"AUH-COMP-006\",\"cities\":[\"abu_dhabi\"],\"topics\":[\"competitors\",\"menu\",\"delivery\"],\"entity\":\"Operation Falafel - Madinat Khalifa A\",\"observation\":\"Talabat lists Operation Falafel in Madinat Khalifa A, with Arabic, Lebanese, sandwich, shawarma, and falafel categories.\",\"source_title\":\"Operation Falafel in Madinat Khalifa - A\",\"source_url\":\"https://www.talabat.com/uae/restaurant/704423/operation-falafel-khalifa-city--ad-7?aid=1483\",\"publisher\":\"Talabat\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Restaurant heading and cuisine tags\",\"qualifiers\":[\"Khalifa City, Abu Dhabi; the page title refers to the delivery area Masdar City, not a verified street address.\",\"Only branch heading and cuisine categories were inspected; item prices and delivery catchment were not established.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-DEL-001\",\"cities\":[\"dubai\"],\"topics\":[\"delivery\",\"operations\",\"suppliers\"],\"entity\":\"Dubai Municipality - transport cold chain\",\"observation\":\"Dubai Municipality guidance specifies transportation units capable of holding hot food at 60 C or above, cold food at 5 C or below, and frozen food at -18 C or below.\",\"source_title\":\"Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2\",\"source_url\":\"https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf\",\"publisher\":\"Dubai Municipality\",\"source_kind\":\"official\",\"published_on\":\"2023-08-31\",\"checked_on\":\"2026-10-12\",\"locator\":\"PDF pages 13-14, section 1.2.2 Temperature Control Requirements\",\"qualifiers\":[\"Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\",\"Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\",\"Transport holding requirements, not cooking temperatures or evidence that a supplier or vehicle meets them.\"],\"valid_until\":null,\"needs_review\":true,\"expired\":false},{\"id\":\"UAE-DEL-001\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\",\"competitors\"],\"entity\":\"Papa Johns UAE - delivery and takeaway\",\"observation\":\"Papa Johns states that UAE branches offer delivery and takeaway and share the same menu and prices.\",\"source_title\":\"Papa Johns Stores in UAE\",\"source_url\":\"https://www.papajohns.ae/stores\",\"publisher\":\"Papa Johns UAE\",\"source_kind\":\"business\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Store directory introduction\",\"qualifiers\":[\"UAE-wide company statement supported by Dubai and Abu Dhabi branch entries.\",\"Delivery catchments, fees, promotions, and item availability were not verified at checkout.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"DXB-DEL-002\",\"cities\":[\"dubai\"],\"topics\":[\"delivery\",\"operations\"],\"entity\":\"Dubai Municipality - sealed delivery and separation\",\"observation\":\"Dubai Municipality delivery guidance requires sealed food containers and separation of hot and cold items into insulated secondary units during transport.\",\"source_title\":\"Requirements for Food Transportation and Delivery Vehicles, DM-FSD-GU63, version 2\",\"source_url\":\"https://dmpmedia.dm.gov.ae/uploads/2024/02/2.-DM-FSD-GU63-Requirements-for-food-transportation-and-delivery-vehicles-guidelines-update.pdf\",\"publisher\":\"Dubai Municipality\",\"source_kind\":\"official\",\"published_on\":\"2023-08-31\",\"checked_on\":\"2026-10-12\",\"locator\":\"PDF page 18, section 1.4.1(e)-(f)\",\"qualifiers\":[\"Version 2 issued 2023-08-31 and still linked from the municipality resource pages inspected on 2026-10-12 UTC.\",\"Historical guidance needs review for amendments and activity-specific applicability; not a complete licensing checklist.\"],\"valid_until\":null,\"needs_review\":true,\"expired\":false},{\"id\":\"UAE-DEL-002\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\"],\"entity\":\"Deliveroo UAE - platform riders and pickup\",\"observation\":\"Deliveroo describes a UAE partner service using its rider network for delivery and allowing customers to collect orders from the restaurant.\",\"source_title\":\"Deliveroo delivery and pickup for UAE partners\",\"source_url\":\"https://merchants.deliveroo.com/en-AE/what-we-offer/delivery\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Delivery network; Customer flexibility\",\"qualifiers\":[\"UAE merchant product description; eligibility and availability at a proposed address need confirmation.\",\"No verified contractual commission, fees, delivery radius, service level, or sales uplift.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-DEL-003\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\",\"operations\"],\"entity\":\"Deliveroo UAE - order tracking\",\"observation\":\"Deliveroo describes order-status monitoring, real-time rider GPS tracking, and rider-arrival alerts for its delivery service.\",\"source_title\":\"Deliveroo delivery and pickup for UAE partners\",\"source_url\":\"https://merchants.deliveroo.com/en-AE/what-we-offer/delivery\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"End-to-end order tracking\",\"qualifiers\":[\"UAE merchant product description; eligibility and availability at a proposed address need confirmation.\",\"No verified contractual commission, fees, delivery radius, service level, or sales uplift.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false},{\"id\":\"UAE-DEL-004\",\"cities\":[\"dubai\",\"abu_dhabi\"],\"topics\":[\"delivery\",\"operations\"],\"entity\":\"Deliveroo UAE - Marketplace+ own riders\",\"observation\":\"Deliveroo describes Marketplace+ as using restaurant delivery staff, with selectable delivery area, minimum spend, and delivery fees, plus an option to request a platform rider.\",\"source_title\":\"Deliveroo Marketplace+ for UAE partners\",\"source_url\":\"https://merchants.deliveroo.com/en-AE/what-we-offer/marketplace\",\"publisher\":\"Deliveroo\",\"source_kind\":\"platform\",\"published_on\":null,\"checked_on\":\"2026-10-12\",\"locator\":\"Benefits of Marketplace+; Receiving orders; Delivering orders\",\"qualifiers\":[\"UAE merchant product description; eligibility and availability at a proposed address need confirmation.\",\"No verified contractual commission, fees, delivery radius, service level, or sales uplift.\"],\"valid_until\":null,\"needs_review\":false,\"expired\":false}],\"matched_count\":8,\"omitted_count\":0},\"warnings\":[\"Some returned records need review; inspect their dates and freshness flags.\"]}",
+      "error": false
+    }
+  ],
+  "record": {
+    "model_requests": 2,
+    "input_tokens": 11512,
+    "output_tokens": 1551,
+    "reasoning_tokens": 0,
+    "cached_tokens": 7936,
+    "reported_cost_usd": "0.001412352",
+    "known_reported_cost_usd": "0.001412352",
+    "estimated_cost_usd": null,
+    "estimate_basis": null,
+    "usage_complete": true,
+    "schema_version": 1,
+    "run_id": "79b78ea0-7ac0-472b-ad65-20393399fba1",
+    "session_id": "ace5905a-8547-4678-a8dc-76e568a553d1",
+    "timestamp_utc": "2026-10-14T13:25:57.809956Z",
+    "model_requested": "deepseek/deepseek-v4.1-flash",
+    "model_reported_if_available": [
+      "deepseek/deepseek-v4.1-flash"
+    ],
+    "provider_if_available": [
+      "Morph"
+    ],
+    "prompt_version": "11.1",
+    "evidence_dataset_version": "a226a6b54cf292e9b2f6f6e9c51112957bff64195bc8182e0b579dd1f79ca3c5",
+    "question": "Give us a 30-day launch marketing plan for each city: Dubai and Abu Dhabi.",
+    "outcome": "completed",
+    "error_category": null,
+    "tool_events": [
+      {
+        "name": "lookup_market_evidence",
+        "duration_ms": 0.500061025377363,
+        "status": "ok",
+        "result_count": 6
+      },
+      {
+        "name": "lookup_market_evidence",
+        "duration_ms": 0.5982629954814911,
+        "status": "ok",
+        "result_count": 8
+      }
+    ],
+    "requests": [
+      {
+        "generation_id": "gen-1791984357-hxQLRaPExVSO1RaO8s4Z",
+        "model_reported": "deepseek/deepseek-v4.1-flash",
+        "provider_reported": "Morph",
+        "duration_ms": 1103.5996180144139,
+        "outcome": "completed",
+        "input_tokens": 4039,
+        "output_tokens": 194,
+        "reasoning_tokens": 0,
+        "cached_tokens": 3968,
+        "reported_cost_usd": "0.0001929"
+      },
+      {
+        "generation_id": "gen-1791984358-t2eBCPdlURZhRQ3KSQVJ",
+        "model_reported": "deepseek/deepseek-v4.1-flash",
+        "provider_reported": "Morph",
+        "duration_ms": 11748.229756951332,
+        "outcome": "completed",
+        "input_tokens": 7473,
+        "output_tokens": 1357,
+        "reasoning_tokens": 0,
+        "cached_tokens": 3968,
+        "reported_cost_usd": "0.001219452"
+      }
+    ],
+    "evidence_ids": [
+      "UAE-MKT-001",
+      "AUH-MKT-001",
+      "UAE-MKT-002",
+      "UAE-MKT-003",
+      "UAE-PRICE-002",
+      "UAE-PRICE-003",
+      "DXB-COMP-004",
+      "AUH-COMP-006",
+      "DXB-DEL-001",
+      "UAE-DEL-001",
+      "DXB-DEL-002",
+      "UAE-DEL-002",
+      "UAE-DEL-003",
+      "UAE-DEL-004"
+    ],
+    "calculation_ids": [],
+    "latency_ms": 12873.277611972298,
+    "tool_output_characters": 12886,
+    "validation_errors": [],
+    "warnings": [
+      "Some returned records need review; inspect their dates and freshness flags."
+    ]
+  },
+  "warnings": [
+    "Some returned records need review; inspect their dates and freshness flags."
+  ],
+  "error_category": null,
+  "error_message": null,
+  "checks": {
+    "reference_integrity": true,
+    "requested_cities_present": true,
+    "durable_profile_unchanged": true,
+    "calculator_exact": null,
+    "claim_support": "requires review"
+  }
+}
