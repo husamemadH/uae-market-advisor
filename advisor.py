@@ -11,6 +11,7 @@ from uuid import uuid4
 from agno.agent import Agent
 from agno.db.sqlite import SqliteDb
 from agno.exceptions import OutputCheckError
+from agno.models.message import Message
 from agno.run import RunContext, RunStatus
 from agno.run.agent import RunOutput
 
@@ -46,7 +47,7 @@ PROJECT_DIR = Path(__file__).resolve().parent
 DEFAULT_DB_FILE = PROJECT_DIR / "runtime" / "sessions.db"
 DEFAULT_EXPORT_DIR = PROJECT_DIR / "runtime" / "exports"
 MAX_INPUT_LENGTH = 8000
-PROMPT_VERSION = "11.1"
+PROMPT_VERSION = "11.2"
 logger = logging.getLogger(__name__)
 
 
@@ -289,6 +290,39 @@ def session_usage(session_id: str, agent: Agent) -> str:
     return render_usage(*log.records(session_id)) if log else "Usage recording is unavailable."
 
 
+def _correct_references(agent, question, session_id, run_id, registry):
+    previous_limit = agent.tool_call_limit
+    agent.tool_call_limit = MAX_TOOL_CALLS - registry.tool_calls
+    try:
+        return agent.run(
+            [
+                Message(
+                    role="user",
+                    content=(
+                        "Application validation rejected the previous attempt because it cited "
+                        "evidence IDs not retrieved during that attempt. This is the single "
+                        "correction attempt. Answer the original question below. Call "
+                        "lookup_market_evidence before making factual market claims, using "
+                        "the relevant cities and topics and query='' initially. Only IDs "
+                        "returned in this correction attempt can be cited; invent no IDs "
+                        "and do not copy IDs from history. If evidence is insufficient, "
+                        "state the limitation without labeling an uncited statement as fact."
+                    ),
+                    add_to_agent_memory=False,
+                ),
+                Message(role="user", content=question),
+            ],
+            session_id=session_id,
+            run_id=run_id,
+            stream=False,
+            dependencies={REGISTRY_KEY: registry},
+        )
+    finally:
+        # This application is synchronous and single-user; do not leave a
+        # reduced agent limit behind for the next question, even after failure.
+        agent.tool_call_limit = previous_limit
+
+
 def answer_question(question: str, session_id: str, agent: Agent) -> ApplicationResult:
     """Run one question with fresh registries; expose only validated final answers."""
     question = question.strip()
@@ -302,6 +336,10 @@ def answer_question(question: str, session_id: str, agent: Agent) -> Application
     token = CURRENT_TURN.set(trace)
     start, timestamp = perf_counter(), datetime.now(timezone.utc)
     result = ApplicationResult(status=RunStatus.error, run_id=str(uuid4()))
+    attempt_run_ids = [result.run_id]
+    validation_errors = []
+    retrieved_ids = []
+    calculated_ids = []
     try:
         response = agent.run(
             question,
@@ -310,6 +348,32 @@ def answer_question(question: str, session_id: str, agent: Agent) -> Application
             stream=False,
             dependencies={REGISTRY_KEY: registry},
         )
+        retrieved_ids.extend(registry.evidence)
+        calculated_ids.extend(registry.calculations)
+        if registry.validation_error:
+            validation_errors.append(registry.validation_error)
+        # One application-level correction for ungrounded citations. The first
+        # attempt remains an error in SQLite; inference and tools share the trace
+        # and budgets, while only freshly retrieved correction records can be cited.
+        if (
+            registry.validation_error == "unretrieved_evidence"
+            and response.status == RunStatus.error
+            and not trace.storage_failed
+            and registry.tool_calls < MAX_TOOL_CALLS
+        ):
+            registry = TurnRegistry(
+                warnings=list(registry.warnings),
+                tool_calls=registry.tool_calls,
+                search_calls=registry.search_calls,
+                output_characters=registry.output_characters,
+            )
+            result.run_id = str(uuid4())
+            attempt_run_ids.append(result.run_id)
+            response = _correct_references(agent, question, session_id, result.run_id, registry)
+            retrieved_ids.extend(registry.evidence)
+            calculated_ids.extend(registry.calculations)
+            if registry.validation_error and registry.validation_error not in validation_errors:
+                validation_errors.append(registry.validation_error)
         result.tools = response.tools or []
         if registry.validation_error:
             raise AnswerValidationError(registry.validation_error)
@@ -345,6 +409,11 @@ def answer_question(question: str, session_id: str, agent: Agent) -> Application
         result.error_category = "storage"
         result.status = RunStatus.error
     result.warnings = list(registry.warnings)
+    if len(attempt_run_ids) > 1:
+        result.warnings.append(
+            "An initial answer failed citation validation; one correction attempt was made. "
+            "Recorded usage includes both attempts."
+        )
     if result.error_category:
         result.error_message = ERROR_MESSAGES[result.error_category]
     result.usage = summarize_usage(trace.requests)
@@ -352,6 +421,7 @@ def answer_question(question: str, session_id: str, agent: Agent) -> Application
     result.record = RunRecord(
         **result.usage.model_dump(),
         run_id=result.run_id,
+        attempt_run_ids=attempt_run_ids,
         session_id=session_id,
         timestamp_utc=timestamp,
         model_requested=MODEL_ID,
@@ -374,11 +444,18 @@ def answer_question(question: str, session_id: str, agent: Agent) -> Application
         error_category=result.error_category,
         requests=trace.requests,
         tool_events=trace.tool_events,
-        evidence_ids=list(registry.evidence),
-        calculation_ids=list(registry.calculations),
+        evidence_ids=list(dict.fromkeys([*retrieved_ids, *registry.evidence])),
+        calculation_ids=list(dict.fromkeys([*calculated_ids, *registry.calculations])),
         latency_ms=(perf_counter() - start) * 1000,
         tool_output_characters=registry.output_characters,
-        validation_errors=[registry.validation_error] if registry.validation_error else [],
+        validation_errors=list(
+            dict.fromkeys(
+                [
+                    *validation_errors,
+                    *([registry.validation_error] if registry.validation_error else []),
+                ]
+            )
+        ),
         warnings=list(result.warnings),
     )
     if log := run_log_for_agent(agent):

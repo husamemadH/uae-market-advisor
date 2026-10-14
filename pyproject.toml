@@ -8,6 +8,7 @@ dependencies = [
     "ddgs>=9.16.0",
     "openai>=3.29.0",
     "pydantic>=2.0",
+    "prompt-toolkit>=3.0.53",
     "python-dotenv>=1.2.4",
     "rich>=14.0",
     "sqlalchemy[asyncio]>=2.0",

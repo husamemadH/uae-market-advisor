@@ -27,7 +27,12 @@ enabled by default; ADVISOR_SEARCH_ENABLED=false or --no-search disables it and
 the manifest records the choice. Search snippets remain uninspected leads.
 --max-cost-usd must be finite and positive. This is a stop threshold between
 turns, not a provider-enforced billing cap: the current turn can exceed it.
-Missing cost stops subsequent paid turns. There are no automatic case retries.
+Missing cost stops subsequent paid turns. The runner does not retry cases. The
+application now permits one bounded correction attempt for unretrieved evidence
+references, using a fresh evidence registry and the remaining tool/search/output
+budgets. Both attempt run IDs, the original validation error, and all observed
+request usage are retained in the per-question record. SDK/agent retries stay
+disabled. Saved baseline/revised full-suite artifacts predate this correction.
 Use a provider-side spending limit if a hard billing cap is required.
 
 Each execution creates a new runtime/evaluations/ directory (or --output PATH).

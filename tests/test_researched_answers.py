@@ -325,7 +325,12 @@ def test_real_agno_lookup_and_followup_registry_isolation_with_failed_run_persis
         assert failed.record.validation_errors == ["unretrieved_evidence"]
         assert failed.content is None
         saved = agent.get_session(session_id=session_id)
-        assert [r.status for r in saved.runs] == [RunStatus.completed, RunStatus.error]
+        assert [r.status for r in saved.runs] == [
+            RunStatus.completed,
+            RunStatus.error,
+            RunStatus.error,
+        ]
+        assert len(failed.record.attempt_run_ids) == 2
         third = answer_question("Retrieve again for this question", session_id, agent)
         assert third.status == RunStatus.completed
         users = [m["content"] for m in requests[-1]["messages"] if m["role"] == "user"]

@@ -199,6 +199,7 @@ def timed_tool(function):
 class RunRecord(UsageSummary):
     schema_version: int = 1
     run_id: str
+    attempt_run_ids: list[str] = Field(default_factory=list)
     session_id: str
     timestamp_utc: datetime
     model_requested: str

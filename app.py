@@ -7,6 +7,7 @@ from agno.agent import Agent
 from agno.exceptions import ModelProviderError
 from agno.run import RunStatus
 from dotenv import load_dotenv
+from prompt_toolkit import PromptSession
 from rich.console import Console
 from rich.markdown import Markdown
 
@@ -29,6 +30,7 @@ from settings import Settings
 
 HELP_TEXT = """Ask about expanding our Jordanian pizza and kebab restaurant into Dubai or Abu Dhabi.
 Follow-up questions use the three most recent completed turns.
+Pasted multiline questions stay together; press Enter to send. Up/Down recall input.
 Calculate contribution, margin, and break-even from explicit scenario inputs.
 Curated research supports advice with source links, inspection dates, and limitations.
 Optional live search finds research leads; snippets are not verified market facts.
@@ -63,6 +65,7 @@ def chat_loop(
     *,
     session_id: str | None = None,
     export_dir: Path = DEFAULT_EXPORT_DIR,
+    input_session: PromptSession | None = None,
 ) -> int:
     sessions = SessionStore(agent.db)
     resumed = session_id is not None
@@ -79,10 +82,16 @@ def chat_loop(
         "Type /help for commands. Research-backed answers include sources and limitations."
     )
     console.print(f"{'Resumed session' if resumed else 'Session'}: {session_id}")
+    if input_session is None and sys.stdin.isatty() and console.is_terminal:
+        input_session = PromptSession()
 
     while True:
         try:
-            question = console.input("\nYou> ").strip()
+            question = (
+                input_session.prompt("\nYou> ")
+                if input_session is not None
+                else console.input("\nYou> ")
+            ).strip()
         except (EOFError, KeyboardInterrupt):
             console.print("\nGoodbye.")
             return 0

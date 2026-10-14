@@ -8,6 +8,9 @@ from agno.models.openrouter import OpenRouter
 from agno.models.response import ModelResponse
 from agno.run import RunStatus
 from agno.run.agent import RunOutput
+from prompt_toolkit import PromptSession
+from prompt_toolkit.input import create_pipe_input
+from prompt_toolkit.output import DummyOutput
 from rich.console import Console
 
 import app
@@ -49,6 +52,51 @@ def test_commands_and_blank_input_do_not_call_model(monkeypatch):
     assert "Unknown command" in output
     assert "New conversation" in output
     assert "Goodbye" in output
+
+
+def test_multiline_terminal_paste_is_one_question(monkeypatch):
+    question = (
+        "Calculate contribution for a hypothetical Dubai branch.\n"
+        "Revenue AED 40; food 12; packaging 2; other costs 1.\n"
+        "Delivery share 50%; commission 25%; fixed costs 30000; operating days 30."
+    )
+    responder = Mock(
+        return_value=ApplicationResult(
+            status=RunStatus.completed,
+            content=typed_answer("Calculated once."),
+            markdown="Calculated once.",
+        )
+    )
+    monkeypatch.setattr(app, "answer_question", responder)
+    console = Console(file=StringIO(), color_system=None)
+    with create_pipe_input() as terminal_input:
+        input_session = PromptSession(input=terminal_input, output=DummyOutput())
+        terminal_input.send_text("\x1b[200~" + question + "\x1b[201~\r/quit\r")
+        assert app.chat_loop(Mock(), console, input_session=input_session) == 0
+    responder.assert_called_once()
+    assert responder.call_args.args[0] == question
+
+
+def test_terminal_up_arrow_recalls_question_without_sending_escape_codes(monkeypatch):
+    def respond(*args):
+        terminal_input.send_text("\x1b[A\r" if responder.call_count == 1 else "/quit\r")
+        return ApplicationResult(
+            status=RunStatus.completed,
+            content=typed_answer("Answer."),
+            markdown="Answer.",
+        )
+
+    responder = Mock(side_effect=respond)
+    monkeypatch.setattr(app, "answer_question", responder)
+    console = Console(file=StringIO(), color_system=None)
+    with create_pipe_input() as terminal_input:
+        input_session = PromptSession(input=terminal_input, output=DummyOutput())
+        terminal_input.send_text("First question\r")
+        assert app.chat_loop(Mock(), console, input_session=input_session) == 0
+    assert [call.args[0] for call in responder.call_args_list] == [
+        "First question",
+        "First question",
+    ]
 
 
 def test_follow_ups_share_session_and_new_resets_it(monkeypatch):
