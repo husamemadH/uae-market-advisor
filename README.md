@@ -354,7 +354,7 @@ The runtime directory and credentials are gitignored. Usage logs omit raw answer
 
 Exports and `/sources` work after resume without inference or search. They revalidate the stored answer against its own saved tool results. They do not revisit source pages or update old research. A failed or cancelled question leaves the preceding validated answer available for export.
 
-## Demo
+## Demo (Click it if its not playing)
 
 [![Watch the demo recording](https://apco.archbyhusam.click/demo-preview.jpg)](https://apco.archbyhusam.click/demo.mp4)
 
