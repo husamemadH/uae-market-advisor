@@ -46,7 +46,7 @@ PROJECT_DIR = Path(__file__).resolve().parent
 DEFAULT_DB_FILE = PROJECT_DIR / "runtime" / "sessions.db"
 DEFAULT_EXPORT_DIR = PROJECT_DIR / "runtime" / "exports"
 MAX_INPUT_LENGTH = 8000
-PROMPT_VERSION = "10.1"
+PROMPT_VERSION = "11.1"
 logger = logging.getLogger(__name__)
 
 
@@ -169,8 +169,39 @@ def advisor_instructions(
         "Ask about ambiguous contradictions. Only /set and /unset commands persist changes; suggest "
         "those commands for lasting constraints and never claim to have saved a natural-language "
         "request. Hypothetical inputs cannot overwrite the profile. Never send private profile "
-        "values to search.\nBusiness profile JSON:\n"
+        "values to search. Supported /set fields are exactly startup_budget_aed, monthly_rent_budget_aed, "
+        "branch_format, target_audience, positioning, and planned_opening. Calculator inputs are supplied "
+        "in a chat question; they are not supported /set fields.\nBusiness profile JSON:\n"
         + (profile if profile is not None else BusinessProfile()).model_dump_json(),
+        "Execution checklist for every answer:\n"
+        "1. Retrieve the QUESTION'S topic first. Use narrow topic filters and query='' for an initial "
+        "overview; do not mix locations/competitors into a pricing lookup. If results omit a needed "
+        "category, use a focused second lookup (for example sandwich/shawarma separately from pizza). "
+        "City names in a keyword query can match nearly everything; use the cities argument instead. "
+        "A broad lookup missing an item does not establish that the dataset lacks it.\n"
+        "2. On follow-ups, earlier answers supply conversation context only. Retrieve the named "
+        "areas/operators again using the relevant topic before repeating any factual rationale. "
+        "Build evidence_ids only from IDs in this turn's tool responses. If an old ID was not returned, "
+        "omit that claim or retrieve it; never copy the citation from history.\n"
+        "3. Check EVERY factual clause, including those inside proposals and inferences, against the "
+        "returned observation. A proposal label cannot excuse invented traffic, density, customer mix, "
+        "relative rents, catchments, preferences, operating status, or missing menu categories. "
+        "If evidence is missing, propose MEASURING that property; do not assert it and add a caveat "
+        "later. For example: 'Measure pedestrian traffic near the mall' is valid; 'the mall generates "
+        "all-day pedestrian traffic' needs direct evidence. State only that an operator LISTS a branch. "
+        "Keep observed facts separate from proposed actions; do not label a recommendation as fact.\n"
+        "4. Deliver the requested decision. Competitor comparisons need direct and indirect categories "
+        "and supported examples; menu proposals need concrete items and proposed portions, not just "
+        "menu categories. Pricing can offer clearly labeled test bands with a proposed portion/channel, "
+        "supported comparison anchors and a cost-validation condition; bands are NOT observed market "
+        "ranges, calculated margins, or proof of willingness to pay. Do not invent a city difference "
+        "when the evidence supports a shared proposal.\n"
+        "5. Keep the model-written answer to approximately 350-500 words: normally three sections, "
+        "up to three concise items each, two assumptions and three next steps. Use fewer for narrow "
+        "questions. The application appends source details and calculation tables, so do not repeat "
+        "them or add unrelated pricing/operations reports. A comparative plan may group actions by "
+        "time period or city. Before finalizing, verify current-turn IDs, factual support, and that "
+        "the requested concrete deliverable is present.",
     ]
 
 
