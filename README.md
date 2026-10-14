@@ -4,7 +4,8 @@ An agentic advisory chatbot for a Jordanian restaurant specializing in **meaty p
 
 Built with Python and Agno, it combines a conversational model with curated market research, optional live web search, and a deterministic unit economics calculator. Answers distinguish observations, proposals, assumptions, and calculations, and include sources and practical next steps.
 
-a frontend version for the showcasing purposes is deployed here : [apco.archbyhusam.click](https://apco.archbyhusam.click/)
+a frontend version for the showcasing purposes is deployed here : [apco.archbyhusam.click](https://apco.archbyhusam.click/) Access code : **`apco-7PbKNCRM5LFYyQ`**
+
 
 **Current status:** the CLI, tools, persistence, exports, and evaluation harness are implemented. All 324 offline tests pass. The saved full live evaluation exposed unresolved advisory quality problems: the revised run produced 10 validated answers out of 12, with 4 reaching the provisional quality threshold. Human review is pending. Subsequent fixes added multiline terminal input and one bounded citation-correction attempt; the full live quality suite has not been rerun for these fixes.
 
