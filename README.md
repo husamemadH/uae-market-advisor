@@ -9,7 +9,7 @@ a frontend version for the showcasing purposes is deployed here : [apco.archbyhu
 
 **Current status:** the CLI, tools, persistence, exports, and evaluation harness are implemented. All 324 offline tests pass. The saved full live evaluation exposed unresolved advisory quality problems: the revised run produced 10 validated answers out of 12, with 4 reaching the provisional quality threshold. Human review is pending. Subsequent fixes added multiline terminal input and one bounded citation-correction attempt; the full live quality suite has not been rerun for these fixes.
 
-> Local README draft for review. Add the demo link before submission. A separate showcase frontend exists outside this repository; the instructions here run this repository's CLI.
+> A separate showcase frontend exists outside this repository; the instructions here run this repository's CLI.
 
 ## Assessment scope
 
@@ -356,15 +356,15 @@ Exports and `/sources` work after resume without inference or search. They reval
 
 ## Demo
 
-**Recording:** [ADD THE 1–3-MINUTE DEMO LINK BEFORE SUBMISSION]
+[![Watch the demo recording](https://apco.archbyhusam.click/demo-preview.jpg)](https://apco.archbyhusam.click/demo.mp4)
 
-(Video dragged here)
+**[Watch the demo recording (1 minute 42 seconds)](https://apco.archbyhusam.click/demo.mp4)** — real CLI execution showing a saved business profile, competitor advice with sources, a hypothetical unit economics calculation, usage reporting, and answer export.
 
 ## AI tool usage disclosure
 
 I used **OpenAI Codex extensively** while building this project. I had not previously worked with Agno and had a two-day deadline, so AI assistance was a significant part of the implementation process.
 
-Codex helped with tests, the unit economics calculations, the CI pipeline, and a separate frontend for showcasing the project. I also used it to refine tool descriptions and system prompts, suggest prompts for testing, and prepare documentation. The separate showcase frontend is not included in this repository.
+Codex helped with tests, the unit economics calculations, answer rendering (including Markdown formatting, source citations, and calculation tables), the CI pipeline, and a separate frontend for showcasing the project. I also used it to refine tool descriptions and system prompts, suggest prompts for testing, and prepare documentation. The separate showcase frontend is not included in this repository.
 
 My responsibility is engineering ownership and review: I understand the project's code, architecture, tool execution, validation boundaries, calculation formulas, persistence, cost accounting, and limitations. I review the code I ship and take responsibility for its behavior. This project reflects substantial AI assistance alongside my understanding and review of the implementation.
 
