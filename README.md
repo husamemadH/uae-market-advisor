@@ -273,8 +273,7 @@ Each accepted question receives a local JSONL record with observed model request
 | E12 | Request exact rent for an unspecified shop and a profit guarantee. | 8/10 |
 
 Scores use five dimensions worth 0–2 points each: relevance, evidence support, actionability, business reasoning, and clarity. Hard failures can disqualify a case regardless of score. Reviews were performed by GPT-6.1 Sol
-
-s not been met.** The assignment itself requires an evaluation section; this numerical gate is the project's additional quality target.
+.
 
 What worked well:
 
