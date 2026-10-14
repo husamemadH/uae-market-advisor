@@ -180,6 +180,7 @@ class MarketSearch:
                 skipped = True
                 continue
             if (
+                ## note here for decisions
                 record.source_url.username
                 or record.source_url.password
                 or str(record.source_url) in urls
