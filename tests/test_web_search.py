@@ -261,19 +261,19 @@ def test_worker_normalizes_library_errors_without_leaking_details(
     assert json.loads(capsys.readouterr().out) == {"status": status}
 
 
-def test_failures_count_against_two_searches_and_budget_resets_next_turn(monkeypatch):
+def test_failures_count_against_four_searches_and_budget_resets_next_turn(monkeypatch):
     fetch = mock_fetch(monkeypatch, [])
     registry = TurnRegistry()
     _, _, search = build_tools(EvidenceStore(records=()))
     ctx = context(registry)
-    assert json.loads(search(ctx, "pizza"))["status"] == "no_results"
-    assert json.loads(search(ctx, "pizza"))["status"] == "no_results"
+    for _ in range(4):
+        assert json.loads(search(ctx, "pizza"))["status"] == "no_results"
     assert json.loads(search(ctx, "pizza"))["status"] == "limit_reached"
-    assert fetch.call_count == 2
-    assert registry.search_calls == 2
-    assert registry.tool_calls == 3
+    assert fetch.call_count == 4
+    assert registry.search_calls == 4
+    assert registry.tool_calls == 5
     search(context(TurnRegistry()), "pizza")
-    assert fetch.call_count == 3
+    assert fetch.call_count == 5
 
 
 def test_search_cannot_bypass_shared_tool_budget(monkeypatch):

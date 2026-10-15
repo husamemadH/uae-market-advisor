@@ -39,7 +39,14 @@ from profiles import BusinessProfile, profile_from_state
 from runtime_adapters import ObservedOpenRouter, ObservedSqliteDb
 from sessions import SessionStorageError, SessionStore, validate_session_id
 from settings import Settings
-from turn_tools import MAX_TOOL_CALLS, REGISTRY_KEY, TurnRegistry, build_tools, get_registry
+from turn_tools import (
+    MAX_SEARCH_CALLS,
+    MAX_TOOL_CALLS,
+    REGISTRY_KEY,
+    TurnRegistry,
+    build_tools,
+    get_registry,
+)
 from web_search import MarketSearch, SearchRecord
 
 MODEL_ID = "deepseek/deepseek-v4.1-flash"
@@ -47,7 +54,7 @@ PROJECT_DIR = Path(__file__).resolve().parent
 DEFAULT_DB_FILE = PROJECT_DIR / "runtime" / "sessions.db"
 DEFAULT_EXPORT_DIR = PROJECT_DIR / "runtime" / "exports"
 MAX_INPUT_LENGTH = 8000
-PROMPT_VERSION = "11.2"
+PROMPT_VERSION = "11.3"
 logger = logging.getLogger(__name__)
 
 
@@ -85,7 +92,8 @@ def advisor_instructions(
         "Missing matches mean incomplete research.",
         (
             "Live search is enabled. Use search_market_web to find research leads for gaps in curated "
-            "evidence or when the user asks to search. At most two searches per question including failures, "
+            f"evidence or when the user asks to search. At most {MAX_SEARCH_CALLS} searches per "
+            "question including failures, "
             "and six calls shared across all tools. Send a short public subject query with city, not "
             "secrets, financial details, a full business profile, or conversation text."
             if search_enabled

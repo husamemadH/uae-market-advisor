@@ -235,7 +235,7 @@ All eight numeric inputs are required. Commission/share values use fractions int
 | Conversation context | 3 most recent completed turns |
 | Question length | 8,000 characters |
 | Shared tool calls | 6 per question |
-| Search invocations | 2 per question, including failed/disabled requests that enter the wrapper |
+| Search invocations | 4 per question, shared across the initial and correction attempts, including failed/disabled requests that enter the wrapper |
 | Search results | 4 per search; snippets up to 600 characters |
 | Lookup/search output | 8,000 characters per response |
 | Combined serialized tool output | 24,000 characters per question |
